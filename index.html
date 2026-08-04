@@ -3,467 +3,723 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Widoczni — Profesjonalne strony internetowe dla lokalnych firm</title>
-<meta name="description" content="Studio Widoczni projektuje nowoczesne, szybkie strony dla lokalnych firm. Świetnie działają na telefonie, powstają w kilka dni, w uczciwej cenie. Bezpłatna wycena.">
+<title>Studio Widoczni — Projektujemy strony, których nie da się zapomnieć</title>
+<meta name="description" content="Studio Widoczni tworzy strony internetowe dla lokalnych firm — szybkie, dopracowane na telefonie i nastawione na zdobywanie klientów. Sprawdź swoją stronę darmowym Audytem AI.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Studio Widoczni — Projektujemy strony, których nie da się zapomnieć">
+<meta property="og:description" content="Strony internetowe, które budują zaufanie i zdobywają klientów. Bezpłatna wycena, płatność po akceptacji projektu.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://studiowidoczni.pl">
+<meta property="og:locale" content="pl_PL">
+<link rel="canonical" href="https://studiowidoczni.pl">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#f5f4f1;
-    --panel:#ffffff;
-    --ink:#121212;
-    --ink-soft:#54544f;
-    --line:rgba(18,18,18,.13);
-    --accent:#2540e6;
-    --accent-dk:#1a2fb0;
-    --accent-tint:#eef0ff;
-    --ok:#16a34a;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.62;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.03em;line-height:1.03;font-weight:600}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 30px}
-  a{color:inherit;text-decoration:none}
-  .mono{font-family:'Space Mono',monospace;font-size:.73rem;letter-spacing:.09em;text-transform:uppercase}
-  :focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:4px}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;padding:14px 26px;border-radius:100px;transition:.2s;border:1.5px solid transparent;font-family:'Space Grotesk';cursor:pointer}
-  .btn-solid{background:var(--ink);color:var(--bg)}
-  .btn-solid:hover{background:var(--accent)}
-  .btn-accent{background:var(--accent);color:#fff}
-  .btn-accent:hover{background:var(--accent-dk)}
-  .btn-line{border-color:var(--ink);color:var(--ink)}
-  .btn-line:hover{background:var(--ink);color:var(--bg)}
+:root{
+  --bg:#fff; --surface:#fafafa; --surface-2:#f4f4f5;
+  --ink:#0a0a0a; --ink-2:#52525b; --ink-3:#a1a1aa;
+  --line:rgba(10,10,10,.09); --line-2:rgba(10,10,10,.17);
+  --focus:#2563eb; --bad:#dc2626; --ok:#16a34a;
+  --sh-md:0 2px 4px rgba(0,0,0,.03),0 12px 32px rgba(0,0,0,.07);
+  --sh-lg:0 4px 8px rgba(0,0,0,.04),0 32px 80px rgba(0,0,0,.12);
+  --e-out:cubic-bezier(.16,1,.3,1); --e-std:cubic-bezier(.4,0,.2,1);
+  --max:1120px;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0a0a0a; --surface:#121212; --surface-2:#1a1a1a;
+  --ink:#fafafa; --ink-2:#a1a1aa; --ink-3:#71717a;
+  --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.20);
+  --focus:#60a5fa; --bad:#f87171; --ok:#4ade80;
+  --sh-md:0 2px 4px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.5);
+  --sh-lg:0 4px 8px rgba(0,0,0,.3),0 32px 80px rgba(0,0,0,.6);
+}}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:78px}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;letter-spacing:-.011em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{letter-spacing:-.04em;line-height:1.04;font-weight:600}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;letter-spacing:-.02em}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:0 0 8px 0;z-index:200}
+.skip:focus{left:0}
 
-  header{position:sticky;top:0;z-index:60;background:rgba(245,244,241,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand{font-family:'Space Grotesk';font-weight:700;font-size:1.32rem;letter-spacing:-.04em;display:flex;align-items:center;gap:9px}
-  .brand .wmark{height:30px;width:auto;fill:currentColor;display:block;flex-shrink:0}
-  .foot-brand .wmark{height:40px;width:auto;fill:currentColor;display:block;margin-bottom:10px}
-  @media(max-width:420px){.brand .studio{display:none}}
-  .navlinks{display:flex;gap:30px;align-items:center}
-  .navlinks a{font-size:.93rem;font-weight:500;color:var(--ink-soft);transition:color .2s}
-  .navlinks a:hover{color:var(--ink)}
-  .navlinks .btn{color:var(--bg)}
-  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
-  .burger span{width:24px;height:2px;background:var(--ink);border-radius:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:inherit;font-size:.95rem;font-weight:500;padding:14px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:transform .15s var(--e-out),background .25s var(--e-std),color .25s var(--e-std),border-color .25s var(--e-std),box-shadow .25s var(--e-std)}
+.btn:active{transform:scale(.975)}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-primary:hover{box-shadow:var(--sh-md);transform:translateY(-1px)}
+.btn-secondary{border-color:var(--line-2);color:var(--ink);background:transparent}
+.btn-secondary:hover{background:var(--surface-2);border-color:var(--ink)}
+.btn[disabled]{opacity:.4;pointer-events:none}
+.btn .arw{transition:transform .25s var(--e-out)}
+.btn:hover .arw{transform:translateX(3px)}
+.btn-sm{padding:10px 18px;font-size:.86rem}
 
-  .hero{padding:84px 0 68px}
-  .status{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:100px;padding:7px 15px;margin-bottom:32px;background:var(--panel)}
-  .status .live{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:pulse 2s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.5)}70%{box-shadow:0 0 0 8px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
-  .hero h1{font-size:clamp(2.9rem,7.2vw,5.9rem)}
-  .hero h1 .thin{-webkit-text-stroke:1.4px var(--ink);color:transparent}
-  .hero-sub{font-size:1.2rem;color:var(--ink-soft);max-width:47ch;margin:28px 0 34px}
-  .hero-cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
-  .hero-micro{margin-top:16px;font-size:.86rem;color:var(--ink-soft);display:flex;gap:18px;flex-wrap:wrap}
-  .hero-micro span{display:flex;align-items:center;gap:7px}
-  .hero-micro .c{color:var(--ok);font-weight:700}
-  .hero-meta{display:flex;gap:36px;margin-top:50px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
-  .hero-meta .n{font-family:'Space Grotesk';font-weight:600;font-size:1.85rem}
-  .hero-meta .l{font-size:.85rem;color:var(--ink-soft)}
+header{position:sticky;top:0;z-index:90;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 76%,transparent);backdrop-filter:blur(16px) saturate(180%)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:1.02rem;letter-spacing:-.03em;flex-shrink:0}
+.wmark{height:26px;width:auto;fill:currentColor;display:block;flex-shrink:0}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a{font-size:.9rem;color:var(--ink-2);transition:color .2s var(--e-std)}
+.navlinks a:hover{color:var(--ink)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:22px;height:1.5px;background:var(--ink);border-radius:2px;transition:transform .3s var(--e-out),opacity .2s}
+.burger.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0}
+.burger.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
-  .band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:15px 0;background:var(--panel)}
-  .band span{font-family:'Space Grotesk';font-weight:500;font-size:1.02rem;padding:0 22px}
-  .band .x{color:var(--accent)}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;margin-top:-70px;padding-top:70px}
+#field{position:absolute;inset:0;width:100%;height:100%;z-index:0;display:block}
+.glow{position:absolute;width:640px;height:640px;border-radius:50%;pointer-events:none;z-index:1;left:0;top:0;background:radial-gradient(circle,rgba(10,10,10,.055),transparent 62%);transform:translate3d(-50%,-50%,0);opacity:0;transition:opacity .6s var(--e-std);will-change:transform}
+@media (prefers-color-scheme:dark){.glow{background:radial-gradient(circle,rgba(255,255,255,.085),transparent 62%)}}
+.hero:hover .glow{opacity:1}
+.hero-inner{max-width:940px}
+.rvl{display:block;overflow:hidden}
+.rvl>span{display:block;transform:translateY(112%);transition:transform 1s var(--e-out)}
+.rvl.on>span{transform:none}
+.badge{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(10px);border-radius:999px;padding:7px 15px;font-size:.79rem;color:var(--ink-2);margin-bottom:30px;opacity:0;transform:translateY(10px);transition:opacity .7s var(--e-out),transform .7s var(--e-out)}
+.badge.on{opacity:1;transform:none}
+.badge i{width:6px;height:6px;border-radius:50%;background:var(--ok);display:block;animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 45%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.2rem);margin-bottom:26px}
+.hero-sub{font-size:clamp(1.02rem,1.6vw,1.2rem);color:var(--ink-2);max-width:46ch;margin-bottom:36px;opacity:0;transform:translateY(14px);transition:opacity .8s var(--e-out) .5s,transform .8s var(--e-out) .5s}
+.hero-sub.on{opacity:1;transform:none}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;opacity:0;transform:translateY(14px);transition:opacity .8s var(--e-out) .65s,transform .8s var(--e-out) .65s}
+.hero-cta.on{opacity:1;transform:none}
 
-  section{padding:94px 0}
-  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:50px}
-  .head h2{font-size:clamp(2.1rem,4.3vw,3.3rem);max-width:17ch}
-  .head p{color:var(--ink-soft);max-width:40ch;font-size:1rem}
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.trust .wrap{display:flex;gap:12px 40px;flex-wrap:wrap;justify-content:space-between;padding-top:22px;padding-bottom:22px}
+.trust span{font-size:.86rem;color:var(--ink-2);display:flex;align-items:center;gap:9px}
+.trust span b{color:var(--ink);font-weight:500}
 
-  .work{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-  .card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .26s,box-shadow .26s}
-  .card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(18,18,18,.12)}
-  .frame{padding:14px 14px 0}
-  .bar{display:flex;align-items:center;gap:6px;padding:0 4px 10px}
-  .bar i{width:11px;height:11px;border-radius:50%;background:var(--line)}
-  .bar .url{margin-left:10px;font-family:'Space Mono';font-size:.72rem;color:var(--ink-soft);background:var(--bg);padding:4px 12px;border-radius:100px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .shot{height:290px;border-radius:10px 10px 0 0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:34px}
-  .shot.salon{background:radial-gradient(120% 100% at 80% 10%, rgba(231,188,192,.85), transparent 55%),linear-gradient(160deg,#5a3542,#2a141c)}
-  .shot.cafe{background:radial-gradient(120% 110% at 25% 15%,#e0a44a,#8a5620 60%,#4a2f1e)}
-  .shot .stag{font-family:'Space Mono';font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px}
-  .shot .sname{font-family:'Space Grotesk';font-weight:700;font-size:2.4rem;color:#fff;line-height:1}
-  .shot.cafe .sname{color:#2b1a12}
-  .shot .sdesc{color:rgba(255,255,255,.82);font-size:.94rem;margin-top:10px;max-width:26ch}
-  .shot.cafe .sdesc{color:rgba(43,26,18,.78)}
-  .shot .pill{align-self:flex-start;margin-top:20px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:#fff;padding:7px 14px;border-radius:100px;font-size:.82rem;font-weight:500}
-  .shot.cafe .pill{background:rgba(43,26,18,.1);border-color:rgba(43,26,18,.25);color:#2b1a12}
-  .cmeta{display:flex;justify-content:space-between;align-items:center;padding:20px 22px}
-  .cmeta .idx{font-family:'Space Mono';color:var(--accent);font-size:.8rem}
-  .cmeta .go{font-family:'Space Grotesk';font-weight:600;display:flex;align-items:center;gap:7px;transition:gap .2s}
-  .card:hover .cmeta .go{gap:12px}
+section.s{padding:clamp(76px,10vw,150px) 0;position:relative}
+.shead{max-width:62ch;margin-bottom:52px}
+.shead h2{font-size:clamp(1.95rem,4.2vw,3.2rem);margin:14px 0 16px}
+.shead p{color:var(--ink-2);font-size:1.04rem}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s var(--e-out),transform .8s var(--e-out)}
+.reveal.in{opacity:1;transform:none}
+.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
-  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
-  .portrait{aspect-ratio:4/5;border-radius:18px;position:relative;overflow:hidden;background:linear-gradient(160deg,#2540e6,#101a5c);display:flex;align-items:flex-end;padding:26px}
-  .portrait::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.3px,transparent 1.3px);background-size:13px 13px}
-  .portrait .ph{position:relative;z-index:2;color:#fff;font-family:'Space Grotesk';font-weight:600;font-size:1.1rem;opacity:.9}
-  .portrait .init{position:absolute;top:24px;left:26px;z-index:2;font-family:'Space Grotesk';font-weight:700;font-size:3rem;color:rgba(255,255,255,.25)}
-  .about-copy h2{font-size:clamp(2rem,4vw,3rem);margin:12px 0 20px}
-  .about-copy p{color:var(--ink-soft);margin-bottom:16px;max-width:52ch}
-  .about-copy p strong{color:var(--ink);font-weight:600}
-  .about-points{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-  .about-points span{background:var(--panel);border:1px solid var(--line);border-radius:100px;padding:9px 16px;font-size:.9rem;font-weight:500}
+.prob{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{border:1px solid var(--line);border-radius:18px;padding:30px 26px;background:var(--bg);transition:transform .3s var(--e-out),box-shadow .3s var(--e-out),border-color .3s var(--e-std)}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:var(--line-2)}
+.pcard .big{font-size:2.9rem;font-weight:600;letter-spacing:-.05em;line-height:1;margin-bottom:16px;font-variant-numeric:tabular-nums}
+.pcard h3{font-size:1.14rem;margin-bottom:8px}
+.pcard p{font-size:.92rem;color:var(--ink-2)}
 
-  .svc{background:var(--ink);color:var(--bg)}
-  .svc .head h2{color:var(--bg)}
-  .svc .head .mono{color:#8f9dff}
-  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.13);border-radius:14px;overflow:hidden}
-  .svc-cell{background:var(--ink);padding:32px 26px;min-height:196px;display:flex;flex-direction:column}
-  .svc-cell .num{font-family:'Space Mono';font-size:.78rem;color:#8f9dff;margin-bottom:auto}
-  .svc-cell h3{font-size:1.32rem;margin:0 0 10px}
-  .svc-cell p{font-size:.93rem;color:rgba(245,244,241,.66)}
+.audit{border:1px solid var(--line-2);border-radius:24px;background:var(--bg);box-shadow:var(--sh-lg);overflow:hidden;position:relative}
+.audit-head{padding:clamp(32px,4vw,52px) clamp(24px,4vw,52px) 0;position:relative}
+.proto{position:absolute;top:18px;right:18px;font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:5px 11px;background:var(--surface)}
+.audit h3{font-size:clamp(1.55rem,3.1vw,2.3rem);margin-bottom:14px;max-width:20ch}
+.audit-desc{color:var(--ink-2);font-size:1rem;max-width:52ch;margin-bottom:30px}
+.audit-form{display:flex;gap:10px;flex-wrap:wrap;padding:0 clamp(24px,4vw,52px) clamp(32px,4vw,52px)}
+.audit-form .inp{flex:1;min-width:230px}
+.audit-form input{width:100%;font-family:'JetBrains Mono',monospace;font-size:.88rem;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:12px;padding:15px 17px;transition:border-color .25s var(--e-std),box-shadow .25s var(--e-std)}
+.audit-form input::placeholder{color:var(--ink-3)}
+.audit-form input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--ink) 9%,transparent)}
+.audit-form .btn{padding:15px 28px}
+.stage{display:none;padding:0 clamp(24px,4vw,52px) clamp(32px,4vw,52px)}
+.stage.on{display:block}
+.scanbox{position:relative;border:1px solid var(--line);border-radius:16px;background:var(--surface);height:150px;overflow:hidden;margin-bottom:26px}
+.scanbox .mock{position:absolute;inset:20px;display:flex;flex-direction:column;gap:8px;opacity:.55}
+.scanbox .mock i{display:block;height:8px;border-radius:2px;background:var(--line-2)}
+.scanbox .sweep{position:absolute;top:0;bottom:0;width:130px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--ink) 9%,transparent),transparent);animation:sweep 1.9s var(--e-std) infinite}
+@keyframes sweep{0%{left:-130px}100%{left:100%}}
+.scanbox .grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:26px 26px}
+.steps{list-style:none;display:flex;flex-direction:column;gap:2px}
+.steps li{display:flex;align-items:center;gap:13px;padding:11px 0;font-size:.94rem;color:var(--ink-3);opacity:.35;transition:opacity .4s var(--e-std),color .4s var(--e-std)}
+.steps li .dot{width:17px;height:17px;border-radius:50%;border:1.5px solid currentColor;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.steps li .dot::after{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;transform:scale(0);transition:transform .3s var(--e-out)}
+.steps li.act{opacity:1;color:var(--ink)}
+.steps li.act .dot{border-color:var(--ink);border-top-color:transparent;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.steps li.done{opacity:1;color:var(--ink-2)}
+.steps li.done .dot{border-color:var(--ok);animation:none}
+.steps li.done .dot::after{background:var(--ok);transform:scale(1)}
+.steps li .lbl{flex:1}
+.steps li .tick{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--ink-3);opacity:0;transition:opacity .3s}
+.steps li.done .tick{opacity:1}
+.report{display:none;border-top:1px solid var(--line)}
+.report.on{display:block}
+.rep-top{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,60px);align-items:center;padding:clamp(32px,4vw,52px)}
+.gauge{position:relative;width:186px;height:186px;flex-shrink:0}
+.gauge svg{transform:rotate(-90deg);display:block}
+.gauge .bgc{stroke:var(--line);fill:none;stroke-width:9}
+.gauge .fgc{stroke:var(--ink);fill:none;stroke-width:9;stroke-linecap:round;stroke-dasharray:534;stroke-dashoffset:534;transition:stroke-dashoffset 1.9s var(--e-out)}
+.gauge .val{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.gauge .val b{font-size:3rem;font-weight:600;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.gauge .val span{font-size:.74rem;color:var(--ink-3);margin-top:5px}
+.cats{display:flex;flex-direction:column;gap:15px;min-width:0}
+.cat{display:grid;grid-template-columns:104px 1fr 42px;gap:14px;align-items:center;font-size:.9rem}
+.cat .nm{color:var(--ink-2)}
+.cat .bar{height:5px;background:var(--line);border-radius:3px;overflow:hidden}
+.cat .bar i{display:block;height:100%;width:0;background:var(--ink);border-radius:3px;transition:width 1.3s var(--e-out)}
+.cat .sc{text-align:right;font-family:'JetBrains Mono',monospace;font-size:.82rem;font-variant-numeric:tabular-nums}
+.rep-sec{padding:0 clamp(24px,4vw,52px) clamp(32px,4vw,52px)}
+.rep-sec h4{font-size:1.14rem;margin-bottom:18px}
+.issues{list-style:none}
+.issues li{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--line);font-size:.94rem;opacity:0;transform:translateY(8px);transition:opacity .5s var(--e-out),transform .5s var(--e-out)}
+.issues li.in{opacity:1;transform:none}
+.issues li .x{color:var(--bad);flex-shrink:0;font-weight:600}
+.issues li .txt strong{display:block;font-weight:500}
+.issues li .txt span{color:var(--ink-2);font-size:.87rem}
+.fixes{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fixes li{display:flex;gap:13px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 17px;font-size:.92rem;opacity:0;transform:translateY(8px);transition:opacity .5s var(--e-out),transform .5s var(--e-out)}
+.fixes li.in{opacity:1;transform:none}
+.fixes li .n{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--ink-3);flex-shrink:0;padding-top:2px}
+.fixes li strong{font-weight:500}
+.fixes li em{display:block;font-style:normal;color:var(--ink-2);font-size:.86rem;margin-top:3px}
+.rep-cta{background:var(--ink);color:var(--bg);padding:clamp(36px,5vw,60px) clamp(24px,4vw,52px);text-align:center}
+.rep-cta h3{font-size:clamp(1.6rem,3.4vw,2.6rem);margin-bottom:14px;color:var(--bg)}
+.rep-cta p{color:color-mix(in srgb,var(--bg) 66%,transparent);margin-bottom:28px}
+.rep-cta .row{display:flex;gap:11px;justify-content:center;flex-wrap:wrap}
+.rep-cta .b1{background:var(--bg);color:var(--ink)}
+.rep-cta .b2{border:1px solid color-mix(in srgb,var(--bg) 34%,transparent);color:var(--bg)}
+.rep-cta .b2:hover{background:color-mix(in srgb,var(--bg) 12%,transparent)}
+.note{border-left:2px solid var(--line-2);padding-left:16px;color:var(--ink-2);font-size:.87rem;margin-top:26px;max-width:72ch}
+.note strong{color:var(--ink);font-weight:600}
 
-  .guar{background:var(--accent-tint)}
-  .guar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .g-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px 24px}
-  .g-card .ic{width:40px;height:40px;border-radius:10px;background:var(--accent-tint);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;margin-bottom:16px;border:1px solid rgba(37,64,230,.2)}
-  .g-card h3{font-size:1.12rem;margin-bottom:6px}
-  .g-card p{font-size:.9rem;color:var(--ink-soft)}
+.work{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.wcard{display:block;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--bg);transition:transform .35s var(--e-out),box-shadow .35s var(--e-out),border-color .3s var(--e-std)}
+.wcard:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--line-2)}
+.wshot{height:290px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:34px}
+.wshot::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1.2px,transparent 1.2px);background-size:13px 13px}
+.wshot.rosa{background:radial-gradient(120% 100% at 78% 8%,rgba(231,188,192,.8),transparent 55%),linear-gradient(160deg,#5a3542,#241118)}
+.wshot.cafe{background:radial-gradient(120% 110% at 25% 12%,#e0a44a,#8a5620 58%,#3d261a)}
+.wshot .tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-bottom:10px;position:relative;z-index:2}
+.wshot .nm{font-size:2.5rem;font-weight:600;letter-spacing:-.045em;color:#fff;line-height:1;position:relative;z-index:2}
+.wshot .ds{color:rgba(255,255,255,.78);font-size:.92rem;margin-top:10px;max-width:28ch;position:relative;z-index:2}
+.wshot.cafe .nm{color:#2b1a12}
+.wshot.cafe .tag{color:rgba(43,26,18,.62)}
+.wshot.cafe .ds{color:rgba(43,26,18,.75)}
+.wmeta{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;font-size:.9rem}
+.wmeta .k{display:inline-flex;align-items:center;gap:7px;font-size:.72rem;border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--ink-2)}
+.wmeta .go{font-weight:500;display:flex;align-items:center;gap:7px;transition:gap .25s var(--e-out)}
+.wcard:hover .wmeta .go{gap:12px}
 
-  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .why-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 30px}
-  .why-card .big{font-family:'Space Grotesk';font-weight:700;font-size:2.6rem;color:var(--accent);line-height:1;margin-bottom:14px}
-  .why-card h3{font-size:1.22rem;margin-bottom:8px}
-  .why-card p{font-size:.95rem;color:var(--ink-soft)}
+.steps4{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--bg)}
+.st{padding:30px 26px;border-right:1px solid var(--line)}
+.st:last-child{border-right:0}
+.st h3{font-size:1.1rem;margin:14px 0 8px}
+.st p{font-size:.89rem;color:var(--ink-2)}
+.st .you{margin-top:12px;font-size:.8rem;color:var(--ink-3);border-top:1px solid var(--line);padding-top:10px}
 
-  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .tier{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 30px;display:flex;flex-direction:column;position:relative}
-  .tier.feat{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-  .tier .flag{position:absolute;top:-11px;left:30px;background:var(--accent);color:#fff;font-family:'Space Mono';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px}
-  .tier .tname{font-family:'Space Grotesk';font-weight:600;font-size:1.28rem;margin-bottom:6px}
-  .tier .tdesc{font-size:.9rem;color:var(--ink-soft);margin-bottom:22px}
-  .tier.feat .tdesc{color:rgba(245,244,241,.7)}
-  .tier .amt{font-family:'Space Grotesk';font-weight:700;font-size:2.35rem;line-height:1}
-  .tier .amt small{font-family:'Inter';font-weight:500;font-size:.88rem;color:var(--ink-soft)}
-  .tier.feat .amt small{color:rgba(245,244,241,.7)}
-  .tier ul{list-style:none;margin:24px 0 28px;flex:1}
-  .tier li{padding:9px 0;font-size:.93rem;border-top:1px solid var(--line);display:flex;gap:10px}
-  .tier.feat li{border-color:rgba(255,255,255,.15)}
-  .tier li::before{content:"→";color:var(--accent);font-weight:700}
-  .tier.feat li::before{color:#8f9dff}
-  .price-note{text-align:center;margin-top:26px;font-size:.9rem;color:var(--ink-soft)}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.scell{border:1px solid var(--line);border-radius:16px;padding:26px 24px;background:var(--bg);transition:transform .3s var(--e-out),box-shadow .3s var(--e-out),border-color .3s var(--e-std)}
+.scell:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:var(--line-2)}
+.scell h3{font-size:1.08rem;margin:12px 0 7px}
+.scell p{font-size:.89rem;color:var(--ink-2)}
 
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel)}
-  .step{padding:32px 26px;border-right:1px solid var(--line)}
-  .step:last-child{border-right:0}
-  .step .sn{font-family:'Space Mono';font-size:.78rem;color:var(--accent);margin-bottom:16px}
-  .step h3{font-size:1.18rem;margin-bottom:8px}
-  .step p{font-size:.91rem;color:var(--ink-soft)}
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tier{border:1px solid var(--line);border-radius:20px;padding:32px 28px;background:var(--bg);display:flex;flex-direction:column;position:relative}
+.tier.feat{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tier .flag{position:absolute;top:-11px;left:28px;background:var(--bg);color:var(--ink);border:1px solid var(--line-2);font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.tier .tn{font-size:1.2rem;font-weight:600;letter-spacing:-.03em;margin-bottom:6px}
+.tier .td{font-size:.88rem;color:var(--ink-2);margin-bottom:22px}
+.tier.feat .td{color:color-mix(in srgb,var(--bg) 66%,transparent)}
+.tier .amt{font-size:2.2rem;font-weight:600;letter-spacing:-.05em;line-height:1}
+.tier .amt small{font-size:.84rem;font-weight:400;color:var(--ink-2)}
+.tier.feat .amt small{color:color-mix(in srgb,var(--bg) 66%,transparent)}
+.tier ul{list-style:none;margin:22px 0 26px;flex:1}
+.tier li{padding:9px 0;font-size:.9rem;border-top:1px solid var(--line);display:flex;gap:10px}
+.tier.feat li{border-color:color-mix(in srgb,var(--bg) 18%,transparent)}
+.tier li::before{content:"→";color:var(--ink-3);flex-shrink:0}
+.tier.feat li::before{color:color-mix(in srgb,var(--bg) 55%,transparent)}
+.pnote{text-align:center;margin-top:26px;font-size:.88rem;color:var(--ink-2)}
 
-  .faq-list{max-width:820px}
-  details.faq{border:1px solid var(--line);border-radius:14px;background:var(--panel);margin-bottom:12px;overflow:hidden}
-  details.faq summary{list-style:none;cursor:pointer;padding:22px 26px;font-family:'Space Grotesk';font-weight:600;font-size:1.08rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
-  details.faq summary::-webkit-details-marker{display:none}
-  details.faq summary .plus{width:26px;height:26px;flex-shrink:0;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:400;font-size:1.2rem;transition:.25s}
-  details.faq[open] summary .plus{transform:rotate(45deg);background:var(--accent);color:#fff;border-color:var(--accent)}
-  details.faq .fa{padding:0 26px 24px;color:var(--ink-soft);font-size:.98rem;max-width:70ch}
+.faq{max-width:820px}
+details.q{border:1px solid var(--line);border-radius:14px;background:var(--bg);margin-bottom:9px;overflow:hidden}
+details.q summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:500;font-size:1rem;display:flex;justify-content:space-between;gap:14px;align-items:center}
+details.q summary::-webkit-details-marker{display:none}
+details.q .ic{width:20px;height:20px;flex-shrink:0;position:relative;transition:transform .3s var(--e-out)}
+details.q .ic::before,details.q .ic::after{content:"";position:absolute;background:var(--ink-2);border-radius:2px;left:50%;top:50%}
+details.q .ic::before{width:11px;height:1.5px;transform:translate(-50%,-50%)}
+details.q .ic::after{width:1.5px;height:11px;transform:translate(-50%,-50%)}
+details.q[open] .ic{transform:rotate(135deg)}
+details.q .a{padding:0 22px 20px;color:var(--ink-2);font-size:.94rem;max-width:68ch}
 
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
-  .c-left{padding:48px 44px;background:var(--accent);color:#fff}
-  .c-left h2{color:#fff;font-size:2.3rem;margin-bottom:14px}
-  .c-left p{color:rgba(255,255,255,.86);margin-bottom:30px;max-width:34ch}
-  .c-contact{display:block;font-family:'Space Grotesk';font-weight:600;font-size:1.15rem;margin-bottom:12px;color:#fff}
-  .c-contact span{display:block;font-family:'Inter';font-weight:400;font-size:.8rem;opacity:.75;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
-  .c-right{padding:44px 42px}
-  .field{margin-bottom:18px}
-  .field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:7px}
-  .field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-family:'Inter';font-size:.96rem;background:var(--bg);transition:border .2s}
-  .field input:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
-  .field textarea{resize:vertical;min-height:110px}
-  .form-note{font-size:.8rem;color:var(--ink-soft);margin-top:12px}
+.contact{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line-2);border-radius:24px;overflow:hidden;background:var(--bg);box-shadow:var(--sh-lg)}
+.cl{padding:clamp(34px,4vw,52px);background:var(--ink);color:var(--bg);display:flex;flex-direction:column;justify-content:center}
+.cl h2{font-size:clamp(1.8rem,3.6vw,2.7rem);color:var(--bg);margin-bottom:16px}
+.cl p{color:color-mix(in srgb,var(--bg) 68%,transparent);margin-bottom:32px;max-width:32ch}
+.cinfo{display:block;margin-bottom:16px;color:var(--bg)}
+.cinfo small{display:block;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--bg) 52%,transparent);margin-bottom:3px}
+.cinfo b{font-weight:500;font-size:1.06rem}
+.cr{padding:clamp(34px,4vw,52px)}
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:.82rem;font-weight:500;margin-bottom:7px}
+.fld input,.fld textarea{width:100%;font-family:inherit;font-size:.94rem;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:10px;padding:13px 15px;transition:border-color .25s var(--e-std),box-shadow .25s var(--e-std)}
+.fld input::placeholder,.fld textarea::placeholder{color:var(--ink-3)}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--ink) 9%,transparent)}
+.fld textarea{resize:vertical;min-height:104px}
+.fnote{font-size:.79rem;color:var(--ink-3);margin-top:12px}
 
-  footer{padding:56px 0 30px;border-top:1px solid var(--line)}
-  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:26px}
-  .foot-brand{font-family:'Space Grotesk';font-weight:700;font-size:1.5rem;letter-spacing:-.03em}
-  .foot-brand p{font-family:'Inter';font-weight:400;font-size:.92rem;color:var(--ink-soft);margin-top:8px;max-width:32ch}
-  .foot-cols{display:flex;gap:52px;flex-wrap:wrap}
-  .foot-col h4{font-family:'Space Mono';font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px}
-  .foot-col a,.foot-col p{display:block;font-size:.94rem;margin-bottom:7px;color:var(--ink)}
-  .foot-col a:hover{color:var(--accent)}
-  .foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.82rem;color:var(--ink-soft)}
+footer{border-top:1px solid var(--line);padding:52px 0 30px}
+.ftop{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px}
+.fbrand .wmark{height:32px;margin-bottom:12px}
+.fbrand strong{font-size:1.1rem;font-weight:600;letter-spacing:-.03em;display:block;margin-bottom:8px}
+.fbrand p{font-size:.9rem;color:var(--ink-2);max-width:34ch}
+.fcols{display:flex;gap:56px;flex-wrap:wrap}
+.fcol h4{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:13px}
+.fcol a,.fcol p{display:block;font-size:.92rem;margin-bottom:7px;color:var(--ink-2)}
+.fcol a:hover{color:var(--ink)}
+.fbot{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.8rem;color:var(--ink-3)}
 
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
-  .reveal.in{opacity:1;transform:none}
-
-  @media(max-width:920px){
-    .navlinks{position:fixed;inset:74px 0 auto 0;background:var(--bg);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);transform:translateY(-170%);transition:transform .35s}
-    .navlinks.open{transform:none}
-    .navlinks a{padding:14px 30px;width:100%}
-    .navlinks .btn{margin:8px 30px}
-    .burger{display:flex}
-    .work,.svc-grid,.why-grid,.price-grid,.steps,.guar-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-    .svc-cell{min-height:auto}
-    .step{border-right:0;border-bottom:1px solid var(--line)}
-    .step:last-child{border-bottom:0}
-    .portrait{aspect-ratio:16/11}
-    section{padding:62px 0}
-  }
-  @media(max-width:600px){.guar-grid{grid-template-columns:1fr}}
-  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.reveal,.status .live{transition:none;opacity:1;transform:none;animation:none}}
+@media(max-width:900px){
+  .navlinks{position:fixed;inset:70px 0 auto 0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 0;transform:translateY(-160%);transition:transform .4s var(--e-out)}
+  .navlinks.open{transform:none}
+  .navlinks a{padding:14px 24px;width:100%}
+  .navlinks .btn{margin:8px 24px}
+  .burger{display:flex}
+  .prob,.work,.svc,.price,.steps4,.contact{grid-template-columns:1fr}
+  .st{border-right:0;border-bottom:1px solid var(--line)}
+  .st:last-child{border-bottom:0}
+  .rep-top{grid-template-columns:1fr;justify-items:center}
+  .cats{width:100%}
+  .gauge{width:158px;height:158px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important}
+  .rvl>span,.hero-sub,.hero-cta,.badge,.reveal,.issues li,.fixes li{transition:none;opacity:1;transform:none}
+  .scanbox .sweep{display:none}
+}
 </style>
 </head>
 <body>
+<a href="#main" class="skip">Przejdź do treści</a>
 
 <header>
   <div class="wrap nav">
-    <div class="brand"><svg class="wmark" viewBox="0 0 149 100" aria-hidden="true"><path d="M1 0 L31 0 L67 72 L53 100 Z"/><path d="M71 0 L95 0 L79 59 Q74 64 70 56 L64 45 Z"/><path d="M79 52 Q92 58 104 46 L113 70 L99 100 Z"/><path d="M124 0 L149 0 L115 67 L107 45 Z"/></svg><span><span class="studio">Studio </span>Widoczni</span></div>
+    <a href="#" class="brand" aria-label="Studio Widoczni — strona główna">
+      <svg class="wmark" viewBox="0 0 149 100" aria-hidden="true"><path d="M1 0 L31 0 L67 72 L53 100 Z"/><path d="M71 0 L95 0 L79 59 Q74 64 70 56 L64 45 Z"/><path d="M79 52 Q92 58 104 46 L113 70 L99 100 Z"/><path d="M124 0 L149 0 L115 67 L107 45 Z"/></svg>
+      Studio Widoczni
+    </a>
     <nav class="navlinks" id="menu">
+      <a href="#audyt">Audyt AI</a>
       <a href="#realizacje">Realizacje</a>
-      <a href="#o-mnie">O mnie</a>
+      <a href="#proces">Proces</a>
       <a href="#cennik">Cennik</a>
       <a href="#faq">FAQ</a>
-      <a href="#kontakt" class="btn btn-solid">Wyceń stronę</a>
+      <a href="#kontakt" class="btn btn-primary btn-sm">Darmowa wycena</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<main id="main">
+
 <section class="hero">
-  <div class="wrap">
-    <div class="status"><span class="live"></span><span class="mono">Przyjmuję projekty · Łódź i online</span></div>
-    <h1 class="reveal">Profesjonalne strony<br>dla <span class="thin">lokalnych</span> firm.</h1>
-    <p class="hero-sub reveal">Projektuję nowoczesne, szybkie strony, które świetnie wyglądają na telefonie i pomagają klientom Cię znaleźć. Konkret, uczciwa cena i kontakt z jednym człowiekiem od początku do końca.</p>
-    <div class="hero-cta reveal">
-      <a href="#kontakt" class="btn btn-accent">Bezpłatna wycena</a>
-      <a href="#realizacje" class="btn btn-line">Zobacz realizacje</a>
-    </div>
-    <div class="hero-micro reveal">
-      <span><span class="c">✓</span> Odpowiedź w 24h</span>
-      <span><span class="c">✓</span> Płatność po akceptacji</span>
-      <span><span class="c">✓</span> Bez zobowiązań</span>
-    </div>
-    <div class="hero-meta reveal">
-      <div class="m"><div class="n">100%</div><div class="l">Dopasowane do telefonu</div></div>
-      <div class="m"><div class="n">~5 dni</div><div class="l">Średni czas realizacji</div></div>
-      <div class="m"><div class="n">od 899 zł</div><div class="l">Za stronę-wizytówkę</div></div>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="glow" id="glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <span class="badge" id="b0"><i></i>Przyjmujemy 2 projekty w tym miesiącu</span>
+    <h1>
+      <span class="rvl" id="r1"><span>Projektujemy strony,</span></span>
+      <span class="rvl" id="r2"><span>których nie da się <em class="serif">zapomnieć</em>.</span></span>
+    </h1>
+    <p class="hero-sub" id="r3">Tworzymy strony internetowe, które budują zaufanie i zdobywają klientów.</p>
+    <div class="hero-cta" id="r4">
+      <a href="#kontakt" class="btn btn-primary">Darmowa wycena <span class="arw">→</span></a>
+      <a href="#realizacje" class="btn btn-secondary">Zobacz realizacje</a>
     </div>
   </div>
 </section>
 
-<div class="band">
-  <span>Restauracje &amp; kawiarnie</span><span class="x">/</span><span>Salony &amp; usługi</span><span class="x">/</span><span>Warsztaty</span><span class="x">/</span><span>Gabinety</span><span class="x">/</span><span>Sklepy lokalne</span><span class="x">/</span><span>Mobile-first</span><span class="x">/</span>
+<div class="trust">
+  <div class="wrap">
+    <span><b>100/100</b> Lighthouse</span>
+    <span><b>24 h</b> na odpowiedź</span>
+    <span><b>Płatność</b> po akceptacji</span>
+    <span><b>WCAG AA</b> dostępność</span>
+    <span><b>Łódź</b> i cała Polska online</span>
+  </div>
 </div>
 
-<section id="realizacje">
+<section class="s" id="problem">
   <div class="wrap">
-    <div class="head reveal">
-      <div><span class="mono" style="color:var(--accent)">01 — Portfolio</span><h2 style="margin-top:12px">Wybrane realizacje</h2></div>
-      <p>Kliknij, aby zobaczyć żywą stronę. Każda powstała od zera i jest w pełni responsywna.</p>
+    <div class="shead reveal">
+      <span class="mono">01 — Diagnoza</span>
+      <h2>Dlaczego większość stron <span class="serif">nie działa</span></h2>
+      <p>Strona lokalnej firmy rzadko przegrywa wyglądem. Przegrywa sekundami ładowania, brakiem wyraźnego wezwania do działania i tym, że nikt jej nie znajduje.</p>
+    </div>
+    <div class="prob reveal">
+      <div class="pcard"><div class="big">53%</div><h3>Wychodzi przed załadowaniem</h3><p>Ponad połowa odwiedzających opuszcza stronę, która ładuje się dłużej niż trzy sekundy. Zanim cokolwiek zobaczą.</p></div>
+      <div class="pcard"><div class="big">7 s</div><h3>Tyle masz na zaufanie</h3><p>W kilka sekund klient decyduje, czy firma wygląda poważnie. Przestarzała strona odpowiada za niego: nie.</p></div>
+      <div class="pcard"><div class="big">76%</div><h3>Wchodzi z telefonu</h3><p>Trzy czwarte ruchu lokalnej firmy to komórki. Strona zaprojektowana pod monitor traci ich wszystkich.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s alt" id="audyt">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="mono">02 — Narzędzie</span>
+      <h2>Audyt <span class="serif">AI</span></h2>
+      <p>Wpisz adres swojej strony i sprawdź, co ją powstrzymuje. Bez rejestracji, bez zobowiązań — wynik dostajesz od razu na ekranie.</p>
+    </div>
+
+    <div class="audit reveal">
+      <div class="audit-head">
+        <span class="proto">Prototyp · dane przykładowe</span>
+        <h3>Sprawdź, czy Twoja strona naprawdę zarabia.</h3>
+        <p class="audit-desc">Przeanalizujemy Twoją stronę pod kątem designu, UX, szybkości, SEO oraz skuteczności sprzedażowej.</p>
+      </div>
+      <form class="audit-form" id="af" autocomplete="off">
+        <div class="inp"><input id="url" type="text" value="https://twojastrona.pl" aria-label="Adres strony do analizy"></div>
+        <button class="btn btn-primary" id="go" type="submit">Rozpocznij analizę <span class="arw">→</span></button>
+      </form>
+
+      <div class="stage" id="stage">
+        <div class="scanbox">
+          <div class="grid"></div>
+          <div class="mock"><i style="width:44%"></i><i style="width:88%"></i><i style="width:72%"></i><i style="width:80%"></i><i style="width:36%"></i></div>
+          <div class="sweep"></div>
+        </div>
+        <ul class="steps" id="steps">
+          <li data-ms="850"><span class="dot"></span><span class="lbl">Analizowanie kodu</span><span class="tick">OK</span></li>
+          <li data-ms="900"><span class="dot"></span><span class="lbl">Sprawdzanie UX</span><span class="tick">OK</span></li>
+          <li data-ms="950"><span class="dot"></span><span class="lbl">Analizowanie SEO</span><span class="tick">OK</span></li>
+          <li data-ms="800"><span class="dot"></span><span class="lbl">Ocena szybkości</span><span class="tick">OK</span></li>
+          <li data-ms="850"><span class="dot"></span><span class="lbl">Analiza CTA</span><span class="tick">OK</span></li>
+          <li data-ms="900"><span class="dot"></span><span class="lbl">Badanie wersji mobilnej</span><span class="tick">OK</span></li>
+          <li data-ms="1050"><span class="dot"></span><span class="lbl">Analiza AI</span><span class="tick">OK</span></li>
+        </ul>
+      </div>
+
+      <div class="report" id="report">
+        <div class="rep-top">
+          <div class="gauge">
+            <svg width="186" height="186" viewBox="0 0 186 186" aria-hidden="true">
+              <circle class="bgc" cx="93" cy="93" r="85"></circle>
+              <circle class="fgc" id="arc" cx="93" cy="93" r="85"></circle>
+            </svg>
+            <div class="val"><b id="score">0</b><span>ocena ogólna</span></div>
+          </div>
+          <div class="cats" id="cats">
+            <div class="cat" data-v="71"><span class="nm">Design</span><span class="bar"><i></i></span><span class="sc">0</span></div>
+            <div class="cat" data-v="64"><span class="nm">UX</span><span class="bar"><i></i></span><span class="sc">0</span></div>
+            <div class="cat" data-v="58"><span class="nm">SEO</span><span class="bar"><i></i></span><span class="sc">0</span></div>
+            <div class="cat" data-v="42"><span class="nm">Performance</span><span class="bar"><i></i></span><span class="sc">0</span></div>
+            <div class="cat" data-v="37"><span class="nm">Konwersja</span><span class="bar"><i></i></span><span class="sc">0</span></div>
+          </div>
+        </div>
+        <div class="rep-sec">
+          <h4>Największe problemy</h4>
+          <ul class="issues" id="issues">
+            <li><span class="x">✕</span><span class="txt"><strong>Strona ładuje się 6,2 s na telefonie</strong><span>Ponad połowa odwiedzających wychodzi, zanim cokolwiek zobaczy.</span></span></li>
+            <li><span class="x">✕</span><span class="txt"><strong>Brak wyraźnego wezwania do działania</strong><span>Na pierwszym ekranie nie ma przycisku kontaktu ani numeru telefonu.</span></span></li>
+            <li><span class="x">✕</span><span class="txt"><strong>Niska czytelność na telefonach</strong><span>Tekst 12 px i przyciski mniejsze niż 44 px — trudne do trafienia palcem.</span></span></li>
+            <li><span class="x">✕</span><span class="txt"><strong>Zbyt mało dowodów zaufania</strong><span>Brak opinii, realizacji i danych firmy widocznych bez przewijania.</span></span></li>
+            <li><span class="x">✕</span><span class="txt"><strong>Braki w SEO</strong><span>Brak opisu strony, jeden nagłówek H1 powtórzony trzykrotnie, obrazy bez opisów.</span></span></li>
+          </ul>
+        </div>
+        <div class="rep-sec">
+          <h4>Co poprawilibyśmy</h4>
+          <ul class="fixes" id="fixes">
+            <li><span class="n">01</span><span><strong>Kompresja obrazów do AVIF i leniwe ładowanie</strong><em>Sześć zdjęć waży łącznie 4,1 MB. Po konwersji zejdą do ok. 380 KB — czas ładowania spadnie poniżej 1,5 s.</em></span></li>
+            <li><span class="n">02</span><span><strong>Przycisk kontaktu w nagłówku, przyklejony przy przewijaniu</strong><em>Dostępny z każdego miejsca strony, także po przewinięciu na sam dół.</em></span></li>
+            <li><span class="n">03</span><span><strong>Tekst do 16 px, przyciski do 48 px</strong><em>Zgodnie z WCAG oraz zaleceniami dla ekranów dotykowych.</em></span></li>
+            <li><span class="n">04</span><span><strong>Opinie i wizytówka Google nad zgięciem</strong><em>Dowód społeczny w pierwszych trzech sekundach to najszybszy sposób na zbudowanie zaufania.</em></span></li>
+            <li><span class="n">05</span><span><strong>Dane strukturalne LocalBusiness</strong><em>Adres, godziny i telefon w formacie, który Google pokazuje wprost w wynikach wyszukiwania.</em></span></li>
+          </ul>
+        </div>
+        <div class="rep-cta">
+          <h3>Możemy zwiększyć skuteczność<br>Twojej strony.</h3>
+          <p>Bezpłatna konsultacja, 20 minut, bez zobowiązań.</p>
+          <div class="row">
+            <a href="#kontakt" class="btn b1">Umów bezpłatną konsultację</a>
+            <a href="#kontakt" class="btn b2">Chcę nową stronę</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note"><strong>Moduł działa w trybie demonstracyjnym.</strong> Wyniki są przykładowe i tak oznaczone. Po podpięciu warstwy danych Performance, SEO i dostępność pochodzić będą z Google PageSpeed Insights, Design i UX z analizy pobranego kodu strony, a rekomendacje z modelu opisującego realnie znalezione braki. Interfejs pozostaje bez zmian.</p>
+  </div>
+</section>
+
+<section class="s" id="realizacje">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="mono">03 — Portfolio</span>
+      <h2>Nasze realizacje</h2>
+      <p>Kliknij, aby otworzyć pełną stronę. Każda powstała od zera i działa bezbłędnie na telefonie.</p>
     </div>
     <div class="work">
-      <a class="card reveal" href="salon-urody-rosa.html" target="_blank" rel="noopener">
-        <div class="frame">
-          <div class="bar"><i></i><i></i><i></i><span class="url">rosa-studio.pl</span></div>
-          <div class="shot salon">
-            <div class="stag">Salon urody</div>
-            <div class="sname">ROSA</div>
-            <div class="sdesc">Elegancka strona salonu fryzjersko-kosmetycznego z cennikiem i galerią.</div>
-            <span class="pill">Fryzjer · Kosmetologia</span>
-          </div>
+      <a class="wcard reveal" href="salon-urody-rosa.html">
+        <div class="wshot rosa">
+          <span class="tag">Salon urody</span>
+          <span class="nm">ROSA</span>
+          <span class="ds">Elegancka strona salonu fryzjersko-kosmetycznego z cennikiem i galerią.</span>
         </div>
-        <div class="cmeta"><span class="idx">// 01</span><span class="go">Zobacz na żywo →</span></div>
+        <div class="wmeta"><span class="k">Koncepcja</span><span class="go">Otwórz stronę →</span></div>
       </a>
-      <a class="card reveal" href="kawiarnia-ziarno.html" target="_blank" rel="noopener">
-        <div class="frame">
-          <div class="bar"><i></i><i></i><i></i><span class="url">ziarno-kawiarnia.pl</span></div>
-          <div class="shot cafe">
-            <div class="stag">Kawiarnia</div>
-            <div class="sname">ZIARNO</div>
-            <div class="sdesc">Ciepła, energiczna strona kawiarni z menu, galerią i godzinami otwarcia.</div>
-            <span class="pill">Gastronomia</span>
-          </div>
+      <a class="wcard reveal" href="kawiarnia-ziarno.html">
+        <div class="wshot cafe">
+          <span class="tag">Kawiarnia</span>
+          <span class="nm">ZIARNO</span>
+          <span class="ds">Ciepła, energiczna strona kawiarni z menu, galerią i godzinami otwarcia.</span>
         </div>
-        <div class="cmeta"><span class="idx">// 02</span><span class="go">Zobacz na żywo →</span></div>
+        <div class="wmeta"><span class="k">Koncepcja</span><span class="go">Otwórz stronę →</span></div>
       </a>
     </div>
   </div>
 </section>
 
-<section id="o-mnie">
-  <div class="wrap about-grid">
-    <div class="portrait reveal">
-      <span class="init">W</span>
-      <span class="ph">[ Tu Twoje zdjęcie ]</span>
+<section class="s alt" id="proces">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="mono">04 — Proces</span>
+      <h2>Jak pracujemy</h2>
+      <p>Cztery kroki, jasny podział ról. Przy każdym etapie widzisz dokładnie, co należy do Ciebie.</p>
     </div>
-    <div class="about-copy reveal">
-      <span class="mono" style="color:var(--accent)">02 — O mnie</span>
-      <h2>Jeden człowiek. Pełne zaangażowanie.</h2>
-      <p>Cześć! Tworzę strony internetowe dla lokalnych firm — takich jak Twoja. <strong>Nie jestem wielką agencją</strong>, w której gubi się Twój projekt. Rozmawiasz bezpośrednio ze mną, a ja odpowiadam za całość: od pierwszego szkicu po publikację w internecie.</p>
-      <p>Stawiam na proste zasady: nowoczesny wygląd, strona, która działa bezbłędnie na telefonie, i uczciwe warunki bez ukrytych kosztów. <strong>Płacisz dopiero, gdy zaakceptujesz projekt.</strong></p>
-      <div class="about-points">
-        <span>◆ Projektowanie &amp; kodowanie</span>
-        <span>◆ Domena i hosting</span>
-        <span>◆ Wsparcie po starcie</span>
+    <div class="steps4 reveal">
+      <div class="st"><span class="mono">Krok 01</span><h3>Rozmowa</h3><p>Mówisz, czym się zajmujesz i co strona ma osiągnąć.</p><div class="you">Ty: 20 minut rozmowy</div></div>
+      <div class="st"><span class="mono">Krok 02</span><h3>Projekt</h3><p>Przygotowujemy propozycję wyglądu i treści.</p><div class="you">Ty: zdjęcia i uwagi — z tekstami pomagamy</div></div>
+      <div class="st"><span class="mono">Krok 03</span><h3>Poprawki</h3><p>Dopracowujemy szczegóły do skutku, w ramach ceny.</p><div class="you">Ty: akceptacja</div></div>
+      <div class="st"><span class="mono">Krok 04</span><h3>Publikacja</h3><p>Uruchamiamy stronę pod Twoją domeną i pilnujemy startu.</p><div class="you">Ty: nic — przejmujemy całość</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="oferta">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="mono">05 — Oferta</span>
+      <h2>Co robimy</h2>
+    </div>
+    <div class="svc reveal">
+      <div class="scell"><span class="mono">01</span><h3>Projektowanie stron</h3><p>Kompletna strona firmowa — projekt, kod, wdrożenie i domena.</p></div>
+      <div class="scell"><span class="mono">02</span><h3>Landing Page</h3><p>Jedna strona pod konkretną usługę lub kampanię reklamową.</p></div>
+      <div class="scell"><span class="mono">03</span><h3>Sklepy internetowe</h3><p>Sprzedaż online z płatnościami, wysyłką i panelem zamówień.</p></div>
+      <div class="scell"><span class="mono">04</span><h3>Modernizacja stron</h3><p>Odświeżenie istniejącej strony bez budowania jej od zera.</p></div>
+      <div class="scell"><span class="mono">05</span><h3>Audyt UX</h3><p>Analiza obecnej strony i lista konkretnych zmian podnoszących konwersję.</p></div>
+      <div class="scell"><span class="mono">06</span><h3>Optymalizacja szybkości</h3><p>Przyspieszenie strony i poprawa wyników Core Web Vitals.</p></div>
+      <div class="scell"><span class="mono">07</span><h3>SEO techniczne</h3><p>Fundament pod widoczność w Google: struktura, dane, indeksacja.</p></div>
+      <div class="scell"><span class="mono">08</span><h3>Integracje AI</h3><p>Automatyzacje i narzędzia oparte o modele językowe wewnątrz strony.</p></div>
+      <div class="scell"><span class="mono">09</span><h3>Opieka nad stroną</h3><p>Aktualizacje, kopie zapasowe i drobne zmiany po publikacji.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s alt" id="cennik">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="mono">06 — Cennik</span>
+      <h2>Jasne widełki, zero niespodzianek</h2>
+      <p>Wyceny orientacyjne. Ostateczną cenę potwierdzamy przed startem, a płacisz dopiero po akceptacji projektu.</p>
+    </div>
+    <div class="price reveal">
+      <div class="tier">
+        <div class="tn">Landing Page</div>
+        <div class="td">Jedna usługa, kampania, szybki start.</div>
+        <div class="amt">od 2 900 zł<small> / jednorazowo</small></div>
+        <ul><li>Jedna strona, pełna narracja</li><li>Formularz i kontakt</li><li>Podstawy SEO</li><li>Publikacja i domena</li></ul>
+        <a href="#kontakt" class="btn btn-secondary">Wybieram</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="svc" id="oferta">
-  <div class="wrap">
-    <div class="head reveal">
-      <div><span class="mono">03 — Oferta</span><h2 style="margin-top:12px">Co dostajesz</h2></div>
-    </div>
-    <div class="svc-grid reveal">
-      <div class="svc-cell"><span class="num">01</span><h3>Nowoczesny design</h3><p>Czysta, aktualna oprawa dopasowana do Twojej branży — bez szablonów sprzed dekady.</p></div>
-      <div class="svc-cell"><span class="num">02</span><h3>Idealna na telefon</h3><p>Większość klientów wejdzie z komórki. Strona działa i wygląda tam bezbłędnie.</p></div>
-      <div class="svc-cell"><span class="num">03</span><h3>Szybkość i Google</h3><p>Lekki kod, szybkie ładowanie i podstawy pod wyszukiwarkę, żeby Cię znajdowano.</p></div>
-      <div class="svc-cell"><span class="num">04</span><h3>Wszystko ogarnięte</h3><p>Domena, hosting, skrzynka mailowa i mapa — biorę na siebie techniczną stronę.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="guar" id="gwarancje">
-  <div class="wrap">
-    <div class="head reveal">
-      <div><span class="mono">04 — Zasady współpracy</span><h2 style="margin-top:12px">Uczciwie i bez ryzyka</h2></div>
-      <p>Wiem, że oddajesz w moje ręce wizerunek firmy. Dlatego jasne warunki są u mnie standardem.</p>
-    </div>
-    <div class="guar-grid reveal">
-      <div class="g-card"><div class="ic">zł</div><h3>Płatność po akceptacji</h3><p>Najpierw widzisz projekt, potem płacisz. Zero płacenia w ciemno.</p></div>
-      <div class="g-card"><div class="ic">§</div><h3>Umowa i faktura</h3><p>Współpracę potwierdzamy na piśmie. Wystawiam fakturę na firmę.</p></div>
-      <div class="g-card"><div class="ic">↺</div><h3>Poprawki w cenie</h3><p>Dopracowujemy projekt, aż będzie zgodny z tym, co ustaliliśmy.</p></div>
-      <div class="g-card"><div class="ic">☎</div><h3>Wsparcie po starcie</h3><p>Po publikacji nie znikam. Drobne zmiany i pytania — jestem pod telefonem.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="dlaczego">
-  <div class="wrap">
-    <div class="head reveal">
-      <div><span class="mono" style="color:var(--accent)">05 — Konkrety</span><h2 style="margin-top:12px">Dlaczego ja</h2></div>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal"><div class="big">½</div><h3>Cena bez agencyjnych narzutów</h3><p>Pracuję sprawnie i sam, więc płacisz za stronę, a nie za korytarze biura. Zwykle ułamek stawki agencji.</p></div>
-      <div class="why-card reveal"><div class="big">5 dni</div><h3>Szybka realizacja</h3><p>Prosta wizytówka potrafi być gotowa w tydzień. Bez miesięcy czekania i zniknięć.</p></div>
-      <div class="why-card reveal"><div class="big">1:1</div><h3>Kontakt z człowiekiem</h3><p>Rozmawiasz bezpośrednio ze mną. Poprawki i pytania załatwiamy od ręki, po ludzku.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="cennik">
-  <div class="wrap">
-    <div class="head reveal">
-      <div><span class="mono" style="color:var(--accent)">06 — Cennik</span><h2 style="margin-top:12px">Prosty, jasny cennik</h2></div>
-      <p>Wyceny orientacyjne. Ostateczną cenę potwierdzam przed startem — bez niespodzianek.</p>
-    </div>
-    <div class="price-grid">
-      <div class="tier reveal">
-        <div class="tname">Wizytówka</div>
-        <div class="tdesc">Jedna strona, wszystko najważniejsze.</div>
-        <div class="amt">od 899 zł<small> /jednorazowo</small></div>
-        <ul><li>Strona „one-page"</li><li>Dopasowanie do telefonu</li><li>Przycisk / formularz kontaktu</li><li>Mapa i godziny</li></ul>
-        <a href="#kontakt" class="btn btn-line">Wybieram</a>
-      </div>
-      <div class="tier feat reveal">
+      <div class="tier feat">
         <span class="flag">Najczęściej wybierane</span>
-        <div class="tname">Strona firmowa</div>
-        <div class="tdesc">Kilka podstron pod rozwiniętą ofertę.</div>
-        <div class="amt">od 1 900 zł<small> /jednorazowo</small></div>
-        <ul><li>Do 5 podstron</li><li>Galeria i cennik</li><li>Podstawy SEO pod Google</li><li>Wpięcie w Mapy Google</li><li>Skrzynka e-mail w domenie</li></ul>
-        <a href="#kontakt" class="btn" style="background:#fff;color:var(--accent)">Wybieram</a>
+        <div class="tn">Strona firmowa</div>
+        <div class="td">Domyślny wybór lokalnej firmy.</div>
+        <div class="amt">od 5 900 zł<small> / jednorazowo</small></div>
+        <ul><li>Do 6 podstron</li><li>Galeria i cennik</li><li>SEO techniczne i Mapy Google</li><li>Skrzynka e-mail w domenie</li><li>Miesiąc wsparcia po starcie</li></ul>
+        <a href="#kontakt" class="btn" style="background:var(--bg);color:var(--ink)">Wybieram</a>
       </div>
-      <div class="tier reveal">
-        <div class="tname">Premium</div>
-        <div class="tdesc">Blog, rezerwacje, sklep-lite.</div>
-        <div class="amt">od 3 500 zł<small> /jednorazowo</small></div>
-        <ul><li>Rozbudowana struktura</li><li>Blog lub aktualności</li><li>Rezerwacje online</li><li>Panel do samodzielnych zmian</li></ul>
-        <a href="#kontakt" class="btn btn-line">Wybieram</a>
+      <div class="tier">
+        <div class="tn">Sklep / rozbudowana</div>
+        <div class="td">E-commerce, rezerwacje, integracje.</div>
+        <div class="amt">od 12 900 zł<small> / jednorazowo</small></div>
+        <ul><li>Sprzedaż lub rezerwacje online</li><li>Panel do samodzielnych zmian</li><li>Integracje i automatyzacje</li><li>Rozbudowana struktura</li></ul>
+        <a href="#kontakt" class="btn btn-secondary">Wybieram</a>
       </div>
     </div>
-    <p class="price-note">Domena i hosting: zwykle 100–250 zł/rok. Opieka nad stroną — opcjonalnie od 49 zł/mies.</p>
+    <p class="pnote">Domena i hosting: zwykle 100–250 zł rocznie. Opieka nad stroną — opcjonalnie od 149 zł miesięcznie.</p>
   </div>
 </section>
 
-<section id="proces">
+<section class="s" id="faq">
   <div class="wrap">
-    <div class="head reveal">
-      <div><span class="mono" style="color:var(--accent)">07 — Proces</span><h2 style="margin-top:12px">Jak to wygląda</h2></div>
+    <div class="shead reveal">
+      <span class="mono">07 — FAQ</span>
+      <h2>Częste pytania</h2>
     </div>
-    <div class="steps reveal">
-      <div class="step"><div class="sn">Krok 01</div><h3>Rozmowa</h3><p>Mówisz, czym się zajmujesz. Ustalamy, co strona ma osiągnąć.</p></div>
-      <div class="step"><div class="sn">Krok 02</div><h3>Projekt</h3><p>Przygotowuję propozycję wyglądu i treści. Ty dajesz uwagi.</p></div>
-      <div class="step"><div class="sn">Krok 03</div><h3>Poprawki</h3><p>Dopieszczamy szczegóły, aż będzie dokładnie tak, jak chcesz.</p></div>
-      <div class="step"><div class="sn">Krok 04</div><h3>Publikacja</h3><p>Wrzucam stronę do sieci pod Twoją domeną. Gotowe.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap">
-    <div class="head reveal">
-      <div><span class="mono" style="color:var(--accent)">08 — FAQ</span><h2 style="margin-top:12px">Częste pytania</h2></div>
-    </div>
-    <div class="faq-list reveal">
-      <details class="faq"><summary>Ile trwa zrobienie strony?<span class="plus">+</span></summary><div class="fa">Prosta wizytówka to zwykle 3–7 dni roboczych od momentu, gdy mam od Ciebie treści i zdjęcia. Większe strony — do dwóch tygodni. Termin potwierdzam na starcie.</div></details>
-      <details class="faq"><summary>Nie mam tekstów ani zdjęć. Co wtedy?<span class="plus">+</span></summary><div class="fa">Nie problem. Pomogę ułożyć treści, a jeśli brakuje zdjęć, podpowiem, skąd wziąć dobre (własne z telefonu zwykle wystarczą) albo zaproponuję rozwiązania tymczasowe.</div></details>
-      <details class="faq"><summary>Czy będę mógł sam edytować stronę?<span class="plus">+</span></summary><div class="fa">Zależy od pakietu. W wersji Premium dostajesz prosty panel do samodzielnych zmian. W tańszych pakietach drobne poprawki robię dla Ciebie w ramach wsparcia.</div></details>
-      <details class="faq"><summary>Co z domeną i hostingiem?<span class="plus">+</span></summary><div class="fa">Ogarniam to za Ciebie — od rejestracji adresu (np. twojafirma.pl) po uruchomienie strony. Roczny koszt domeny i hostingu to zwykle 100–250 zł i jest jasno rozpisany.</div></details>
-      <details class="faq"><summary>A jeśli projekt mi się nie spodoba?<span class="plus">+</span></summary><div class="fa">Najpierw pokazuję projekt, a płacisz dopiero po jego akceptacji. Poprawki wprowadzamy do skutku, w ramach ustalonej ceny. Nie płacisz za coś, czego nie zatwierdziłeś.</div></details>
-      <details class="faq"><summary>Wystawiasz fakturę?<span class="plus">+</span></summary><div class="fa">Tak. Współpracę potwierdzamy umową, a za usługę wystawiam fakturę na firmę.</div></details>
+    <div class="faq reveal">
+      <details class="q" open><summary>Ile trwa zrobienie strony?<span class="ic"></span></summary><div class="a">Landing page to zwykle 5–7 dni roboczych, strona firmowa 10–14 dni — licząc od momentu, gdy mamy komplet treści i zdjęć. Termin potwierdzamy na starcie.</div></details>
+      <details class="q"><summary>Nie mam tekstów ani zdjęć. Co wtedy?<span class="ic"></span></summary><div class="a">To najczęstsza sytuacja i nie jest problemem. Teksty układamy wspólnie na podstawie rozmowy, a przy zdjęciach podpowiadamy, co i jak sfotografować telefonem, żeby wyglądało dobrze.</div></details>
+      <details class="q"><summary>A jeśli projekt mi się nie spodoba?<span class="ic"></span></summary><div class="a">Najpierw pokazujemy projekt, płacisz dopiero po jego akceptacji. Poprawki wprowadzamy do skutku w ramach ustalonej ceny. Nie płacisz za coś, czego nie zatwierdziłeś.</div></details>
+      <details class="q"><summary>Czy będę mógł sam edytować stronę?<span class="ic"></span></summary><div class="a">W pakiecie rozbudowanym dostajesz panel do samodzielnych zmian. W pozostałych drobne poprawki wprowadzamy dla Ciebie w ramach wsparcia — zwykle tego samego dnia.</div></details>
+      <details class="q"><summary>Co z domeną i hostingiem?<span class="ic"></span></summary><div class="a">Zajmujemy się tym za Ciebie — od rejestracji adresu po uruchomienie strony. Roczny koszt to zwykle 100–250 zł i jest jasno rozpisany przed startem.</div></details>
+      <details class="q"><summary>Wystawiacie fakturę?<span class="ic"></span></summary><div class="a">Tak. Współpracę potwierdzamy umową, a za usługę wystawiamy fakturę na firmę.</div></details>
     </div>
   </div>
 </section>
 
-<section id="kontakt">
+<section class="s" id="kontakt">
   <div class="wrap">
-    <div class="contact-grid reveal">
-      <div class="c-left">
-        <span class="mono" style="color:rgba(255,255,255,.7)">09 — Kontakt</span>
-        <h2 style="margin-top:14px">Zróbmy Ci stronę</h2>
-        <p>Napisz w dwóch zdaniach, czym się zajmujesz. Odeślę bezpłatną wycenę — bez zobowiązań.</p>
-        <a class="c-contact" href="mailto:kontakt@studiowidoczni.pl"><span>E-mail</span>kontakt@studiowidoczni.pl</a>
-        <a class="c-contact" href="tel:+48500600700"><span>Telefon</span>500 600 700</a>
+    <div class="contact reveal">
+      <div class="cl">
+        <span class="mono" style="color:color-mix(in srgb,var(--bg) 55%,transparent)">08 — Kontakt</span>
+        <h2 style="margin-top:14px">Gotowy na stronę, która <span class="serif">naprawdę sprzedaje</span>?</h2>
+        <p>Napisz w dwóch zdaniach, czym się zajmujesz. Odeślemy bezpłatną wycenę — bez zobowiązań.</p>
+        <a class="cinfo" href="mailto:kontakt@studiowidoczni.pl"><small>E-mail</small><b>kontakt@studiowidoczni.pl</b></a>
+        <a class="cinfo" href="tel:+48500600700"><small>Telefon</small><b>500 600 700</b></a>
       </div>
-      <div class="c-right">
+      <div class="cr">
         <form action="https://formspree.io/f/TWOJ_ID" method="POST">
-          <div class="field"><label for="n">Imię</label><input id="n" type="text" name="imie" placeholder="Jan Kowalski" required></div>
-          <div class="field"><label for="e">E-mail lub telefon</label><input id="e" type="text" name="kontakt" placeholder="jan@firma.pl" required></div>
-          <div class="field"><label for="m">Czym się zajmujesz?</label><textarea id="m" name="wiadomosc" placeholder="Np. Prowadzę warsztat samochodowy w Łodzi i potrzebuję prostej strony z cennikiem." required></textarea></div>
-          <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center">Wyślij zapytanie</button>
-          <p class="form-note">Odpowiadam zwykle w ciągu 24 godzin.</p>
+          <div class="fld"><label for="n">Imię</label><input id="n" name="imie" type="text" placeholder="Jan Kowalski" required></div>
+          <div class="fld"><label for="e">E-mail lub telefon</label><input id="e" name="kontakt" type="text" placeholder="jan@firma.pl" required></div>
+          <div class="fld"><label for="m">Czym się zajmujesz?</label><textarea id="m" name="wiadomosc" placeholder="Prowadzę warsztat samochodowy w Łodzi i potrzebuję strony z cennikiem." required></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Wyślij zapytanie <span class="arw">→</span></button>
+          <p class="fnote">Odpowiadamy zwykle w ciągu 24 godzin.</p>
         </form>
       </div>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand"><svg class="wmark" viewBox="0 0 149 100" aria-hidden="true"><path d="M1 0 L31 0 L67 72 L53 100 Z"/><path d="M71 0 L95 0 L79 59 Q74 64 70 56 L64 45 Z"/><path d="M79 52 Q92 58 104 46 L113 70 L99 100 Z"/><path d="M124 0 L149 0 L115 67 L107 45 Z"/></svg>Studio Widoczni<p>Profesjonalne strony internetowe dla lokalnych firm. Łódź i cała Polska — online.</p></div>
-      <div class="foot-cols">
-        <div class="foot-col">
+    <div class="ftop">
+      <div class="fbrand">
+        <svg class="wmark" viewBox="0 0 149 100" aria-hidden="true"><path d="M1 0 L31 0 L67 72 L53 100 Z"/><path d="M71 0 L95 0 L79 59 Q74 64 70 56 L64 45 Z"/><path d="M79 52 Q92 58 104 46 L113 70 L99 100 Z"/><path d="M124 0 L149 0 L115 67 L107 45 Z"/></svg>
+        <strong>Studio Widoczni</strong>
+        <p>Strony internetowe dla lokalnych firm. Łódź i cała Polska — online.</p>
+      </div>
+      <div class="fcols">
+        <div class="fcol">
           <h4>Nawigacja</h4>
+          <a href="#audyt">Audyt AI</a>
           <a href="#realizacje">Realizacje</a>
-          <a href="#o-mnie">O mnie</a>
+          <a href="#proces">Proces</a>
           <a href="#cennik">Cennik</a>
           <a href="#faq">FAQ</a>
         </div>
-        <div class="foot-col">
+        <div class="fcol">
           <h4>Kontakt</h4>
           <a href="mailto:kontakt@studiowidoczni.pl">kontakt@studiowidoczni.pl</a>
           <a href="tel:+48500600700">500 600 700</a>
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
+          <p>Łódź, Polska</p>
         </div>
       </div>
     </div>
-    <div class="foot-bottom">
+    <div class="fbot">
       <span>© 2025 Studio Widoczni · studiowidoczni.pl</span>
-      <span>NIP 000-000-00-00 · Łódź</span>
+      <span>NIP 000-000-00-00</span>
     </div>
   </div>
 </footer>
 
 <script>
-  const burger=document.getElementById('burger'), menu=document.getElementById('menu');
-  burger.addEventListener('click',()=>menu.classList.toggle('open'));
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var burger=document.getElementById('burger'), menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.classList.toggle('x',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){menu.classList.remove('open');burger.classList.remove('x');burger.setAttribute('aria-expanded','false');});
+  });
+
+  var cv=document.getElementById('field'), ctx=cv.getContext('2d');
+  var W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2);
+  var mx=-9999,my=-9999,tmx=-9999,tmy=-9999,t=0;
+  var GAP=30,STEP=14,R=190;
+  function size(){var r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
+  function base(){return getComputedStyle(document.documentElement).getPropertyValue('--ink').trim()==='#fafafa'?'255,255,255':'10,10,10';}
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    mx+=(tmx-mx)*.09; my+=(tmy-my)*.09;
+    var c=base(); ctx.lineWidth=1;
+    for(var x=GAP/2;x<W;x+=GAP){
+      var near=1e9; ctx.beginPath();
+      for(var y=-STEP;y<=H+STEP;y+=STEP){
+        var dx=Math.sin(y*0.0075+t*0.35+x*0.004)*5;
+        var ax=x-mx, ay=y-my, d=Math.sqrt(ax*ax+ay*ay);
+        if(d<R){var k=1-d/R; dx+=(ax/(d||1))*k*k*30; if(d<near) near=d;}
+        if(y===-STEP) ctx.moveTo(x+dx,y); else ctx.lineTo(x+dx,y);
+      }
+      var a=.08+(near<R?(1-near/R)*.34:0);
+      ctx.strokeStyle='rgba('+c+','+a.toFixed(3)+')';
+      ctx.stroke();
+    }
+    t+=0.016; requestAnimationFrame(draw);
+  }
+  size(); window.addEventListener('resize',size);
+  if(RM){for(var x0=GAP/2;x0<W;x0+=GAP){ctx.beginPath();ctx.moveTo(x0,0);ctx.lineTo(x0,H);ctx.strokeStyle='rgba('+base()+',.08)';ctx.stroke();}}
+  else draw();
+
+  var hero=document.querySelector('.hero'), glow=document.getElementById('glow');
+  hero.addEventListener('pointermove',function(e){
+    var r=hero.getBoundingClientRect(); tmx=e.clientX-r.left; tmy=e.clientY-r.top;
+    glow.style.transform='translate3d('+(tmx-320)+'px,'+(tmy-320)+'px,0)';
+  });
+  hero.addEventListener('pointerleave',function(){tmx=-9999;tmy=-9999;});
+
+  ['b0','r1','r2','r3','r4'].forEach(function(id,i){
+    var el=document.getElementById(id); if(el) setTimeout(function(){el.classList.add('on');},120+i*115);
+  });
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.08,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  var form=document.getElementById('af'), stage=document.getElementById('stage'),
+      report=document.getElementById('report'), go=document.getElementById('go'),
+      steps=Array.prototype.slice.call(document.querySelectorAll('#steps li'));
+  function countTo(el,end,dur){
+    if(RM){el.textContent=end;return;}
+    var t0=null;
+    requestAnimationFrame(function step(ts){
+      if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1);
+      el.textContent=Math.round(end*(1-Math.pow(1-p,3)));
+      if(p<1)requestAnimationFrame(step);
+    });
+  }
+  function showReport(){
+    report.classList.add('on');
+    report.scrollIntoView({behavior:RM?'auto':'smooth',block:'center'});
+    setTimeout(function(){
+      document.getElementById('arc').style.strokeDashoffset=534*(1-0.83);
+      countTo(document.getElementById('score'),83,1900);
+      document.querySelectorAll('#cats .cat').forEach(function(c,i){
+        var v=+c.dataset.v;
+        setTimeout(function(){c.querySelector('.bar i').style.width=v+'%';countTo(c.querySelector('.sc'),v,1300);},i*110);
+      });
+      document.querySelectorAll('#issues li').forEach(function(li,i){setTimeout(function(){li.classList.add('in');},700+i*90);});
+      document.querySelectorAll('#fixes li').forEach(function(li,i){setTimeout(function(){li.classList.add('in');},1200+i*90);});
+    },120);
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    go.disabled=true; go.textContent='Analizuję…';
+    report.classList.remove('on');
+    steps.forEach(function(s){s.className='';});
+    stage.classList.add('on');
+    stage.scrollIntoView({behavior:RM?'auto':'smooth',block:'center'});
+    var i=0;
+    (function next(){
+      if(i>0) steps[i-1].className='done';
+      if(i>=steps.length){
+        setTimeout(function(){
+          stage.classList.remove('on');
+          go.disabled=false; go.innerHTML='Analizuj ponownie <span class="arw">→</span>';
+          showReport();
+        },380); return;
+      }
+      steps[i].className='act';
+      setTimeout(function(){i++;next();}, RM?60:+steps[i].dataset.ms);
+    })();
+  });
+})();
 </script>
 </body>
 </html>
