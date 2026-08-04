@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Widoczni — Profesjonalne strony internetowe dla lokalnych firm</title>
+<meta name="description" content="Studio Widoczni projektuje nowoczesne, szybkie strony dla lokalnych firm. Świetnie działają na telefonie, powstają w kilka dni, w uczciwej cenie. Bezpłatna wycena.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f4f1;
+    --panel:#ffffff;
+    --ink:#121212;
+    --ink-soft:#54544f;
+    --line:rgba(18,18,18,.13);
+    --accent:#2540e6;
+    --accent-dk:#1a2fb0;
+    --accent-tint:#eef0ff;
+    --ok:#16a34a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.62;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.03em;line-height:1.03;font-weight:600}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 30px}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:'Space Mono',monospace;font-size:.73rem;letter-spacing:.09em;text-transform:uppercase}
+  :focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;padding:14px 26px;border-radius:100px;transition:.2s;border:1.5px solid transparent;font-family:'Space Grotesk';cursor:pointer}
+  .btn-solid{background:var(--ink);color:var(--bg)}
+  .btn-solid:hover{background:var(--accent)}
+  .btn-accent{background:var(--accent);color:#fff}
+  .btn-accent:hover{background:var(--accent-dk)}
+  .btn-line{border-color:var(--ink);color:var(--ink)}
+  .btn-line:hover{background:var(--ink);color:var(--bg)}
+
+  header{position:sticky;top:0;z-index:60;background:rgba(245,244,241,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:'Space Grotesk';font-weight:700;font-size:1.32rem;letter-spacing:-.04em;display:flex;align-items:center;gap:9px}
+  .brand .dot{width:9px;height:9px;background:var(--accent);border-radius:50%;display:inline-block;margin-bottom:2px}
+  .navlinks{display:flex;gap:30px;align-items:center}
+  .navlinks a{font-size:.93rem;font-weight:500;color:var(--ink-soft);transition:color .2s}
+  .navlinks a:hover{color:var(--ink)}
+  .navlinks .btn{color:var(--bg)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:24px;height:2px;background:var(--ink);border-radius:2px}
+
+  .hero{padding:84px 0 68px}
+  .status{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:100px;padding:7px 15px;margin-bottom:32px;background:var(--panel)}
+  .status .live{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.5)}70%{box-shadow:0 0 0 8px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
+  .hero h1{font-size:clamp(2.9rem,7.2vw,5.9rem)}
+  .hero h1 .thin{-webkit-text-stroke:1.4px var(--ink);color:transparent}
+  .hero-sub{font-size:1.2rem;color:var(--ink-soft);max-width:47ch;margin:28px 0 34px}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .hero-micro{margin-top:16px;font-size:.86rem;color:var(--ink-soft);display:flex;gap:18px;flex-wrap:wrap}
+  .hero-micro span{display:flex;align-items:center;gap:7px}
+  .hero-micro .c{color:var(--ok);font-weight:700}
+  .hero-meta{display:flex;gap:36px;margin-top:50px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
+  .hero-meta .n{font-family:'Space Grotesk';font-weight:600;font-size:1.85rem}
+  .hero-meta .l{font-size:.85rem;color:var(--ink-soft)}
+
+  .band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:15px 0;background:var(--panel)}
+  .band span{font-family:'Space Grotesk';font-weight:500;font-size:1.02rem;padding:0 22px}
+  .band .x{color:var(--accent)}
+
+  section{padding:94px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:50px}
+  .head h2{font-size:clamp(2.1rem,4.3vw,3.3rem);max-width:17ch}
+  .head p{color:var(--ink-soft);max-width:40ch;font-size:1rem}
+
+  .work{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .26s,box-shadow .26s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(18,18,18,.12)}
+  .frame{padding:14px 14px 0}
+  .bar{display:flex;align-items:center;gap:6px;padding:0 4px 10px}
+  .bar i{width:11px;height:11px;border-radius:50%;background:var(--line)}
+  .bar .url{margin-left:10px;font-family:'Space Mono';font-size:.72rem;color:var(--ink-soft);background:var(--bg);padding:4px 12px;border-radius:100px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .shot{height:290px;border-radius:10px 10px 0 0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:34px}
+  .shot.salon{background:radial-gradient(120% 100% at 80% 10%, rgba(231,188,192,.85), transparent 55%),linear-gradient(160deg,#5a3542,#2a141c)}
+  .shot.cafe{background:radial-gradient(120% 110% at 25% 15%,#e0a44a,#8a5620 60%,#4a2f1e)}
+  .shot .stag{font-family:'Space Mono';font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px}
+  .shot .sname{font-family:'Space Grotesk';font-weight:700;font-size:2.4rem;color:#fff;line-height:1}
+  .shot.cafe .sname{color:#2b1a12}
+  .shot .sdesc{color:rgba(255,255,255,.82);font-size:.94rem;margin-top:10px;max-width:26ch}
+  .shot.cafe .sdesc{color:rgba(43,26,18,.78)}
+  .shot .pill{align-self:flex-start;margin-top:20px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:#fff;padding:7px 14px;border-radius:100px;font-size:.82rem;font-weight:500}
+  .shot.cafe .pill{background:rgba(43,26,18,.1);border-color:rgba(43,26,18,.25);color:#2b1a12}
+  .cmeta{display:flex;justify-content:space-between;align-items:center;padding:20px 22px}
+  .cmeta .idx{font-family:'Space Mono';color:var(--accent);font-size:.8rem}
+  .cmeta .go{font-family:'Space Grotesk';font-weight:600;display:flex;align-items:center;gap:7px;transition:gap .2s}
+  .card:hover .cmeta .go{gap:12px}
+
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .portrait{aspect-ratio:4/5;border-radius:18px;position:relative;overflow:hidden;background:linear-gradient(160deg,#2540e6,#101a5c);display:flex;align-items:flex-end;padding:26px}
+  .portrait::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.3px,transparent 1.3px);background-size:13px 13px}
+  .portrait .ph{position:relative;z-index:2;color:#fff;font-family:'Space Grotesk';font-weight:600;font-size:1.1rem;opacity:.9}
+  .portrait .init{position:absolute;top:24px;left:26px;z-index:2;font-family:'Space Grotesk';font-weight:700;font-size:3rem;color:rgba(255,255,255,.25)}
+  .about-copy h2{font-size:clamp(2rem,4vw,3rem);margin:12px 0 20px}
+  .about-copy p{color:var(--ink-soft);margin-bottom:16px;max-width:52ch}
+  .about-copy p strong{color:var(--ink);font-weight:600}
+  .about-points{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+  .about-points span{background:var(--panel);border:1px solid var(--line);border-radius:100px;padding:9px 16px;font-size:.9rem;font-weight:500}
+
+  .svc{background:var(--ink);color:var(--bg)}
+  .svc .head h2{color:var(--bg)}
+  .svc .head .mono{color:#8f9dff}
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.13);border-radius:14px;overflow:hidden}
+  .svc-cell{background:var(--ink);padding:32px 26px;min-height:196px;display:flex;flex-direction:column}
+  .svc-cell .num{font-family:'Space Mono';font-size:.78rem;color:#8f9dff;margin-bottom:auto}
+  .svc-cell h3{font-size:1.32rem;margin:0 0 10px}
+  .svc-cell p{font-size:.93rem;color:rgba(245,244,241,.66)}
+
+  .guar{background:var(--accent-tint)}
+  .guar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .g-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px 24px}
+  .g-card .ic{width:40px;height:40px;border-radius:10px;background:var(--accent-tint);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;margin-bottom:16px;border:1px solid rgba(37,64,230,.2)}
+  .g-card h3{font-size:1.12rem;margin-bottom:6px}
+  .g-card p{font-size:.9rem;color:var(--ink-soft)}
+
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .why-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 30px}
+  .why-card .big{font-family:'Space Grotesk';font-weight:700;font-size:2.6rem;color:var(--accent);line-height:1;margin-bottom:14px}
+  .why-card h3{font-size:1.22rem;margin-bottom:8px}
+  .why-card p{font-size:.95rem;color:var(--ink-soft)}
+
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tier{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 30px;display:flex;flex-direction:column;position:relative}
+  .tier.feat{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .tier .flag{position:absolute;top:-11px;left:30px;background:var(--accent);color:#fff;font-family:'Space Mono';font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px}
+  .tier .tname{font-family:'Space Grotesk';font-weight:600;font-size:1.28rem;margin-bottom:6px}
+  .tier .tdesc{font-size:.9rem;color:var(--ink-soft);margin-bottom:22px}
+  .tier.feat .tdesc{color:rgba(245,244,241,.7)}
+  .tier .amt{font-family:'Space Grotesk';font-weight:700;font-size:2.35rem;line-height:1}
+  .tier .amt small{font-family:'Inter';font-weight:500;font-size:.88rem;color:var(--ink-soft)}
+  .tier.feat .amt small{color:rgba(245,244,241,.7)}
+  .tier ul{list-style:none;margin:24px 0 28px;flex:1}
+  .tier li{padding:9px 0;font-size:.93rem;border-top:1px solid var(--line);display:flex;gap:10px}
+  .tier.feat li{border-color:rgba(255,255,255,.15)}
+  .tier li::before{content:"→";color:var(--accent);font-weight:700}
+  .tier.feat li::before{color:#8f9dff}
+  .price-note{text-align:center;margin-top:26px;font-size:.9rem;color:var(--ink-soft)}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel)}
+  .step{padding:32px 26px;border-right:1px solid var(--line)}
+  .step:last-child{border-right:0}
+  .step .sn{font-family:'Space Mono';font-size:.78rem;color:var(--accent);margin-bottom:16px}
+  .step h3{font-size:1.18rem;margin-bottom:8px}
+  .step p{font-size:.91rem;color:var(--ink-soft)}
+
+  .faq-list{max-width:820px}
+  details.faq{border:1px solid var(--line);border-radius:14px;background:var(--panel);margin-bottom:12px;overflow:hidden}
+  details.faq summary{list-style:none;cursor:pointer;padding:22px 26px;font-family:'Space Grotesk';font-weight:600;font-size:1.08rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary .plus{width:26px;height:26px;flex-shrink:0;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:400;font-size:1.2rem;transition:.25s}
+  details.faq[open] summary .plus{transform:rotate(45deg);background:var(--accent);color:#fff;border-color:var(--accent)}
+  details.faq .fa{padding:0 26px 24px;color:var(--ink-soft);font-size:.98rem;max-width:70ch}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+  .c-left{padding:48px 44px;background:var(--accent);color:#fff}
+  .c-left h2{color:#fff;font-size:2.3rem;margin-bottom:14px}
+  .c-left p{color:rgba(255,255,255,.86);margin-bottom:30px;max-width:34ch}
+  .c-contact{display:block;font-family:'Space Grotesk';font-weight:600;font-size:1.15rem;margin-bottom:12px;color:#fff}
+  .c-contact span{display:block;font-family:'Inter';font-weight:400;font-size:.8rem;opacity:.75;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
+  .c-right{padding:44px 42px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:7px}
+  .field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-family:'Inter';font-size:.96rem;background:var(--bg);transition:border .2s}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+  .field textarea{resize:vertical;min-height:110px}
+  .form-note{font-size:.8rem;color:var(--ink-soft);margin-top:12px}
+
+  footer{padding:56px 0 30px;border-top:1px solid var(--line)}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:26px}
+  .foot-brand{font-family:'Space Grotesk';font-weight:700;font-size:1.5rem;letter-spacing:-.03em}
+  .foot-brand p{font-family:'Inter';font-weight:400;font-size:.92rem;color:var(--ink-soft);margin-top:8px;max-width:32ch}
+  .foot-cols{display:flex;gap:52px;flex-wrap:wrap}
+  .foot-col h4{font-family:'Space Mono';font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px}
+  .foot-col a,.foot-col p{display:block;font-size:.94rem;margin-bottom:7px;color:var(--ink)}
+  .foot-col a:hover{color:var(--accent)}
+  .foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.82rem;color:var(--ink-soft)}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:920px){
+    .navlinks{position:fixed;inset:74px 0 auto 0;background:var(--bg);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);transform:translateY(-170%);transition:transform .35s}
+    .navlinks.open{transform:none}
+    .navlinks a{padding:14px 30px;width:100%}
+    .navlinks .btn{margin:8px 30px}
+    .burger{display:flex}
+    .work,.svc-grid,.why-grid,.price-grid,.steps,.guar-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .svc-cell{min-height:auto}
+    .step{border-right:0;border-bottom:1px solid var(--line)}
+    .step:last-child{border-bottom:0}
+    .portrait{aspect-ratio:16/11}
+    section{padding:62px 0}
+  }
+  @media(max-width:600px){.guar-grid{grid-template-columns:1fr}}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.reveal,.status .live{transition:none;opacity:1;transform:none;animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Widoczni<span class="dot"></span></div>
+    <nav class="navlinks" id="menu">
+      <a href="#realizacje">Realizacje</a>
+      <a href="#o-mnie">O mnie</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt" class="btn btn-solid">Wyceń stronę</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="status"><span class="live"></span><span class="mono">Przyjmuję projekty · Łódź i online</span></div>
+    <h1 class="reveal">Profesjonalne strony<br>dla <span class="thin">lokalnych</span> firm.</h1>
+    <p class="hero-sub reveal">Projektuję nowoczesne, szybkie strony, które świetnie wyglądają na telefonie i pomagają klientom Cię znaleźć. Konkret, uczciwa cena i kontakt z jednym człowiekiem od początku do końca.</p>
+    <div class="hero-cta reveal">
+      <a href="#kontakt" class="btn btn-accent">Bezpłatna wycena</a>
+      <a href="#realizacje" class="btn btn-line">Zobacz realizacje</a>
+    </div>
+    <div class="hero-micro reveal">
+      <span><span class="c">✓</span> Odpowiedź w 24h</span>
+      <span><span class="c">✓</span> Płatność po akceptacji</span>
+      <span><span class="c">✓</span> Bez zobowiązań</span>
+    </div>
+    <div class="hero-meta reveal">
+      <div class="m"><div class="n">100%</div><div class="l">Dopasowane do telefonu</div></div>
+      <div class="m"><div class="n">~5 dni</div><div class="l">Średni czas realizacji</div></div>
+      <div class="m"><div class="n">od 899 zł</div><div class="l">Za stronę-wizytówkę</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <span>Restauracje &amp; kawiarnie</span><span class="x">/</span><span>Salony &amp; usługi</span><span class="x">/</span><span>Warsztaty</span><span class="x">/</span><span>Gabinety</span><span class="x">/</span><span>Sklepy lokalne</span><span class="x">/</span><span>Mobile-first</span><span class="x">/</span>
+</div>
+
+<section id="realizacje">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="mono" style="color:var(--accent)">01 — Portfolio</span><h2 style="margin-top:12px">Wybrane realizacje</h2></div>
+      <p>Kliknij, aby zobaczyć żywą stronę. Każda powstała od zera i jest w pełni responsywna.</p>
+    </div>
+    <div class="work">
+      <a class="card reveal" href="salon-urody-rosa.html" target="_blank" rel="noopener">
+        <div class="frame">
+          <div class="bar"><i></i><i></i><i></i><span class="url">rosa-studio.pl</span></div>
+          <div class="shot salon">
+            <div class="stag">Salon urody</div>
+            <div class="sname">ROSA</div>
+            <div class="sdesc">Elegancka strona salonu fryzjersko-kosmetycznego z cennikiem i galerią.</div>
+            <span class="pill">Fryzjer · Kosmetologia</span>
+          </div>
+        </div>
+        <div class="cmeta"><span class="idx">// 01</span><span class="go">Zobacz na żywo →</span></div>
+      </a>
+      <a class="card reveal" href="kawiarnia-ziarno.html" target="_blank" rel="noopener">
+        <div class="frame">
+          <div class="bar"><i></i><i></i><i></i><span class="url">ziarno-kawiarnia.pl</span></div>
+          <div class="shot cafe">
+            <div class="stag">Kawiarnia</div>
+            <div class="sname">ZIARNO</div>
+            <div class="sdesc">Ciepła, energiczna strona kawiarni z menu, galerią i godzinami otwarcia.</div>
+            <span class="pill">Gastronomia</span>
+          </div>
+        </div>
+        <div class="cmeta"><span class="idx">// 02</span><span class="go">Zobacz na żywo →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="o-mnie">
+  <div class="wrap about-grid">
+    <div class="portrait reveal">
+      <span class="init">W</span>
+      <span class="ph">[ Tu Twoje zdjęcie ]</span>
+    </div>
+    <div class="about-copy reveal">
+      <span class="mono" style="color:var(--accent)">02 — O mnie</span>
+      <h2>Jeden człowiek. Pełne zaangażowanie.</h2>
+      <p>Cześć! Tworzę strony internetowe dla lokalnych firm — takich jak Twoja. <strong>Nie jestem wielką agencją</strong>, w której gubi się Twój projekt. Rozmawiasz bezpośrednio ze mną, a ja odpowiadam za całość: od pierwszego szkicu po publikację w internecie.</p>
+      <p>Stawiam na proste zasady: nowoczesny wygląd, strona, która działa bezbłędnie na telefonie, i uczciwe warunki bez ukrytych kosztów. <strong>Płacisz dopiero, gdy zaakceptujesz projekt.</strong></p>
+      <div class="about-points">
+        <span>◆ Projektowanie &amp; kodowanie</span>
+        <span>◆ Domena i hosting</span>
+        <span>◆ Wsparcie po starcie</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="oferta">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="mono">03 — Oferta</span><h2 style="margin-top:12px">Co dostajesz</h2></div>
+    </div>
+    <div class="svc-grid reveal">
+      <div class="svc-cell"><span class="num">01</span><h3>Nowoczesny design</h3><p>Czysta, aktualna oprawa dopasowana do Twojej branży — bez szablonów sprzed dekady.</p></div>
+      <div class="svc-cell"><span class="num">02</span><h3>Idealna na telefon</h3><p>Większość klientów wejdzie z komórki. Strona działa i wygląda tam bezbłędnie.</p></div>
+      <div class="svc-cell"><span class="num">03</span><h3>Szybkość i Google</h3><p>Lekki kod, szybkie ładowanie i podstawy pod wyszukiwarkę, żeby Cię znajdowano.</p></div>
+      <div class="svc-cell"><span class="num">04</span><h3>Wszystko ogarnięte</h3><p>Domena, hosting, skrzynka mailowa i mapa — biorę na siebie techniczną stronę.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="guar" id="gwarancje">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="mono">04 — Zasady współpracy</span><h2 style="margin-top:12px">Uczciwie i bez ryzyka</h2></div>
+      <p>Wiem, że oddajesz w moje ręce wizerunek firmy. Dlatego jasne warunki są u mnie standardem.</p>
+    </div>
+    <div class="guar-grid reveal">
+      <div class="g-card"><div class="ic">zł</div><h3>Płatność po akceptacji</h3><p>Najpierw widzisz projekt, potem płacisz. Zero płacenia w ciemno.</p></div>
+      <div class="g-card"><div class="ic">§</div><h3>Umowa i faktura</h3><p>Współpracę potwierdzamy na piśmie. Wystawiam fakturę na firmę.</p></div>
+      <div class="g-card"><div class="ic">↺</div><h3>Poprawki w cenie</h3><p>Dopracowujemy projekt, aż będzie zgodny z tym, co ustaliliśmy.</p></div>
+      <div class="g-card"><div class="ic">☎</div><h3>Wsparcie po starcie</h3><p>Po publikacji nie znikam. Drobne zmiany i pytania — jestem pod telefonem.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="dlaczego">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="mono" style="color:var(--accent)">05 — Konkrety</span><h2 style="margin-top:12px">Dlaczego ja</h2></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="big">½</div><h3>Cena bez agencyjnych narzutów</h3><p>Pracuję sprawnie i sam, więc płacisz za stronę, a nie za korytarze biura. Zwykle ułamek stawki agencji.</p></div>
+      <div class="why-card reveal"><div class="big">5 dni</div><h3>Szybka realizacja</h3><p>Prosta wizytówka potrafi być gotowa w tydzień. Bez miesięcy czekania i zniknięć.</p></div>
+      <div class="why-card reveal"><div class="big">1:1</div><h3>Kontakt z człowiekiem</h3><p>Rozmawiasz bezpośrednio ze mną. Poprawki i pytania załatwiamy od ręki, po ludzku.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cennik">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="mono" style="color:var(--accent)">06 — Cennik</span><h2 style="margin-top:12px">Prosty, jasny cennik</h2></div>
+      <p>Wyceny orientacyjne. Ostateczną cenę potwierdzam przed startem — bez niespodzianek.</p>
+    </div>
+    <div class="price-grid">
+      <div class="tier reveal">
+        <div class="tname">Wizytówka</div>
+        <div class="tdesc">Jedna strona, wszystko najważniejsze.</div>
+        <div class="amt">od 899 zł<small> /jednorazowo</small></div>
+        <ul><li>Strona „one-page"</li><li>Dopasowanie do telefonu</li><li>Przycisk / formularz kontaktu</li><li>Mapa i godziny</li></ul>
+        <a href="#kontakt" class="btn btn-line">Wybieram</a>
+      </div>
+      <div class="tier feat reveal">
+        <span class="flag">Najczęściej wybierane</span>
+        <div class="tname">Strona firmowa</div>
+        <div class="tdesc">Kilka podstron pod rozwiniętą ofertę.</div>
+        <div class="amt">od 1 900 zł<small> /jednorazowo</small></div>
+        <ul><li>Do 5 podstron</li><li>Galeria i cennik</li><li>Podstawy SEO pod Google</li><li>Wpięcie w Mapy Google</li><li>Skrzynka e-mail w domenie</li></ul>
+        <a href="#kontakt" class="btn" style="background:#fff;color:var(--accent)">Wybieram</a>
+      </div>
+      <div class="tier reveal">
+        <div class="tname">Premium</div>
+        <div class="tdesc">Blog, rezerwacje, sklep-lite.</div>
+        <div class="amt">od 3 500 zł<small> /jednorazowo</small></div>
+        <ul><li>Rozbudowana struktura</li><li>Blog lub aktualności</li><li>Rezerwacje online</li><li>Panel do samodzielnych zmian</li></ul>
+        <a href="#kontakt" class="btn btn-line">Wybieram</a>
+      </div>
+    </div>
+    <p class="price-note">Domena i hosting: zwykle 100–250 zł/rok. Opieka nad stroną — opcjonalnie od 49 zł/mies.</p>
+  </div>
+</section>
+
+<section id="proces">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="mono" style="color:var(--accent)">07 — Proces</span><h2 style="margin-top:12px">Jak to wygląda</h2></div>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="sn">Krok 01</div><h3>Rozmowa</h3><p>Mówisz, czym się zajmujesz. Ustalamy, co strona ma osiągnąć.</p></div>
+      <div class="step"><div class="sn">Krok 02</div><h3>Projekt</h3><p>Przygotowuję propozycję wyglądu i treści. Ty dajesz uwagi.</p></div>
+      <div class="step"><div class="sn">Krok 03</div><h3>Poprawki</h3><p>Dopieszczamy szczegóły, aż będzie dokładnie tak, jak chcesz.</p></div>
+      <div class="step"><div class="sn">Krok 04</div><h3>Publikacja</h3><p>Wrzucam stronę do sieci pod Twoją domeną. Gotowe.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="mono" style="color:var(--accent)">08 — FAQ</span><h2 style="margin-top:12px">Częste pytania</h2></div>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq"><summary>Ile trwa zrobienie strony?<span class="plus">+</span></summary><div class="fa">Prosta wizytówka to zwykle 3–7 dni roboczych od momentu, gdy mam od Ciebie treści i zdjęcia. Większe strony — do dwóch tygodni. Termin potwierdzam na starcie.</div></details>
+      <details class="faq"><summary>Nie mam tekstów ani zdjęć. Co wtedy?<span class="plus">+</span></summary><div class="fa">Nie problem. Pomogę ułożyć treści, a jeśli brakuje zdjęć, podpowiem, skąd wziąć dobre (własne z telefonu zwykle wystarczą) albo zaproponuję rozwiązania tymczasowe.</div></details>
+      <details class="faq"><summary>Czy będę mógł sam edytować stronę?<span class="plus">+</span></summary><div class="fa">Zależy od pakietu. W wersji Premium dostajesz prosty panel do samodzielnych zmian. W tańszych pakietach drobne poprawki robię dla Ciebie w ramach wsparcia.</div></details>
+      <details class="faq"><summary>Co z domeną i hostingiem?<span class="plus">+</span></summary><div class="fa">Ogarniam to za Ciebie — od rejestracji adresu (np. twojafirma.pl) po uruchomienie strony. Roczny koszt domeny i hostingu to zwykle 100–250 zł i jest jasno rozpisany.</div></details>
+      <details class="faq"><summary>A jeśli projekt mi się nie spodoba?<span class="plus">+</span></summary><div class="fa">Najpierw pokazuję projekt, a płacisz dopiero po jego akceptacji. Poprawki wprowadzamy do skutku, w ramach ustalonej ceny. Nie płacisz za coś, czego nie zatwierdziłeś.</div></details>
+      <details class="faq"><summary>Wystawiasz fakturę?<span class="plus">+</span></summary><div class="fa">Tak. Współpracę potwierdzamy umową, a za usługę wystawiam fakturę na firmę.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div class="contact-grid reveal">
+      <div class="c-left">
+        <span class="mono" style="color:rgba(255,255,255,.7)">09 — Kontakt</span>
+        <h2 style="margin-top:14px">Zróbmy Ci stronę</h2>
+        <p>Napisz w dwóch zdaniach, czym się zajmujesz. Odeślę bezpłatną wycenę — bez zobowiązań.</p>
+        <a class="c-contact" href="mailto:kontakt@widocznistudio.pl"><span>E-mail</span>kontakt@widocznistudio.pl</a>
+        <a class="c-contact" href="tel:+48500600700"><span>Telefon</span>500 600 700</a>
+      </div>
+      <div class="c-right">
+        <form action="https://formspree.io/f/TWOJ_ID" method="POST">
+          <div class="field"><label for="n">Imię</label><input id="n" type="text" name="imie" placeholder="Jan Kowalski" required></div>
+          <div class="field"><label for="e">E-mail lub telefon</label><input id="e" type="text" name="kontakt" placeholder="jan@firma.pl" required></div>
+          <div class="field"><label for="m">Czym się zajmujesz?</label><textarea id="m" name="wiadomosc" placeholder="Np. Prowadzę warsztat samochodowy w Łodzi i potrzebuję prostej strony z cennikiem." required></textarea></div>
+          <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center">Wyślij zapytanie</button>
+          <p class="form-note">Odpowiadam zwykle w ciągu 24 godzin.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">Widoczni<p>Profesjonalne strony internetowe dla lokalnych firm. Łódź i cała Polska — online.</p></div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Nawigacja</h4>
+          <a href="#realizacje">Realizacje</a>
+          <a href="#o-mnie">O mnie</a>
+          <a href="#cennik">Cennik</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="foot-col">
+          <h4>Kontakt</h4>
+          <a href="mailto:kontakt@widocznistudio.pl">kontakt@widocznistudio.pl</a>
+          <a href="tel:+48500600700">500 600 700</a>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 Studio Widoczni · widocznistudio.pl</span>
+      <span>NIP 000-000-00-00 · Łódź</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger=document.getElementById('burger'), menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROSA — Studio Urody | Fryzjerstwo i Kosmetologia</title>
+<meta name="description" content="ROSA — kameralne studio urody. Strzyżenie, koloryzacja, pielęgnacja twarzy i stylizacja. Umów wizytę.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#3a1f2b;
+    --plum-soft:#5a3542;
+    --blush:#e7bcc0;
+    --blush-pale:#f6e4e3;
+    --cream:#fbf5f2;
+    --champagne:#b0895a;
+    --champagne-lt:#c9a878;
+    --ink:#2c1c22;
+    --line:rgba(58,31,43,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Jost',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:'Cormorant',serif;font-weight:500;line-height:1.05;letter-spacing:.01em}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  .eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--champagne)}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,245,242,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .brand{font-family:'Cormorant',serif;font-size:1.7rem;letter-spacing:.28em;font-weight:600;padding-left:.28em}
+  .navlinks{display:flex;gap:34px;align-items:center}
+  .navlinks a{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;transition:color .25s}
+  .navlinks a:hover{color:var(--champagne)}
+  .btn{display:inline-block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:13px 26px;border-radius:2px;transition:.28s}
+  .btn-solid{background:var(--plum);color:var(--cream)}
+  .btn-solid:hover{background:var(--plum-soft)}
+  .btn-line{border:1px solid var(--plum);color:var(--plum)}
+  .btn-line:hover{background:var(--plum);color:var(--cream)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:24px;height:1.5px;background:var(--plum);transition:.3s}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;padding:0}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:78vh}
+  .hero-left{display:flex;flex-direction:column;justify-content:center;padding:70px 60px 70px 0}
+  .hero-left .eyebrow{margin-bottom:26px}
+  .hero h1{font-size:clamp(3.2rem,7vw,6.2rem);color:var(--plum)}
+  .hero h1 em{font-style:italic;color:var(--champagne)}
+  .hero p.lead{font-size:1.12rem;max-width:34ch;margin:28px 0 38px;color:var(--plum-soft)}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-right{
+    position:relative;border-radius:3px;overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 80% 10%, rgba(231,188,192,.9), transparent 55%),
+      linear-gradient(160deg, #6a3c4a 0%, #3a1f2b 60%, #2a141c 100%);
+  }
+  .hero-right::after{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size:5px 5px;mix-blend-mode:overlay;
+  }
+  .hero-badge{
+    position:absolute;left:32px;bottom:32px;right:32px;
+    display:flex;justify-content:space-between;align-items:flex-end;color:var(--cream);z-index:2
+  }
+  .hero-badge .big{font-family:'Cormorant',serif;font-size:2.6rem;line-height:1}
+  .hero-badge small{display:block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;opacity:.75;margin-top:6px}
+  .hero-mark{position:absolute;top:34px;right:34px;font-family:'Cormorant',serif;font-style:italic;font-size:1.5rem;color:var(--blush);z-index:2}
+
+  /* MARQUEE STRIP */
+  .strip{background:var(--plum);color:var(--blush-pale);padding:16px 0;overflow:hidden;white-space:nowrap}
+  .strip span{font-family:'Cormorant',serif;font-size:1.25rem;font-style:italic;padding:0 30px;opacity:.9}
+  .strip .dot{color:var(--champagne);font-style:normal}
+
+  /* SECTION BASE */
+  section{padding:110px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 64px}
+  .sec-head h2{font-size:clamp(2.4rem,4.5vw,3.6rem);color:var(--plum);margin:16px 0 0}
+
+  /* SERVICES */
+  .serv-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+  .serv-col{padding:52px 48px}
+  .serv-col:first-child{border-right:1px solid var(--line)}
+  .serv-col h3{font-size:2.1rem;color:var(--plum);margin-bottom:8px}
+  .serv-col .kind{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne);margin-bottom:22px}
+  .serv-list{list-style:none;margin-top:24px}
+  .serv-list li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px}
+  .serv-list li:last-child{border-bottom:0}
+  .serv-list .name{font-size:1.05rem;color:var(--ink);font-weight:400}
+  .serv-list .lead-dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+  .serv-list .price{font-family:'Cormorant',serif;font-size:1.35rem;color:var(--plum);font-weight:600;white-space:nowrap}
+  .serv-list .from{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--plum-soft);opacity:.7;margin-right:2px}
+
+  /* ATMOSPHERE / ABOUT */
+  .about{background:var(--blush-pale)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .about-panel{
+    aspect-ratio:4/5;border-radius:3px;position:relative;overflow:hidden;
+    background:linear-gradient(155deg,#e7bcc0 0%, #cf98a0 45%, #8a5563 100%);
+  }
+  .about-panel::before{
+    content:"R";position:absolute;font-family:'Cormorant',serif;font-size:20rem;color:rgba(255,255,255,.16);
+    right:-2rem;bottom:-5rem;line-height:1;font-style:italic
+  }
+  .about-copy h2{font-size:clamp(2.2rem,4vw,3.2rem);color:var(--plum);margin:14px 0 22px}
+  .about-copy p{color:var(--plum-soft);margin-bottom:18px;max-width:46ch}
+  .stats{display:flex;gap:44px;margin-top:34px}
+  .stats .n{font-family:'Cormorant',serif;font-size:2.8rem;color:var(--champagne);line-height:1}
+  .stats small{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--plum-soft);margin-top:4px}
+
+  /* GALLERY */
+  .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .tile{aspect-ratio:3/4;border-radius:3px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:20px}
+  .tile span{position:relative;z-index:2;color:var(--cream);font-family:'Cormorant',serif;font-style:italic;font-size:1.25rem}
+  .tile:nth-child(1){background:linear-gradient(160deg,#5a3542,#2a141c)}
+  .tile:nth-child(2){background:linear-gradient(160deg,#e7bcc0,#a4646f);aspect-ratio:3/5}
+  .tile:nth-child(3){background:linear-gradient(160deg,#c9a878,#8a6538)}
+  .tile:nth-child(4){background:linear-gradient(160deg,#c9a878,#7a5a34);aspect-ratio:3/5}
+  .tile:nth-child(5){background:linear-gradient(160deg,#6a3c4a,#3a1f2b)}
+  .tile:nth-child(6){background:linear-gradient(160deg,#e7bcc0,#b07680)}
+  .gal-note{text-align:center;margin-top:26px;font-size:.86rem;color:var(--plum-soft);opacity:.7}
+
+  /* TESTIMONIAL */
+  .quote{background:var(--plum);color:var(--cream);text-align:center}
+  .quote .mark{font-family:'Cormorant',serif;font-size:5rem;color:var(--champagne);line-height:.4}
+  .quote blockquote{font-family:'Cormorant',serif;font-style:italic;font-size:clamp(1.8rem,3.4vw,2.7rem);max-width:20ch;margin:24px auto 30px;line-height:1.25}
+  .quote cite{font-style:normal;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blush)}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+  .contact-info{padding:56px 50px}
+  .contact-info h2{font-size:2.6rem;color:var(--plum);margin-bottom:30px}
+  .info-row{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+  .info-row .lbl{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne);width:110px;flex-shrink:0;padding-top:4px}
+  .info-row .val{font-size:1.05rem;color:var(--ink)}
+  .info-row .val strong{font-weight:500}
+  .contact-map{
+    background:linear-gradient(150deg,#6a3c4a,#2a141c);position:relative;min-height:420px;
+    display:flex;align-items:center;justify-content:center;padding:40px
+  }
+  .contact-map .card{background:var(--cream);padding:36px 34px;border-radius:3px;text-align:center;max-width:300px}
+  .contact-map .card h3{font-size:1.9rem;color:var(--plum);margin-bottom:8px}
+  .contact-map .card p{font-size:.94rem;color:var(--plum-soft);margin-bottom:22px}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:var(--blush-pale);padding:60px 0 30px}
+  .foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-brand{font-family:'Cormorant',serif;font-size:2rem;letter-spacing:.24em}
+  .foot-cols{display:flex;gap:70px;flex-wrap:wrap}
+  .foot-col h4{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne);margin-bottom:14px;font-weight:500}
+  .foot-col p,.foot-col a{display:block;font-size:.92rem;color:var(--blush-pale);opacity:.8;margin-bottom:7px}
+  .foot-bottom{padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem;opacity:.6;letter-spacing:.04em}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .navlinks{position:fixed;inset:78px 0 auto 0;background:var(--cream);flex-direction:column;gap:0;padding:12px 0;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:transform .35s;box-shadow:0 20px 40px rgba(0,0,0,.06)}
+    .navlinks.open{transform:none}
+    .navlinks a{padding:15px 28px;width:100%}
+    .navlinks .btn{margin:10px 28px;text-align:center}
+    .burger{display:flex}
+    .hero-grid{grid-template-columns:1fr;min-height:auto}
+    .hero-left{padding:56px 0 46px}
+    .hero-right{min-height:52vh}
+    .serv-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .serv-col:first-child{border-right:0;border-bottom:1px solid var(--line)}
+    .about-panel{aspect-ratio:16/12}
+    .gal-grid{grid-template-columns:1fr 1fr}
+    .tile,.tile:nth-child(2),.tile:nth-child(4){aspect-ratio:3/4}
+    .contact-map{min-height:340px}
+    section{padding:76px 0}
+  }
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.reveal{transition:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">ROSA</div>
+    <nav class="navlinks" id="menu">
+      <a href="#oferta">Oferta</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#studio">Studio</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="btn btn-solid">Umów wizytę</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <span class="eyebrow">Fryzjerstwo &nbsp;·&nbsp; Kosmetologia</span>
+      <h1>Twoje piękno,<br>w dobrych <em>rękach</em>.</h1>
+      <p class="lead">Kameralne studio urody, w którym każda wizyta to chwila spokoju. Strzyżenie, koloryzacja i pielęgnacja szyte na miarę.</p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-solid">Umów wizytę</a>
+        <a href="tel:+48500600700" class="btn btn-line">Zadzwoń: 500 600 700</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <span class="hero-mark">est. 2019</span>
+      <div class="hero-badge">
+        <div class="big">ROSA<small>Studio Urody</small></div>
+        <div style="text-align:right"><div class="big" style="font-size:1.6rem">4.9<small>★ 320 opinii</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <span>Strzyżenie</span><span class="dot">✦</span><span>Koloryzacja</span><span class="dot">✦</span><span>Pielęgnacja twarzy</span><span class="dot">✦</span><span>Stylizacja</span><span class="dot">✦</span><span>Manicure</span><span class="dot">✦</span><span>Makijaż</span><span class="dot">✦</span>
+</div>
+
+<!-- SERVICES / CENNIK -->
+<section id="oferta">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Nasza oferta</span>
+      <h2 id="cennik">Usługi i cennik</h2>
+    </div>
+    <div class="serv-grid reveal">
+      <div class="serv-col">
+        <div class="kind">Fryzjerstwo</div>
+        <h3>Włosy</h3>
+        <ul class="serv-list">
+          <li><span class="name">Strzyżenie damskie + modelowanie</span><span class="lead-dots"></span><span class="price"><span class="from">od</span>120 zł</span></li>
+          <li><span class="name">Strzyżenie męskie</span><span class="lead-dots"></span><span class="price">70 zł</span></li>
+          <li><span class="name">Koloryzacja jednolita</span><span class="lead-dots"></span><span class="price"><span class="from">od</span>190 zł</span></li>
+          <li><span class="name">Balayage / sombre</span><span class="lead-dots"></span><span class="price"><span class="from">od</span>320 zł</span></li>
+          <li><span class="name">Botoks / nabłyszczanie</span><span class="lead-dots"></span><span class="price">150 zł</span></li>
+          <li><span class="name">Upięcie okolicznościowe</span><span class="lead-dots"></span><span class="price"><span class="from">od</span>160 zł</span></li>
+        </ul>
+      </div>
+      <div class="serv-col">
+        <div class="kind">Kosmetologia</div>
+        <h3>Twarz &amp; ciało</h3>
+        <ul class="serv-list">
+          <li><span class="name">Oczyszczanie wodorowe</span><span class="lead-dots"></span><span class="price">220 zł</span></li>
+          <li><span class="name">Mezoterapia mikroigłowa</span><span class="lead-dots"></span><span class="price"><span class="from">od</span>280 zł</span></li>
+          <li><span class="name">Peeling kwasami</span><span class="lead-dots"></span><span class="price">190 zł</span></li>
+          <li><span class="name">Stylizacja brwi + henna</span><span class="lead-dots"></span><span class="price">80 zł</span></li>
+          <li><span class="name">Manicure hybrydowy</span><span class="lead-dots"></span><span class="price">120 zł</span></li>
+          <li><span class="name">Makijaż okolicznościowy</span><span class="lead-dots"></span><span class="price"><span class="from">od</span>180 zł</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="studio">
+  <div class="wrap about-grid">
+    <div class="about-panel reveal"></div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">O studiu</span>
+      <h2>Miejsce, do którego chce się wracać</h2>
+      <p>Założyłyśmy ROSA z prostą myślą: wizyta u fryzjera i kosmetologa powinna być przyjemnością, a nie pośpiechem. Dlatego przyjmujemy tylko na umówione godziny — bez tłoku, bez czekania.</p>
+      <p>Pracujemy na sprawdzonych, profesjonalnych kosmetykach i dobieramy zabieg do Twoich włosów i skóry, a nie odwrotnie.</p>
+      <div class="stats">
+        <div><div class="n">7</div><small>lat doświadczenia</small></div>
+        <div><div class="n">3</div><small>stylistki</small></div>
+        <div><div class="n">320+</div><small>opinii 5★</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Metamorfozy</span>
+      <h2>Nasze realizacje</h2>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="tile"><span>Koloryzacja</span></div>
+      <div class="tile"><span>Balayage</span></div>
+      <div class="tile"><span>Upięcie ślubne</span></div>
+      <div class="tile"><span>Pielęgnacja</span></div>
+      <div class="tile"><span>Strzyżenie</span></div>
+      <div class="tile"><span>Makijaż</span></div>
+    </div>
+    <p class="gal-note">↑ Miejsce na prawdziwe zdjęcia z salonu — wystarczy je podmienić.</p>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote">
+  <div class="wrap reveal">
+    <div class="mark">“</div>
+    <blockquote>Wychodzę stąd za każdym razem jak nowa osoba.</blockquote>
+    <cite>— Katarzyna M., stała klientka</cite>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="kontakt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Zapraszamy</span>
+      <h2>Umów wizytę</h2>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="info-row" style="border-top:0"><div class="lbl">Adres</div><div class="val"><strong>ul. Kwiatowa 12/3</strong><br>90-001 Łódź</div></div>
+        <div class="info-row"><div class="lbl">Telefon</div><div class="val"><strong>500 600 700</strong></div></div>
+        <div class="info-row"><div class="lbl">E-mail</div><div class="val">kontakt@rosa-studio.pl</div></div>
+        <div class="info-row"><div class="lbl">Godziny</div><div class="val">Pon–Pt&nbsp; 9:00 – 20:00<br>Sob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00 – 15:00<br>Niedz&nbsp;&nbsp; nieczynne</div></div>
+        <div style="margin-top:28px"><a href="tel:+48500600700" class="btn btn-solid">Zadzwoń i zarezerwuj</a></div>
+      </div>
+      <div class="contact-map">
+        <div class="card">
+          <h3>ROSA</h3>
+          <p>ul. Kwiatowa 12/3<br>Łódź — centrum</p>
+          <a href="#" class="btn btn-line">Zobacz na mapie</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">ROSA</div>
+        <p style="opacity:.6;font-size:.9rem;margin-top:8px">Studio urody · Fryzjerstwo &amp; Kosmetologia</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Menu</h4>
+          <a href="#oferta">Oferta</a>
+          <a href="#cennik">Cennik</a>
+          <a href="#studio">Studio</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+        <div class="foot-col">
+          <h4>Kontakt</h4>
+          <p>ul. Kwiatowa 12/3, Łódź</p>
+          <p>500 600 700</p>
+          <p>kontakt@rosa-studio.pl</p>
+        </div>
+        <div class="foot-col">
+          <h4>Znajdź nas</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Booksy</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 ROSA Studio Urody. Wszelkie prawa zastrzeżone.</span>
+      <span>Projekt strony — Twoja Firma</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger=document.getElementById('burger'), menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
