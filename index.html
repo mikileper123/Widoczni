@@ -235,10 +235,17 @@ section.s{padding:clamp(76px,10vw,150px) 0;position:relative}
 .st p{font-size:.89rem;color:var(--ink-2)}
 .st .you{margin-top:12px;font-size:.8rem;color:var(--ink-3);border-top:1px solid var(--line);padding-top:10px}
 
-.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.scell{border:1px solid var(--line);border-radius:16px;padding:26px 24px;background:var(--bg);transition:transform .3s var(--e-out),box-shadow .3s var(--e-out),border-color .3s var(--e-std)}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.scell{display:flex;flex-direction:column}
+.scell .lead{font-size:.95rem;color:var(--ink-2);margin-bottom:18px}
+.scell ul{list-style:none;margin-top:auto;display:flex;flex-wrap:wrap;gap:7px}
+.scell ul li{font-size:.8rem;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--surface)}
+.scell .star{float:right;font-size:.62rem;font-family:'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border:1px solid var(--line-2);border-radius:999px;padding:4px 10px}
+.scell .more{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-size:.88rem;font-weight:500;transition:gap .25s var(--e-out)}
+.scell:hover .more{gap:12px}
+.scell{border:1px solid var(--line);border-radius:18px;padding:30px 28px;background:var(--bg);transition:transform .3s var(--e-out),box-shadow .3s var(--e-out),border-color .3s var(--e-std)}
 .scell:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:var(--line-2)}
-.scell h3{font-size:1.08rem;margin:12px 0 7px}
+.scell h3{font-size:1.28rem;margin:12px 0 9px}
 .scell p{font-size:.89rem;color:var(--ink-2)}
 
 .price{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -528,15 +535,31 @@ footer{border-top:1px solid var(--line);padding:52px 0 30px}
       <h2>Co robimy</h2>
     </div>
     <div class="svc reveal">
-      <div class="scell"><span class="mono">01</span><h3>Projektowanie stron</h3><p>Kompletna strona firmowa — projekt, kod, wdrożenie i domena.</p></div>
-      <div class="scell"><span class="mono">02</span><h3>Landing Page</h3><p>Jedna strona pod konkretną usługę lub kampanię reklamową.</p></div>
-      <div class="scell"><span class="mono">03</span><h3>Modernizacja stron</h3><p>Odświeżenie istniejącej strony bez budowania jej od zera.</p></div>
-      <div class="scell"><span class="mono">04</span><h3>Audyt UX</h3><p>Analiza obecnej strony i lista konkretnych zmian podnoszących konwersję.</p></div>
-      <div class="scell"><span class="mono">05</span><h3>Optymalizacja szybkości</h3><p>Przyspieszenie strony i poprawa wyników Core Web Vitals.</p></div>
-      <div class="scell"><span class="mono">06</span><h3>SEO techniczne</h3><p>Fundament pod widoczność w Google: struktura, dane, indeksacja.</p></div>
-      <div class="scell"><span class="mono">07</span><h3>Wizytówka Google</h3><p>Konfiguracja profilu firmy w Mapach i wynikach lokalnych.</p></div>
-      <div class="scell"><span class="mono">08</span><h3>Integracje AI</h3><p>Automatyzacje i narzędzia oparte o modele językowe wewnątrz strony.</p></div>
-      <div class="scell"><span class="mono">09</span><h3>Opieka nad stroną</h3><p>Aktualizacje, kopie zapasowe i drobne zmiany po publikacji.</p></div>
+      <div class="scell">
+        <span class="mono">01</span><span class="star">Główny produkt</span>
+        <h3>Strony internetowe</h3>
+        <p class="lead">Projekt, kod, wdrożenie i publikacja pod Twoją domeną. Całość po naszej stronie — od pierwszego szkicu po działający adres.</p>
+        <ul><li>One Page</li><li>Strony firmowe</li><li>Landing Page</li><li>Redesign istniejących stron</li></ul>
+      </div>
+      <div class="scell">
+        <span class="mono">02</span>
+        <h3>Audyt AI</h3>
+        <p class="lead">Wpisujesz adres, dostajesz raport z konkretną listą tego, co blokuje Twoją stronę. Bez rejestracji i bez zobowiązań.</p>
+        <ul><li>Design i UX</li><li>SEO</li><li>Szybkość</li><li>Skuteczność sprzedażowa</li></ul>
+        <a href="#audyt" class="more">Sprawdź swoją stronę <span class="arw">→</span></a>
+      </div>
+      <div class="scell">
+        <span class="mono">03</span><span class="star">od 149 zł / mies.</span>
+        <h3>Opieka nad stroną</h3>
+        <p class="lead">Strona nie zostaje sama po publikacji. Pilnujemy jej, wprowadzamy zmiany i reagujemy, zanim zauważysz problem.</p>
+        <ul><li>Aktualizacje i kopie zapasowe</li><li>Drobne zmiany treści</li><li>Monitoring dostępności</li><li>Wsparcie mailowe</li></ul>
+      </div>
+      <div class="scell">
+        <span class="mono">04</span>
+        <h3>Optymalizacja stron</h3>
+        <p class="lead">Masz stronę, ale ładuje się wolno albo nie sprzedaje. Poprawiamy to, co już istnieje, bez budowania od zera.</p>
+        <ul><li>Szybkość i Core Web Vitals</li><li>UX i konwersja</li><li>SEO techniczne</li></ul>
+      </div>
     </div>
   </div>
 </section>
@@ -550,8 +573,8 @@ footer{border-top:1px solid var(--line);padding:52px 0 30px}
     </div>
     <div class="price reveal">
       <div class="tier">
-        <div class="tn">Landing Page</div>
-        <div class="td">Jedna usługa, kampania, szybki start.</div>
+        <div class="tn">One Page / Landing</div>
+        <div class="td">Jedna strona, jedna usługa, szybki start.</div>
         <div class="amt">od 2 900 zł<small> / jednorazowo</small></div>
         <ul><li>Jedna strona, pełna narracja</li><li>Formularz i kontakt</li><li>Podstawy SEO</li><li>Publikacja i domena</li></ul>
         <a href="#kontakt" class="btn btn-secondary">Wybieram</a>
@@ -565,14 +588,14 @@ footer{border-top:1px solid var(--line);padding:52px 0 30px}
         <a href="#kontakt" class="btn" style="background:var(--bg);color:var(--ink)">Wybieram</a>
       </div>
       <div class="tier">
-        <div class="tn">Rozbudowana</div>
-        <div class="td">Większa struktura, blog, rezerwacje.</div>
+        <div class="tn">Strona rozbudowana</div>
+        <div class="td">Większa struktura i więcej treści.</div>
         <div class="amt">od 9 900 zł<small> / jednorazowo</small></div>
-        <ul><li>Do 12 podstron</li><li>Blog lub aktualności</li><li>Rezerwacje online</li><li>Panel do samodzielnych zmian</li><li>Integracje i automatyzacje</li></ul>
+        <ul><li>Do 12 podstron</li><li>Blog lub aktualności</li><li>Zaawansowane SEO techniczne</li><li>Panel do samodzielnych zmian</li></ul>
         <a href="#kontakt" class="btn btn-secondary">Wybieram</a>
       </div>
     </div>
-    <p class="pnote">Domena i hosting: zwykle 100–250 zł rocznie. Opieka nad stroną — opcjonalnie od 149 zł miesięcznie.</p>
+    <p class="pnote">Redesign istniejącej strony i optymalizacja — wycena indywidualna po audycie.<br>Domena i hosting: zwykle 100–250 zł rocznie. Opieka nad stroną — od 149 zł miesięcznie.</p>
   </div>
 </section>
 
