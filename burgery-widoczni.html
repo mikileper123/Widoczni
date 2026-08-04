@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BRASCA — Chicken Sandwich</title>
-<meta name="description" content="BRASCA — kurczak marynowany w maślance, chrupiąca panierka i brioche prosto z pieca. Kanapka, po którą wraca się codziennie.">
+<title>Burgery Widoczni — Burgery z kurczakiem</title>
+<meta name="description" content="Burgery Widoczni — kurczak marynowany w maślance, chrupiąca panierka i brioche prosto z pieca. Burger, po który wraca się codziennie.">
 <meta name="theme-color" content="#120e0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@ a{color:inherit;text-decoration:none}
 header{position:sticky;top:0;z-index:70;border-bottom:1px solid transparent;transition:background .4s var(--e-std),border-color .4s var(--e-std),backdrop-filter .4s var(--e-std)}
 header.on{background:color-mix(in srgb,var(--cream) 93%,transparent);backdrop-filter:blur(18px) saturate(180%);border-bottom-color:var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
-.brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.5rem;letter-spacing:.02em;color:#fff;transition:color .4s var(--e-std)}
+.brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(.95rem,2.6vw,1.32rem);letter-spacing:.01em;color:#fff;white-space:nowrap;transition:color .4s var(--e-std)}
 header.on .brand{color:var(--ink)}
 .brand i{color:var(--flame);font-style:normal}
 .nav-links{display:flex;gap:28px;align-items:center}
@@ -185,7 +185,7 @@ footer{background:var(--char);color:rgba(248,242,231,.72);padding:56px 0 28px}
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#" class="brand">BRASC<i>A</i></a>
+    <a href="#" class="brand">BURGERY <i>WIDOCZNI</i></a>
     <nav class="nav-links" id="menu">
       <a href="#menu-sec">Menu</a>
       <a href="#jak">Jak to robimy</a>
@@ -198,10 +198,10 @@ footer{background:var(--char);color:rgba(248,242,231,.72);padding:56px 0 28px}
 
 <section class="hero">
   <video class="hv" id="hv" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-    <source src="brasca-motion.mp4" type="video/mp4">
+    <source src="burgery-widoczni-motion.mp4" type="video/mp4">
   </video>
   <div class="wrap hero-in">
-    <span class="eyebrow" id="e0">Chicken Sandwich · Smażone na miejscu</span>
+    <span class="eyebrow" id="e0">Burgery z kurczakiem · Smażone na miejscu</span>
     <h1>
       <span class="ln" id="l1"><span>Chrupie tak,</span></span>
       <span class="ln" id="l2"><span>że słychać</span></span>
@@ -218,8 +218,8 @@ footer{background:var(--char);color:rgba(248,242,231,.72);padding:56px 0 28px}
 
 <div class="ticker">
   <div class="ticker-in" id="tick">
-    <span>Maślanka 24h</span><span class="d">✦</span><span>Ręczna panierka</span><span class="d">✦</span><span>Brioche z pieca</span><span class="d">✦</span><span>Sos Brasca</span><span class="d">✦</span><span>Smażone na miejscu</span><span class="d">✦</span>
-    <span>Maślanka 24h</span><span class="d">✦</span><span>Ręczna panierka</span><span class="d">✦</span><span>Brioche z pieca</span><span class="d">✦</span><span>Sos Brasca</span><span class="d">✦</span><span>Smażone na miejscu</span><span class="d">✦</span>
+    <span>Maślanka 24h</span><span class="d">✦</span><span>Ręczna panierka</span><span class="d">✦</span><span>Brioche z pieca</span><span class="d">✦</span><span>Sos Widoczni</span><span class="d">✦</span><span>Smażone na miejscu</span><span class="d">✦</span>
+    <span>Maślanka 24h</span><span class="d">✦</span><span>Ręczna panierka</span><span class="d">✦</span><span>Brioche z pieca</span><span class="d">✦</span><span>Sos Widoczni</span><span class="d">✦</span><span>Smażone na miejscu</span><span class="d">✦</span>
   </div>
 </div>
 
@@ -235,7 +235,7 @@ footer{background:var(--char);color:rgba(248,242,231,.72);padding:56px 0 28px}
         <div class="pic"><b>01</b></div>
         <div class="body">
           <h3>Classic</h3>
-          <p>Kurczak, sos Brasca, ogórek małosolny, sałata w chłodnej chrupkości. Punkt wyjścia i najczęstszy wybór.</p>
+          <p>Kurczak, sos Widoczni, ogórek małosolny, sałata w chłodnej chrupkości. Punkt wyjścia i najczęstszy wybór.</p>
           <div class="price">32 zł <small>/ w zestawie 42 zł</small></div>
         </div>
       </div>
@@ -318,7 +318,7 @@ footer{background:var(--char);color:rgba(248,242,231,.72);padding:56px 0 28px}
         <span class="eyebrow" style="color:var(--gold)">Adres</span>
         <h3 style="margin-top:14px">Znajdziesz nas tu</h3>
         <p class="addr">ul. Piotrkowska 104<br>90-926 Łódź</p>
-        <p class="sm">tel. 600 700 800<br>hej@brasca.pl</p>
+        <p class="sm">tel. 600 700 800<br>hej@burgerywidoczni.pl</p>
         <div class="row">
           <a href="#" class="btn btn-flame">Nawiguj</a>
           <a href="#" class="btn btn-out" style="color:var(--cream)"><span>Instagram</span></a>
@@ -340,8 +340,8 @@ footer{background:var(--char);color:rgba(248,242,231,.72);padding:56px 0 28px}
   <div class="wrap">
     <div class="ftop">
       <div>
-        <div class="fbrand">BRASC<i>A</i></div>
-        <p style="margin-top:8px;font-size:.92rem">Chicken sandwich · Łódź</p>
+        <div class="fbrand">BURGERY <i>WIDOCZNI</i></div>
+        <p style="margin-top:8px;font-size:.92rem">Burgery z kurczakiem · Łódź</p>
       </div>
       <div class="fcols">
         <div class="fcol">
@@ -354,7 +354,7 @@ footer{background:var(--char);color:rgba(248,242,231,.72);padding:56px 0 28px}
           <h4>Kontakt</h4>
           <p>ul. Piotrkowska 104, Łódź</p>
           <p>600 700 800</p>
-          <p>hej@brasca.pl</p>
+          <p>hej@burgerywidoczni.pl</p>
         </div>
         <div class="fcol">
           <h4>Social</h4>
@@ -365,7 +365,7 @@ footer{background:var(--char);color:rgba(248,242,231,.72);padding:56px 0 28px}
       </div>
     </div>
     <div class="fbot">
-      <span>© 2025 BRASCA. Wszelkie prawa zastrzeżone.</span>
+      <span>© 2025 Burgery Widoczni. Wszelkie prawa zastrzeżone.</span>
       <span>Projekt strony — <a href="index.html">Studio Widoczni</a></span>
     </div>
   </div>
