@@ -144,12 +144,18 @@ button{font:inherit;color:inherit;background:transparent}
 .nav-logo{flex:0 0 auto;display:flex;align-items:center;min-height:48px}
 .nav-logo img{height:54px;width:auto;transition:height 300ms ease}
 .nav.is-shrunk .nav-logo img{height:44px}
-/* Logo tekstowe pokazuje się tylko, gdy pliku logotypu brakuje. */
+/* Zastępcze logo tekstowe — pokazuje się wyłącznie, gdy brakuje pliku
+   logotypu. Odwzorowuje układ oryginału: granatowo-niebieski wordmark
+   z powiększonym „X" i kreską pod spodem. Do podmiany na plik klienta. */
 .logo-fallback{
-  display:none;font-weight:800;font-size:1.25rem;letter-spacing:-.02em;color:var(--ink);
+  display:none;align-items:baseline;
+  font-weight:800;font-size:1.375rem;letter-spacing:-.03em;
+  color:var(--acc);white-space:nowrap;
+  border-bottom:3px solid var(--acc);padding-bottom:2px;line-height:1;
 }
-.logo-fallback b{color:var(--acc)}
-.is-missing .logo-fallback{display:block}
+.logo-fallback b{font-size:1.5em;font-weight:800;line-height:.7;margin:0 -.02em}
+.is-missing .logo-fallback{display:inline-flex}
+.card .logo-fallback{font-size:1.125rem;border-bottom-width:2px}
 
 .nav-links{margin-left:auto;display:flex;align-items:center;gap:clamp(18px,2.2vw,34px)}
 .nav-links a{
