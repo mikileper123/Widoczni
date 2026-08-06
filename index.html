@@ -1228,6 +1228,26 @@ footer{border-top:1px solid var(--line);padding:52px 0 30px}
   .jr-mb{margin-bottom:clamp(10px,2vh,26px)}
   .jr-nav{padding-top:clamp(4px,1vh,12px)}
 }
+
+/* ══════════ stepper bez kolek: zostaje linia postepu i podpisy ══════════ */
+.jr-nav .num{display:none}
+.jr-nav button{gap:5px;padding-top:18px}
+.jr-rail{top:6px}
+.jr-nav button.act .tt{color:var(--acc);font-weight:600}
+.jr-nav button.done .tt{color:var(--ink-2)}
+@media(max-width:820px){
+  .jr-nav button{padding-top:14px;min-height:44px}
+  .jr-rail{top:4px}
+}
+
+/* Kolizja nazw: reguła .tt przełącznika motywu (okrągły przycisk 38 px)
+   trafiała też w podpisy etapów w sekcji procesu, rysując wokół nich
+   bladą obwódkę. Poniżej znosimy ją wyłącznie wewnątrz steppera. */
+.jr-nav .tt{width:auto;height:auto;border:0;border-radius:0;background:none;display:block;flex-shrink:1;cursor:inherit}
+@media(max-width:560px){
+  /* piec podpisow w jednym rzedzie musi zmiescic sie na waskim ekranie */
+  .jr-nav .tt{font-size:.66rem;line-height:1.2}
+}
 </style>
 <script>document.documentElement.setAttribute('data-theme','light');</script>
 </head>
