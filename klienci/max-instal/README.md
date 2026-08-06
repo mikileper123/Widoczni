@@ -14,34 +14,48 @@ do skopiowania — jego runtime nie trafił tutaj.
 | `index.html` | Cała strona — HTML, CSS i JS w jednym pliku |
 | `polityka-prywatnosci.html` | Wymagana prawnie, linkowana ze stopki |
 | `robots.txt`, `sitemap.xml` | Do wgrania w root domeny |
-| `assets/` | Zdjęcia i logotypy — **do uzupełnienia** |
+| `assets/` | Zdjęcia i logotypy (brakuje 4 zdjęć realizacji) |
 
 Folder jest samodzielny. Można go wgrać na hosting w całości albo przenieść do osobnego
 repozytorium bez zmian w kodzie.
 
-## Brakujące pliki graficzne
+## Zasoby graficzne
 
-Prototyp odwoływał się do grafik, których nie było w przekazanej paczce. Strona działa bez
-nich — każdy kadr pokazuje etykietę zamiast ikony zepsutego obrazka, a logo i pasek
-producentów mają zapasowe wersje tekstowe. Proporcje są zablokowane, więc podmiana nie
-przesunie layoutu.
+Pliki z pakietu projektowego leżą w `assets/`. Każdy jest w dwóch wersjach: oryginał
+od klienta (master, do ewentualnego ponownego przetworzenia) oraz `.webp`, który
+serwuje strona.
 
-| Ścieżka | Co to jest | Proporcje |
+| Serwowany plik | Wymiary | Waga | Master |
+|---|---|---|---|
+| `hero-digital-twin-pion.webp` | 1024×1536 | 228 KB | `.png` 2673 KB |
+| `foto-maszynownia.webp` | 1400×1867 | 293 KB | `.jpg` 425 KB |
+| `logo-max-instal.webp` | 660×220 | 27 KB | `.png` 2172×724 |
+| `logo-max-instal-white.webp` | 660×220 | 13 KB | `.png` 2172×724 |
+| `producenci-logos.webp` | 1530×85 | 13 KB | `.png` 49 KB |
+
+Razem serwowane: **573 KB** zamiast 3,8 MB. Sama grafika hero schudła o 91%,
+co przy budżecie LCP poniżej 2,5 s na wolnym łączu ma znaczenie decydujące.
+Logo przyszło w 2172 px szerokości, a wyświetla się w 54 px — przeskalowane
+do 660 px daje trzykrotny zapas na ekrany o wysokiej gęstości.
+
+`logo-max-instal-white.png` nie jest obecnie używany: logotyp występuje na białej
+pigułce nawigacji i na jasnej karcie kontaktowej. Zostaje na wypadek ciemnego wariantu.
+
+### Nadal brakuje — zdjęcia realizacji
+
+Cztery kadry w sekcji „Realizacje" czekają na materiał. Pakiet projektowy ich nie
+zawierał („klient dostarczy"). Do czasu dostarczenia kadr pokazuje etykietę zamiast
+ikony zepsutego obrazka, a proporcje są zablokowane, więc podmiana nie ruszy layoutu.
+
+| Ścieżka | Obiekt | Proporcje |
 |---|---|---|
-| `assets/logo-max-instal.png` | Logotyp (nawigacja + karta kontaktowa) | 2172×724 |
-| `assets/hero-digital-twin.png` | Wizualizacja „X-Ray" budynku w hero | pion, ~2:3 |
-| `assets/foto-maszynownia.jpg` | Zdjęcie w sekcji „O firmie" | 4:3 |
-| `assets/producenci-logos.png` | Pas logotypów producentów (marquee) | 1530×85 |
 | `assets/realizacja-biurowiec.jpg` | Biurowiec klasy A, Warszawa | 4:3 |
 | `assets/realizacja-szpital.jpg` | Szpital, Skierniewice | 4:3 |
 | `assets/realizacja-hala.jpg` | Hala produkcyjna, Łódź | 4:3 |
 | `assets/realizacja-galeria.jpg` | Galeria handlowa, Warszawa | 4:3 |
 
-Format WebP lub AVIF dla zdjęć, SVG lub PNG dla logotypów. Atrybuty `width` i `height`
-w `index.html` trzeba wtedy zaktualizować do realnych wymiarów — chronią przed CLS.
-
-Docelowo pas producentów warto rozbić na osobne SVG zamiast jednego PNG — pozwoli to
-na hover per logo i da ostrość na każdym ekranie.
+Po dostarczeniu warto przepuścić je przez tę samą konwersję do WebP i zaktualizować
+`width`/`height` w `index.html` — atrybuty chronią przed przeskokiem layoutu.
 
 ## Dane firmy (NAP)
 

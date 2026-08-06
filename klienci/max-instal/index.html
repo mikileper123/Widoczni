@@ -74,6 +74,12 @@ button{font:inherit;color:inherit;background:transparent}
 /* Domyślne min-width:auto nie pozwala elementowi siatki zejść poniżej szerokości
    jego treści — długi nagłówek rozpychał wtedy całą stronę w poziomie. */
 .about > *,.offer > *,.perm > *,.contact-grid > *,.works-head > *{min-width:0}
+
+/* Kadr zdjęcia — kontekst pozycjonowania dla etykiety braku pliku.
+   MUSI stać przed klasami komponentów: przy równej specyficzności wygrywa
+   reguła późniejsza, a `.hero-art` potrzebuje swojego position:absolute.
+   Wcześniej ta reguła leżała niżej i przestawiała grafikę hero na statyczną. */
+.shot{position:relative}
 .mono{
   font-family:'DM Mono',ui-monospace,monospace;
   text-transform:uppercase;
@@ -506,12 +512,9 @@ button{font:inherit;color:inherit;background:transparent}
 /* --- Brakujące zdjęcia -------------------------------------------------- */
 /* Dopóki klient nie dostarczy plików, kadr pokazuje etykietę zamiast
    ikony zepsutego obrazka. Proporcje zostają, więc podmiana nie ruszy layoutu. */
-/* Tylko kontekst pozycjonowania — żadnego tła. Wcześniej `.shot` niosło
-   `background:var(--card)` i jako reguła późniejsza w arkuszu wygrywało
-   z `.makers`, `.card` i `.nav-logo`, zamalowując je na granatowo. */
-.shot{position:relative}
 /* Etykietę dostają wyłącznie kadry, które ją zadeklarowały — logo i karta
-   kontaktowa mają własny tekst zastępczy. */
+   kontaktowa mają własny tekst zastępczy. Reguła bazowa `.shot` siedzi
+   na górze arkusza; tutaj zostaje tylko stan braku pliku. */
 .shot.is-missing[data-label]::after{
   content:attr(data-label);
   position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;
@@ -588,7 +591,7 @@ button{font:inherit;color:inherit;background:transparent}
 <header class="nav" id="nav">
   <div class="nav-row">
     <a class="nav-logo shot" id="logo-wrap" href="#start" aria-label="Max-Instal — strona główna">
-      <img src="assets/logo-max-instal.png" alt="Max-Instal" width="2172" height="724"
+      <img src="assets/logo-max-instal.webp" alt="Max-Instal" width="660" height="220"
            onerror="this.closest('.shot').classList.add('is-missing');this.remove()">
       <span class="logo-fallback" aria-hidden="true">MA<b>X</b>-INSTAL</span>
     </a>
@@ -625,7 +628,7 @@ button{font:inherit;color:inherit;background:transparent}
   <div class="hero-stage">
     <span class="hero-glow" aria-hidden="true"></span>
     <div class="hero-art shot" data-label="Wizualizacja X-Ray budynku">
-      <img src="assets/hero-digital-twin.png" alt="" width="1024" height="1536" fetchpriority="high"
+      <img src="assets/hero-digital-twin-pion.webp" alt="" width="1024" height="1536" fetchpriority="high"
            onerror="this.closest('.shot').classList.add('is-missing');this.remove()">
       <span class="fade fade-l" aria-hidden="true"></span>
       <span class="fade fade-r" aria-hidden="true"></span>
@@ -700,8 +703,8 @@ button{font:inherit;color:inherit;background:transparent}
       </div>
       <div class="about-shot shot" data-reveal data-label="Zdjęcie: maszynownia / realizacja">
         <div class="par" data-parallax="0.03">
-          <img src="assets/foto-maszynownia.jpg" alt="Maszynownia z instalacją wentylacyjną wykonaną przez Max-Instal"
-               width="1600" height="1200" loading="lazy"
+          <img src="assets/foto-maszynownia.webp" alt="Maszynownia z instalacją wentylacyjną wykonaną przez Max-Instal"
+               width="1400" height="1867" loading="lazy"
                onerror="this.closest('.shot').classList.add('is-missing');this.remove()">
         </div>
       </div>
@@ -875,10 +878,10 @@ button{font:inherit;color:inherit;background:transparent}
 <section class="makers shot" id="makers" aria-label="Producenci urządzeń, które montujemy">
   <div class="marquee">
     <div class="marquee-track">
-      <img src="assets/producenci-logos.png" alt="Producenci: Fujitsu, Jeven, Klimor, Lennox, LG, MDV, Midea, Mitsubishi Electric, Swegon"
+      <img src="assets/producenci-logos.webp" alt="Producenci: Fujitsu, Jeven, Klimor, Lennox, LG, MDV, Midea, Mitsubishi Electric, Swegon"
            width="1530" height="85"
            onerror="this.closest('.shot').classList.add('is-missing')">
-      <img src="assets/producenci-logos.png" alt="" aria-hidden="true" width="1530" height="85">
+      <img src="assets/producenci-logos.webp" alt="" aria-hidden="true" width="1530" height="85">
     </div>
   </div>
   <div class="makers-fallback" aria-hidden="true">
@@ -939,7 +942,7 @@ button{font:inherit;color:inherit;background:transparent}
     </div>
 
     <div class="card shot" data-reveal>
-      <img src="assets/logo-max-instal.png" alt="Max-Instal" width="2172" height="724" loading="lazy"
+      <img src="assets/logo-max-instal.webp" alt="Max-Instal" width="660" height="220" loading="lazy"
            onerror="this.closest('.shot').classList.add('is-missing');this.remove()">
       <span class="logo-fallback" aria-hidden="true">MA<b>X</b>-INSTAL</span>
       <dl class="info">
