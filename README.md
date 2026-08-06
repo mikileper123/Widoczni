@@ -2,18 +2,30 @@
 
 Strona-portfolio studia **Widoczni** — nowoczesne strony internetowe dla lokalnych firm.
 
-## Zawartość
+## Struktura
 
-| Plik | Opis |
-|---|---|
-| `index.html` | Strona główna firmy (hero, realizacje, o mnie, oferta, cennik, FAQ, kontakt) |
-| `salon-urody-rosa.html` | Przykładowa realizacja — salon fryzjersko-kosmetyczny ROSA |
-| `kawiarnia-ziarno.html` | Przykładowa realizacja — kawiarnia ZIARNO |
+```
+index.html                              ← strona główna studia
+realizacje/                             ← demo i portfolio (linkowane ze strony głównej)
+    salon-urody-rosa/index.html         ← salon fryzjersko-kosmetyczny ROSA
+    kawiarnia-ziarno/index.html         ← kawiarnia ZIARNO
+klienci/                                ← produkcyjne strony klientów (patrz klienci/README.md)
+```
 
-Każdy plik jest samodzielny — cały CSS i JS znajduje się w środku, bez zewnętrznych zależności
-(poza Google Fonts). Wszystkie trzy pliki muszą leżeć w tym samym folderze, ponieważ sekcja
-„Realizacje" na stronie głównej linkuje do pozostałych dwóch ścieżkami względnymi.
+Podział jest celowy: `realizacje/` to materiał sprzedażowy studia, `klienci/` to prawdziwe
+wdrożenia, które docelowo trafiają na własne domeny. Szczegóły konwencji —
+[`klienci/README.md`](klienci/README.md).
+
+Każda strona jest samodzielna — cały CSS i JS znajduje się wewnątrz jej `index.html`,
+bez zewnętrznych zależności (poza Google Fonts).
 
 ## Podgląd lokalny
 
-Wystarczy otworzyć `index.html` w przeglądarce.
+Ścieżki do realizacji są katalogowe (`realizacje/salon-urody-rosa/`), więc otwarcie pliku
+przez `file://` nie rozwiąże ich poprawnie. Uruchom lokalny serwer:
+
+```bash
+python3 -m http.server 8000
+```
+
+i wejdź na <http://localhost:8000>.
