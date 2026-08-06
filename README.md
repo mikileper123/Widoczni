@@ -10,6 +10,7 @@ realizacje/                             ← demo i portfolio (linkowane ze stron
     salon-urody-rosa/index.html         ← salon fryzjersko-kosmetyczny ROSA
     kawiarnia-ziarno/index.html         ← kawiarnia ZIARNO
 klienci/                                ← produkcyjne strony klientów (patrz klienci/README.md)
+    max-instal/index.html               ← wentylacja i klimatyzacja, Skierniewice
 ```
 
 Podział jest celowy: `realizacje/` to materiał sprzedażowy studia, `klienci/` to prawdziwe

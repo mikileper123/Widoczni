@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wentylacja i klimatyzacja Skierniewice — Max-Instal</title>
+<meta name="description" content="Max-Instal Skierniewice — projektowanie, montaż i serwis wentylacji, klimatyzacji, ogrzewania i chłodnictwa. Uprawnienia budowlane bez ograniczeń. Od 2005 roku.">
+<link rel="canonical" href="https://maxinstal.pl/">
+<meta name="theme-color" content="#0F3D6E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F3D6E'/%3E%3Cpath d='M6 23V9h4l6 8 6-8h4v14h-4v-8l-6 8-6-8v8z' fill='%23F2F0EB'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="Max-Instal">
+<meta property="og:title" content="Wentylacja i klimatyzacja Skierniewice — Max-Instal">
+<meta property="og:description" content="Projektowanie, montaż i serwis instalacji wentylacji, klimatyzacji, ogrzewania i chłodnictwa. Od 2005 roku.">
+<meta property="og:url" content="https://maxinstal.pl/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700&family=DM+Mono&family=Manrope:wght@400;500;700&display=swap">
+
+<!-- Znacznik obecności JS. Bez niego treść nigdy nie startuje ukryta —
+     gdy skrypt się nie wykona, strona i tak jest w całości czytelna. -->
+<script>document.documentElement.classList.add('js')</script>
+
+<style>
+/* ============================================================
+   TOKENY — system designu Studio Widoczni
+   Nie wpisuj kolorów na sztywno. Zawsze token.
+   ============================================================ */
+:root{
+  --szyld:#0F3D6E;
+  --szyld-deep:#092647;
+  --szyld-line:#4E7CB0;
+  --chalk:#F2F0EB;
+  --chalk-dim:#E4E1D9;
+  --ink:#171A1F;
+  --ink-soft:#5A6069;
+  --signal:#F26722;
+  --rule:#C9C4B8;
+
+  --max:1200px;
+  --pad:24px;
+  --e:cubic-bezier(.22,1,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+/* Kotwice nie mogą chować nagłówka sekcji pod przyklejonym paskiem. */
+html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+@media (max-width:1000px){html{scroll-padding-top:72px}}
+body{
+  margin:0;
+  background:var(--chalk);
+  color:var(--ink);
+  font:400 1.0625rem/1.65 Manrope,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+section{padding:clamp(64px,10vw,128px) 0}
+
+/* --- Typografia --------------------------------------------------------- */
+h1,h2{
+  font-family:Archivo,system-ui,sans-serif;
+  font-weight:700;
+  font-variation-settings:'wdth' 125;
+  margin:0;
+}
+h1{font-size:clamp(2.75rem,7vw,5.5rem);line-height:.95;letter-spacing:-.025em}
+h2{font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;letter-spacing:-.015em}
+h3{font:700 1.3125rem/1.3 Manrope,sans-serif;letter-spacing:-.005em;margin:0}
+p{margin:0}
+.lead{font-size:1.1875rem;line-height:1.6}
+.small{font-size:.9375rem;line-height:1.55}
+.eyebrow{
+  font:400 .75rem/1.2 'DM Mono',ui-monospace,monospace;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+/* Polskie słowa są długie — twarde 68 znaków na kolumnę tekstu. */
+.measure{max-width:68ch}
+
+/* --- Przyciski ---------------------------------------------------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:52px;min-width:48px;padding:0 24px;
+  border-radius:4px;border:1px solid transparent;
+  font:700 1.0625rem/1 Manrope,sans-serif;
+  text-decoration:none;cursor:pointer;
+  transition:background-color .15s var(--e),color .15s var(--e),border-color .15s var(--e);
+}
+.btn-primary{background:var(--signal);color:var(--chalk)}
+.btn-primary:hover{background:#D9551A}
+.btn-ghost{border-color:var(--rule);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--chalk-dim)}
+.on-szyld .btn-ghost{border-color:var(--szyld-line);color:var(--chalk)}
+.on-szyld .btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+:where(a,button,input,textarea,select,summary):focus-visible{
+  outline:2px solid var(--signal);
+  outline-offset:2px;
+}
+
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--signal);color:var(--chalk);padding:12px 16px;border-radius:4px;
+}
+.skip:focus{left:8px;top:8px}
+
+/* --- Nawigacja ---------------------------------------------------------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:var(--szyld);
+  border-bottom:1px solid var(--szyld-line);
+}
+.nav-in{display:flex;align-items:center;gap:24px;height:72px}
+.brand{
+  font-family:Archivo,sans-serif;font-weight:700;font-variation-settings:'wdth' 125;
+  font-size:1.25rem;letter-spacing:-.02em;color:var(--chalk);
+  text-decoration:none;margin-right:auto;
+}
+.brand span{color:var(--signal)}
+.nav-links{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+.nav-links a{
+  font:500 .9375rem/1 Manrope,sans-serif;color:var(--chalk);
+  text-decoration:none;padding:8px 0;display:inline-block;
+  border-bottom:2px solid transparent;
+  transition:border-color .15s var(--e);
+}
+.nav-links a:hover{border-bottom-color:var(--signal)}
+.nav-tel{
+  font:700 .9375rem/1 Manrope,sans-serif;color:var(--chalk);
+  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  min-height:48px;padding:0 16px;border-radius:4px;background:var(--signal);
+}
+.nav-tel:hover{background:#D9551A}
+
+/* Przełącznik menu — tylko mobile. 48×48 celu dotykowego. */
+.nav-toggle{
+  display:none;
+  width:48px;height:48px;flex:0 0 auto;
+  align-items:center;justify-content:center;
+  background:transparent;border:1px solid var(--szyld-line);border-radius:4px;
+  color:var(--chalk);cursor:pointer;padding:0;
+}
+.nav-toggle svg{width:24px;height:24px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+.nav-toggle .ico-close{display:none}
+.nav-toggle[aria-expanded="true"] .ico-open{display:none}
+.nav-toggle[aria-expanded="true"] .ico-close{display:block}
+
+@media (max-width:1000px){
+  .nav-in{height:64px;gap:12px}
+  .nav-toggle{display:inline-flex}
+
+  /* Panel menu rozwijany pod paskiem — pozycje pełnej szerokości,
+     żeby trafiać kciukiem bez celowania. */
+  .nav-links{
+    display:none;
+    position:absolute;left:0;right:0;top:100%;
+    flex-direction:column;gap:0;
+    background:var(--szyld-deep);
+    border-bottom:1px solid var(--szyld-line);
+    padding:8px var(--pad) 16px;
+  }
+  .nav-links.open{display:flex}
+  .nav-links li + li{border-top:1px solid rgba(78,124,176,.3)}
+  .nav-links a{
+    display:block;padding:16px 0;font-size:1.0625rem;font-weight:500;
+    border-bottom:0;
+  }
+  .nav-links a:hover{border-bottom-color:transparent;color:var(--signal)}
+}
+@media (max-width:560px){
+  .nav-tel span{display:none}
+  .nav-tel{padding:0 14px}
+}
+@media (max-width:400px){
+  /* Na najwęższych ekranach telefon żyje w pasku dolnym — nie dublujemy go w nagłówku. */
+  .nav-tel{display:none}
+}
+
+/* --- HERO — tablica szyldu (element sygnaturowy, raz na stronie) -------- */
+.hero{
+  background:var(--szyld);
+  color:var(--chalk);
+  padding:clamp(56px,8vw,96px) 0 clamp(64px,9vw,112px);
+  position:relative;
+}
+/* Keyline jak na emaliowanej tablicy — odsunięty o 12px od krawędzi pola. */
+.hero::after{
+  content:"";position:absolute;inset:12px;
+  border:1px solid var(--szyld-line);
+  pointer-events:none;
+}
+.hero .eyebrow{color:var(--szyld-line)}
+.hero h1{margin:24px 0 0;max-width:16ch}
+.hero .lead{margin:32px 0 0;color:#C6D3E2;max-width:60ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+
+/* --- Pasek faktów ------------------------------------------------------- */
+.facts{
+  background:var(--szyld-deep);
+  color:var(--chalk);
+  padding:0;
+  border-top:1px solid var(--szyld-line);
+}
+.facts-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+}
+.fact{padding:32px 24px}
+.fact + .fact{border-left:1px solid rgba(78,124,176,.4)}
+.fact dt{
+  font:400 .75rem/1.2 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--szyld-line);margin:0 0 8px;
+}
+.fact dd{margin:0;font:500 1.0625rem/1.45 Manrope,sans-serif}
+@media (max-width:800px){
+  .facts-grid{grid-template-columns:1fr}
+  .fact + .fact{border-left:0;border-top:1px solid rgba(78,124,176,.4)}
+}
+
+/* --- Nagłówki sekcji ---------------------------------------------------- */
+.sec-head{margin-bottom:clamp(40px,5vw,64px)}
+.sec-head .eyebrow{color:var(--ink-soft);display:block;margin-bottom:16px}
+.sec-head p{margin-top:24px;color:var(--ink-soft)}
+.on-szyld .sec-head .eyebrow{color:var(--szyld-line)}
+.on-szyld .sec-head p{color:#C6D3E2}
+
+/* --- Karty -------------------------------------------------------------- */
+.cards{display:grid;gap:24px;grid-template-columns:repeat(2,1fr)}
+.card{
+  background:var(--chalk-dim);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  padding:32px;
+}
+.card h3{margin-bottom:8px}
+.card .eyebrow{color:var(--ink-soft);display:block;margin-bottom:16px}
+.card ul{margin:16px 0 0;padding-left:20px}
+.card li{margin-top:8px}
+.card li::marker{color:var(--signal)}
+@media (max-width:800px){.cards{grid-template-columns:1fr}}
+
+/* --- Realizacje --------------------------------------------------------- */
+.works{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.works{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.works{grid-template-columns:1fr}}
+.work figcaption{
+  margin-top:16px;font-size:.9375rem;line-height:1.55;color:var(--ink-soft);
+}
+.work{margin:0}
+/* Placeholder zdjęcia — świadomie widoczny, do podmiany na <img>.
+   Proporcje 3:2 rezerwują miejsce, więc podmiana nie wywoła CLS. */
+.ph{
+  aspect-ratio:3/2;
+  background:var(--chalk-dim);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;text-align:center;
+}
+.ph span{
+  font:400 .75rem/1.5 'DM Mono',monospace;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);
+}
+
+/* --- Producenci --------------------------------------------------------- */
+.makers{background:var(--szyld-deep);color:var(--chalk)}
+.makers-grid{
+  display:grid;gap:1px;background:rgba(78,124,176,.4);
+  border:1px solid rgba(78,124,176,.4);border-radius:4px;overflow:hidden;
+  grid-template-columns:repeat(3,1fr);
+}
+.maker{
+  background:var(--szyld-deep);
+  padding:32px 24px;text-align:center;
+  font:700 1.125rem/1.2 Manrope,sans-serif;letter-spacing:-.01em;
+}
+@media (max-width:700px){.makers-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* --- O nas -------------------------------------------------------------- */
+.about{display:grid;gap:clamp(32px,5vw,64px);grid-template-columns:1fr 1fr;align-items:start}
+.about p + p{margin-top:24px}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+
+/* --- Kontakt ------------------------------------------------------------ */
+.contact{background:var(--szyld);color:var(--chalk)}
+.contact-grid{display:grid;gap:clamp(32px,5vw,64px);grid-template-columns:1fr 1fr;align-items:start}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+.nap{font-style:normal;line-height:1.8}
+.nap a{color:var(--chalk)}
+.nap .big{
+  display:inline-flex;align-items:center;min-height:48px;
+  font:700 1.375rem/1.2 Manrope,sans-serif;color:var(--chalk);text-decoration:none;
+  border-bottom:2px solid var(--signal);
+}
+.nap dl{margin:32px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 24px}
+.nap dt{
+  font:400 .75rem/1.6 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--szyld-line);
+}
+.nap dd{margin:0}
+
+/* --- Formularz ---------------------------------------------------------- */
+.field{margin-bottom:24px}
+.field label{
+  display:block;margin-bottom:8px;
+  font:500 .9375rem/1.4 Manrope,sans-serif;
+}
+.field input,.field textarea{
+  width:100%;min-height:52px;padding:14px 16px;
+  background:var(--chalk);color:var(--ink);
+  border:1px solid var(--rule);border-radius:4px;
+  font:400 1.0625rem/1.5 Manrope,sans-serif;
+}
+.field textarea{min-height:128px;resize:vertical}
+.field .err{
+  display:none;margin-top:8px;
+  font:500 .9375rem/1.45 Manrope,sans-serif;color:#FFC9AE;
+}
+.field.invalid input,.field.invalid textarea{border-color:var(--signal);border-width:2px}
+.field.invalid .err{display:block}
+
+.consent{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+.consent input{width:24px;height:24px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--signal)}
+.consent label{font-size:.9375rem;line-height:1.55;color:#C6D3E2}
+.consent a{color:var(--chalk)}
+.consent.invalid label{color:#FFC9AE}
+
+.form-note{margin-top:16px;font-size:.9375rem;line-height:1.55;color:#C6D3E2}
+
+/* --- Stopka ------------------------------------------------------------- */
+.foot{background:var(--szyld-deep);color:#C6D3E2;padding:64px 0 32px}
+.foot-grid{display:grid;gap:32px;grid-template-columns:2fr 1fr 1fr;align-items:start}
+@media (max-width:800px){.foot-grid{grid-template-columns:1fr}}
+.foot h2{font:700 1.0625rem/1.3 Manrope,sans-serif;letter-spacing:0;color:var(--chalk);margin-bottom:16px}
+.foot a{color:#C6D3E2}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{margin-top:8px}
+.foot-bottom{
+  margin-top:48px;padding-top:24px;
+  border-top:1px solid rgba(78,124,176,.4);
+  display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
+  font-size:.9375rem;
+}
+
+/* --- Pasek akcji na telefonie ------------------------------------------ */
+/* Ponad 70% ruchu to telefon, a użytkownik ma jeden cel: zadzwonić.
+   Pasek siedzi w strefie kciuka i jest widoczny na każdej wysokości strony. */
+.callbar{
+  display:none;
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:var(--szyld-deep);
+  border-top:1px solid var(--szyld-line);
+  padding:8px var(--pad);
+  padding-bottom:calc(8px + env(safe-area-inset-bottom));
+  gap:8px;
+}
+.callbar .btn{flex:1 1 0;min-width:0;padding:0 16px;font-size:1rem}
+.callbar .btn-ghost{border-color:var(--szyld-line);color:var(--chalk)}
+
+@media (max-width:1000px){
+  .callbar{display:flex}
+  /* Rezerwa na pasek, żeby nie przykrywał końca stopki. */
+  body{padding-bottom:76px}
+}
+
+/* --- Cele dotykowe na telefonie ---------------------------------------- */
+/* Linki z numerem i adresem to na mobile najczęściej klikane elementy strony.
+   W układzie tekstowym mają ~18px wysokości — za mało, żeby trafić kciukiem. */
+@media (max-width:1000px){
+  .brand{display:inline-flex;align-items:center;min-height:48px}
+  /* inline-block, nie flex — link adresowy ma w środku <br>,
+     który w kontenerze flex przestałby łamać wiersz. */
+  .nap dd a,
+  .foot li a,
+  .foot-bottom a{
+    display:inline-block;padding:13px 0;min-height:24px;min-width:48px;
+  }
+  .nap dl{gap:0 24px}
+  .foot li{margin-top:0}
+}
+
+/* --- Reveal ------------------------------------------------------------- */
+/* Budżet animacji: opacity + translateY, 400ms, raz. Nic poza transform. */
+.js .reveal{opacity:0;transform:translateY(12px);transition:opacity .4s var(--e),transform .4s var(--e)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    transition-duration:.01ms !important;
+  }
+  /* Musi być tak samo specyficzne jak `.js .reveal`, inaczej nie wygra. */
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Przejdź do treści</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#main">MAX<span>-</span>INSTAL</a>
+    <nav aria-label="Główna">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#uslugi">Usługi</a></li>
+        <li><a href="#realizacje">Realizacje</a></li>
+        <li><a href="#producenci">Producenci</a></li>
+        <li><a href="#o-nas">O nas</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="nav-tel" href="tel:+48512115071"><span>Zadzwoń</span> 512 115 071</a>
+    <button class="nav-toggle" id="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <svg class="ico-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="ico-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO — tablica szyldu. Bez animacji: to jest element LCP. -->
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Skierniewice · od 2005 roku</p>
+      <h1>Wentylacja i klimatyzacja bez półśrodków</h1>
+      <p class="lead">Projektujemy, montujemy i serwisujemy instalacje wentylacji, klimatyzacji, ogrzewania i chłodnictwa. Zakłady przemysłowe, biurowce, obiekty zabytkowe i domy prywatne.</p>
+      <div class="hero-cta on-szyld">
+        <a class="btn btn-primary" href="tel:+48512115071">Zadzwoń: 512 115 071</a>
+        <a class="btn btn-ghost" href="#kontakt">Zamów wycenę</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="wrap">
+      <dl class="facts-grid">
+        <div class="fact">
+          <dt>Doświadczenie</dt>
+          <dd>Na rynku od 2005 roku</dd>
+        </div>
+        <div class="fact">
+          <dt>Uprawnienia</dt>
+          <dd>Uprawnienia budowlane w specjalności instalacyjnej bez ograniczeń</dd>
+        </div>
+        <div class="fact">
+          <dt>Zakres</dt>
+          <dd>Projekt, montaż i serwis w jednej firmie</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <!-- USŁUGI -->
+  <section id="uslugi">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Usługi</span>
+        <h2>Co robimy</h2>
+        <p class="lead measure">Prowadzimy instalację od projektu, przez montaż, po przeglądy — bez przekazywania zadania podwykonawcom na żadnym etapie.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <span class="eyebrow">01</span>
+          <h3>Projektowanie</h3>
+          <p class="small">Dokumentacja instalacji dla nowych obiektów i modernizacji.</p>
+          <ul>
+            <li>Wentylacja</li>
+            <li>Klimatyzacja</li>
+            <li>Ogrzewanie</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="eyebrow">02</span>
+          <h3>Montaż</h3>
+          <p class="small">Instalacje w wykonaniu zwykłym i specjalnym.</p>
+          <ul>
+            <li>Centrale wentylacyjne z odzyskiem ciepła (rekuperacja)</li>
+            <li>Kanały wentylacyjne z blachy ocynkowanej, nierdzewnej, kwasoodpornej i aluminiowej</li>
+            <li>Wentylatory i automatyka w wykonaniu przeciwwybuchowym (EX)</li>
+            <li>Okapy kuchenne i odciągi miejscowe</li>
+            <li>Agregaty wody lodowej i klimakonwektory</li>
+            <li>Klimatyzatory ścienne, kasetonowe i kanałowe</li>
+            <li>Układy freonowe split, multisplit i VRF</li>
+            <li>Szafy klimatyzacji precyzyjnej</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="eyebrow">03</span>
+          <h3>Serwis</h3>
+          <p class="small">Przeglądy, regulacja i uruchomienie instalacji.</p>
+          <ul>
+            <li>Centrale wentylacyjne</li>
+            <li>Klimatyzatory</li>
+            <li>Wentylatory</li>
+            <li>Kurtyny powietrzne</li>
+            <li>Agregaty wody lodowej</li>
+            <li>Chłodnie</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="eyebrow">04</span>
+          <h3>Nadzór</h3>
+          <p class="small">Posiadamy uprawnienia budowlane w specjalności instalacyjnej w zakresie sieci i instalacji, urządzeń cieplnych, wentylacyjnych, gazowych, wodociągowych i kanalizacyjnych — bez ograniczeń.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REALIZACJE -->
+  <section id="realizacje">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Realizacje</span>
+        <h2>Wybrane wdrożenia</h2>
+      </div>
+
+      <div class="works">
+        <figure class="work reveal">
+          <div class="ph"><span>Zdjęcie — centrale wentylacyjne na dachu, ujęcie ogólne</span></div>
+          <figcaption>Zespół central wentylacyjnych z instalacją kanałową na dachu budynku.</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <div class="ph"><span>Zdjęcie — maszynownia dachowa z ekranem akustycznym</span></div>
+          <figcaption>Maszynownia dachowa z osłoną akustyczną i rozprowadzeniem kanałów.</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <div class="ph"><span>Zdjęcie — centrala wentylacyjna sekcyjna</span></div>
+          <figcaption>Centrala wentylacyjna z odzyskiem ciepła wraz z agregatem skraplającym.</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <div class="ph"><span>Zdjęcie — okapy w kuchni przemysłowej</span></div>
+          <figcaption>Okapy i odciągi miejscowe w kuchni zbiorowego żywienia.</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <div class="ph"><span>Zdjęcie — instalacja w budynku użyteczności publicznej</span></div>
+          <figcaption>Instalacja wentylacji mechanicznej w budynku użyteczności publicznej.</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <div class="ph"><span>Zdjęcie — montaż na wysokości, sala widowiskowa</span></div>
+          <figcaption>Montaż instalacji na rusztowaniu jezdnym w sali widowiskowej.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCENCI -->
+  <section id="producenci" class="makers on-szyld">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Producenci</span>
+        <h2>Na czym pracujemy</h2>
+        <p class="lead measure">Urządzenia dobieramy spośród producentów, których serwisujemy na co dzień i do których mamy dostęp do części.</p>
+      </div>
+
+      <div class="makers-grid reveal">
+        <div class="maker">Swegon</div>
+        <div class="maker">Mitsubishi Electric</div>
+        <div class="maker">Klimor</div>
+        <div class="maker">Fujitsu</div>
+        <div class="maker">Lennox</div>
+        <div class="maker">MDV</div>
+        <div class="maker">Jeven</div>
+        <div class="maker">Midea</div>
+        <div class="maker">LG</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O NAS -->
+  <section id="o-nas">
+    <div class="wrap">
+      <div class="about">
+        <div class="sec-head reveal" style="margin-bottom:0">
+          <span class="eyebrow">O nas</span>
+          <h2>Firma Max-Instal</h2>
+        </div>
+        <div class="reveal measure">
+          <p>Działamy od 2005 roku w branży wentylacji, klimatyzacji, ogrzewania i chłodnictwa. Specjalizujemy się w projektowaniu, montażu i serwisie instalacji.</p>
+          <p>Wykonujemy instalacje w domach prywatnych, budynkach użyteczności publicznej, zakładach przemysłowych i obiektach zabytkowych. Mamy doświadczenie w montażu instalacji w wykonaniu zwykłym i specjalnym.</p>
+          <p>Realizujemy instalacje dla obiektów przemysłowych i handlowych — butików, biurowców, sal konferencyjnych i domów weselnych — a także duże systemy wentylacyjne z rekuperacją. Podstawowymi elementami tych instalacji są agregaty wody lodowej, klimakonwektory i centrale wentylacyjne. Świadczymy też usługi w zakresie regulacji i uruchomienia instalacji.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="contact on-szyld">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Kontakt</span>
+        <h2>Porozmawiajmy o instalacji</h2>
+        <p class="lead measure">Najszybciej odpowiemy telefonicznie. Jeśli wolisz opisać temat na piśmie — wypełnij formularz.</p>
+      </div>
+
+      <div class="contact-grid">
+        <address class="nap reveal">
+          <a class="big" href="tel:+48512115071">512 115 071</a>
+          <dl>
+            <dt>Firma</dt>
+            <dd>Max-Instal</dd>
+
+            <dt>Adres</dt>
+            <dd>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Max-Instal%2C%20Joachima%20Lelewela%2016%2C%2096-100%20Skierniewice" target="_blank" rel="noopener">
+                ul. Joachima Lelewela 16, lokal nr 9<br>
+                96-100 Skierniewice
+              </a>
+            </dd>
+
+            <dt>Tel / fax</dt>
+            <dd><a href="tel:+48468336048">+48 46 833 60 48</a></dd>
+
+            <dt>Komórka</dt>
+            <dd><a href="tel:+48512115071">512 115 071</a></dd>
+
+            <dt>E-mail</dt>
+            <dd><a href="mailto:biuro@maxinstal.pl">biuro@maxinstal.pl</a></dd>
+
+            <dt>NIP</dt>
+            <dd>727-244-94-79</dd>
+
+            <dt>REGON</dt>
+            <dd>100112240</dd>
+          </dl>
+        </address>
+
+        <form class="reveal" id="kontakt-form" novalidate>
+          <div class="field">
+            <label for="f-imie">Imię i nazwisko</label>
+            <input id="f-imie" name="imie" type="text" autocomplete="name" required>
+            <p class="err" id="e-imie">Podaj imię, żebyśmy wiedzieli, jak się zwracać.</p>
+          </div>
+
+          <div class="field">
+            <label for="f-tel">Telefon</label>
+            <input id="f-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required>
+            <p class="err" id="e-tel">Podaj numer telefonu, żebyśmy mogli oddzwonić.</p>
+          </div>
+
+          <div class="field">
+            <label for="f-mail">E-mail <span class="small">(opcjonalnie)</span></label>
+            <input id="f-mail" name="email" type="email" inputmode="email" autocomplete="email">
+            <p class="err" id="e-mail">Ten adres e-mail wygląda na niepełny — sprawdź go.</p>
+          </div>
+
+          <div class="field">
+            <label for="f-tresc">Czego dotyczy sprawa</label>
+            <textarea id="f-tresc" name="wiadomosc" required></textarea>
+            <p class="err" id="e-tresc">Napisz w dwóch zdaniach, czego potrzebujesz.</p>
+          </div>
+
+          <div class="consent" id="consent-row">
+            <input id="f-zgoda" name="zgoda" type="checkbox" required>
+            <label for="f-zgoda">
+              Wyrażam zgodę na przetwarzanie moich danych osobowych przez Max-Instal, ul. Joachima Lelewela 16 lok. 9, 96-100 Skierniewice, w celu udzielenia odpowiedzi na zapytanie. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.
+            </label>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Zamów wycenę</button>
+          <p class="form-note" id="form-note">Formularz otworzy Twój program pocztowy z gotową treścią zapytania.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Max-Instal</h2>
+        <p class="small">Projektowanie, montaż i serwis instalacji wentylacji, klimatyzacji, ogrzewania i chłodnictwa. Skierniewice, od 2005 roku.</p>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <ul class="small">
+          <li><a href="tel:+48512115071">512 115 071</a></li>
+          <li><a href="tel:+48468336048">+48 46 833 60 48</a></li>
+          <li><a href="mailto:biuro@maxinstal.pl">biuro@maxinstal.pl</a></li>
+          <li>ul. Joachima Lelewela 16 lok. 9<br>96-100 Skierniewice</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Informacje</h2>
+        <ul class="small">
+          <li><a href="#uslugi">Usługi</a></li>
+          <li><a href="#realizacje">Realizacje</a></li>
+          <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Max-Instal · NIP 727-244-94-79 · REGON 100112240</span>
+      <span>Projekt strony — <a href="https://widoczni.pl">Studio Widoczni</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar on-szyld">
+  <a class="btn btn-primary" href="tel:+48512115071">Zadzwoń</a>
+  <a class="btn btn-ghost" href="#kontakt">Zamów wycenę</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HVACBusiness",
+  "name":"Max-Instal",
+  "url":"https://maxinstal.pl/",
+  "email":"biuro@maxinstal.pl",
+  "telephone":"+48512115071",
+  "faxNumber":"+48468336048",
+  "foundingDate":"2005",
+  "vatID":"PL7272449479",
+  "taxID":"7272449479",
+  "description":"Projektowanie, montaż i serwis instalacji wentylacji, klimatyzacji, ogrzewania i chłodnictwa.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"ul. Joachima Lelewela 16, lokal nr 9",
+    "addressLocality":"Skierniewice",
+    "postalCode":"96-100",
+    "addressCountry":"PL"
+  },
+  "areaServed":{"@type":"Country","name":"Polska"},
+  "knowsLanguage":"pl",
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Usługi",
+    "itemListElement":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Projektowanie instalacji wentylacji, klimatyzacji i ogrzewania"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Montaż instalacji wentylacji i klimatyzacji"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Serwis central wentylacyjnych i klimatyzatorów"}}
+    ]
+  }
+}
+</script>
+
+<script>
+/* Menu mobilne. */
+(function(){
+  var btn = document.getElementById('nav-toggle');
+  var list = document.getElementById('nav-links');
+  if(!btn || !list) return;
+
+  function close(){
+    list.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  }
+
+  btn.addEventListener('click', function(){
+    var open = list.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  /* Klik w pozycję menu przewija do sekcji — panel ma wtedy zniknąć. */
+  list.addEventListener('click', function(e){
+    if(e.target.tagName === 'A') close();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && list.classList.contains('open')){ close(); btn.focus(); }
+  });
+
+  /* Po powrocie na desktop panel nie może zostać w stanie otwartym. */
+  var mq = window.matchMedia('(min-width:1001px)');
+  (mq.addEventListener ? mq.addEventListener.bind(mq,'change') : mq.addListener.bind(mq))(function(){
+    if(mq.matches) close();
+  });
+})();
+
+/* Reveal przy scrollu — raz na element, bez ponownego odtwarzania. */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.08, rootMargin:'0px 0px -50px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+
+  /* Siatka bezpieczeństwa: przy gwałtownym skoku scrolla (kotwica, przywrócona
+     pozycja, Home/End) przeglądarka potrafi nie policzyć przecięcia dla sekcji,
+     nad którymi „przeleciała". Taka sekcja zostałaby niewidoczna na zawsze. */
+  window.addEventListener('scroll', function sweep(){
+    els.forEach(function(el){
+      if(!el.classList.contains('in') && el.getBoundingClientRect().top < window.innerHeight){
+        el.classList.add('in'); io.unobserve(el);
+      }
+    });
+  }, {passive:true});
+})();
+
+/* Formularz — walidacja inline, następnie mailto z gotową treścią.
+   Do podmiany na realny backend (patrz README.md w tym folderze). */
+(function(){
+  var form = document.getElementById('kontakt-form');
+  if(!form) return;
+
+  function row(input){ return input.closest('.field') || input.closest('.consent'); }
+  function mark(input, bad){ row(input).classList.toggle('invalid', bad); }
+
+  form.querySelectorAll('input,textarea').forEach(function(input){
+    input.addEventListener('input', function(){
+      if(row(input).classList.contains('invalid')) mark(input, !valid(input));
+    });
+  });
+
+  function valid(input){
+    if(input.type === 'checkbox') return input.checked;
+    var v = input.value.trim();
+    if(!v) return !input.required;
+    if(input.type === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+    if(input.type === 'tel')   return v.replace(/\D/g,'').length >= 9;
+    return true;
+  }
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var fields = Array.prototype.slice.call(form.querySelectorAll('input,textarea'));
+    var bad = null;
+
+    fields.forEach(function(input){
+      var ok = valid(input);
+      mark(input, !ok);
+      if(!ok && !bad) bad = input;
+    });
+
+    if(bad){ bad.focus(); return; }
+
+    var get = function(id){ return document.getElementById(id).value.trim(); };
+    var body = [
+      'Imię i nazwisko: ' + get('f-imie'),
+      'Telefon: ' + get('f-tel'),
+      'E-mail: ' + (get('f-mail') || '—'),
+      '',
+      get('f-tresc')
+    ].join('\n');
+
+    window.location.href = 'mailto:biuro@maxinstal.pl'
+      + '?subject=' + encodeURIComponent('Zapytanie ze strony — ' + get('f-imie'))
+      + '&body=' + encodeURIComponent(body);
+
+    document.getElementById('form-note').textContent =
+      'Otwieramy Twój program pocztowy. Jeśli nic się nie stało, napisz na biuro@maxinstal.pl lub zadzwoń: 512 115 071.';
+  });
+})();
+</script>
+
+</body>
+</html>
