@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Max-Instal — instalacje HVAC dla wymagających inwestycji | Skierniewice</title>
+<meta name="description" content="Max-Instal — projektowanie, montaż, uruchomienie i serwis instalacji wentylacji, klimatyzacji, ogrzewania i chłodnictwa. Od 2005 roku, Skierniewice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html { scroll-behavior: smooth; background: #07111D; }
+  body { margin: 0; background: #07111D; color: #EAF1F8; font-family: 'Manrope', system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; text-wrap: pretty; overflow-x: hidden; }
+  * { box-sizing: border-box; }
+  a { color: #1E90FF; text-decoration: none; }
+  a:hover { color: #61B4FF; }
+  h1, h2, h3, h4, p, ul, ol, dl, dd, figure, figcaption { margin: 0; }
+  ul, ol { padding: 0; list-style: none; }
+  img, svg { display: block; }
+  button, input, textarea, select { font: inherit; color: inherit; background: transparent; }
+  :focus-visible { outline: 2px solid #1E90FF; outline-offset: 3px; }
+  @keyframes mi7-scan { 0% { transform: translateY(-10%); opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { transform: translateY(110%); opacity: 0; } }
+  @keyframes mi7-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.9; } }
+  @keyframes mi7-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes mi7-flow { from { background-position: 0 0; } to { background-position: 240px 0; } }
+  @keyframes mi7-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HVACBusiness","name":"Max-Instal","url":"https://maxinstal.pl/","email":"biuro@maxinstal.pl","telephone":"+48512115071","foundingDate":"2005","priceRange":"$$","vatID":"PL7272449479","taxID":"7272449479","description":"Projektowanie, montaż, uruchomienie i serwis instalacji wentylacji, klimatyzacji, ogrzewania i chłodnictwa.","address":{"@type":"PostalAddress","streetAddress":"ul. Joachima Lelewela 16, lokal nr 9","addressLocality":"Skierniewice","postalCode":"96-100","addressCountry":"PL"}}
+</script>
+</helmet>
+
+<div style="background:#07111D">
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:80;padding:clamp(10px,1.4vw,18px) clamp(12px,1.6vw,24px);pointer-events:none">
+  <div data-nav data-navrow style="pointer-events:auto;max-width:1180px;margin:0 auto;padding:0 clamp(14px,1.8vw,28px) 0 clamp(18px,2.2vw,32px);height:80px;display:flex;align-items:center;gap:clamp(20px,2.6vw,36px);background:rgba(255,255,255,0.94);backdrop-filter:blur(20px) saturate(1.3);border-radius:999px;box-shadow:0 22px 50px -32px rgba(7,17,29,0.6);transition:height 300ms ease,box-shadow 300ms ease">
+    <a href="#start" aria-label="Max-Instal — strona główna" style="flex:0 0 auto;display:flex;align-items:center">
+      <img data-navlogo src="logo-max-instal.png" alt="Max-Instal" width="2172" height="724" style="height:54px;width:auto;transition:height 300ms ease">
+    </a>
+    <nav aria-label="Główna" data-navlinks style="margin-left:auto;display:flex;align-items:center;gap:clamp(18px,2.2vw,34px)">
+      <a href="#oferta" style="font-size:0.9375rem;font-weight:600;color:#2A3540;white-space:nowrap;transition:color 200ms ease" style-hover="color:#1E90FF">Oferta</a>
+      <a href="#o-firmie" style="font-size:0.9375rem;font-weight:600;color:#2A3540;white-space:nowrap;transition:color 200ms ease" style-hover="color:#1E90FF">O firmie</a>
+      <a href="#realizacje" style="font-size:0.9375rem;font-weight:600;color:#2A3540;white-space:nowrap;transition:color 200ms ease" style-hover="color:#1E90FF">Realizacje</a>
+      <a href="#uprawnienia" style="font-size:0.9375rem;font-weight:600;color:#2A3540;white-space:nowrap;transition:color 200ms ease" style-hover="color:#1E90FF">Uprawnienia</a>
+      <a href="#kontakt" style="font-size:0.9375rem;font-weight:600;color:#2A3540;white-space:nowrap;transition:color 200ms ease" style-hover="color:#1E90FF">Kontakt</a>
+    </nav>
+    <a href="#kontakt" data-navcta style="flex:0 0 auto;display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 8px 0 26px;background:#1E90FF;color:#FFFFFF;border-radius:999px;font-weight:700;font-size:0.9375rem;white-space:nowrap;box-shadow:0 18px 40px -18px rgba(30,144,255,0.9);transition:background 200ms ease,transform 200ms ease" style-hover="background:#3FA5FF;color:#FFFFFF;transform:translateY(-1px)">
+      Skontaktuj się
+      <span style="width:36px;height:36px;display:grid;place-items:center;background:rgba(255,255,255,0.2);border-radius:999px">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+      </span>
+    </a>
+    <button type="button" data-burger onClick="{{ toggleMenu }}" aria-expanded="false" aria-label="Menu" style="margin-left:auto;display:none;width:48px;height:48px;align-items:center;justify-content:center;border:1px solid #E1E6EB;border-radius:999px;color:#101519;cursor:pointer">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+    </button>
+  </div>
+  <div data-mobilemenu style="pointer-events:auto;display:none;max-width:1440px;margin:10px auto 0;border-radius:24px;padding:8px 24px 20px;background:rgba(255,255,255,0.97);box-shadow:0 24px 50px -30px rgba(7,17,29,0.5)">
+    <a href="#oferta" style="display:block;color:#101519;padding:14px 0;font-weight:600;border-bottom:1px solid #EEF1F4">Oferta</a>
+    <a href="#realizacje" style="display:block;color:#101519;padding:14px 0;font-weight:600;border-bottom:1px solid #EEF1F4">Realizacje</a>
+    <a href="#o-firmie" style="display:block;color:#101519;padding:14px 0;font-weight:600;border-bottom:1px solid #EEF1F4">O firmie</a>
+    <a href="#uprawnienia" style="display:block;color:#101519;padding:14px 0;font-weight:600;border-bottom:1px solid #EEF1F4">Uprawnienia</a>
+    <a href="#kontakt" style="display:block;color:#101519;padding:14px 0;font-weight:600">Kontakt</a>
+    <a href="#kontakt" style="display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 26px;margin-top:16px;background:#1E90FF;color:#FFFFFF;border-radius:999px;font-weight:700;font-size:0.9375rem">Skontaktuj się</a>
+  </div>
+</header>
+
+<section id="start" style="position:relative;background:#07111D">
+  <div data-xraystage style="position:relative;min-height:100vh;overflow:hidden">
+    <span style="position:absolute;top:0;bottom:0;right:0;width:70%;z-index:0;pointer-events:none;background:radial-gradient(60% 55% at 62% 46%,rgba(30,144,255,0.2),transparent 72%)"></span>
+    <div data-xray style="position:absolute;top:0;bottom:0;right:0;width:clamp(420px,56%,980px);z-index:0;opacity:1;transition:opacity 1600ms cubic-bezier(.22,1,.36,1)">
+      <image-slot id="mi7-xray" shape="rect" fit="cover" src="hero-digital-twin-pion.png" placeholder="budynek X-Ray z instalacjami"></image-slot>
+      <span style="position:absolute;top:0;bottom:0;left:0;width:38%;pointer-events:none;background:linear-gradient(90deg,#07111D 0%,rgba(7,17,29,0.6) 45%,rgba(7,17,29,0) 100%)"></span>
+      <span style="position:absolute;top:0;bottom:0;right:0;width:22%;pointer-events:none;background:linear-gradient(270deg,#07111D 0%,rgba(7,17,29,0.4) 55%,rgba(7,17,29,0) 100%)"></span>
+      <span style="position:absolute;left:0;right:0;top:0;height:20%;pointer-events:none;background:linear-gradient(180deg,#07111D 0%,rgba(7,17,29,0.35) 60%,rgba(7,17,29,0) 100%)"></span>
+      <span style="position:absolute;left:0;right:0;bottom:0;height:24%;pointer-events:none;background:linear-gradient(0deg,#07111D 0%,rgba(7,17,29,0.5) 55%,rgba(7,17,29,0) 100%)"></span>
+    </div>
+    <span style="position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(96deg,rgba(7,17,29,0.6) 0%,rgba(7,17,29,0.3) 40%,rgba(7,17,29,0) 62%,rgba(7,17,29,0) 100%)"></span>
+
+
+    <div data-herogrid style="position:relative;z-index:4;max-width:1560px;margin:0 auto;min-height:100vh;padding:clamp(120px,16vh,180px) clamp(20px,3.4vw,56px) clamp(120px,16vh,170px);display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(32px,4vw,64px);align-items:center">
+      <div>
+        <h1 style="margin-top:clamp(20px,2.4vw,32px);font-weight:800;font-size:clamp(2.5rem,5.2vw,4.75rem);line-height:1.0;letter-spacing:-0.038em;color:#FFFFFF;max-width:18ch">Projektujemy i realizujemy to, czego na co dzień nie widać.</h1>
+        <p style="margin-top:clamp(20px,2.2vw,30px);max-width:46ch;font-size:clamp(1.0625rem,1.2vw,1.1875rem);color:rgba(234,241,248,0.76)">Kompleksowe instalacje wentylacji, klimatyzacji, ogrzewania i chłodnictwa dla wymagających inwestycji.</p>
+        <div style="margin-top:clamp(28px,3vw,40px);display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#kontakt" style="display:inline-flex;align-items:center;gap:12px;height:58px;padding:0 8px 0 28px;background:#1E90FF;color:#FFFFFF;border-radius:999px;font-weight:700;box-shadow:0 22px 48px -20px rgba(30,144,255,0.95);transition:background 200ms ease,transform 200ms ease" style-hover="background:#3FA5FF;color:#FFFFFF;transform:translateY(-2px)">
+            Skontaktuj się
+            <span style="width:40px;height:40px;display:grid;place-items:center;background:rgba(255,255,255,0.2);border-radius:999px">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </span>
+          </a>
+          <a href="#realizacje" style="display:inline-flex;align-items:center;gap:12px;height:58px;padding:0 8px 0 28px;background:rgba(255,255,255,0.08);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.22);color:#FFFFFF;border-radius:999px;font-weight:700;transition:background 200ms ease" style-hover="background:rgba(255,255,255,0.16);color:#FFFFFF">
+            Zobacz realizacje
+            <span style="width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.28);border-radius:999px">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </span>
+          </a>
+        </div>
+
+        <ol data-layers style="display:none">
+          <li data-layer="0" style="display:grid;grid-template-columns:auto 1fr;gap:18px;padding:clamp(18px,3.5vh,40px) 0;min-height:clamp(110px,17vh,210px);transition:opacity 400ms ease">
+            <span data-layerdot style="width:30px;height:30px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.24);border-radius:999px;font-family:'DM Mono',monospace;font-size:0.75rem;color:rgba(234,241,248,0.7);transition:background 400ms ease,border-color 400ms ease,color 400ms ease">1</span>
+            <div>
+              <p data-layertitle style="font-family:'DM Mono',monospace;font-size:0.8125rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(234,241,248,0.72);transition:color 400ms ease">Budynek</p>
+              <p style="margin-top:8px;font-size:0.9375rem;color:rgba(234,241,248,0.56)">To, co widoczne. Efekt naszej pracy zaczyna się tutaj.</p>
+            </div>
+          </li>
+          <li data-layer="1" style="display:grid;grid-template-columns:auto 1fr;gap:18px;padding:clamp(18px,3.5vh,40px) 0;min-height:clamp(110px,17vh,210px);transition:opacity 400ms ease">
+            <span data-layerdot style="width:30px;height:30px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.24);border-radius:999px;font-family:'DM Mono',monospace;font-size:0.75rem;color:rgba(234,241,248,0.7);transition:background 400ms ease,border-color 400ms ease,color 400ms ease">2</span>
+            <div>
+              <p data-layertitle style="font-family:'DM Mono',monospace;font-size:0.8125rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(234,241,248,0.72);transition:color 400ms ease">Wentylacja</p>
+              <p style="margin-top:8px;font-size:0.9375rem;color:rgba(234,241,248,0.56)">Kanały i centrale z odzyskiem ciepła. Czyste powietrze w całym obiekcie.</p>
+            </div>
+          </li>
+          <li data-layer="2" style="display:grid;grid-template-columns:auto 1fr;gap:18px;padding:clamp(18px,3.5vh,40px) 0;min-height:clamp(110px,17vh,210px);transition:opacity 400ms ease">
+            <span data-layerdot style="width:30px;height:30px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.24);border-radius:999px;font-family:'DM Mono',monospace;font-size:0.75rem;color:rgba(234,241,248,0.7);transition:background 400ms ease,border-color 400ms ease,color 400ms ease">3</span>
+            <div>
+              <p data-layertitle style="font-family:'DM Mono',monospace;font-size:0.8125rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(234,241,248,0.72);transition:color 400ms ease">Klimatyzacja</p>
+              <p style="margin-top:8px;font-size:0.9375rem;color:rgba(234,241,248,0.56)">Układy split, multisplit i VRF. Optymalny klimat przez cały rok.</p>
+            </div>
+          </li>
+          <li data-layer="3" style="display:grid;grid-template-columns:auto 1fr;gap:18px;padding:clamp(18px,3.5vh,40px) 0;min-height:clamp(110px,17vh,210px);transition:opacity 400ms ease">
+            <span data-layerdot style="width:30px;height:30px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.24);border-radius:999px;font-family:'DM Mono',monospace;font-size:0.75rem;color:rgba(234,241,248,0.7);transition:background 400ms ease,border-color 400ms ease,color 400ms ease">4</span>
+            <div>
+              <p data-layertitle style="font-family:'DM Mono',monospace;font-size:0.8125rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(234,241,248,0.72);transition:color 400ms ease">Ogrzewanie</p>
+              <p style="margin-top:8px;font-size:0.9375rem;color:rgba(234,241,248,0.56)">Instalacje cieplne prowadzone tam, gdzie ciepło jest potrzebne.</p>
+            </div>
+          </li>
+          <li data-layer="4" style="display:grid;grid-template-columns:auto 1fr;gap:18px;padding:clamp(18px,3.5vh,40px) 0;min-height:clamp(110px,17vh,210px);transition:opacity 400ms ease">
+            <span data-layerdot style="width:30px;height:30px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.24);border-radius:999px;font-family:'DM Mono',monospace;font-size:0.75rem;color:rgba(234,241,248,0.7);transition:background 400ms ease,border-color 400ms ease,color 400ms ease">5</span>
+            <div>
+              <p data-layertitle style="font-family:'DM Mono',monospace;font-size:0.8125rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(234,241,248,0.72);transition:color 400ms ease">Chłodnictwo</p>
+              <p style="margin-top:8px;font-size:0.9375rem;color:rgba(234,241,248,0.56)">Agregaty wody lodowej i chłodnie dla przemysłu i handlu.</p>
+            </div>
+          </li>
+          <li data-layer="5" style="display:grid;grid-template-columns:auto 1fr;gap:18px;padding:clamp(18px,3.5vh,40px) 0;min-height:clamp(110px,17vh,210px);transition:opacity 400ms ease">
+            <span data-layerdot style="width:30px;height:30px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.24);border-radius:999px;font-family:'DM Mono',monospace;font-size:0.75rem;color:rgba(234,241,248,0.7);transition:background 400ms ease,border-color 400ms ease,color 400ms ease">6</span>
+            <div>
+              <p data-layertitle style="font-family:'DM Mono',monospace;font-size:0.8125rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(234,241,248,0.72);transition:color 400ms ease">Automatyka</p>
+              <p style="margin-top:8px;font-size:0.9375rem;color:rgba(234,241,248,0.56)">Wszystko połączone i wyregulowane. Serce instalacji, które pracuje w tle.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div data-hud style="display:none">
+        <div style="display:grid;gap:12px;padding:20px;background:rgba(255,255,255,0.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.18);border-radius:18px">
+          <span style="width:38px;height:38px;display:grid;place-items:center;background:rgba(30,144,255,0.24);border-radius:999px">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8FC9F5" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 9.5h17M8 5V3M16 5V3"></path></svg>
+          </span>
+          <p style="font-weight:700;color:#FFFFFF;line-height:1.35"><span data-count="21">21</span> lat<br><span style="font-weight:500;color:rgba(234,241,248,0.72)">doświadczenia</span></p>
+        </div>
+        <div style="display:grid;gap:12px;padding:20px;background:rgba(255,255,255,0.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.18);border-radius:18px">
+          <span style="width:38px;height:38px;display:grid;place-items:center;background:rgba(30,144,255,0.24);border-radius:999px">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8FC9F5" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"></path></svg>
+          </span>
+          <p style="font-weight:700;color:#FFFFFF;line-height:1.35">Projekt • Montaż<br>• Serwis</p>
+        </div>
+        <div style="display:grid;gap:12px;padding:20px;background:rgba(255,255,255,0.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.18);border-radius:18px">
+          <span style="width:38px;height:38px;display:grid;place-items:center;background:rgba(30,144,255,0.24);border-radius:999px">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8FC9F5" stroke-width="1.7" aria-hidden="true"><path d="M4 20V7l7-3v16M11 20h9V11l-9-4"></path><path d="M14.5 14h2M14.5 17h2"></path></svg>
+          </span>
+          <p style="font-weight:700;color:#FFFFFF;line-height:1.35"><span data-count="500">500</span>+<br><span style="font-weight:500;color:rgba(234,241,248,0.72)">realizacji</span></p>
+        </div>
+        <div style="display:grid;gap:12px;padding:20px;background:rgba(255,255,255,0.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.18);border-radius:18px">
+          <span style="width:38px;height:38px;display:grid;place-items:center;background:rgba(30,144,255,0.24);border-radius:999px">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8FC9F5" stroke-width="1.7" aria-hidden="true"><path d="M12 3l7 3v5.6c0 4-3 7.5-7 8.4-4-.9-7-4.4-7-8.4V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
+          </span>
+          <p style="font-weight:700;color:#FFFFFF;line-height:1.35">Uprawnienia<br><span style="font-weight:500;color:rgba(234,241,248,0.72)">bez ograniczeń</span></p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<section id="o-firmie" style="background:#FAFBFC;color:#101519;padding:clamp(40px,4.5vw,72px) clamp(20px,3.4vw,56px) clamp(64px,8vw,132px);background-image:linear-gradient(rgba(30,144,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(30,144,255,0.025) 1px,transparent 1px);background-size:56px 56px">
+  <div style="max-width:1560px;margin:0 auto">
+    <div data-statgrid style="display:grid;grid-template-columns:repeat(4,1fr);gap:0">
+      <div data-reveal data-stat style="position:relative;padding:clamp(26px,3vw,44px) clamp(24px,2.8vw,44px) clamp(26px,3vw,44px) 0;border-left:0;transition:transform 340ms cubic-bezier(.22,1,.36,1)">
+        <span data-statline style="position:absolute;left:0;right:clamp(24px,2.8vw,44px);top:0;height:2px;background:#1E90FF;transform:scaleX(0);transform-origin:left;transition:transform 340ms ease"></span>
+        <span data-staticon style="display:grid;place-items:center;width:44px;height:44px;color:#1E90FF;transition:transform 340ms ease">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 9.5h17M8 5V3M16 5V3"></path></svg>
+        </span>
+        <p style="margin-top:28px;font-weight:700;font-size:clamp(2.25rem,3.6vw,3.5rem);line-height:0.95;letter-spacing:-0.04em;color:#101519"><span data-count="21">21</span>+</p>
+        <p style="margin-top:16px;font-weight:600;color:#101519">lat doświadczenia</p>
+        <p style="margin-top:10px;font-size:0.9375rem;line-height:1.6;color:#7A8593;max-width:28ch">Od 2005 roku realizujemy najbardziej wymagające inwestycje HVAC.</p>
+      </div>
+      <div data-reveal data-stat style="position:relative;padding:clamp(26px,3vw,44px) clamp(24px,2.8vw,44px);border-left:1px solid #E7EAEE;transition:transform 340ms cubic-bezier(.22,1,.36,1)">
+        <span data-statline style="position:absolute;left:clamp(24px,2.8vw,44px);right:clamp(24px,2.8vw,44px);top:0;height:2px;background:#1E90FF;transform:scaleX(0);transform-origin:left;transition:transform 340ms ease"></span>
+        <span data-staticon style="display:grid;place-items:center;width:44px;height:44px;color:#1E90FF;transition:transform 340ms ease">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M4 20V7l7-3v16M11 20h9V11l-9-4"></path><path d="M14.5 14h2M14.5 17h2M4 20h16"></path></svg>
+        </span>
+        <p style="margin-top:28px;font-weight:700;font-size:clamp(2.25rem,3.6vw,3.5rem);line-height:0.95;letter-spacing:-0.04em;color:#101519"><span data-count="500">500</span>+</p>
+        <p style="margin-top:16px;font-weight:600;color:#101519">zrealizowanych inwestycji</p>
+        <p style="margin-top:10px;font-size:0.9375rem;line-height:1.6;color:#7A8593;max-width:28ch">Setki ukończonych projektów dla obiektów komercyjnych, przemysłowych i publicznych.</p>
+      </div>
+      <div data-reveal data-stat style="position:relative;padding:clamp(26px,3vw,44px) clamp(24px,2.8vw,44px);border-left:1px solid #E7EAEE;transition:transform 340ms cubic-bezier(.22,1,.36,1)">
+        <span data-statline style="position:absolute;left:clamp(24px,2.8vw,44px);right:clamp(24px,2.8vw,44px);top:0;height:2px;background:#1E90FF;transform:scaleX(0);transform-origin:left;transition:transform 340ms ease"></span>
+        <span data-staticon style="display:grid;place-items:center;width:44px;height:44px;color:#1E90FF;transition:transform 340ms ease">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M4 6.5h10M18 6.5h2M4 12h4M12 12h8M4 17.5h13"></path><circle cx="16" cy="6.5" r="1.8"></circle><circle cx="10" cy="12" r="1.8"></circle><circle cx="19" cy="17.5" r="1.8"></circle></svg>
+        </span>
+        <p style="margin-top:28px;font-weight:700;font-size:clamp(1.375rem,1.9vw,1.75rem);line-height:1.2;letter-spacing:-0.025em;color:#101519;min-height:clamp(2.2rem,3.5vw,3.4rem);display:flex;align-items:flex-end"><span><span style="white-space:nowrap">Projekt <span style="font-size:0.55em;color:#1E90FF;vertical-align:middle">•</span></span> <span style="white-space:nowrap">Montaż <span style="font-size:0.55em;color:#1E90FF;vertical-align:middle">•</span></span> Serwis</span></p>
+        <p style="margin-top:16px;font-weight:600;color:#101519">kompleksowa realizacja</p>
+        <p style="margin-top:10px;font-size:0.9375rem;line-height:1.6;color:#7A8593;max-width:28ch">Kompleksowa realizacja instalacji HVAC od projektu, przez wykonanie, aż po uruchomienie.</p>
+      </div>
+      <div data-reveal data-stat style="position:relative;padding:clamp(26px,3vw,44px) 0 clamp(26px,3vw,44px) clamp(24px,2.8vw,44px);border-left:1px solid #E7EAEE;transition:transform 340ms cubic-bezier(.22,1,.36,1)">
+        <span data-statline style="position:absolute;left:clamp(24px,2.8vw,44px);right:0;top:0;height:2px;background:#1E90FF;transform:scaleX(0);transform-origin:left;transition:transform 340ms ease"></span>
+        <span data-staticon style="display:grid;place-items:center;width:44px;height:44px;color:#1E90FF;transition:transform 340ms ease">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M12 3l7 3v5.6c0 4-3 7.5-7 8.4-4-.9-7-4.4-7-8.4V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
+        </span>
+        <p style="margin-top:28px;font-weight:700;font-size:clamp(1.375rem,1.9vw,1.75rem);line-height:1.2;letter-spacing:-0.025em;color:#101519;min-height:clamp(2.2rem,3.5vw,3.4rem);display:flex;align-items:flex-end">Uprawnienia bez ograniczeń</p>
+        <p style="margin-top:16px;font-weight:600;color:#101519">pełne kwalifikacje</p>
+        <p style="margin-top:10px;font-size:0.9375rem;line-height:1.6;color:#7A8593;max-width:28ch">Wykwalifikowany zespół posiadający pełne uprawnienia do realizacji instalacji sanitarnych i HVAC.</p>
+      </div>
+    </div>
+
+    <div data-aboutgrid style="margin-top:clamp(48px,6vw,104px);display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(32px,5vw,88px);align-items:center">
+      <div data-reveal>
+        <p style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.24em;text-transform:uppercase;color:#1E90FF">Max-Instal</p>
+        <h2 style="margin-top:clamp(18px,2.2vw,28px);font-weight:800;font-size:clamp(1.875rem,3.6vw,3.125rem);line-height:1.02;letter-spacing:-0.035em;color:#101519">Kompleksowo. Profesjonalnie. Niezawodnie.</h2>
+        <p style="margin-top:24px;max-width:48ch;color:#5A6470">Od projektu, przez montaż, aż po serwis. Dostarczamy instalacje HVAC dla domów prywatnych, biurowców, obiektów handlowych, budynków użyteczności publicznej, zakładów przemysłowych i obiektów zabytkowych.</p>
+        <p style="margin-top:16px;max-width:48ch;color:#5A6470">Posiadamy uprawnienia budowlane w specjalności instalacyjnej w zakresie sieci i instalacji, urządzeń cieplnych, wentylacyjnych, gazowych, wodociągowych i kanalizacyjnych, bez ograniczeń.</p>
+        <a href="#oferta" style="margin-top:clamp(28px,3vw,40px);display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 8px 0 26px;background:#1E90FF;color:#FFFFFF;border-radius:999px;font-weight:700;box-shadow:0 20px 44px -22px rgba(30,144,255,0.9);transition:background 200ms ease,transform 200ms ease" style-hover="background:#0F7AE0;color:#FFFFFF;transform:translateY(-2px)">
+          Poznaj naszą ofertę
+          <span style="width:38px;height:38px;display:grid;place-items:center;background:rgba(255,255,255,0.22);border-radius:999px">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+          </span>
+        </a>
+      </div>
+      <div data-reveal style="position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#E4E9ED;box-shadow:0 60px 110px -80px rgba(16,21,25,0.8)">
+        <div data-parallax="0.03" style="position:absolute;inset:-5% 0">
+          <image-slot id="mi7-about" shape="rect" fit="cover" src="foto-maszynownia.jpg" placeholder="maszynownia / realizacja Max-Instal"></image-slot>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="realizacje" style="background:#07111D;padding:clamp(40px,4.5vw,72px) clamp(20px,3.4vw,56px) clamp(48px,5.5vw,88px)">
+  <div style="max-width:1560px;margin:0 auto">
+    <div data-workshead2 style="display:flex;flex-wrap:wrap;gap:20px clamp(24px,4vw,64px);align-items:flex-end;justify-content:space-between">
+      <div data-reveal style="max-width:64ch">
+        <p style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.24em;text-transform:uppercase;color:#5FB0FF">Realizacje</p>
+        <h2 style="margin-top:12px;font-weight:800;font-size:clamp(1.875rem,3.6vw,3.125rem);line-height:1.02;letter-spacing:-0.035em;color:#FFFFFF">Nasze realizacje</h2>
+        <p style="margin-top:12px;max-width:56ch;color:rgba(234,241,248,0.72)">Od ponad 20 lat projektujemy i realizujemy instalacje HVAC dla najbardziej wymagających inwestycji w całej Polsce.</p>
+      </div>
+      <a data-reveal href="#kontakt" style="display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 26px;border:1px solid rgba(255,255,255,0.24);color:#FFFFFF;border-radius:999px;font-weight:600;white-space:nowrap;transition:background 200ms ease,border-color 200ms ease" style-hover="background:rgba(255,255,255,0.08);color:#FFFFFF">Zobacz wszystkie realizacje <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div data-worksgrid style="margin-top:clamp(20px,2.4vw,36px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,0.85fr) minmax(0,1.25fr);gap:clamp(16px,1.8vw,26px)">
+
+      <article data-pcard style="cursor:pointer">
+        <div style="position:relative;height:clamp(360px,34vw,460px);border-radius:28px;overflow:hidden;background:#0E1B2A">
+          <image-slot id="mi7-w-2" shape="rect" fit="cover" placeholder="biurowiec klasy A"></image-slot>
+          <span data-pblueprint style="position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 500ms ease;background-image:linear-gradient(rgba(30,144,255,0.14) 1px,transparent 1px),linear-gradient(90deg,rgba(30,144,255,0.14) 1px,transparent 1px);background-size:44px 44px"></span>
+          <span style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,17,29,0.06) 30%,rgba(7,17,29,0.42) 62%,rgba(7,17,29,0.9) 100%)"></span>
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,2.2vw,32px);display:flex;gap:16px;align-items:flex-end;justify-content:space-between">
+            <div data-ptext style="transition:transform 500ms cubic-bezier(.22,1,.36,1);min-width:0;overflow-wrap:break-word">
+              <p data-pcat style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.16em;text-transform:uppercase;color:#5FB0FF;opacity:0;transform:translateY(6px);transition:opacity 400ms ease,transform 400ms ease">Obiekt biurowy</p>
+              <h3 style="margin-top:8px;font-weight:700;font-size:clamp(1.25rem,1.8vw,1.625rem);letter-spacing:-0.02em;color:#FFFFFF">Biurowiec klasy A</h3>
+              <p style="margin-top:4px;font-size:0.9375rem;color:rgba(234,241,248,0.66)">Warszawa</p>
+              <p style="margin-top:10px;font-size:0.9375rem;color:rgba(234,241,248,0.8);max-width:38ch">Kompleksowa instalacja HVAC, wentylacji i klimatyzacji.</p>
+            </div>
+            <span data-parrow style="flex:0 0 auto;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.3);border-radius:999px;transition:transform 400ms cubic-bezier(.22,1,.36,1),border-color 400ms ease">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="1.8" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article data-pcard style="cursor:pointer">
+        <div style="position:relative;height:clamp(360px,34vw,460px);border-radius:28px;overflow:hidden;background:#0E1B2A">
+          <image-slot id="mi7-w-3" shape="rect" fit="cover" placeholder="szpital"></image-slot>
+          <span data-pblueprint style="position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 500ms ease;background-image:linear-gradient(rgba(30,144,255,0.14) 1px,transparent 1px),linear-gradient(90deg,rgba(30,144,255,0.14) 1px,transparent 1px);background-size:44px 44px"></span>
+          <span style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,17,29,0.06) 30%,rgba(7,17,29,0.42) 62%,rgba(7,17,29,0.9) 100%)"></span>
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,2.2vw,32px);display:flex;gap:16px;align-items:flex-end;justify-content:space-between">
+            <div data-ptext style="transition:transform 500ms cubic-bezier(.22,1,.36,1);min-width:0;overflow-wrap:break-word">
+              <p data-pcat style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.16em;text-transform:uppercase;color:#5FB0FF;opacity:0;transform:translateY(6px);transition:opacity 400ms ease,transform 400ms ease">Obiekt publiczny</p>
+              <h3 style="margin-top:8px;font-weight:700;font-size:clamp(1.25rem,1.8vw,1.625rem);letter-spacing:-0.02em;color:#FFFFFF">Szpital</h3>
+              <p style="margin-top:4px;font-size:0.9375rem;color:rgba(234,241,248,0.66)">Skierniewice</p>
+              <p style="margin-top:10px;font-size:0.9375rem;color:rgba(234,241,248,0.8);max-width:38ch">Centrale wentylacyjne i klimatyzacja precyzyjna.</p>
+            </div>
+            <span data-parrow style="flex:0 0 auto;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.3);border-radius:999px;transition:transform 400ms cubic-bezier(.22,1,.36,1),border-color 400ms ease">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="1.8" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article data-pcard style="cursor:pointer">
+        <div style="position:relative;height:clamp(360px,34vw,460px);border-radius:28px;overflow:hidden;background:#0E1B2A">
+          <image-slot id="mi7-w-1" shape="rect" fit="cover" placeholder="hala produkcyjna"></image-slot>
+          <span data-pblueprint style="position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 500ms ease;background-image:linear-gradient(rgba(30,144,255,0.14) 1px,transparent 1px),linear-gradient(90deg,rgba(30,144,255,0.14) 1px,transparent 1px);background-size:44px 44px"></span>
+          <span style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,17,29,0.06) 30%,rgba(7,17,29,0.42) 62%,rgba(7,17,29,0.9) 100%)"></span>
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,2.2vw,32px);display:flex;gap:16px;align-items:flex-end;justify-content:space-between">
+            <div data-ptext style="transition:transform 500ms cubic-bezier(.22,1,.36,1);min-width:0;overflow-wrap:break-word">
+              <p data-pcat style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.16em;text-transform:uppercase;color:#5FB0FF;opacity:0;transform:translateY(6px);transition:opacity 400ms ease,transform 400ms ease">Przemysł</p>
+              <h3 style="margin-top:8px;font-weight:700;font-size:clamp(1.25rem,1.8vw,1.625rem);letter-spacing:-0.02em;color:#FFFFFF">Hala produkcyjna</h3>
+              <p style="margin-top:4px;font-size:0.9375rem;color:rgba(234,241,248,0.66)">Łódź</p>
+              <p style="margin-top:10px;font-size:0.9375rem;color:rgba(234,241,248,0.8);max-width:38ch">Wentylacja i ogrzewanie hali produkcyjnej.</p>
+            </div>
+            <span data-parrow style="flex:0 0 auto;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.3);border-radius:999px;transition:transform 400ms cubic-bezier(.22,1,.36,1),border-color 400ms ease">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="1.8" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article data-pcard style="cursor:pointer">
+        <div style="position:relative;height:clamp(360px,34vw,460px);border-radius:28px;overflow:hidden;background:#0E1B2A">
+          <image-slot id="mi7-w-4" shape="rect" fit="cover" placeholder="galeria handlowa"></image-slot>
+          <span data-pblueprint style="position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 500ms ease;background-image:linear-gradient(rgba(30,144,255,0.14) 1px,transparent 1px),linear-gradient(90deg,rgba(30,144,255,0.14) 1px,transparent 1px);background-size:44px 44px"></span>
+          <span style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,17,29,0.06) 30%,rgba(7,17,29,0.42) 62%,rgba(7,17,29,0.9) 100%)"></span>
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,2.2vw,32px);display:flex;gap:16px;align-items:flex-end;justify-content:space-between">
+            <div data-ptext style="transition:transform 500ms cubic-bezier(.22,1,.36,1);min-width:0;overflow-wrap:break-word">
+              <p data-pcat style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.16em;text-transform:uppercase;color:#5FB0FF;opacity:0;transform:translateY(6px);transition:opacity 400ms ease,transform 400ms ease">Obiekt handlowy</p>
+              <h3 style="margin-top:8px;font-weight:700;font-size:clamp(1.25rem,1.8vw,1.625rem);letter-spacing:-0.02em;color:#FFFFFF">Galeria handlowa</h3>
+              <p style="margin-top:4px;font-size:0.9375rem;color:rgba(234,241,248,0.66)">Warszawa</p>
+              <p style="margin-top:10px;font-size:0.9375rem;color:rgba(234,241,248,0.8);max-width:38ch">Klimatyzacja i wentylacja powierzchni handlowych.</p>
+            </div>
+            <span data-parrow style="flex:0 0 auto;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.3);border-radius:999px;transition:transform 400ms cubic-bezier(.22,1,.36,1),border-color 400ms ease">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="1.8" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+
+    <div data-reveal style="margin-top:clamp(40px,5vw,72px);text-align:center">
+      <h3 style="font-weight:800;font-size:clamp(1.75rem,3.4vw,2.75rem);letter-spacing:-0.03em;color:#FFFFFF">Masz podobną inwestycję?</h3>
+      <p style="margin-top:16px;color:rgba(234,241,248,0.72);max-width:52ch;margin-left:auto;margin-right:auto">Porozmawiajmy o projekcie i przygotujmy rozwiązanie dopasowane do Twojego obiektu.</p>
+      <a href="#kontakt" style="margin-top:28px;display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 32px;background:#1E90FF;color:#FFFFFF;border-radius:999px;font-weight:700;box-shadow:0 20px 44px -20px rgba(30,144,255,0.9);transition:background 200ms ease,transform 200ms ease">Skontaktuj się</a>
+    </div>
+  </div>
+</section>
+
+<section id="oferta" style="background:#F4F6F8;color:#101519;padding:clamp(56px,7vw,104px) clamp(20px,3.4vw,56px);background-image:linear-gradient(rgba(30,144,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(30,144,255,0.025) 1px,transparent 1px);background-size:56px 56px">
+  <div data-offergrid style="max-width:1560px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,4.5vw,80px);align-items:center">
+    <div data-reveal>
+      <p style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.24em;text-transform:uppercase;color:#1E90FF">Oferta</p>
+      <h2 style="margin-top:clamp(16px,2vw,24px);font-weight:800;font-size:clamp(1.875rem,3.6vw,3.125rem);line-height:1.02;letter-spacing:-0.035em;color:#101519;max-width:20ch">Kompleksowo od projektu po serwis.</h2>
+      <p style="margin-top:18px;max-width:46ch;color:#5A6470">Każdy etap inwestycji prowadzi nasz zespół. Najedź na etap, aby zobaczyć, co obejmuje.</p>
+
+      <div style="margin-top:clamp(28px,3.4vw,48px);display:grid;gap:6px">
+        <button type="button" data-svcitem="0" style="display:flex;align-items:center;gap:18px;width:100%;text-align:left;padding:14px 0 14px 24px;border:0;border-left:3px solid transparent;background:transparent;cursor:pointer;transition:border-color 400ms ease">
+          <span data-svcno style="font-family:'DM Mono',monospace;font-size:0.8125rem;color:#9AA2AB;transition:color 400ms ease">01</span>
+          <span data-svcicon style="flex:0 0 auto;width:44px;height:44px;border-radius:999px;display:grid;place-items:center;background:transparent;color:#8A94A0;transition:color 400ms ease,background 400ms ease"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 18V6h5l3 4h8v8z"></path><path d="M4 10h5"></path></svg></span>
+          <span data-svcname style="font-weight:700;font-size:clamp(1.125rem,1.5vw,1.25rem);letter-spacing:-0.02em;color:#6B7684;transition:color 400ms ease,font-size 400ms ease">Projektowanie</span>
+        </button>
+        <button type="button" data-svcitem="1" style="display:flex;align-items:center;gap:18px;width:100%;text-align:left;padding:14px 0 14px 24px;border:0;border-left:3px solid transparent;background:transparent;cursor:pointer;transition:border-color 400ms ease">
+          <span data-svcno style="font-family:'DM Mono',monospace;font-size:0.8125rem;color:#9AA2AB;transition:color 400ms ease">02</span>
+          <span data-svcicon style="flex:0 0 auto;width:44px;height:44px;border-radius:999px;display:grid;place-items:center;background:transparent;color:#8A94A0;transition:color 400ms ease,background 400ms ease"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M14.5 3.6a4.5 4.5 0 0 0 5.9 5.9L21 10l-9 9-4 1 1-4 9-9z"></path><path d="M4 20l3-3"></path></svg></span>
+          <span data-svcname style="font-weight:700;font-size:clamp(1.125rem,1.5vw,1.25rem);letter-spacing:-0.02em;color:#6B7684;transition:color 400ms ease,font-size 400ms ease">Montaż</span>
+        </button>
+        <button type="button" data-svcitem="2" style="display:flex;align-items:center;gap:18px;width:100%;text-align:left;padding:14px 0 14px 24px;border:0;border-left:3px solid transparent;background:transparent;cursor:pointer;transition:border-color 400ms ease">
+          <span data-svcno style="font-family:'DM Mono',monospace;font-size:0.8125rem;color:#9AA2AB;transition:color 400ms ease">03</span>
+          <span data-svcicon style="flex:0 0 auto;width:44px;height:44px;border-radius:999px;display:grid;place-items:center;background:transparent;color:#8A94A0;transition:color 400ms ease,background 400ms ease"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3.2 2"></path></svg></span>
+          <span data-svcname style="font-weight:700;font-size:clamp(1.125rem,1.5vw,1.25rem);letter-spacing:-0.02em;color:#6B7684;transition:color 400ms ease,font-size 400ms ease">Uruchomienie</span>
+        </button>
+        <button type="button" data-svcitem="3" style="display:flex;align-items:center;gap:18px;width:100%;text-align:left;padding:14px 0 14px 24px;border:0;border-left:3px solid transparent;background:transparent;cursor:pointer;transition:border-color 400ms ease">
+          <span data-svcno style="font-family:'DM Mono',monospace;font-size:0.8125rem;color:#9AA2AB;transition:color 400ms ease">04</span>
+          <span data-svcicon style="flex:0 0 auto;width:44px;height:44px;border-radius:999px;display:grid;place-items:center;background:transparent;color:#8A94A0;transition:color 400ms ease,background 400ms ease"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"></path></svg></span>
+          <span data-svcname style="font-weight:700;font-size:clamp(1.125rem,1.5vw,1.25rem);letter-spacing:-0.02em;color:#6B7684;transition:color 400ms ease,font-size 400ms ease">Serwis</span>
+        </button>
+        <button type="button" data-svcitem="4" style="display:flex;align-items:center;gap:18px;width:100%;text-align:left;padding:14px 0 14px 24px;border:0;border-left:3px solid transparent;background:transparent;cursor:pointer;transition:border-color 400ms ease">
+          <span data-svcno style="font-family:'DM Mono',monospace;font-size:0.8125rem;color:#9AA2AB;transition:color 400ms ease">05</span>
+          <span data-svcicon style="flex:0 0 auto;width:44px;height:44px;border-radius:999px;display:grid;place-items:center;background:transparent;color:#8A94A0;transition:color 400ms ease,background 400ms ease"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3l7 3v5.6c0 4-3 7.5-7 8.4-4-.9-7-4.4-7-8.4V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+          <span data-svcname style="font-weight:700;font-size:clamp(1.125rem,1.5vw,1.25rem);letter-spacing:-0.02em;color:#6B7684;transition:color 400ms ease,font-size 400ms ease">Nadzór</span>
+        </button>
+      </div>
+    </div>
+
+    <div data-reveal>
+      <div style="background:rgba(255,255,255,0.85);backdrop-filter:blur(18px);border-radius:32px;padding:clamp(32px,3.6vw,56px);box-shadow:0 60px 120px -95px rgba(16,21,25,0.55);border:1px solid rgba(255,255,255,0.75)">
+        <div data-pane style="transition:opacity 320ms ease,transform 320ms ease">
+          <h3 data-panetitle style="font-weight:800;font-size:clamp(1.5rem,2.2vw,2rem);letter-spacing:-0.03em;color:#101519">Projektowanie instalacji HVAC</h3>
+          <p data-panedesc style="margin-top:12px;color:#5A6470;max-width:52ch">Tworzymy kompletną dokumentację techniczną dostosowaną do charakteru inwestycji.</p>
+          <div style="margin-top:clamp(22px,2.4vw,32px);display:grid;gap:clamp(18px,2vw,26px)">
+            <div>
+              <p style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.18em;text-transform:uppercase;color:#7A8593">Co robimy</p>
+              <ul data-panelist style="margin-top:14px;display:grid;gap:10px">
+                <li style="display:flex;gap:14px;align-items:baseline">
+                  <span style="flex:0 0 auto;width:6px;height:6px;border-radius:999px;background:#1E90FF"></span>
+                  <span data-paneitem style="color:#101519;font-size:1rem"></span>
+                </li>
+                <li style="display:flex;gap:14px;align-items:baseline">
+                  <span style="flex:0 0 auto;width:6px;height:6px;border-radius:999px;background:#1E90FF"></span>
+                  <span data-paneitem style="color:#101519;font-size:1rem"></span>
+                </li>
+                <li style="display:flex;gap:14px;align-items:baseline">
+                  <span style="flex:0 0 auto;width:6px;height:6px;border-radius:999px;background:#1E90FF"></span>
+                  <span data-paneitem style="color:#101519;font-size:1rem"></span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.18em;text-transform:uppercase;color:#7A8593">Co otrzymuje klient</p>
+              <p data-paneclient style="margin-top:10px;font-weight:600;font-size:1.0625rem;color:#101519;max-width:50ch"></p>
+            </div>
+          </div>
+          <div style="margin-top:clamp(22px,2.4vw,32px);padding-left:24px;border-left:3px solid #1E90FF">
+            <p style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.18em;text-transform:uppercase;color:#1E90FF">Efekt</p>
+            <p data-paneeffect style="margin-top:8px;font-weight:700;font-size:clamp(1.125rem,1.5vw,1.375rem);letter-spacing:-0.02em;color:#101519"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Nasi producenci" style="background:#FFFFFF;padding:clamp(14px,1.5vw,22px) 0">
+  <div data-marquee style="overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)">
+    <div data-marqueetrack style="display:flex;align-items:center;width:max-content;animation:mi7-marquee 40s linear infinite reverse">
+      <img src="producenci-logos.png" alt="Producenci: Fujitsu, Jeven, Klimor, Lennox, LG, MDV, Midea, Mitsubishi Electric, Swegon" width="1530" height="85" style="height:clamp(52px,5.4vw,80px);width:auto">
+      <img src="producenci-logos.png" alt="" aria-hidden="true" width="1530" height="85" style="height:clamp(52px,5.4vw,80px);width:auto">
+    </div>
+  </div>
+</section>
+
+<section id="uprawnienia" style="background:#07111D;padding:clamp(56px,7vw,112px) clamp(20px,3.4vw,56px)">
+  <div data-permgrid style="max-width:1560px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,4.5vw,80px);align-items:center">
+    <div data-reveal>
+      <p style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.24em;text-transform:uppercase;color:#5FB0FF">Uprawnienia</p>
+      <h2 style="margin-top:clamp(16px,2vw,24px);font-weight:800;font-size:clamp(1.875rem,3.6vw,3.125rem);line-height:1.02;letter-spacing:-0.035em;color:#FFFFFF;max-width:18ch">Pełne uprawnienia budowlane bez ograniczeń</h2>
+      <p style="margin-top:18px;max-width:48ch;color:rgba(234,241,248,0.72)">Posiadamy uprawnienia budowlane w specjalności instalacyjnej. Projektujemy i kierujemy robotami w pełnym zakresie, bez ograniczeń co do kubatury i rodzaju obiektu.</p>
+    </div>
+    <ul data-reveal data-permlist style="display:grid;grid-template-columns:1fr;gap:0">
+      <li style="padding:24px 0 26px;border-top:1px solid rgba(255,255,255,0.12);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:start">
+        <p style="font-weight:600;color:#FFFFFF;max-width:44ch">Uprawnienia budowlane</p>
+        <p style="font-family:'DM Mono',monospace;font-size:0.8125rem;letter-spacing:0.06em;color:#5FB0FF;white-space:nowrap">LOD/0322/OWOS/05</p>
+      </li>
+      <li style="padding:24px 0 26px;border-top:1px solid rgba(255,255,255,0.12);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:start">
+        <p style="font-weight:600;color:#FFFFFF;max-width:44ch">Instalowanie, konserwacja oraz serwisowanie urządzeń chłodniczych, klimatyzacyjnych oraz pomp ciepła</p>
+        <p style="font-family:'DM Mono',monospace;font-size:0.8125rem;letter-spacing:0.06em;color:#5FB0FF;white-space:nowrap">FGAZ-P/14/0049/16</p>
+      </li>
+      <li style="padding:24px 0 26px;border-top:1px solid rgba(255,255,255,0.12);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:start">
+        <p style="font-weight:600;color:#FFFFFF;max-width:44ch">Polska Izba Inżynierów Budownictwa</p>
+        <p style="font-family:'DM Mono',monospace;font-size:0.8125rem;letter-spacing:0.06em;color:#5FB0FF;white-space:nowrap">ŁOD-N9I-LWC-9LP</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<footer id="kontakt" aria-label="Kontakt" style="position:relative;background:#FFFFFF;border-top:1px solid #E7EAEE;overflow:hidden">
+  <span style="position:absolute;top:-25%;left:-12%;width:52%;height:115%;pointer-events:none;background:radial-gradient(50% 50% at 50% 50%,rgba(30,144,255,0.05),transparent 70%)"></span>
+  <div data-ctagrid style="position:relative;max-width:1560px;margin:0 auto;padding:clamp(72px,9vw,150px) clamp(20px,3.4vw,56px) clamp(64px,7vw,120px);display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(44px,6vw,130px);align-items:center">
+    <div data-reveal>
+      <p style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.2em;text-transform:uppercase;color:#1E90FF">Kontakt</p>
+      <h2 style="margin-top:22px;font-weight:800;font-size:clamp(2.5rem,4.6vw,4rem);line-height:1.02;letter-spacing:-0.04em;color:#101519">Porozmawiajmy<br>o Twojej inwestycji.</h2>
+      <p style="margin-top:24px;font-size:clamp(1.0625rem,1.3vw,1.1875rem);line-height:1.7;color:#5A6470;max-width:46ch">Opowiedz nam o swoim obiekcie. Doradzimy, przygotujemy rozwiązanie i przeprowadzimy Cię przez cały proces, od projektu po wieloletni serwis.</p>
+      <a href="tel:+48512115071" style="margin-top:clamp(32px,3.5vw,48px);display:inline-flex;align-items:center;gap:12px;height:62px;padding:0 8px 0 32px;background:#1E90FF;color:#FFFFFF;border-radius:999px;font-weight:700;font-size:1.0625rem;box-shadow:0 26px 54px -22px rgba(30,144,255,0.95);transition:background 200ms ease,transform 200ms ease" style-hover="background:#3FA5FF;color:#FFFFFF;transform:translateY(-2px)">
+        Skontaktuj się
+        <span style="width:44px;height:44px;display:grid;place-items:center;background:rgba(255,255,255,0.2);border-radius:999px">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+        </span>
+      </a>
+      <div style="margin-top:clamp(32px,3.5vw,48px);display:flex;flex-wrap:wrap;gap:16px 44px;align-items:center">
+        <a href="tel:+48512115071" style="display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:clamp(1.125rem,1.5vw,1.375rem);letter-spacing:-0.01em;color:#101519;transition:color 200ms ease" style-hover="color:#1E90FF">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#1E90FF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"></path></svg>
+          512 115 071
+        </a>
+        <a href="mailto:biuro@maxinstal.pl" style="display:inline-flex;align-items:center;gap:12px;font-weight:600;color:#5A6470;transition:color 200ms ease" style-hover="color:#101519">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#1E90FF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="m3 6 9 7 9-7"></path></svg>
+          biuro@maxinstal.pl
+        </a>
+      </div>
+    </div>
+    <div data-reveal style="position:relative;background:#FAFBFC;border:1px solid #E7EAEE;border-radius:24px;padding:clamp(28px,3vw,44px);box-shadow:0 40px 80px -50px rgba(16,21,25,0.35)">
+      <img src="logo-max-instal.png" alt="Max-Instal" width="2172" height="724" style="height:32px;width:auto">
+      <div style="margin-top:clamp(24px,2.5vw,36px);display:grid">
+        <div data-inforow style="display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-top:1px solid #E7EAEE">
+          <p style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:#1E90FF;padding-top:3px">Adres</p>
+          <p style="color:#101519;line-height:1.6">ul. Joachima Lelewela 16, lokal nr 9<br>96-100 Skierniewice</p>
+        </div>
+        <div data-inforow style="display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-top:1px solid #E7EAEE">
+          <p style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:#1E90FF;padding-top:3px">Biuro</p>
+          <p style="color:#101519">Pon–Pt: 8:00–16:00</p>
+        </div>
+        <div data-inforow style="display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-top:1px solid #E7EAEE">
+          <p style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:#1E90FF;padding-top:3px">NIP</p>
+          <p style="color:#101519">727-244-94-79</p>
+        </div>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Joachima%20Lelewela%2016%2C%2096-100%20Skierniewice" target="_blank" rel="noopener" style="margin-top:clamp(20px,2vw,28px);display:flex;align-items:center;justify-content:center;gap:10px;height:56px;border:1px solid #DCE2E8;border-radius:999px;color:#101519;font-weight:600;transition:border-color 200ms ease,background 200ms ease" style-hover="color:#101519;border-color:rgba(30,144,255,0.6);background:rgba(30,144,255,0.06)">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1E90FF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Otwórz w Google Maps
+      </a>
+    </div>
+  </div>
+  <div style="position:relative;border-top:1px solid #E7EAEE">
+    <div data-footbar style="max-width:1560px;margin:0 auto;padding:22px clamp(20px,3.4vw,56px);display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;font-family:'DM Mono',monospace;font-size:0.75rem;color:#7A8593">
+      <span>© 2026 Max-Instal</span>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center">
+        <a href="polityka-prywatnosci.html" style="color:#7A8593;transition:color 200ms ease" style-hover="color:#101519">Polityka prywatności</a>
+        <span>Projekt i wykonanie: <a href="https://widoczni.pl" style="color:#5A6470;transition:color 200ms ease" style-hover="color:#101519">Studio Widoczni</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div data-callbar style="position:fixed;left:12px;right:12px;bottom:12px;z-index:75;display:none;gap:8px;padding:10px;background:rgba(7,17,29,0.9);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.14);border-radius:999px">
+  <a href="tel:+48512115071" style="flex:1 1 0;display:flex;align-items:center;justify-content:center;height:50px;background:#1E90FF;color:#FFFFFF;border-radius:999px;font-weight:700">Zadzwoń</a>
+  <a href="#kontakt" style="flex:1 1 0;display:flex;align-items:center;justify-content:center;height:50px;border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;border-radius:999px;font-weight:700">Kontakt</a>
+</div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#1E90FF&quot;,&quot;options&quot;:[&quot;#1E90FF&quot;,&quot;#F97316&quot;,&quot;#14B8A6&quot;,&quot;#8B5CF6&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Charakter marki&quot;},&quot;corners&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Zaokrąglone&quot;,&quot;options&quot;:[&quot;Zaokrąglone&quot;,&quot;Techniczne&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Charakter marki&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Pełny ruch&quot;,&quot;options&quot;:[&quot;Pełny ruch&quot;,&quot;Wyciszony&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Charakter marki&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.applyTweaks();
+    this.applyResponsive();
+    this.setupReveal();
+    this.setupCounters();
+    this.setupHovers();
+    this.setupLayers();
+    this.setupSvcNav();
+    this.setupScroll();
+    this.runXray();
+    this._onResize = () => { this.applyResponsive(); this.runParallax(); };
+    window.addEventListener('resize', this._onResize);
+  }
+
+  componentDidUpdate() { this.applyTweaks(); }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    (this._ios || []).forEach(o => o.disconnect());
+    clearTimeout(this._xrayT);
+    if (this._hoverFix) {
+      document.removeEventListener('mouseover', this._hoverFix, true);
+      document.removeEventListener('mouseout', this._hoverFix, true);
+    }
+  }
+
+  q(sel) { return Array.from(document.querySelectorAll(sel)); }
+  one(sel) { return document.querySelector(sel); }
+
+  // X-Ray reveal: building first, then the scan sweep uncovers the installation layer.
+  runXray() {
+    const xray = this.one('[data-xray]');
+    const scan = this.one('[data-scanline]');
+    const grid = this.one('[data-grid]');
+    if (this.reduced || this._calm) {
+      if (xray) xray.style.opacity = '0.9';
+      if (grid) grid.style.opacity = '1';
+      return;
+    }
+    this._xrayT = setTimeout(() => {
+      if (scan) { scan.style.animation = 'mi7-scan 2600ms cubic-bezier(.5,0,.5,1) forwards'; }
+      if (grid) grid.style.opacity = '1';
+      setTimeout(() => { if (xray) xray.style.opacity = '0.92'; }, 520);
+    }, 950);
+  }
+
+  applyResponsive() {
+    const w = window.innerWidth;
+    const compact = w < 1120;
+    const stack = w < 900;
+    const set = (sel, prop, val) => { const el = this.one(sel); if (el) el.style[prop] = val; };
+
+    set('[data-navlinks]', 'display', compact ? 'none' : 'flex');
+    set('[data-navcta]', 'display', compact ? 'none' : 'inline-flex');
+    set('[data-burger]', 'display', compact ? 'flex' : 'none');
+    set('[data-callbar]', 'display', stack ? 'flex' : 'none');
+    document.body.style.paddingBottom = stack ? '84px' : '0';
+    if (!compact) this.closeMenu();
+
+    set('[data-herogrid]', 'gridTemplateColumns', stack ? '1fr' : '1.35fr 1fr');
+    set('[data-hud]', 'display', 'none');
+    set('[data-xray]', 'width', stack ? '100%' : 'clamp(420px,56%,980px)');
+    set('[data-xray]', 'opacity', stack ? '0.4' : '1');
+    set('[data-statgrid]', 'gridTemplateColumns', w < 700 ? '1fr' : compact ? 'repeat(2,1fr)' : 'repeat(4,1fr)');
+    this.q('[data-stat]').forEach((s, i) => {
+      const cols = w < 700 ? 1 : compact ? 2 : 4;
+      s.style.borderLeft = (i % cols === 0) ? '0' : '1px solid #E7EAEE';
+      s.style.borderTop = (i >= cols) ? '1px solid #E7EAEE' : '0';
+    });
+    set('[data-aboutgrid]', 'gridTemplateColumns', stack ? '1fr' : '1fr 1.05fr');
+    set('[data-worksgrid]', 'gridTemplateColumns', w < 760 ? 'minmax(0,1fr)' : compact ? 'minmax(0,1fr) minmax(0,1fr)' : 'repeat(4,minmax(0,1fr))');
+    set('[data-pstats]', 'gridTemplateColumns', w < 700 ? '1fr 1fr' : 'repeat(4,1fr)');
+    set('[data-offergrid]', 'gridTemplateColumns', stack ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1.15fr)');
+    set('[data-logos]', 'gridTemplateColumns', w < 640 ? 'repeat(2,1fr)' : compact ? 'repeat(3,1fr)' : 'repeat(4,1fr)');
+    set('[data-contactgrid]', 'gridTemplateColumns', stack ? '1fr' : 'repeat(3,1fr)');
+    set('[data-ctagrid]', 'gridTemplateColumns', stack ? '1fr' : '1.15fr 1fr');
+    set('[data-footgrid]', 'gridTemplateColumns', w < 640 ? '1fr' : stack ? '1fr 1fr' : '1.5fr 1fr 0.8fr 0.8fr');
+    set('[data-permgrid]', 'gridTemplateColumns', stack ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1.2fr)');
+    this.q('[data-inforow]').forEach(r => { r.style.gridTemplateColumns = w < 480 ? '84px 1fr' : '110px 1fr'; });
+    this.q('[data-svcname]').forEach(n => { n.style.whiteSpace = 'nowrap'; });
+    set('[data-permlist]', 'gridTemplateColumns', '1fr');
+  }
+
+  setupReveal() {
+    if (this.reduced || this._calm || !('IntersectionObserver' in window)) return;
+    const els = this.q('[data-reveal]');
+    els.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity 720ms cubic-bezier(.22,1,.36,1), transform 720ms cubic-bezier(.22,1,.36,1)';
+    });
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'none';
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.04 });
+    els.forEach(el => io.observe(el));
+    this._ios = [io];
+  }
+
+  setupCounters() {
+    if (this.reduced || this._calm || !('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        this.runCount(e.target);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.6 });
+    this.q('[data-count]').forEach(el => io.observe(el));
+    (this._ios = this._ios || []).push(io);
+  }
+
+  runCount(el) {
+    const target = parseInt(el.dataset.count, 10);
+    if (!target) return;
+    const dur = 1300, t0 = performance.now();
+    const tick = now => {
+      const p = Math.min(1, (now - t0) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = String(Math.round(target * eased));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  // Scroll through the hero rail switches the active installation layer.
+  setupLayers() {
+    const layers = this.q('[data-layer]');
+    const hud = this.one('[data-hudlayer]');
+    const bar = this.one('[data-hudbar]');
+    const xray = this.one('[data-xray]');
+    if (!layers.length) return;
+    const names = layers.map(l => (l.querySelector('[data-layertitle]') || {}).textContent || '');
+    const accFor = i => { const k = ['a', 'a', 'l', 'o', 'l', 'a'][i] || 'a'; return k === 'o' ? '#FF8A3D' : k === 'l' ? this._accentL2 : this._accent; };
+    const setActive = i => {
+      if (this._layer === i) return;
+      this._layer = i;
+      layers.forEach((l, n) => {
+        const on = n === i;
+        l.style.opacity = on ? '1' : '0.44';
+        const dot = l.querySelector('[data-layerdot]');
+        const t = l.querySelector('[data-layertitle]');
+        if (dot) {
+          dot.style.background = on ? accFor(i) : 'transparent';
+          dot.style.borderColor = on ? accFor(i) : 'rgba(255,255,255,0.24)';
+          dot.style.color = on ? '#07111D' : 'rgba(234,241,248,0.7)';
+        }
+        if (t) t.style.color = on ? '#FFFFFF' : 'rgba(234,241,248,0.72)';
+      });
+      if (hud) hud.textContent = names[i];
+      if (bar) bar.style.width = Math.round(((i + 1) / layers.length) * 100) + '%';
+      if (xray && !this.reduced && i > 0) xray.style.opacity = '0.96';
+    };
+    setActive(0);
+    if (!('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) setActive(layers.indexOf(e.target)); });
+    }, { rootMargin: '-46% 0px -46% 0px', threshold: 0 });
+    layers.forEach(l => io.observe(l));
+    (this._ios = this._ios || []).push(io);
+  }
+
+  setupHovers() {
+    // Portfolio showcase cards.
+    this.q('[data-pcard]').forEach(card => {
+      const slot = card.querySelector('image-slot');
+      const bp = card.querySelector('[data-pblueprint]');
+      const tbox = card.querySelector('[data-ptext]');
+      const cat = card.querySelector('[data-pcat]');
+      const arrow = card.querySelector('[data-parrow]');
+      card.addEventListener('mouseenter', () => {
+        if (slot) { slot.style.transition = 'transform 1000ms cubic-bezier(.22,1,.36,1)'; slot.style.transform = 'scale(1.08)'; }
+        if (bp) bp.style.opacity = '1';
+        if (tbox) tbox.style.transform = 'translateY(-6px)';
+        if (cat) { cat.style.opacity = '1'; cat.style.transform = 'none'; }
+        if (arrow) { arrow.style.transform = 'rotate(-45deg)'; arrow.style.borderColor = 'rgba(' + this._trip + ',0.9)'; }
+      });
+      card.addEventListener('mouseleave', () => {
+        if (slot) slot.style.transform = 'none';
+        if (bp) bp.style.opacity = '0';
+        if (tbox) tbox.style.transform = 'none';
+        if (cat) { cat.style.opacity = '0'; cat.style.transform = 'translateY(6px)'; }
+        if (arrow) { arrow.style.transform = 'none'; arrow.style.borderColor = 'rgba(255,255,255,0.3)'; }
+      });
+    });
+
+    this.q('[data-module]').forEach(mod => {
+      const line = mod.querySelector('[data-modline]');
+      const arrow = mod.querySelector('[data-modarrow]');
+      mod.addEventListener('mouseenter', () => {
+        mod.style.boxShadow = '0 40px 70px -50px rgba(16,21,25,0.9)';
+        if (line) line.style.opacity = '1';
+        if (arrow) { arrow.style.background = this._accent; arrow.style.borderColor = this._accent; }
+      });
+      mod.addEventListener('mouseleave', () => {
+        mod.style.transform = 'none';
+        mod.style.boxShadow = '0 20px 44px -40px rgba(16,21,25,0.9)';
+        if (line) line.style.opacity = '0';
+        if (arrow) { arrow.style.background = 'transparent'; arrow.style.borderColor = '#DCE2E8'; }
+      });
+      mod.addEventListener('mousemove', e => {
+        if (this.reduced || this._calm || window.innerWidth < 900) return;
+        const r = mod.getBoundingClientRect();
+        const rx = ((e.clientY - r.top) / r.height - 0.5) * -8;
+        const ry = ((e.clientX - r.left) / r.width - 0.5) * 10;
+        mod.style.transform = 'rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg) translateY(-5px)';
+      });
+    });
+
+    const mq = this.one('[data-marquee]');
+    const tr = this.one('[data-marqueetrack]');
+    if (mq && tr) {
+      mq.addEventListener('mouseenter', () => { tr.style.animationPlayState = 'paused'; });
+      mq.addEventListener('mouseleave', () => { tr.style.animationPlayState = this._calm ? 'paused' : 'running'; });
+    }
+
+    this.q('[data-logo]').forEach(l => {
+      l.addEventListener('mouseenter', () => { l.style.color = '#FFFFFF'; });
+      l.addEventListener('mouseleave', () => { l.style.color = 'rgba(234,241,248,0.52)'; });
+    });
+
+    this.q('[data-stat]').forEach(card => {
+      const line = card.querySelector('[data-statline]');
+      const icon = card.querySelector('[data-staticon]');
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-6px)';
+        if (line) line.style.transform = 'scaleX(1)';
+        if (icon) icon.style.transform = 'rotate(5deg)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'none';
+        if (line) line.style.transform = 'scaleX(0)';
+        if (icon) icon.style.transform = 'none';
+      });
+    });
+  }
+
+  setupSvcNav() {
+    const items = this.q('[data-svcitem]');
+    if (!items.length) return;
+    const pane = this.one('[data-pane]');
+    const pTitle = this.one('[data-panetitle]');
+    const pDesc = this.one('[data-panedesc]');
+    const pLis = this.q('[data-panelist] [data-paneitem]');
+    const pClient = this.one('[data-paneclient]');
+    const pWhy = this.one('[data-panewhy]');
+    const pEffect = this.one('[data-paneeffect]');
+    const panes = [
+      ['Projektowanie instalacji HVAC', 'Tworzymy kompletną dokumentację techniczną dostosowaną do charakteru inwestycji.', ['Obliczenia techniczne i bilanse', 'Dobór urządzeń i systemów', 'Dokumentacja projektowa i BIM'], 'Kompletną dokumentację techniczną.', 'Dokumentacja gotowa do realizacji.'],
+      ['Montaż instalacji', 'Instalacje w wykonaniu zwykłym i specjalnym, prowadzone przez własny zespół.', ['Centrale wentylacyjne z rekuperacją', 'Kanały z blachy ocynkowanej i nierdzewnej', 'Układy split, multisplit i VRF'], 'Instalację wykonaną przez jeden zespół.', 'Instalacja wykonana zgodnie z projektem i harmonogramem.'],
+      ['Uruchomienie i regulacja', 'Przygotowujemy instalację do przekazania i codziennej pracy.', ['Regulacja przepływów', 'Pomiary wydajności', 'Konfiguracja automatyki'], 'Instalację wyregulowaną i przekazaną do użytkowania.', 'Instalacja w pełni uruchomiona i gotowa do eksploatacji.'],
+      ['Serwis i konserwacja', 'Utrzymujemy instalacje w pełnej sprawności przez cały okres eksploatacji.', ['Przeglądy central i klimatyzatorów', 'Konserwacja agregatów i chłodni', 'Naprawy i wymiana podzespołów'], 'Stałą opiekę serwisową.', 'Sprawna instalacja i przewidywalne koszty utrzymania.'],
+      ['Nadzór i doradztwo', 'Prowadzimy nadzór nad realizacją w oparciu o pełne uprawnienia budowlane.', ['Nadzór nad wykonaniem', 'Koordynacja prac branżowych', 'Odbiory i doradztwo techniczne'], 'Inwestycję pod pełnym nadzorem budowlanym.', 'Inwestycja prowadzona zgodnie z przepisami i sztuką budowlaną.']
+    ];
+    const apply = i => {
+      const p = panes[i];
+      if (!p) return;
+      if (pTitle) pTitle.textContent = p[0];
+      if (pDesc) pDesc.textContent = p[1];
+      pLis.forEach((li, n) => { li.textContent = p[2][n] || ''; });
+      if (pClient) pClient.textContent = p[3];
+      if (pEffect) pEffect.textContent = p[4];
+    };
+    const select = i => {
+      if (this._svc === i) return;
+      this._svc = i;
+      items.forEach((it, n) => {
+        const on = n === i;
+        it.style.borderLeftColor = on ? this._accent : 'transparent';
+        const no = it.querySelector('[data-svcno]');
+        const ic = it.querySelector('[data-svcicon]');
+        const nm = it.querySelector('[data-svcname]');
+        if (no) no.style.color = on ? this._accent : '#9AA2AB';
+        if (ic) { ic.style.color = on ? this._accent : '#8A94A0'; ic.style.background = on ? 'rgba(' + this._trip + ',0.1)' : 'transparent'; }
+        if (nm) { nm.style.color = on ? '#101519' : '#6B7684'; nm.style.fontSize = on ? 'clamp(1.375rem,1.9vw,1.625rem)' : 'clamp(1.125rem,1.5vw,1.25rem)'; }
+      });
+      if (!pane || this.reduced) { apply(i); return; }
+      pane.style.opacity = '0';
+      pane.style.transform = 'translateY(12px)';
+      clearTimeout(this._paneT);
+      this._paneT = setTimeout(() => {
+        apply(i);
+        pane.style.opacity = '1';
+        pane.style.transform = 'none';
+      }, 300);
+    };
+    this._svc = -1;
+    select(0);
+    items.forEach((it, n) => {
+      it.addEventListener('mouseenter', () => select(n));
+      it.addEventListener('click', () => select(n));
+      it.addEventListener('focus', () => select(n));
+    });
+  }
+
+  setupScroll() {
+    const row = this.one('[data-navrow]');
+    const logo = this.one('[data-navlogo]');
+    const nav = this.one('[data-nav]');
+    this._px = this.q('[data-parallax]');
+    this._onScroll = () => {
+      const shrunk = window.scrollY > 60;
+      if (row) row.style.height = shrunk ? '68px' : '80px';
+      if (logo) logo.style.height = shrunk ? '44px' : '54px';
+      if (nav) nav.style.boxShadow = shrunk ? '0 16px 40px -26px rgba(7,17,29,0.75)' : '0 22px 50px -32px rgba(7,17,29,0.6)';
+      this.runParallax();
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this.runParallax();
+  }
+
+  runParallax() {
+    if (this.reduced || this._calm || !this._px || window.innerWidth < 900) return;
+    const vh = window.innerHeight;
+    this._px.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < -260 || r.top > vh + 260) return;
+      const off = (r.top + r.height / 2 - vh / 2) / vh;
+      el.style.transform = 'translate3d(0,' + (off * parseFloat(el.dataset.parallax) * -100).toFixed(1) + 'px,0)';
+    });
+  }
+
+  applyTweaks() { this.applyAccent(); this.applyCorners(); this.applyMotion(); }
+
+  trip(hex) { const n = parseInt(hex.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+  mix(hex, t) { return '#' + this.trip(hex).map(v => Math.round(v + (255 - v) * t).toString(16).padStart(2, '0')).join(''); }
+
+  applyAccent() {
+    const a = this.props.accent ?? '#1E90FF';
+    this._accent = a;
+    this._accentL2 = this.mix(a, 0.5);
+    this._trip = this.trip(a).join(',');
+    this._origTrips = ['30, 144, 255', '63, 165, 255', '95, 176, 255', '95, 208, 255'];
+    const next = [a, this.mix(a, 0.18), this.mix(a, 0.35), this._accentL2].map(h => this.trip(h).join(', '));
+    const prev = this._tripsNow || this._origTrips;
+    this._tripsNow = next;
+    if (prev.join('|') !== next.join('|')) this.q('[style]').forEach(el => this.swapTrips(el, prev));
+    if (!this._hoverFix) {
+      this._hoverFix = e => {
+        let el = e.target;
+        setTimeout(() => {
+          for (let d = 0; d < 3 && el && el.style; d++, el = el.parentElement) {
+            this.swapTrips(el, this._origTrips);
+            if (this._pillEls && this._pillEls.indexOf(el) > -1) el.style.borderRadius = this._radius;
+          }
+        }, 30);
+      };
+      document.addEventListener('mouseover', this._hoverFix, true);
+      document.addEventListener('mouseout', this._hoverFix, true);
+    }
+  }
+
+  swapTrips(el, from) {
+    const to = this._tripsNow;
+    if (!to || !el.style) return;
+    const st = el.style;
+    for (let i = st.length - 1; i >= 0; i--) {
+      const p = st[i]; let v = st.getPropertyValue(p); let ch = false;
+      for (let k = 0; k < 4; k++) { if (from[k] !== to[k] && v.indexOf(from[k]) > -1) { v = v.split(from[k]).join(to[k]); ch = true; } }
+      if (ch) st.setProperty(p, v);
+    }
+  }
+
+  applyCorners() {
+    if (!this._pillEls) this._pillEls = this.q('[style]').filter(el => el.style.borderRadius === '999px');
+    this._radius = (this.props.corners ?? 'Zaokrąglone') === 'Techniczne' ? '12px' : '999px';
+    this._pillEls.forEach(el => { el.style.borderRadius = this._radius; });
+  }
+
+  applyMotion() {
+    const calm = (this.props.motion ?? 'Pełny ruch') === 'Wyciszony';
+    this._calm = calm;
+    const track = this.one('[data-marqueetrack]');
+    if (track) track.style.animationPlayState = calm ? 'paused' : 'running';
+    this.q('[style]').forEach(el => {
+      if ((el.style.animationName || '').indexOf('mi7-pulse') > -1) el.style.animationPlayState = calm ? 'paused' : 'running';
+    });
+    if (calm) {
+      this.q('[data-parallax]').forEach(el => { el.style.transform = 'none'; });
+      this.q('[data-reveal]').forEach(el => { el.style.transition = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; });
+      const grid = this.one('[data-grid]');
+      if (grid) grid.style.opacity = '1';
+    }
+  }
+
+  closeMenu() {
+    const menu = this.one('[data-mobilemenu]');
+    const burger = this.one('[data-burger]');
+    if (menu) menu.style.display = 'none';
+    if (burger) burger.setAttribute('aria-expanded', 'false');
+    this._menuOpen = false;
+  }
+
+  renderVals() {
+    return {
+      toggleMenu: () => {
+        const menu = this.one('[data-mobilemenu]');
+        const burger = this.one('[data-burger]');
+        if (!menu) return;
+        this._menuOpen = !this._menuOpen;
+        menu.style.display = this._menuOpen ? 'block' : 'none';
+        if (burger) burger.setAttribute('aria-expanded', this._menuOpen ? 'true' : 'false');
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
