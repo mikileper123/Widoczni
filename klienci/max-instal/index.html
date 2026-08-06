@@ -123,12 +123,6 @@ button{font:inherit;color:inherit;background:transparent}
 }
 .btn-glass:hover{background:rgba(255,255,255,.16);color:#fff}
 .btn-glass .ico{background:transparent;border:1px solid rgba(255,255,255,.28)}
-.btn-outline{
-  height:auto;min-height:52px;padding:12px 26px;
-  border-color:rgba(255,255,255,.24);color:#fff;font-weight:600;
-  white-space:normal;   /* nowrap wypychał ten przycisk poza ekran przy 360px */
-}
-.btn-outline:hover{background:rgba(255,255,255,.08);color:#fff}
 .btn-sm{height:56px;padding:0 8px 0 26px}
 .btn-sm .ico{width:38px;height:38px}
 
@@ -721,7 +715,6 @@ button{font:inherit;color:inherit;background:transparent}
         <h2 class="h2 on-dark" style="margin-top:12px">Nasze realizacje</h2>
         <p style="margin-top:12px;max-width:56ch;color:var(--on-dark)">Od ponad 20 lat projektujemy i realizujemy instalacje HVAC dla najbardziej wymagających inwestycji w całej Polsce.</p>
       </div>
-      <a class="btn btn-outline" href="#kontakt" data-reveal>Zobacz wszystkie realizacje <span aria-hidden="true">→</span></a>
     </div>
 
     <div class="works">
@@ -923,7 +916,10 @@ button{font:inherit;color:inherit;background:transparent}
   <div class="contact-grid">
     <div data-reveal>
       <p class="mono eyebrow" style="font-size:.6875rem;letter-spacing:.2em">Kontakt</p>
-      <h2>Porozmawiajmy<br>o Twojej inwestycji.</h2>
+      <!-- Spacja PRZED <br> jest konieczna: na telefonie łamanie jest chowane,
+           a bez niej wyrazy sklejały się w „Porozmawiajmyo". Na desktopie
+           spacja na końcu wiersza i tak się nie renderuje. -->
+      <h2>Porozmawiajmy <br>o Twojej inwestycji.</h2>
       <p class="contact-lead">Opowiedz nam o swoim obiekcie. Doradzimy, przygotujemy rozwiązanie i przeprowadzimy Cię przez cały proces, od projektu po wieloletni serwis.</p>
       <a class="btn btn-primary" href="tel:+48512115071">
         Skontaktuj się
@@ -1187,7 +1183,16 @@ button{font:inherit;color:inherit;background:transparent}
       if(window.matchMedia('(hover:hover)').matches){
         it.addEventListener('mouseenter', function(){ select(n); });
       }
-      it.addEventListener('click', function(){ select(n); });
+      it.addEventListener('click', function(){
+        select(n);
+        /* Na telefonie panel z treścią leży POD listą etapów, poza ekranem —
+           bez tego stuknięcie w etap nie daje żadnego widocznego skutku.
+           Na desktopie kolumny stoją obok siebie, więc przewijanie nie jest
+           potrzebne i byłoby irytujące. */
+        if(window.matchMedia('(max-width:899px)').matches){
+          pane.scrollIntoView({block:'nearest', behavior: reduced ? 'auto' : 'smooth'});
+        }
+      });
       it.addEventListener('focus', function(){ select(n); });
     });
 
