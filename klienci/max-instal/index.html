@@ -362,7 +362,13 @@ button{font:inherit;color:inherit;background:transparent}
   padding:14px 0 14px 24px;border:0;border-left:3px solid transparent;
   cursor:pointer;transition:border-color 400ms ease;
 }
-.svc-no{font-size:.8125rem;color:var(--muted-2);transition:color 400ms ease}
+/* Manrope zamiast DM Mono: maszynowe zero z ukośnikiem wyglądało jak ø. */
+.svc-no{
+  font-family:Manrope,system-ui,sans-serif;font-weight:600;
+  font-size:.8125rem;color:var(--muted-2);
+  font-variant-numeric:tabular-nums;
+  transition:color 400ms ease;
+}
 .svc-ico{
   flex:0 0 auto;width:44px;height:44px;border-radius:999px;display:grid;place-items:center;
   background:transparent;color:#8A94A0;transition:color 400ms ease,background 400ms ease;
