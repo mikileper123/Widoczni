@@ -486,7 +486,7 @@ button{font:inherit;color:inherit;background:transparent}
 .footbar{
   max-width:var(--max);margin:0 auto;padding:16px var(--gut);
   display:flex;flex-wrap:wrap;gap:4px 28px;align-items:center;justify-content:space-between;
-  font-size:.8125rem;color:var(--muted);text-transform:none;
+  font-size:.875rem;color:var(--muted);
 }
 /* Linki (m.in. polityka prywatności) ciemniejsze — muted na białym nie łapał AA. */
 .footbar a{color:var(--ink-2);transition:color 200ms ease;display:inline-flex;align-items:center;min-height:48px}
@@ -1015,7 +1015,9 @@ button{font:inherit;color:inherit;background:transparent}
   </div>
 
   <div class="footbar-wrap">
-    <div class="mono footbar">
+    <!-- Bez klasy .mono: stopka w Manrope jak reszta strony, nie w kroju
+         maszynowym. -->
+    <div class="footbar">
       <span>© 2026 Max-Instal</span>
       <div class="footbar-links">
         <a href="polityka-prywatnosci.html">Polityka prywatności</a>
