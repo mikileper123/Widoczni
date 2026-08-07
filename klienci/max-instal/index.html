@@ -2,7 +2,9 @@
 <html lang="pl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- viewport-fit=cover: bez tego env(safe-area-inset-*) na iPhone zawsze zwraca 0
+     i dolny pasek akcji wjeżdża pod wskaźnik gestu home. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Max-Instal — instalacje HVAC dla wymagających inwestycji | Skierniewice</title>
 <meta name="description" content="Max-Instal — projektowanie, montaż, uruchomienie i serwis instalacji wentylacji, klimatyzacji, ogrzewania i chłodnictwa. Od 2005 roku, Skierniewice.">
 <link rel="canonical" href="https://maxinstal.pl/">
@@ -48,7 +50,6 @@
   --line:#E7EAEE;
   --line-2:#DCE2E8;
   --on-dark:rgba(234,241,248,.72);
-  --on-dark-2:rgba(234,241,248,.56);
   --max:1560px;
   --gut:clamp(20px,3.4vw,56px);
   --e:cubic-bezier(.22,1,.36,1);
@@ -190,9 +191,10 @@ button{font:inherit;color:inherit;background:transparent}
 .menu a:last-of-type{border-bottom:0}
 .menu .btn-menu{
   display:inline-flex;align-items:center;justify-content:center;
-  height:48px;padding:0 26px;margin-top:16px;border-bottom:0;
+  height:48px;padding:0 26px;margin:16px 10px 0 0;border-bottom:0;
   background:var(--acc);color:#fff;border-radius:999px;font-weight:700;font-size:.9375rem;
 }
+.menu .btn-menu.ghost{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
 
 /* --- Hero --------------------------------------------------------------- */
 .hero{position:relative;background:var(--dark)}
@@ -385,7 +387,8 @@ button{font:inherit;color:inherit;background:transparent}
 .pane h3{font-weight:800;font-size:clamp(1.5rem,2.2vw,2rem);letter-spacing:-.03em;color:var(--ink)}
 .pane-desc{margin-top:12px;color:var(--ink-2);max-width:52ch}
 .pane-blocks{margin-top:clamp(22px,2.4vw,32px);display:grid;gap:clamp(18px,2vw,26px)}
-.pane-lab{font-size:.6875rem;letter-spacing:.18em;color:var(--muted)}
+/* 12px + ciemniejszy kolor: 11px w #7A8593 dawało kontrast ~3,7:1, poniżej AA. */
+.pane-lab{font-size:.75rem;letter-spacing:.18em;color:var(--ink-2)}
 .pane-list{margin-top:14px;display:grid;gap:10px}
 .pane-list li{display:flex;gap:14px;align-items:baseline;color:var(--ink);font-size:1rem}
 .pane-list li::before{
@@ -399,7 +402,13 @@ button{font:inherit;color:inherit;background:transparent}
 }
 
 /* --- Producenci --------------------------------------------------------- */
-.makers{background:#fff;padding:clamp(14px,1.5vw,22px) 0}
+.makers{background:#fff;padding:clamp(20px,2.4vw,30px) 0}
+/* Podpis nad logotypami — bez niego przewijający się pasek czytał się
+   jak przypadkowy baner, nie jak dowód zaufania. */
+.makers-label{
+  display:block;text-align:center;margin-bottom:14px;
+  font-size:.75rem;letter-spacing:.2em;color:var(--ink-2);
+}
 .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .marquee-track{display:flex;align-items:center;width:max-content;animation:mi-marquee 40s linear infinite reverse}
 .marquee:hover .marquee-track{animation-play-state:paused}
@@ -471,7 +480,7 @@ button{font:inherit;color:inherit;background:transparent}
   display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;
   border-top:1px solid var(--line);
 }
-.info-row dt{font-size:.6875rem;letter-spacing:.14em;color:var(--acc);padding-top:3px}
+.info-row dt{font-size:.75rem;letter-spacing:.14em;color:var(--acc-deep);padding-top:3px}
 .info-row dd{margin:0;color:var(--ink);line-height:1.6}
 .card .maps{
   margin-top:clamp(20px,2vw,28px);display:flex;align-items:center;justify-content:center;gap:10px;
@@ -484,15 +493,17 @@ button{font:inherit;color:inherit;background:transparent}
 .footbar{
   max-width:var(--max);margin:0 auto;padding:16px var(--gut);
   display:flex;flex-wrap:wrap;gap:4px 28px;align-items:center;justify-content:space-between;
-  font-size:.75rem;color:var(--muted);text-transform:none;
+  font-size:.8125rem;color:var(--muted);text-transform:none;
 }
-.footbar a{color:var(--muted);transition:color 200ms ease;display:inline-flex;align-items:center;min-height:48px}
+/* Linki (m.in. polityka prywatności) ciemniejsze — muted na białym nie łapał AA. */
+.footbar a{color:var(--ink-2);transition:color 200ms ease;display:inline-flex;align-items:center;min-height:48px}
 .footbar a:hover{color:var(--ink)}
 .footbar-links{display:flex;flex-wrap:wrap;gap:4px 28px;align-items:center}
 
 /* --- Pasek akcji na telefonie ------------------------------------------ */
 .callbar{
-  position:fixed;left:12px;right:12px;bottom:12px;z-index:75;display:none;gap:8px;padding:10px;
+  position:fixed;left:12px;right:12px;z-index:75;display:none;gap:8px;padding:10px;
+  bottom:calc(12px + env(safe-area-inset-bottom,0px));
   background:rgba(7,17,29,.9);backdrop-filter:blur(18px);
   border:1px solid rgba(255,255,255,.14);border-radius:999px;
 }
@@ -527,6 +538,18 @@ button{font:inherit;color:inherit;background:transparent}
 .js [data-reveal].is-in{opacity:1;transform:none}
 
 /* ============================================================
+   Urządzenia dotykowe — treść nie może zależeć od hovera
+   ============================================================ */
+@media (hover:none){
+  /* Kategorie kart realizacji odsłaniał wyłącznie :hover — na dotyku
+     były trwale niewidoczne. */
+  .work-cat{opacity:1;transform:none}
+  /* Strzałka w kółku sugeruje link, a karta nim nie jest — na dotyku
+     to fałszywa obietnica, na desktopie element animacji hovera. */
+  .work-arrow{display:none}
+}
+
+/* ============================================================
    Responsywność — progi z prototypu: 1120 / 900 / 760 / 700 / 640 / 480
    ============================================================ */
 @media (max-width:1119px){
@@ -541,8 +564,10 @@ button{font:inherit;color:inherit;background:transparent}
   .works{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:899px){
-  html{scroll-padding-top:96px}
-  body{padding-bottom:84px}
+  /* scroll-padding-bottom: scrollIntoView musi wiedzieć o stałym callbarze,
+     inaczej dosuwa treść (blok EFEKT w ofercie) pod pasek. */
+  html{scroll-padding-top:96px;scroll-padding-bottom:110px}
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   .callbar{display:flex}
   .hero-grid{grid-template-columns:1fr;padding-top:clamp(104px,14vh,150px)}
   .hero-art{width:100%;opacity:.4}
@@ -551,16 +576,67 @@ button{font:inherit;color:inherit;background:transparent}
   .perm{grid-template-columns:minmax(0,1fr)}
   .contact-grid{grid-template-columns:1fr}
   .contact h2 br{display:none}
+
+  /* Numer decyzji pod nazwą zamiast obok: nowrap w kolumnie auto zabierał
+     ~140px i zgniatał nazwę uprawnienia do siedmiu linii. */
+  .perm-list li{grid-template-columns:1fr;gap:6px}
+  .perm-list .no{font-size:.875rem}
+
+  /* --- Oferta: pionowa lista etapów -> poziomy pasek zakładek-pigułek.
+     Lista zjadała cały ekran zanim widać było jakąkolwiek treść, nieaktywne
+     wiersze wyglądały jak wyłączone, a tapnięcie wymagało skoku scrolla
+     o ~440px, po którym aktywny etap uciekał nad górną krawędź. Pigułki
+     mieszczą się w jednym wierszu, panel z treścią zaczyna się tuż pod nimi. */
+  .offer-nav{
+    display:flex;overflow-x:auto;gap:8px;
+    margin-top:20px;padding:4px 2px 10px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  }
+  .offer-nav::-webkit-scrollbar{display:none}
+  .svc{
+    flex:0 0 auto;width:auto;gap:10px;
+    height:48px;padding:0 18px;
+    border:1px solid var(--line-2);border-radius:999px;background:#fff;
+  }
+  .svc-ico{display:none}
+  .svc-name{font-size:1rem;white-space:nowrap}
+  .svc.is-on{border-color:var(--acc);background:var(--acc)}
+  .svc.is-on .svc-no{color:rgba(255,255,255,.75)}
+  .svc.is-on .svc-name{color:#fff;font-size:1rem}
+  /* scrollIntoView na panelu respektuje te marginesy — treść omija
+     przyklejoną nawigację u góry i callbar u dołu. */
+  .pane-card{scroll-margin-top:104px;scroll-margin-bottom:110px}
+
+  /* Kompaktowy panel: desktopowe odstępy robiły z niego ~640px wysokości,
+     która nie mieściła się między nawigacją a callbarem — blok EFEKT
+     lądował pod paskiem. */
+  .pane-card{padding:24px 20px;border-radius:24px}
+  .pane h3{font-size:1.375rem}
+  .pane-desc{margin-top:8px}
+  .pane-blocks{margin-top:14px;gap:14px}
+  .pane-list{margin-top:10px;gap:8px}
+  .pane-effect{margin-top:14px;padding-left:18px}
 }
 @media (max-width:759px){
   .works{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:699px){
-  .stats{grid-template-columns:1fr}
-  .stat{padding-left:0;padding-right:0;border-left:0}
-  .stat .stat-line{left:0;right:0}
-  .stat + .stat{border-top:1px solid var(--line)}
-  .svc-name{white-space:normal}
+  /* Zostaje siatka 2x2 z progu 1119px — jedna kolumna rozciągała cztery
+     fakty na 1163px (1,4 ekranu). Notki znikają: powtarzały treść labeli
+     i akapitu „O firmie", a bez nich blok mieści się w ~pół ekranu. */
+  .stat{padding:20px 14px}
+  .stat:nth-child(odd){padding-left:0}
+  .stat:nth-child(even){padding-right:0}
+  .stat-note{display:none}
+  .stat-ico{width:36px;height:36px}
+  .stat-num{margin-top:16px;font-size:2rem}
+  .stat-txt{margin-top:16px;font-size:1.1875rem;min-height:0}
+  .stat-lab{margin-top:8px;font-size:.9375rem}
+}
+/* Nagłówek hero na najwęższych ekranach: 40px łamało się na 5 linii
+   z sierotą „widać." w ostatniej. */
+@media (max-width:399px){
+  .h1{font-size:2.125rem}
 }
 @media (max-width:479px){
   .info-row{grid-template-columns:84px 1fr}
@@ -611,7 +687,10 @@ button{font:inherit;color:inherit;background:transparent}
     <a href="#o-firmie">O firmie</a>
     <a href="#uprawnienia">Uprawnienia</a>
     <a href="#kontakt">Kontakt</a>
-    <a class="btn-menu" href="#kontakt">Skontaktuj się</a>
+    <!-- Telefon w menu: kto otworzył menu, żeby zadzwonić, nie może musieć
+         go zamykać i szukać paska na dole. -->
+    <a class="btn-menu" href="tel:+48512115071">Zadzwoń: 512 115 071</a>
+    <a class="btn-menu ghost" href="#kontakt">Skontaktuj się</a>
   </div>
 </header>
 
@@ -636,9 +715,12 @@ button{font:inherit;color:inherit;background:transparent}
         <h1 class="h1">Projektujemy i realizujemy to, czego na co dzień nie widać.</h1>
         <p class="hero-lead">Kompleksowe instalacje wentylacji, klimatyzacji, ogrzewania i chłodnictwa dla wymagających inwestycji.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#kontakt">
-            Skontaktuj się
-            <span class="ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+          <!-- Prosto do dzwonienia: „Skontaktuj się" przewijało 7500px na dół
+               strony, choć celem użytkownika mobilnego jest telefon. Etykieta
+               z numerem mówi wprost, co się stanie po tapnięciu. -->
+          <a class="btn btn-primary" href="tel:+48512115071">
+            Zadzwoń: 512 115 071
+            <span class="ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg></span>
           </a>
           <a class="btn btn-glass" href="#realizacje">
             Zobacz realizacje
@@ -712,7 +794,9 @@ button{font:inherit;color:inherit;background:transparent}
     <div class="works-head">
       <div data-reveal style="max-width:64ch">
         <p class="mono eyebrow on-dark">Realizacje</p>
-        <h2 class="h2 on-dark" style="margin-top:12px">Nasze realizacje</h2>
+        <!-- H2 treściowy — „Nasze realizacje" dublowało eyebrow „Realizacje"
+             stojący linijkę wyżej. -->
+        <h2 class="h2 on-dark" style="margin-top:12px">Od biurowca po szpital</h2>
         <p style="margin-top:12px;max-width:56ch;color:var(--on-dark)">Od ponad 20 lat projektujemy i realizujemy instalacje HVAC dla najbardziej wymagających inwestycji w całej Polsce.</p>
       </div>
     </div>
@@ -858,7 +942,7 @@ button{font:inherit;color:inherit;background:transparent}
             </div>
           </div>
           <div class="pane-effect">
-            <p class="mono pane-lab" style="color:var(--acc)">Efekt</p>
+            <p class="mono pane-lab" style="color:var(--acc-deep)">Efekt</p>
             <p data-pane-effect></p>
           </div>
         </div>
@@ -869,6 +953,7 @@ button{font:inherit;color:inherit;background:transparent}
 
 <!-- PRODUCENCI -->
 <section class="makers shot" id="makers" aria-label="Producenci urządzeń, które montujemy">
+  <span class="mono makers-label" aria-hidden="true">Montujemy urządzenia tych producentów</span>
   <div class="marquee">
     <div class="marquee-track">
       <img src="assets/producenci-logos.webp" alt="Producenci: Fujitsu, Jeven, Klimor, Lennox, LG, MDV, Midea, Mitsubishi Electric, Swegon"
@@ -921,9 +1006,11 @@ button{font:inherit;color:inherit;background:transparent}
            spacja na końcu wiersza i tak się nie renderuje. -->
       <h2>Porozmawiajmy <br>o Twojej inwestycji.</h2>
       <p class="contact-lead">Opowiedz nam o swoim obiekcie. Doradzimy, przygotujemy rozwiązanie i przeprowadzimy Cię przez cały proces, od projektu po wieloletni serwis.</p>
+      <!-- Etykieta zgodna z akcją: link otwiera dialer, więc mówi „Zadzwoń",
+           nie „Skontaktuj się" (ten napis noszą wyłącznie kotwice do #kontakt). -->
       <a class="btn btn-primary" href="tel:+48512115071">
-        Skontaktuj się
-        <span class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+        Zadzwoń: 512 115 071
+        <span class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg></span>
       </a>
       <div class="contact-direct">
         <a class="contact-tel" href="tel:+48512115071">
@@ -1036,7 +1123,17 @@ button{font:inherit;color:inherit;background:transparent}
       var open = menu.classList.toggle('is-open');
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    menu.addEventListener('click', function(e){ if(e.target.tagName === 'A') close(); });
+    menu.addEventListener('click', function(e){
+      if(e.target.tagName !== 'A') return;
+      close();
+      /* Fokus na sekcję docelową — po display:none menu fokus spadał na body
+         i Tab/czytnik ekranu wracał na początek dokumentu. */
+      var href = e.target.getAttribute('href') || '';
+      if(href.charAt(0) === '#'){
+        var sec = document.querySelector(href);
+        if(sec){ sec.setAttribute('tabindex','-1'); sec.focus({preventScroll:true}); }
+      }
+    });
     document.addEventListener('keydown', function(e){
       if(e.key === 'Escape' && menu.classList.contains('is-open')){ close(); burger.focus(); }
     });
@@ -1185,12 +1282,19 @@ button{font:inherit;color:inherit;background:transparent}
       }
       it.addEventListener('click', function(){
         select(n);
-        /* Na telefonie panel z treścią leży POD listą etapów, poza ekranem —
-           bez tego stuknięcie w etap nie daje żadnego widocznego skutku.
-           Na desktopie kolumny stoją obok siebie, więc przewijanie nie jest
-           potrzebne i byłoby irytujące. */
+        /* Na telefonie zakładki to poziomy pasek pigułek, a panel z treścią
+           leży tuż pod nim. Dosuwamy wybraną pigułkę w poziomie (scroll
+           kontenera, nie strony) i panel w pionie — scroll-margin na panelu
+           trzyma go między przyklejoną nawigacją a callbarem. Na desktopie
+           kolumny stoją obok siebie i przewijanie byłoby irytujące. */
         if(window.matchMedia('(max-width:899px)').matches){
-          pane.scrollIntoView({block:'nearest', behavior: reduced ? 'auto' : 'smooth'});
+          var nav = it.parentElement;
+          nav.scrollTo({left: Math.max(0, it.offsetLeft - 16), behavior: reduced ? 'auto' : 'smooth'});
+          /* Pasek pigułek ląduje tuż pod pływającą nawigacją (~100px), a panel
+             wypełnia resztę ekranu nad callbarem. Dosuwanie panelu do dołu
+             (scrollIntoView 'nearest') wpychało aktywną pigułkę pod nawigację. */
+          var d = nav.getBoundingClientRect().top - 100;
+          if(Math.abs(d) > 8) window.scrollBy({top: d, behavior: reduced ? 'auto' : 'smooth'});
         }
       });
       it.addEventListener('focus', function(){ select(n); });
@@ -1206,6 +1310,28 @@ button{font:inherit;color:inherit;background:transparent}
       e.preventDefault();
       items[n].focus();
     });
+  })();
+
+  /* --- Callbar w sekcji kontaktu ---------------------------------------- */
+  /* Przycisk „Kontakt" prowadzi do #kontakt — gdy użytkownik już tam jest,
+     tap nie robi nic i połowa stale widocznego paska staje się martwa.
+     W obrębie sekcji kontaktu przycisk zmienia się w link do e-maila. */
+  (function(){
+    var more = document.querySelector('.callbar .more');
+    var sec = document.getElementById('kontakt');
+    if(!more || !sec || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(en){
+      en.forEach(function(e){
+        if(e.isIntersecting){
+          more.textContent = 'Napisz e-mail';
+          more.setAttribute('href','mailto:biuro@maxinstal.pl');
+        }else{
+          more.textContent = 'Kontakt';
+          more.setAttribute('href','#kontakt');
+        }
+      });
+    }, {threshold:.2});
+    io.observe(sec);
   })();
 
   /* --- Parallax --------------------------------------------------------- */
