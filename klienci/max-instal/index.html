@@ -550,18 +550,8 @@ button{font:inherit;color:inherit;background:transparent}
 }
 @media (max-width:899px){
   html{scroll-padding-top:96px}
-  /* Hero nie zajmuje pełnego ekranu — u dołu wystaje początek statystyk,
-     co pokazuje, że strona ma ciąg dalszy (pełny 100svh zostawiał pas
-     pustego granatu i wyglądał jak koniec treści). */
-  .hero-stage{min-height:0}
-  .hero-grid{
-    grid-template-columns:1fr;min-height:88svh;
-    padding-top:clamp(104px,14vh,150px);padding-bottom:clamp(40px,7vh,72px);
-  }
+  .hero-grid{grid-template-columns:1fr;padding-top:clamp(104px,14vh,150px)}
   .hero-art{width:100%;opacity:.4}
-  /* Przyciski na pełną szerokość — pewniejszy cel dla kciuka i spokojniejszy
-     układ niż dwie pigułki różnej długości wiszące przy lewej krawędzi. */
-  .hero-cta .btn{flex:1 1 100%;justify-content:space-between;padding-left:24px}
   .about{grid-template-columns:1fr}
   .offer{grid-template-columns:minmax(0,1fr)}
   .perm{grid-template-columns:minmax(0,1fr)}
