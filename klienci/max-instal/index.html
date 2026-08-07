@@ -500,20 +500,6 @@ button{font:inherit;color:inherit;background:transparent}
 .footbar a:hover{color:var(--ink)}
 .footbar-links{display:flex;flex-wrap:wrap;gap:4px 28px;align-items:center}
 
-/* --- Pasek akcji na telefonie ------------------------------------------ */
-.callbar{
-  position:fixed;left:12px;right:12px;z-index:75;display:none;gap:8px;padding:10px;
-  bottom:calc(12px + env(safe-area-inset-bottom,0px));
-  background:rgba(7,17,29,.9);backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.14);border-radius:999px;
-}
-.callbar a{
-  flex:1 1 0;display:flex;align-items:center;justify-content:center;height:50px;
-  border-radius:999px;font-weight:700;
-}
-.callbar .call{background:var(--acc);color:#fff}
-.callbar .more{border:1px solid rgba(255,255,255,.35);color:#fff}
-
 /* --- Brakujące zdjęcia -------------------------------------------------- */
 /* Dopóki klient nie dostarczy plików, kadr pokazuje etykietę zamiast
    ikony zepsutego obrazka. Proporcje zostają, więc podmiana nie ruszy layoutu. */
@@ -564,11 +550,7 @@ button{font:inherit;color:inherit;background:transparent}
   .works{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:899px){
-  /* scroll-padding-bottom: scrollIntoView musi wiedzieć o stałym callbarze,
-     inaczej dosuwa treść (blok EFEKT w ofercie) pod pasek. */
-  html{scroll-padding-top:96px;scroll-padding-bottom:110px}
-  body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-  .callbar{display:flex}
+  html{scroll-padding-top:96px}
   .hero-grid{grid-template-columns:1fr;padding-top:clamp(104px,14vh,150px)}
   .hero-art{width:100%;opacity:.4}
   .about{grid-template-columns:1fr}
@@ -603,13 +585,12 @@ button{font:inherit;color:inherit;background:transparent}
   .svc.is-on{border-color:var(--acc);background:var(--acc)}
   .svc.is-on .svc-no{color:rgba(255,255,255,.75)}
   .svc.is-on .svc-name{color:#fff;font-size:1rem}
-  /* scrollIntoView na panelu respektuje te marginesy — treść omija
-     przyklejoną nawigację u góry i callbar u dołu. */
-  .pane-card{scroll-margin-top:104px;scroll-margin-bottom:110px}
+  /* scrollIntoView na panelu respektuje margines — treść omija
+     przyklejoną nawigację u góry. */
+  .pane-card{scroll-margin-top:104px;scroll-margin-bottom:24px}
 
-  /* Kompaktowy panel: desktopowe odstępy robiły z niego ~640px wysokości,
-     która nie mieściła się między nawigacją a callbarem — blok EFEKT
-     lądował pod paskiem. */
+  /* Kompaktowy panel: desktopowe odstępy robiły z niego ~640px wysokości
+     i po wyborze etapu nie mieścił się w całości na ekranie. */
   .pane-card{padding:24px 20px;border-radius:24px}
   .pane h3{font-size:1.375rem}
   .pane-desc{margin-top:8px}
@@ -1060,11 +1041,6 @@ button{font:inherit;color:inherit;background:transparent}
   </div>
 </footer>
 
-<div class="callbar">
-  <a class="call" href="tel:+48512115071">Zadzwoń</a>
-  <a class="more" href="#kontakt">Kontakt</a>
-</div>
-
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -1284,15 +1260,12 @@ button{font:inherit;color:inherit;background:transparent}
         select(n);
         /* Na telefonie zakładki to poziomy pasek pigułek, a panel z treścią
            leży tuż pod nim. Dosuwamy wybraną pigułkę w poziomie (scroll
-           kontenera, nie strony) i panel w pionie — scroll-margin na panelu
-           trzyma go między przyklejoną nawigacją a callbarem. Na desktopie
-           kolumny stoją obok siebie i przewijanie byłoby irytujące. */
+           kontenera, nie strony), a stronę tak, by pasek pigułek lądował
+           tuż pod pływającą nawigacją — wtedy panel wypełnia resztę ekranu.
+           Na desktopie kolumny stoją obok siebie i przewijanie by irytowało. */
         if(window.matchMedia('(max-width:899px)').matches){
           var nav = it.parentElement;
           nav.scrollTo({left: Math.max(0, it.offsetLeft - 16), behavior: reduced ? 'auto' : 'smooth'});
-          /* Pasek pigułek ląduje tuż pod pływającą nawigacją (~100px), a panel
-             wypełnia resztę ekranu nad callbarem. Dosuwanie panelu do dołu
-             (scrollIntoView 'nearest') wpychało aktywną pigułkę pod nawigację. */
           var d = nav.getBoundingClientRect().top - 100;
           if(Math.abs(d) > 8) window.scrollBy({top: d, behavior: reduced ? 'auto' : 'smooth'});
         }
@@ -1310,28 +1283,6 @@ button{font:inherit;color:inherit;background:transparent}
       e.preventDefault();
       items[n].focus();
     });
-  })();
-
-  /* --- Callbar w sekcji kontaktu ---------------------------------------- */
-  /* Przycisk „Kontakt" prowadzi do #kontakt — gdy użytkownik już tam jest,
-     tap nie robi nic i połowa stale widocznego paska staje się martwa.
-     W obrębie sekcji kontaktu przycisk zmienia się w link do e-maila. */
-  (function(){
-    var more = document.querySelector('.callbar .more');
-    var sec = document.getElementById('kontakt');
-    if(!more || !sec || !('IntersectionObserver' in window)) return;
-    var io = new IntersectionObserver(function(en){
-      en.forEach(function(e){
-        if(e.isIntersecting){
-          more.textContent = 'Napisz e-mail';
-          more.setAttribute('href','mailto:biuro@maxinstal.pl');
-        }else{
-          more.textContent = 'Kontakt';
-          more.setAttribute('href','#kontakt');
-        }
-      });
-    }, {threshold:.2});
-    io.observe(sec);
   })();
 
   /* --- Parallax --------------------------------------------------------- */
