@@ -12,7 +12,8 @@ Strona-portfolio studia **Widoczni** — nowoczesne strony internetowe dla lokal
 | `sara-beauty.html` | Realizacja dla klienta — salon kosmetyczny Sara's Beauty (Skierniewice) |
 
 Każdy plik jest samodzielny — cały CSS i JS znajduje się w środku, bez zewnętrznych zależności
-(poza Google Fonts). Wszystkie pliki muszą leżeć w tym samym folderze, ponieważ sekcja
+(poza Google Fonts). Wyjątek: `sara-beauty.html` korzysta ze zdjęć w folderze `img/`.
+Wszystkie pliki muszą leżeć w tym samym folderze, ponieważ sekcja
 „Realizacje" na stronie głównej linkuje do pozostałych ścieżkami względnymi.
 
 ## Podgląd lokalny

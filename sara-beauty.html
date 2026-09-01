@@ -2,12 +2,12 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kosmetolog Skierniewice — Sara's Beauty</title>
-<meta name="description" content="Sara's Beauty Skierniewice — kosmetologia, trychologia i fryzjerstwo. Zabiegi na twarz, laminacja brwi i rzęs, mezoterapia, koloryzacja. Tel. 514 330 140.">
+<meta name="description" content="Sara's Beauty Skierniewice — Sara Dąbrowska, mgr kosmetologii i trycholog. Kosmetologia, trychologia i fryzjerstwo. Indywidualnie dobrana pielęgnacja. Tel. 514 330 140.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,614 +32,770 @@
 }
 </script>
 <style>
+
   :root{
-    --peri:#acc1ff;
-    --peri-deep:#7d97e8;
-    --peri-pale:#e9eeff;
-    --navy:#26325e;
-    --navy-deep:#1a2344;
-    --navy-soft:#525f8c;
-    --ice:#f8f9fd;
-    --ice-dim:#eef1fb;
-    --ink:#212843;
-    --gold:#b8925a;
-    --line:rgba(38,50,94,.13);
-    --line-soft:rgba(38,50,94,.08);
+    --bg:#fbfcfe;
+    --ink:#141c38;
+    --ink-soft:#5b6483;
+    --peri:#93acf0;
+    --peri-soft:#aec3f7;
+    --navy:#131b36;
+    --navy-2:#1b2547;
+    --line:rgba(20,28,56,.12);
+    --line-soft:rgba(20,28,56,.07);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    font-family:'Jost',sans-serif;
-    background:var(--ice);
-    color:var(--ink);
-    line-height:1.6;
-    font-weight:300;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.serif{font-family:'Cormorant',serif;font-weight:500;line-height:1.05;letter-spacing:.01em}
-  .script{font-family:'Great Vibes',cursive;font-weight:400}
-  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  html,body{overflow-x:clip}
+  body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-weight:300;font-size:15.5px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Bodoni Moda',serif;font-weight:400;line-height:1.06;letter-spacing:.002em}
   a{color:inherit;text-decoration:none}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
-  .eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:400;color:var(--peri-deep)}
+  a:hover{color:var(--peri)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 clamp(24px,4vw,56px)}
+  .label{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;font-weight:500;color:var(--peri)}
+  .sec-ix{display:flex;align-items:center;gap:18px;margin-bottom:clamp(30px,4vw,44px)}
+  .sec-ix .n{font-family:'Bodoni Moda',serif;font-size:.92rem;color:var(--ink);letter-spacing:.08em}
+  .sec-ix .rule{width:52px;height:1px;background:var(--line)}
+  .sdiv{display:flex;justify-content:center;padding:clamp(20px,3vw,36px) 0 0}
+  .sdiv svg{width:88px;height:44px;color:var(--peri-soft)}
   .mgm{display:block}
+  .arrow-link{display:inline-flex;align-items:baseline;gap:12px;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:8px;transition:color .3s,border-color .3s}
+  .arrow-link .ar{display:inline-block;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+  .arrow-link:hover{color:var(--peri);border-color:var(--peri)}
+  .arrow-link:hover .ar{transform:translateX(6px)}
+  .btn{display:inline-flex;align-items:center;gap:14px;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;padding:20px 38px;transition:.35s}
+  .btn .ar{display:inline-block;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+  .btn:hover .ar{transform:translateX(6px)}
+  .btn-ink{background:var(--ink);color:#fff}
+  .btn-ink:hover{background:var(--navy-2);color:#fff}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
+  .btn-light{border:1px solid rgba(255,255,255,.4);color:#fff}
+  .btn-light:hover{border-color:#fff;color:#fff}
 
-  /* NAV */
-  header{position:sticky;top:0;z-index:50;background:rgba(248,249,253,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
-  .brand{display:flex;align-items:center;gap:12px}
-  .brand .mgm{width:34px;height:40px;color:var(--peri-deep)}
-  .brand .bt{font-family:'Cormorant',serif;font-size:1.32rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--navy);padding-left:.2em;line-height:1.1}
-  .brand .bt small{display:block;font-family:'Jost',sans-serif;font-size:.56rem;letter-spacing:.42em;font-weight:400;color:var(--navy-soft);margin-top:3px}
-  .navlinks{display:flex;gap:32px;align-items:center}
-  .navlinks a{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;transition:color .25s}
-  .navlinks a:hover{color:var(--peri-deep)}
-  .btn{display:inline-block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:14px 26px;border-radius:2px;transition:.28s;font-weight:400}
-  .btn-solid{background:var(--navy);color:#fff}
-  .btn-solid:hover{background:var(--navy-deep)}
-  .btn-line{border:1px solid var(--navy);color:var(--navy)}
-  .btn-line:hover{background:var(--navy);color:#fff}
-  .btn-ice{background:#fff;color:var(--navy)}
-  .btn-ice:hover{background:var(--peri-pale)}
-  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px}
-  .burger span{width:24px;height:1.5px;background:var(--navy);transition:.3s}
+  header{position:sticky;top:0;z-index:60;background:rgba(251,252,254,.94);border-bottom:1px solid var(--line-soft)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:32px}
+  .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+  .brand:hover{color:inherit}
+  .brand .mgm{width:26px;height:32px;color:var(--peri-soft)}
+  .brand .bt{font-family:'Bodoni Moda',serif;font-size:1.02rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding-left:.22em;white-space:nowrap}
+  .navlinks{display:flex;gap:clamp(22px,2.6vw,38px);align-items:center}
+  .navlinks .cta{margin-left:clamp(10px,2vw,26px)}
+  .navlinks a{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);transition:color .25s;white-space:nowrap;position:relative}
+  .navlinks a:hover{color:var(--ink)}
+  .navlinks a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+  .navlinks a:not(.cta):hover::after{transform:scaleX(1)}
+  .navlinks .cta{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:4px}
+  .navlinks .cta:hover{color:var(--peri);border-color:var(--peri)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:14px 10px;min-width:48px;min-height:48px;justify-content:center;align-items:center}
+  .burger span{width:24px;height:1.5px;background:var(--ink);transition:.3s}
+  .nav-book{display:none;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--ink);padding:12px 16px;color:var(--ink)}
+  .nav-book:hover{color:var(--ink)}
+  .fab{display:none;position:fixed;left:20px;right:20px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:70;background:var(--ink);color:#fff;text-align:center;justify-content:center;align-items:center;gap:12px;padding:18px 24px;font-size:.76rem;letter-spacing:.24em;text-transform:uppercase;box-shadow:0 16px 40px -12px rgba(20,28,56,.4);transform:translateY(140%);transition:transform .45s cubic-bezier(.22,1,.36,1)}
+  .fab:hover{color:#fff}
+  .fab.show{transform:none}
 
-  /* HERO */
-  .hero{position:relative;overflow:hidden;padding:0}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:78vh}
-  .hero-left{display:flex;flex-direction:column;justify-content:center;padding:70px 60px 70px 0}
-  .hero-left .eyebrow{margin-bottom:26px}
-  .hero h1{font-size:clamp(3rem,6.6vw,5.6rem);color:var(--navy)}
-  .hero h1 em{font-style:italic;color:var(--peri-deep)}
-  .hero p.lead{font-size:1.12rem;max-width:38ch;margin:28px 0 38px;color:var(--navy-soft)}
-  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
-  .hero-note{margin-top:26px;font-size:.82rem;letter-spacing:.08em;color:var(--navy-soft)}
-  .hero-right{
-    position:relative;border-radius:3px;overflow:hidden;
-    display:flex;align-items:center;justify-content:center;
-    background:
-      radial-gradient(120% 90% at 80% 8%, rgba(255,255,255,.5), transparent 55%),
-      radial-gradient(90% 90% at 15% 95%, rgba(38,50,94,.5), transparent 60%),
-      linear-gradient(160deg, #b9cbff 0%, #8fa5ec 55%, #5e74bb 100%);
-  }
-  .hero-right::after{
-    content:"";position:absolute;inset:0;
-    background-image:radial-gradient(rgba(255,255,255,.35) 1px, transparent 1px);
-    background-size:26px 26px;opacity:.35;
-  }
-  .hero-logo{position:relative;z-index:2;text-align:center;color:#fff;padding:40px}
-  .hero-logo .mgm{width:clamp(150px,16vw,215px);height:auto;margin:0 auto;filter:drop-shadow(0 12px 30px rgba(26,35,68,.28))}
-  .hero-logo .sc{font-size:clamp(2.6rem,4.4vw,3.6rem);line-height:1.1;margin-top:6px;text-shadow:0 6px 24px rgba(26,35,68,.3)}
-  .hero-logo .cs{font-size:.68rem;letter-spacing:.52em;text-transform:uppercase;opacity:.9;margin-top:12px;padding-left:.52em}
-  .hero-badge{
-    position:absolute;left:32px;right:32px;bottom:28px;z-index:2;
-    display:flex;justify-content:space-between;align-items:flex-end;color:#fff;gap:14px
-  }
-  .hero-badge small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
-  .hero-badge .b{font-family:'Cormorant',serif;font-size:1.35rem;line-height:1.2}
+  .hero{position:relative;min-height:calc(84vh - 80px);display:flex;align-items:center;overflow:hidden}
+  .hero-copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;width:min(100%,760px);margin-left:max(0px,calc(50vw - 720px));padding:52px clamp(24px,5vw,80px) 56px clamp(24px,4vw,64px)}
+  .hero-art{position:absolute;inset:0 0 0 auto;width:48%;z-index:0;pointer-events:none}
+  .hero-field{position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,254,255,0) 0%,rgba(242,247,255,.55) 52%,#eef4fe 100%)}
+  .kv-halo{position:absolute;width:clamp(460px,42vw,680px);aspect-ratio:1;right:-6%;top:52%;transform:translateY(-48%);border-radius:50%;background:radial-gradient(circle at 46% 44%,#dfeafd 0%,rgba(223,234,253,.5) 46%,rgba(223,234,253,0) 70%)}
+  .hero-art::after{content:"";position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' sc-camel-base-frequency='0.9' sc-camel-num-octaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .hero-hair{position:absolute;left:0;right:0;top:63%;height:1px;z-index:1;background:linear-gradient(90deg,rgba(223,230,243,0) 0%,#dfe6f3 18%,#d7e0f2 62%,rgba(223,230,243,0) 100%)}
+  .hero-mark{position:absolute;display:block;right:clamp(-40px,2vw,90px);top:52%;width:clamp(340px,30vw,480px);height:auto;transform:translateY(-48%);filter:drop-shadow(0 30px 60px rgba(125,151,232,.22));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .4s,markFloat 12s ease-in-out 1.7s infinite}
+  @keyframes markIn{from{opacity:0;transform:translateY(-46%) scale(.97)}to{opacity:1;transform:translateY(-46%) scale(1)}}
+  @keyframes markFloat{0%,100%{transform:translateY(-46%)}50%{transform:translateY(calc(-46% - 5px))}}
+  @keyframes markInM{from{opacity:0;transform:scale(.97)}to{opacity:.8;transform:scale(1)}}
+  .hero-cta{gap:26px;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .6s}
+  .hero-cta .btn{padding:13px 26px;min-height:0;transition:background .3s ease,color .3s ease}
+  .hero-cta .btn .ar{transition:transform .3s cubic-bezier(.22,1,.36,1)}
+  .hero-cta .btn:hover .ar{transform:translateX(4px)}
+  .hero .lead{animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .48s}
+  @media (prefers-reduced-motion:reduce){.hero-mark,.hero .lead,.hero-cta,.hl-line{animation:none;opacity:1;transform:none}.hero-mark{transform:translateY(-46%)}}
+  .hero-copy .label{margin-bottom:38px;color:var(--peri-deep,#7d97e8);font-size:.72rem}
+  .hero h1{font-size:clamp(2.7rem,5vw,5rem);color:var(--ink);line-height:1.08;letter-spacing:-.014em}
+  .hero h1 em{font-style:italic;font-weight:400;color:var(--ink-soft)}
+  .hero h1 .it{font-size:.55em;line-height:1.4;letter-spacing:0}
+  .hero h1 .it:nth-child(3){margin-top:26px}
+  .hl-line{display:block;opacity:0;transform:translateY(26px);animation:hlUp .8s cubic-bezier(.22,1,.36,1) forwards}
+  .hl-line:nth-child(2){animation-delay:.12s}
+  .hl-line:nth-child(3){animation-delay:.24s}
+  .hl-line:nth-child(4){animation-delay:.36s}
+  @keyframes hlUp{to{opacity:1;transform:none}}
+  .hero .lead{font-size:1.06rem;color:var(--ink-soft);max-width:460px;margin:32px 0 46px}
+  .hero-cta{display:flex;gap:34px;flex-wrap:wrap;align-items:center}
+  .hero-sig{display:flex;align-items:center;gap:18px;margin-top:auto;padding-top:64px;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
+  .hero-sig::before{content:"";width:44px;height:1px;background:var(--line)}
+  .intro{border-top:1px solid var(--line-soft)}
+  .intro-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(44px,6vw,100px);align-items:end}
+  .intro h2{font-size:clamp(1.9rem,3.4vw,3rem);max-width:22ch}
+  .intro .label{display:block;margin-bottom:28px}
+  .intro-side p{color:var(--ink-soft);max-width:44ch;margin-bottom:26px}
 
-  /* STRIP */
-  .strip{background:var(--navy);color:var(--peri-pale);padding:16px 0;overflow:hidden;white-space:nowrap}
-  .strip span{font-family:'Cormorant',serif;font-size:1.25rem;font-style:italic;padding:0 26px;opacity:.92}
-  .strip .dot{color:var(--peri);font-style:normal}
+  .marq{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);overflow:hidden;padding:22px 0;white-space:nowrap}
+  .marq-in{display:inline-block;animation:marq 46s linear infinite}
+  .marq span{font-family:'Bodoni Moda',serif;font-size:1.15rem;letter-spacing:.3em;text-transform:uppercase;padding:0 30px;color:var(--ink-soft)}
+  .marq .dot{color:var(--peri-soft);padding:0}
+  @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-  /* SECTION BASE */
-  section{padding:110px 0}
-  .sec-head{text-align:center;max-width:640px;margin:0 auto 60px}
-  .sec-head h2{font-size:clamp(2.4rem,4.5vw,3.6rem);color:var(--navy);margin:16px 0 0}
-  .sec-head p{margin-top:16px;color:var(--navy-soft)}
+  section{padding:clamp(88px,10vw,150px) 0}
+  .meet{background:#fafbfd;position:relative;overflow:hidden}
+  .meet .sec-ix{margin-bottom:clamp(40px,5vw,64px)}
+  .meet-grid{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);column-gap:clamp(48px,7vw,110px);grid-template-areas:"photo head" "photo spec" "photo desc" "photo cta" "photo .";align-items:start;position:relative;z-index:1}
+  .meet-photo{grid-area:photo;aspect-ratio:4/5;position:relative;width:min(100%,380px);justify-self:start;margin:clamp(16px,3vw,44px) 0 0 clamp(0px,3vw,48px)}
+  .meet-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .meet-h{grid-area:head;font-size:clamp(2.2rem,3.6vw,3.4rem);line-height:1.12}
+  .meet-h em{font-style:italic;font-weight:400}
+  .meet-spec{grid-area:spec;margin:32px 0 0;padding-top:24px;border-top:1px solid var(--line);max-width:300px;display:flex;flex-direction:column;gap:8px}
+  .meet-spec .l1{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);font-weight:500}
+  .meet-spec .l2{font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft)}
+  .meet-p{grid-area:desc;color:var(--ink-soft);max-width:44ch;margin:26px 0 0}
+  .meet-cta{grid-area:cta;margin-top:36px;justify-self:start}
+  .meet-cta:hover .ar{transform:translateX(4px)}
+  .meet-sig{position:absolute;left:max(-80px,-5vw);bottom:-56px;width:clamp(220px,24vw,340px);height:auto;color:var(--peri);opacity:.09;pointer-events:none;z-index:0}
 
-  /* OFERTA */
-  .off-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);background:#fff}
-  .off-col{padding:46px 40px;border-right:1px solid var(--line);display:flex;flex-direction:column}
-  .off-col:last-child{border-right:0}
-  .off-col .kind{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--peri-deep);margin-bottom:18px}
-  .off-col h3{font-size:2rem;color:var(--navy);margin-bottom:14px}
-  .off-col p{font-size:.95rem;color:var(--navy-soft);margin-bottom:20px}
-  .off-list{list-style:none;margin-top:auto}
-  .off-list li{padding:10px 0;border-top:1px solid var(--line-soft);font-size:.95rem;display:flex;gap:10px;align-items:baseline}
-  .off-list li::before{content:"—";color:var(--peri-deep);flex-shrink:0}
+  .motto{text-align:center;display:flex;flex-direction:column;justify-content:center;min-height:56vh;background:linear-gradient(180deg,#fafbfd 0%,#f2f6fe 100%)}
+  .motto h2{font-size:clamp(2.6rem,5.6vw,5rem);max-width:20ch;margin:0 auto}
+  .motto .it{display:block;font-style:italic;font-weight:400;color:var(--ink-soft);margin-top:10px}
+  .motto p{margin:44px auto 0;max-width:52ch;color:var(--ink-soft)}
 
-  /* MEZOTERAPIA */
-  .mezo{background:var(--peri-pale)}
-  .mezo-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
-  .mezo-panel{
-    aspect-ratio:4/5;border-radius:3px;position:relative;overflow:hidden;
-    display:flex;align-items:center;justify-content:center;
-    background:
-      radial-gradient(110% 80% at 75% 12%, rgba(255,255,255,.45), transparent 55%),
-      linear-gradient(160deg,#a9beff 0%, #7f97e5 55%, #4d63a8 100%);
-  }
-  .mezo-panel .mgm{width:56%;color:rgba(255,255,255,.5)}
-  .mezo-panel .cap{position:absolute;left:26px;bottom:22px;color:#fff;font-family:'Cormorant',serif;font-style:italic;font-size:1.3rem}
-  .mezo-copy h2{font-size:clamp(2.2rem,4vw,3.2rem);color:var(--navy);margin:14px 0 18px}
-  .mezo-copy>p{color:var(--navy-soft);max-width:50ch}
-  .fx{list-style:none;margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px 26px}
-  .fx li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem}
-  .fx .ic{width:30px;height:30px;flex-shrink:0;border-radius:50%;background:#fff;color:var(--peri-deep);display:flex;align-items:center;justify-content:center;font-size:.85rem;border:1px solid var(--line)}
-  .fx b{font-weight:500;display:block}
-  .fx small{color:var(--navy-soft);font-size:.86rem}
-  .mezo-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-  .mezo-tags span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--navy)}
+  .offer{border-top:1px solid var(--line-soft)}
+  .offer-head{margin-bottom:clamp(48px,6vw,80px)}
+  .offer-head .label{display:block;margin-bottom:26px}
+  .offer-head h2{font-size:clamp(2.4rem,4.4vw,4rem);max-width:16ch}
+  .offer-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(48px,6vw,96px);align-items:start}
+  .orow{padding:38px 0;border-top:1px solid var(--line);cursor:pointer;transition:opacity .4s}
+  .orow:last-child{border-bottom:1px solid var(--line)}
+  .offer-list.has-act .orow{opacity:.38}
+  .offer-list.has-act .orow.act{opacity:1}
+  .orow .num{font-size:.7rem;letter-spacing:.3em;color:var(--peri);display:block;margin-bottom:12px}
+  .orow h3{font-size:clamp(2rem,3.4vw,3rem);transition:transform .45s cubic-bezier(.22,1,.36,1)}
+  .orow.act h3{transform:translateX(12px)}
+  .orow .odesc{max-height:0;overflow:hidden;transition:max-height .55s cubic-bezier(.22,1,.36,1),opacity .45s;opacity:0}
+  .orow.act .odesc{max-height:260px;opacity:1}
+  .orow .odesc p{color:var(--ink-soft);max-width:52ch;margin:16px 0 20px}
+  .offer-photo{position:sticky;top:120px;aspect-ratio:4/5;position:sticky;overflow:hidden}
+  .oimg{position:absolute;inset:0;opacity:0;transition:opacity .7s ease}
+  .oimg.on{opacity:1}
+  .oimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
-  /* CENNIK */
-  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-  .pcard{background:#fff;border:1px solid var(--line);padding:42px 40px}
-  .pcard.wide{grid-column:1/-1}
-  .pcard .kind{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--peri-deep);margin-bottom:10px}
-  .pcard h3{font-size:1.9rem;color:var(--navy);margin-bottom:18px}
-  .plist{list-style:none}
-  .plist li{padding:12px 0;border-bottom:1px solid var(--line-soft);display:flex;align-items:baseline;gap:10px}
-  .plist li:last-child{border-bottom:0}
-  .plist .name{font-size:1rem}
-  .plist .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
-  .plist .price{font-family:'Cormorant',serif;font-size:1.3rem;color:var(--navy);font-weight:600;white-space:nowrap}
-  .plist .from{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--navy-soft);opacity:.75;margin-right:2px}
-  .htable{width:100%;border-collapse:collapse;margin-top:6px}
-  .htable th{font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--navy-soft);font-weight:400;text-align:right;padding:10px 6px;border-bottom:1px solid var(--line)}
+  .steps{background:#fff;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .steps h2{font-size:clamp(2.2rem,4vw,3.6rem);max-width:24ch}
+  .steps .intro{color:var(--ink-soft);max-width:54ch;margin:26px 0 0}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(32px,4vw,64px);margin-top:clamp(56px,7vw,96px)}
+  .step{border-top:1px solid var(--ink);padding-top:28px}
+  .step .n{font-family:'Bodoni Moda',serif;font-size:2.6rem;line-height:1;color:var(--peri);display:block;margin-bottom:18px}
+  .step h3{font-size:1.35rem;margin-bottom:10px}
+  .step p{color:var(--ink-soft);font-size:.96rem}
+
+  .menu-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,64px)}
+  .menu-head h2{font-size:clamp(2.4rem,4.4vw,4rem)}
+  .mrow{display:flex;flex-direction:column;gap:6px;padding:30px 0;border-top:1px solid var(--line)}
+  .mrow:last-of-type{border-bottom:1px solid var(--line)}
+  .mrow .top{display:flex;align-items:baseline;gap:18px}
+  .mrow .name{font-family:'Bodoni Moda',serif;font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:500}
+  .mrow .dots{flex:1;border-bottom:1px dotted var(--line)}
+  .mrow .price{font-family:'Bodoni Moda',serif;font-size:clamp(1.3rem,2vw,1.7rem);font-weight:600;white-space:nowrap}
+  .mrow .price .from{font-family:'Manrope',sans-serif;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-right:6px;font-weight:400}
+  .mrow .sub{font-size:.92rem;color:var(--ink-soft);max-width:64ch}
+  .menu-foot{margin-top:clamp(40px,5vw,60px);text-align:center}
+
+  .cen-tabs{display:flex;gap:clamp(20px,4vw,44px);margin:clamp(36px,4vw,52px) 0 clamp(28px,3vw,40px);border-bottom:1px solid var(--line)}
+  .cen-tab{background:none;border:0;cursor:pointer;font-family:'Bodoni Moda',serif;font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;color:var(--ink-soft);padding:0 2px 16px;border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .3s,border-color .3s}
+  .cen-tab.on{color:var(--ink);border-color:var(--ink)}
+  .cgroup{margin-bottom:clamp(36px,4vw,56px)}
+  .cgroup:last-child{margin-bottom:0}
+  .cgroup h3{font-size:clamp(1.5rem,2.4vw,2rem);margin-bottom:10px}
+  .clist{list-style:none}
+  .clist li{display:flex;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px solid var(--line-soft)}
+  .clist .name{font-size:1rem}
+  .clist .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:20px}
+  .clist .price{font-family:'Bodoni Moda',serif;font-size:1.25rem;font-weight:600;white-space:nowrap}
+  .clist .from{font-family:'Manrope',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-right:4px;font-weight:400}
+  .cen-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+  .htable{width:100%;border-collapse:collapse}
+  .htable th{font-family:'Manrope',sans-serif;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:400;text-align:right;padding:12px 6px;border-bottom:1px solid var(--line)}
   .htable th:first-child{text-align:left}
-  .htable td{padding:11px 6px;border-bottom:1px solid var(--line-soft);font-size:.98rem;text-align:right}
+  .htable td{padding:12px 6px;border-bottom:1px solid var(--line-soft);font-size:.98rem;text-align:right}
   .htable td:first-child{text-align:left}
-  .htable td.pr{font-family:'Cormorant',serif;font-size:1.22rem;font-weight:600;color:var(--navy);white-space:nowrap}
-  .htable td.na{color:var(--navy-soft);opacity:.45}
-  .htable .cat td{padding-top:26px;border-bottom:1px solid var(--line);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--peri-deep);text-align:left}
+  .htable td.pr{font-family:'Bodoni Moda',serif;font-size:1.2rem;font-weight:600;white-space:nowrap}
+  .htable td.na{color:var(--ink-soft);opacity:.4}
+  .htable .cat td{padding-top:30px;border-bottom:1px solid var(--line);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--peri);text-align:left}
   .htable tr:last-child td{border-bottom:0}
-  .price-note{text-align:center;margin-top:26px;font-size:.86rem;color:var(--navy-soft)}
-
-  /* O MNIE */
-  .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
-  .about-panel{
-    aspect-ratio:4/5;border-radius:3px;position:relative;overflow:hidden;
-    background:linear-gradient(155deg,#c4d3ff 0%, #93a9ec 50%, #58619b 100%);
-    display:flex;align-items:flex-end;padding:28px;
+  @media(max-width:860px){
+    .cen-cols{grid-template-columns:1fr}
+    .htable th{font-size:.56rem;letter-spacing:.08em;padding:10px 3px}
+    .htable td{padding:10px 3px;font-size:.88rem}
+    .htable td.pr{font-size:1rem}
   }
-  .about-panel .mgm{position:absolute;right:-8%;top:-4%;width:75%;color:rgba(255,255,255,.28)}
-  .about-panel .who{position:relative;z-index:2;color:#fff}
-  .about-panel .who .sc{font-size:2.4rem;line-height:1}
-  .about-panel .who small{display:block;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;margin-top:8px;opacity:.9}
-  .about-copy h2{font-size:clamp(2.2rem,4vw,3.2rem);color:var(--navy);margin:14px 0 22px}
-  .about-copy p{color:var(--navy-soft);margin-bottom:16px;max-width:52ch}
-  .creds{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-  .creds span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:10px 18px;border:1px solid var(--line);border-radius:999px;color:var(--navy);background:var(--ice)}
-
-  /* VOUCHER */
-  .voucher{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-  .voucher::before{
-    content:"";position:absolute;inset:0;
-    background-image:radial-gradient(rgba(172,193,255,.16) 1px, transparent 1px);
-    background-size:24px 24px;
+  .case{display:grid;grid-template-columns:minmax(140px,.32fr) minmax(0,.68fr);gap:clamp(28px,5vw,80px);align-items:start;margin-top:clamp(56px,7vw,110px)}
+  .case--flip{grid-template-columns:minmax(0,.68fr) minmax(140px,.32fr)}
+  .case--flip .case-meta{order:2;text-align:right}
+  .case--flip .case-meta .sec-ix{justify-content:flex-end}
+  .case-meta{position:sticky;top:130px}
+  .case-meta .big{font-family:'Bodoni Moda',serif;font-size:clamp(3.6rem,7vw,6.4rem);line-height:1;color:var(--ink)}
+  .case-meta .lab{display:block;font-size:.64rem;letter-spacing:.4em;text-transform:uppercase;color:var(--peri);margin-top:14px}
+  .case-meta .desc{font-size:.9rem;color:var(--ink-soft);max-width:26ch;margin-top:22px}
+  .case--flip .case-meta .desc{margin-left:auto}
+  .case .ba{max-width:640px;width:100%}
+  .case--flip .ba{justify-self:end}
+  .ba{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--line-soft);cursor:ew-resize;touch-action:none}
+  .ba img{position:absolute;top:0;height:100%;width:200%;max-width:none;object-fit:cover;pointer-events:none;user-select:none}
+  .ba .im-before{left:0}
+  .ba .after-wrap{position:absolute;inset:0;overflow:hidden}
+  .ba .im-after{left:-100%}
+  .ba .ba-line{position:absolute;top:0;bottom:0;width:1px;background:#fff;box-shadow:0 0 0 .5px rgba(20,28,56,.25);pointer-events:none}
+  .ba .ba-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:rgba(251,252,254,.92);display:flex;align-items:center;justify-content:center;gap:5px;font-size:.7rem;color:var(--ink);pointer-events:none;box-shadow:0 6px 20px rgba(20,28,56,.25)}
+  .ba .tag{position:absolute;bottom:14px;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:#fff;background:rgba(20,28,56,.55);padding:7px 12px;pointer-events:none;backdrop-filter:blur(4px)}
+  .ba .tag-b{left:14px}
+  .ba .tag-a{right:14px}
+  .ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+  .meta-cap{margin-top:16px;font-size:.92rem;color:var(--ink-soft)}
+  .meta-note{margin-top:clamp(32px,4vw,48px);text-align:center;font-size:.86rem;color:var(--ink-soft)}
+  @media(max-width:760px){
+    .case,.case--flip{grid-template-columns:1fr;gap:22px;margin-top:56px}
+    .case-meta{position:static;display:flex;align-items:baseline;gap:16px}
+    .case--flip .case-meta{order:0;text-align:left}
+    .case-meta .big{font-size:2.6rem}
+    .case-meta .lab{margin-top:0}
+    .case-meta .desc{display:none}
+    .case .ba,.case--flip .ba{margin:0;max-width:none;justify-self:stretch}
   }
-  .vo-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;position:relative;z-index:2}
-  .vo-copy .eyebrow{color:var(--peri)}
-  .vo-copy h2{font-size:clamp(2.4rem,4.4vw,3.5rem);margin:16px 0 10px}
-  .vo-copy .sc{display:block;font-size:clamp(2.4rem,4vw,3.4rem);color:var(--peri);margin-bottom:18px;line-height:1.1}
-  .vo-copy>p{color:#c9d4f5;max-width:44ch;margin-bottom:24px}
-  .vo-list{list-style:none;margin-bottom:34px}
-  .vo-list li{display:flex;gap:12px;padding:9px 0;align-items:baseline}
-  .vo-list li::before{content:"✓";color:var(--gold);font-size:.9rem}
-  .vo-card{
-    aspect-ratio:3/4;max-width:330px;margin:0 auto;border-radius:6px;position:relative;
-    background:linear-gradient(165deg,#33427a,#202a52);
-    border:1px solid rgba(172,193,255,.35);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
-    box-shadow:0 40px 80px -30px rgba(0,0,0,.55);
-  }
-  .vo-card::before{content:"";position:absolute;inset:12px;border:1px solid rgba(172,193,255,.28);border-radius:3px}
-  .vo-card .mgm{width:34%;color:var(--peri)}
-  .vo-card .t{font-family:'Cormorant',serif;font-size:1.5rem;letter-spacing:.3em;text-transform:uppercase;margin-top:14px;padding-left:.3em}
-  .vo-card .s{font-family:'Great Vibes',cursive;font-size:1.5rem;color:var(--peri)}
-  .vo-card .m{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:#c9d4f5;margin-top:16px}
 
-  /* KONTAKT */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:#fff}
-  .contact-info{padding:56px 50px}
-  .contact-info h2{font-size:2.6rem;color:var(--navy);margin-bottom:26px}
-  .info-row{display:flex;gap:16px;padding:17px 0;border-top:1px solid var(--line-soft)}
-  .info-row:first-of-type{border-top:0}
-  .info-row .lbl{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--peri-deep);width:112px;flex-shrink:0;padding-top:5px}
-  .info-row .val{font-size:1.02rem}
-  .info-row .val strong{font-weight:500}
-  .info-row .val a:hover{color:var(--peri-deep)}
-  .contact-map{
-    background:
-      radial-gradient(100% 80% at 80% 10%, rgba(172,193,255,.35), transparent 55%),
-      linear-gradient(150deg,#3a4a85,#1a2344);
-    position:relative;min-height:460px;
-    display:flex;align-items:center;justify-content:center;padding:40px;
-  }
-  .contact-map .card{background:var(--ice);padding:38px 34px;border-radius:3px;text-align:center;max-width:310px}
-  .contact-map .card .mgm{width:52px;margin:0 auto 14px;color:var(--peri-deep)}
-  .contact-map .card h3{font-size:1.9rem;color:var(--navy);margin-bottom:8px}
-  .contact-map .card p{font-size:.94rem;color:var(--navy-soft);margin-bottom:22px}
+  .voucher{background:var(--navy);color:#fff}
+  .vo-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,7vw,110px);align-items:center}
+  .vo-copy .label{display:block;color:var(--peri-soft);margin-bottom:28px}
+  .vo-copy h2{font-size:clamp(2.6rem,4.8vw,4.4rem)}
+  .vo-copy p{color:#b9c3e6;max-width:44ch;margin:26px 0 40px}
+  .vo-card{aspect-ratio:8/5;max-width:520px;margin:0 auto;position:relative;background:linear-gradient(135deg,#1b2547 0%,#161f3e 55%,#1e2a52 100%);border:1px solid rgba(174,190,242,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;animation:voFloat 9s ease-in-out infinite}
+  @keyframes voFloat{0%,100%{transform:translateY(0) rotate(-.4deg)}50%{transform:translateY(-9px) rotate(.4deg)}}
+  @media(prefers-reduced-motion:reduce){.vo-card{animation:none}}
+  .vo-card::before{content:"";position:absolute;inset:14px;border:1px solid rgba(174,190,242,.22)}
+  .vo-card .mgm{width:54px;color:var(--peri-soft)}
+  .vo-card .t{font-family:'Bodoni Moda',serif;font-size:1.4rem;letter-spacing:.42em;text-transform:uppercase;margin-top:16px;padding-left:.42em}
+  .vo-card .s{font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.1rem;color:var(--peri-soft)}
+  .vo-card .m{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:#8e9cd0;margin-top:18px}
 
-  /* FOOTER */
-  footer{background:var(--navy-deep);color:#dbe3fa;padding:60px 0 30px}
-  .foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:36px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
-  .foot-brand{display:flex;align-items:center;gap:14px}
-  .foot-brand .mgm{width:38px;color:var(--peri)}
-  .foot-brand .bt{font-family:'Cormorant',serif;font-size:1.5rem;letter-spacing:.22em;text-transform:uppercase}
-  .foot-brand small{display:block;font-size:.6rem;letter-spacing:.4em;opacity:.65;margin-top:4px;font-family:'Jost',sans-serif}
-  .foot-cols{display:flex;gap:70px;flex-wrap:wrap}
-  .foot-col h4{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--peri);margin-bottom:14px;font-weight:400}
-  .foot-col p,.foot-col a{display:block;font-size:.92rem;opacity:.82;margin-bottom:7px}
-  .foot-col a:hover{opacity:1}
-  .foot-bottom{padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem;opacity:.6;letter-spacing:.04em}
+  .final{text-align:center;background:radial-gradient(60% 70% at 50% 100%,#eef4fe 0%,rgba(238,244,254,0) 70%)}
+  .final h2{font-size:clamp(3rem,7vw,6rem)}
+  .final p{color:var(--ink-soft);max-width:46ch;margin:28px auto 48px}
+  .final .tels{display:flex;justify-content:center;gap:clamp(28px,5vw,64px);flex-wrap:wrap;margin-top:60px}
+  .final .tels a{font-family:'Bodoni Moda',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500}
+  .final .addr{margin-top:26px;font-size:.86rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
 
-  /* REVEAL */
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  footer{border-top:1px solid var(--line-soft);padding:clamp(56px,7vw,88px) 0 36px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(32px,4vw,64px)}
+  .foot-brand .mgm{width:30px;color:var(--peri-soft);margin-bottom:18px}
+  .foot-brand .bt{font-family:'Bodoni Moda',serif;font-size:1.2rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
+  .foot-brand p{font-size:.9rem;color:var(--ink-soft);margin-top:16px}
+  .foot-brand b{font-weight:400;color:var(--ink)}
+  .foot-col h4{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--peri);margin-bottom:18px;font-weight:400}
+  .foot-col a,.foot-col p{display:block;font-size:.92rem;color:var(--ink-soft);margin-bottom:8px}
+  .foot-col a:hover{color:var(--ink)}
+  .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:clamp(48px,6vw,72px);padding-top:28px;border-top:1px solid var(--line-soft);font-size:.78rem;color:var(--ink-soft)}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
   .reveal.in{opacity:1;transform:none}
 
   @media(max-width:1000px){
-    .off-grid{grid-template-columns:1fr}
-    .off-col{border-right:0;border-bottom:1px solid var(--line)}
-    .off-col:last-child{border-bottom:0}
-    .mezo-grid,.vo-grid{grid-template-columns:1fr;gap:44px}
-    .mezo-panel{aspect-ratio:16/10}
+    .vo-grid{grid-template-columns:1fr;gap:44px}
+    .meet-eyebrow{text-align:left;margin-bottom:28px}
+    .meet-grid{grid-template-columns:1fr;column-gap:0;grid-template-areas:"head" "spec" "photo" "desc" "cta"}
+    .meet-h{font-size:clamp(2rem,7.6vw,2.6rem)}
+    .meet-spec{margin-top:24px;padding-top:22px}
+    .meet-photo{width:min(78vw,380px);margin:38px 0 0;justify-self:start}
+    .meet-p{margin-top:34px}
+    .meet-cta{margin-top:30px}
+    .meet-sig{width:180px;left:-50px;bottom:-36px;opacity:.07}
+    .offer-grid{grid-template-columns:1fr}
+    .offer-photo{position:relative;top:0;aspect-ratio:4/3;order:-1}
+    .steps-grid{grid-template-columns:1fr;gap:36px}
+    .foot-grid{grid-template-columns:1fr 1fr}
   }
-  @media(max-width:900px){
-    .navlinks{position:fixed;inset:78px 0 auto 0;background:var(--ice);flex-direction:column;gap:0;padding:12px 0;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:transform .35s;box-shadow:0 20px 40px rgba(26,35,68,.08)}
-    .navlinks.open{transform:none}
-    .navlinks a{padding:15px 28px;width:100%}
-    .navlinks .btn{margin:10px 28px;text-align:center}
+  @media(max-width:1140px){
+    .navlinks{position:fixed;inset:76px 0 0 0;height:calc(100dvh - 76px);background:var(--bg);flex-direction:column;gap:0;padding:28px 0 40px;transform:translateY(-105%);transition:transform .45s cubic-bezier(.22,1,.36,1);align-items:flex-start;overflow-y:auto;visibility:hidden}
+    .navlinks.open{transform:none;visibility:visible}
+    .navlinks a{padding:16px 24px;width:100%;font-family:'Bodoni Moda',serif;font-size:1.7rem;letter-spacing:.04em;text-transform:none;color:var(--ink);border-bottom:1px solid var(--line-soft)}
+    .navlinks .cta{border-bottom:0;color:var(--peri);margin-top:16px;font-size:1.4rem;font-style:italic}
     .burger{display:flex}
-    .hero-grid{grid-template-columns:1fr;min-height:auto}
-    .hero-left{padding:56px 0 46px}
-    .hero-right{min-height:56vh}
-    .price-grid{grid-template-columns:1fr}
-    .about-grid,.contact-grid{grid-template-columns:1fr}
-    .about-panel{aspect-ratio:16/11}
-    .contact-map{min-height:360px}
-    .fx{grid-template-columns:1fr}
-    section{padding:76px 0}
-    .pcard{padding:34px 20px}
-    .htable th{font-size:.58rem;letter-spacing:.08em;padding:10px 3px}
-    .htable td{padding:10px 3px;font-size:.88rem}
-    .htable td.pr{font-size:1.02rem}
-    .contact-info{padding:42px 24px}
-    .info-row{flex-direction:column;gap:5px}
-    .info-row .lbl{width:auto;padding-top:0}
-    .info-row .val{word-break:break-word}
+    .nav-book{display:inline-block}
+    .fab{display:inline-flex}
+    .hero{min-height:auto}
+    .hero-copy{padding:52px clamp(24px,5vw,48px) 48px;margin-left:0;width:100%;max-width:680px}
+    .hero-copy .label{margin-bottom:22px}
+    .hero h1{font-size:clamp(2.2rem,6.6vw,3.4rem)}
+    .hero h1 .it:nth-child(3){margin-top:16px}
+    .hero .lead{font-size:1rem;margin:20px 0 34px;max-width:40ch}
+    .hero-cta{gap:24px}
+    .hero-art{width:100%}
+    .hero-field{background:linear-gradient(215deg,#eef4fe 0%,rgba(242,247,255,.4) 36%,rgba(253,254,255,0) 62%)}
+    .kv-halo{width:min(52vw,440px);right:-12%;top:52%;transform:translateY(-50%)}
+    .hero-hair{display:none}
+    .hero-mark{width:min(32vw,300px);right:clamp(-30px,1vw,40px);top:52%}
+    .intro-grid{grid-template-columns:1fr;align-items:start;gap:28px}
+    .motto{min-height:auto}
+    .mrow .top{gap:12px}
+    .mrow .dots{min-width:20px}
+    section{padding:72px 0}
+    .vo-card .t{font-size:1.15rem}
+    .final .tels{flex-direction:column;gap:12px}
+  }
+  @media(max-width:640px){
+    .nav{gap:12px}
+    .brand{gap:9px}
+    .brand .bt{font-size:.86rem;letter-spacing:.15em}
+    .nav-book{padding:10px 12px}
+    .hero-copy{padding:44px 24px 40px;max-width:none}
+    .hero h1{font-size:clamp(2.15rem,9vw,2.6rem)}
+    .hero .lead{max-width:32ch;margin:18px 0 28px}
+    .hero-cta{flex-direction:column;align-items:stretch;gap:18px}
+    .hero-cta .btn{justify-content:center;text-align:center;width:100%;min-height:50px;padding:14px 26px}
+    .hero-cta .arrow-link{align-self:center}
+    .kv-halo{width:min(72vw,320px);right:-16%;top:6%;transform:none}
+    .hero-mark{width:min(48vw,210px);right:clamp(-26px,-3vw,-8px);top:88px;transform:none;opacity:.8;filter:none;animation:markInM 1.2s cubic-bezier(.22,1,.36,1) both .4s}
+    section{padding:60px 0}
+    body{font-size:15px}
+    .sec-ix{gap:14px;margin-bottom:26px}
+    .sec-ix .rule{width:36px}
+    .meet .sec-ix{margin-bottom:30px}
+    .meet-h{font-size:clamp(1.9rem,8.4vw,2.4rem)}
+    .meet-photo{width:100%;max-width:none;aspect-ratio:4/5;margin-top:32px}
+    .intro h2{font-size:clamp(1.6rem,6.8vw,2rem)}
+    .motto{min-height:auto}
+    .motto h2{font-size:clamp(1.9rem,8vw,2.4rem)}
+    .motto p{margin-top:30px}
+    .offer-head h2,.menu-head h2{font-size:clamp(1.9rem,8vw,2.4rem)}
+    .orow{padding:28px 0}
+    .orow h3{font-size:clamp(1.6rem,7.4vw,2rem)}
+    .steps h2{font-size:clamp(1.6rem,6.8vw,2rem)}
+    .cen-tab{font-size:1.1rem;padding-bottom:12px}
+    .cgroup h3{font-size:1.35rem}
+    .clist .name{font-size:.92rem}
+    .clist .price{font-size:1.1rem}
+    .vo-copy h2{font-size:clamp(2rem,8.6vw,2.6rem)}
+    .vo-card{max-width:none}
+    .final h2{font-size:clamp(2.3rem,10vw,3rem)}
+    .final .tels a{font-size:1.5rem}
+    .foot-grid{grid-template-columns:1fr;gap:30px}
+    .sdiv svg{width:66px;height:33px}
   }
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     .reveal{transition:none;opacity:1;transform:none}
+    .marq-in{animation:none}
   }
+
+  .cen-panel[hidden]{display:none}
+
 </style>
 </head>
 <body>
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden"><defs><path id="mgm-v2" transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0" fill="currentColor"></path></defs></svg>
 
 <header>
   <div class="wrap nav">
     <a class="brand" href="#" aria-label="Sara's Beauty — strona główna">
-      <svg class="mgm" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="290 215 360 425" fill="currentColor"><path transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0"/></svg>
-      <span class="bt">Sara's Beauty<small>Kosmetolog</small></span>
+      <svg class="mgm" aria-hidden="true" viewBox="290 215 360 425" fill="currentColor"><use href="#mgm-v2"></use></svg>
+      <span class="bt">Sara's Beauty</span>
     </a>
     <nav class="navlinks" id="menu">
       <a href="#oferta">Oferta</a>
       <a href="#cennik">Cennik</a>
+      <a href="#metamorfozy">Metamorfozy</a>
       <a href="#o-mnie">O mnie</a>
       <a href="#voucher">Voucher</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="tel:+48514330140" class="btn btn-solid">Umów wizytę</a>
+      <a href="tel:+48514330140" class="cta">Umów wizytę <span aria-hidden="true">→</span></a>
     </nav>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div style="display:flex;align-items:center;gap:10px">
+      <a class="nav-book" href="tel:+48514330140">Umów</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-left">
-      <span class="eyebrow">Kosmetologia · Trychologia · Fryzjerstwo</span>
-      <h1>Zdrowa skóra,<br>zadbane <em>włosy</em>.</h1>
-      <p class="lead">Gabinet kosmetologiczno-fryzjerski w Skierniewicach. Zabiegi dobierane indywidualnie — do potrzeb Twojej skóry i włosów, nie odwrotnie.</p>
-      <div class="hero-cta">
-        <a href="tel:+48514330140" class="btn btn-solid">Zadzwoń: 514 330 140</a>
-        <a href="#cennik" class="btn btn-line">Zobacz cennik</a>
-      </div>
-      <p class="hero-note">Wizyty po wcześniejszym umówieniu — telefonicznie lub przez Instagram.</p>
-    </div>
-    <div class="hero-right">
-      <div class="hero-logo">
-        <svg class="mgm" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="290 215 360 425" fill="currentColor"><path transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0"/></svg>
-        <div class="sc script" aria-hidden="true">Sara's Beauty</div>
-        <div class="cs">Cosmetologist</div>
-      </div>
-      <div class="hero-badge">
-        <div class="b">Sara Dąbrowska<small>mgr kosmetologii · trycholog</small></div>
-        <div class="b" style="text-align:right">Skierniewice<small>Ludwików 1P</small></div>
-      </div>
+<a class="fab" id="fab" href="tel:+48514330140" aria-label="Umów wizytę — zadzwoń">Umów wizytę <span aria-hidden="true">→</span></a>
+
+<section class="hero" style="padding:0">
+  <div class="hero-art" aria-hidden="true">
+    <div class="hero-field"></div>
+    <div class="kv-halo"></div>
+    <svg class="hero-mark" viewBox="290 215 360 425" style="color:#a2bcf6" aria-hidden="true"><use href="#mgm-v2"></use></svg>
+  </div>
+  <div class="hero-hair" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <span class="label">Kosmetologia · Trychologia · Fryzjerstwo</span>
+    <h1><span class="hl-line">Zdrowa skóra.</span><span class="hl-line">Zadbane włosy.</span><span class="hl-line it"><em>Piękno, które</em></span><span class="hl-line it"><em>zaczyna się od Ciebie.</em></span></h1>
+    <p class="lead">Indywidualna pielęgnacja skóry, skóry głowy i włosów, oparta na wiedzy, doświadczeniu i potrzebach Twojej skóry.</p>
+    <div class="hero-cta">
+      <a href="tel:+48514330140" class="btn btn-ink">Umów wizytę <span class="ar" aria-hidden="true">→</span></a>
+      <a href="#oferta" class="arrow-link" style="border-bottom:0;text-transform:none;letter-spacing:.06em;font-size:.9rem">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
-<div class="strip" aria-hidden="true">
-  <span>Zabiegi na twarz</span><span class="dot">✦</span><span>Laminacja brwi i rzęs</span><span class="dot">✦</span><span>Mezoterapia</span><span class="dot">✦</span><span>Trychologia</span><span class="dot">✦</span><span>Koloryzacja</span><span class="dot">✦</span><span>Strzyżenie</span><span class="dot">✦</span>
+<div class="marq" aria-hidden="true">
+  <div class="marq-in">
+    <span>Kosmetologia</span><span class="dot">✦</span><span>Trychologia</span><span class="dot">✦</span><span>Fryzjerstwo</span><span class="dot">✦</span><span>Pielęgnacja skóry</span><span class="dot">✦</span><span>Pielęgnacja włosów</span><span class="dot">✦</span><span>Kosmetologia</span><span class="dot">✦</span><span>Trychologia</span><span class="dot">✦</span><span>Fryzjerstwo</span><span class="dot">✦</span><span>Pielęgnacja skóry</span><span class="dot">✦</span><span>Pielęgnacja włosów</span><span class="dot">✦</span>
+  </div>
 </div>
 
-<!-- OFERTA -->
-<section id="oferta">
+<section class="intro" style="padding:clamp(72px,8vw,120px) 0">
+  <div class="wrap intro-grid">
+    <div class="reveal">
+      <span class="label">Poznaj Sara's Beauty</span>
+      <h2>Świadoma pielęgnacja zaczyna się od zrozumienia potrzeb skóry i włosów.</h2>
+    </div>
+    <div class="intro-side reveal">
+      <p>Łączę kosmetologię, trychologię i fryzjerstwo, aby tworzyć indywidualne plany pielęgnacji i zabiegów dopasowane do realnych potrzeb.</p>
+      <a href="#o-mnie" class="arrow-link">Poznaj mnie <span class="ar" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="o-mnie" class="meet">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Oferta</span>
-      <h2>Trzy pasje, jedno miejsce</h2>
-      <p>Piękno zaczyna się od zdrowej skóry i zadbanych włosów — dlatego każdy zabieg poprzedza dokładna analiza potrzeb.</p>
+    <div class="sec-ix reveal"><span class="n">01</span><span class="rule"></span><span class="label">Poznajmy się</span></div>
+    <div class="meet-grid">
+      <div class="meet-photo reveal" style="transition-delay:.1s">
+        <img src="img/sara-portret.jpg" alt="Sara Dąbrowska — portret w gabinecie" width="1200" height="1800" loading="lazy">
+      </div>
+      <h2 class="meet-h reveal">Nazywam się<br><em>Sara Dąbrowska.</em></h2>
+      <div class="meet-spec reveal" style="transition-delay:.12s"><span class="l1">Magister kosmetologii</span><span class="l2">specjalizacja · trychologia</span></div>
+      <p class="meet-p reveal" style="transition-delay:.2s">Łączę kosmetologię i trychologię, patrząc na skórę i włosy kompleksowo. Każdą pielęgnację dobieram indywidualnie, opierając ją na wiedzy, doświadczeniu i realnych potrzebach.</p>
+      <a href="#kontakt" class="arrow-link meet-cta reveal" style="transition-delay:.3s">Poznaj mnie lepiej <span class="ar" aria-hidden="true">→</span></a>
     </div>
-    <div class="off-grid reveal">
-      <div class="off-col">
-        <div class="kind">01 — Kosmetologia</div>
-        <h3>Pielęgnacja twarzy</h3>
-        <p>Profesjonalne zabiegi dobierane do skóry — również trądzikowej, atopowej, wrażliwej i dojrzałej, przy przebarwieniach i oznakach starzenia.</p>
-        <ul class="off-list">
-          <li>Oczyszczanie wodorowe i manualne</li>
-          <li>Peelingi kwasowe i retinol</li>
-          <li>Mezoterapia mikroigłowa</li>
-          <li>Zamykanie naczynek</li>
-        </ul>
-      </div>
-      <div class="off-col">
-        <div class="kind">02 — Trychologia</div>
-        <h3>Skóra głowy i włosy</h3>
-        <p>Specjalistyczna pielęgnacja skóry głowy i zabiegi trychologiczne, które realnie poprawiają kondycję włosów.</p>
-        <ul class="off-list">
-          <li>Mezoterapia skóry głowy</li>
-          <li>Peeling i infuzja tlenowa</li>
-          <li>Prądy na skórę głowy</li>
-          <li>Krioterapia i keratyna</li>
-        </ul>
-      </div>
-      <div class="off-col">
-        <div class="kind">03 — Fryzjerstwo</div>
-        <h3>Strzyżenie i kolor</h3>
-        <p>Od klasycznego strzyżenia po dekoloryzację i air touch — z profesjonalną pielęgnacją na każdym etapie.</p>
-        <ul class="off-list">
-          <li>Strzyżenie damskie i męskie</li>
-          <li>Koloryzacja, baleyage, air touch</li>
-          <li>Fryzury okolicznościowe</li>
-          <li>Regeneracja botox i krioterapia</li>
-        </ul>
-      </div>
-    </div>
+  </div>
+  <svg class="meet-sig" viewBox="290 215 360 425" aria-hidden="true"><use href="#mgm-v2"></use></svg>
+</section>
+
+<section class="motto">
+  <div class="wrap reveal">
+    <div class="sdiv" aria-hidden="true" style="padding:0 0 34px"><svg viewBox="0 0 88 44" fill="none"><path d="M10 34 C 30 44, 46 30, 44 20 C 42 10, 58 0, 78 10" stroke="currentColor" stroke-width="1"></path></svg></div>
+    <h2>Nie wierzę w przypadkową pielęgnację.<span class="it">Wierzę w świadomie dobrane rozwiązania.</span></h2>
+    <p>Każda skóra i każde włosy mają inne potrzeby. Dlatego punktem wyjścia zawsze jest dla mnie ich dokładne poznanie.</p>
   </div>
 </section>
 
-<!-- MEZOTERAPIA -->
-<section class="mezo">
-  <div class="wrap mezo-grid">
-    <div class="mezo-panel reveal">
-      <svg class="mgm" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="290 215 360 425" fill="currentColor"><path transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0"/></svg>
-      <span class="cap">Twoja skóra, nasza pasja</span>
-    </div>
-    <div class="mezo-copy reveal">
-      <span class="eyebrow">Zabieg polecany</span>
-      <h2>Mezoterapia mikroigłowa</h2>
-      <p>Skuteczny zabieg, który pobudza skórę do regeneracji i przywraca jej zdrowy blask. Bezpieczny, komfortowy i odpowiedni dla każdego typu skóry — widoczne efekty już po pierwszej serii.</p>
-      <ul class="fx">
-        <li><span class="ic">✦</span><span><b>Wygładzenie</b><small>i rozświetlenie skóry</small></span></li>
-        <li><span class="ic">✦</span><span><b>Redukcja blizn</b><small>potrądzikowych</small></span></li>
-        <li><span class="ic">✦</span><span><b>Zmniejszenie porów</b><small>i niedoskonałości</small></span></li>
-        <li><span class="ic">✦</span><span><b>Poprawa jędrności</b><small>i elastyczności</small></span></li>
-        <li><span class="ic">✦</span><span><b>Naturalna regeneracja</b><small>od wewnątrz</small></span></li>
-        <li><span class="ic">✦</span><span><b>Twarz, szyja, dekolt</b><small>oraz skóra głowy</small></span></li>
-      </ul>
-      <div class="mezo-tags">
-        <span>od 300 zł</span><span>Bezpieczny zabieg</span><span>Efekty po 1 serii</span><span>Każdy typ skóry</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CENNIK -->
-<section id="cennik">
+<section class="offer" id="oferta">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Cennik</span>
-      <h2>Usługi i ceny</h2>
+    <div class="offer-head reveal">
+      <div class="sec-ix" style="margin-bottom:0"><span class="n">02</span><span class="rule"></span><span class="label">Oferta</span></div>
+      <h2 style="margin-top:26px">Trzy specjalizacje, jedno podejście</h2>
     </div>
-    <div class="price-grid">
-      <div class="pcard reveal">
-        <div class="kind">Kosmetologia</div>
-        <h3>Oczy i brwi</h3>
-        <ul class="plist">
-          <li><span class="name">Regulacja brwi</span><span class="dots"></span><span class="price">40 zł</span></li>
-          <li><span class="name">Koloryzacja z regulacją brwi</span><span class="dots"></span><span class="price">60 zł</span></li>
-          <li><span class="name">Koloryzacja rzęs</span><span class="dots"></span><span class="price">40 zł</span></li>
-          <li><span class="name">Koloryzacja rzęs i brwi</span><span class="dots"></span><span class="price">80 zł</span></li>
-          <li><span class="name">Laminacja brwi</span><span class="dots"></span><span class="price">140 zł</span></li>
-          <li><span class="name">Laminacja rzęs</span><span class="dots"></span><span class="price">140 zł</span></li>
-          <li><span class="name">Laminacja brwi i rzęs</span><span class="dots"></span><span class="price">250 zł</span></li>
-        </ul>
+    <div class="offer-grid">
+      <div class="offer-list has-act reveal">
+        <div class="orow act" data-off="0">
+          <span class="num">01</span>
+          <h3>Kosmetologia</h3>
+          <div class="odesc">
+            <p>Profesjonalna pielęgnacja skóry twarzy i ciała, dopasowana do jej aktualnych potrzeb i kondycji — również skóry trądzikowej, atopowej, wrażliwej, dojrzałej, z przebarwieniami i oznakami starzenia.</p>
+            <a href="#cennik" class="arrow-link">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="orow" data-off="1">
+          <span class="num">02</span>
+          <h3>Trychologia</h3>
+          <div class="odesc">
+            <p>Profesjonalna pielęgnacja skóry głowy i włosów oraz zabiegi trychologiczne wspierające ich zdrowie i kondycję.</p>
+            <a href="#cennik" class="arrow-link">Poznaj trychologię <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="orow" data-off="2">
+          <span class="num">03</span>
+          <h3>Fryzjerstwo</h3>
+          <div class="odesc">
+            <p>Strzyżenie, koloryzacja, dekoloryzacja oraz profesjonalna pielęgnacja włosów.</p>
+            <a href="#cennik" class="arrow-link">Zobacz usługi <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
       </div>
-      <div class="pcard reveal">
-        <div class="kind">Kosmetologia</div>
-        <h3>Zabiegi na twarz</h3>
-        <ul class="plist">
-          <li><span class="name">Oczyszczanie wodorowe</span><span class="dots"></span><span class="price">220 zł</span></li>
-          <li><span class="name">Oczyszczanie manualne</span><span class="dots"></span><span class="price"><span class="from">od</span>200 zł</span></li>
-          <li><span class="name">Kwasy</span><span class="dots"></span><span class="price">200–350 zł</span></li>
-          <li><span class="name">Retinol</span><span class="dots"></span><span class="price">300 zł</span></li>
-          <li><span class="name">Mezoterapia twarzy</span><span class="dots"></span><span class="price">300 zł</span></li>
-          <li><span class="name">Mezoterapia twarzy + szyja</span><span class="dots"></span><span class="price">350 zł</span></li>
-          <li><span class="name">Mezoterapia twarzy + szyja + dekolt</span><span class="dots"></span><span class="price">400 zł</span></li>
-        </ul>
-      </div>
-      <div class="pcard wide reveal">
-        <div class="kind">Kosmetologia</div>
-        <h3>Zamykanie naczynek</h3>
-        <ul class="plist">
-          <li><span class="name">Zamknięcie naczynka</span><span class="dots"></span><span class="price">100 zł</span></li>
-          <li><span class="name">Mały obszar (nos / broda)</span><span class="dots"></span><span class="price">250 zł</span></li>
-          <li><span class="name">Średni obszar (policzki / dekolt)</span><span class="dots"></span><span class="price">450 zł</span></li>
-          <li><span class="name">Rubiniaki (5–10)</span><span class="dots"></span><span class="price">300 zł</span></li>
-        </ul>
-      </div>
-      <div class="pcard wide reveal">
-        <div class="kind">Fryzjerstwo</div>
-        <h3>Włosy</h3>
-        <table class="htable">
-          <thead>
-            <tr><th scope="col">Usługa</th><th scope="col">Krótkie</th><th scope="col">Średnie</th><th scope="col">Długie</th></tr>
-          </thead>
-          <tbody>
-            <tr class="cat"><td colspan="4">Strzyżenie</td></tr>
-            <tr><td>Damskie</td><td class="pr">80 zł</td><td class="na">—</td><td class="na">—</td></tr>
-            <tr><td>Męskie</td><td class="pr">50 zł</td><td class="na">—</td><td class="na">—</td></tr>
-            <tr><td>Zarost / broda</td><td class="pr">40 zł</td><td class="na">—</td><td class="na">—</td></tr>
-            <tr><td>Strzyżenie dzieci (do 6 lat)</td><td class="pr">40 zł</td><td class="na">—</td><td class="na">—</td></tr>
-            <tr class="cat"><td colspan="4">Koloryzacja</td></tr>
-            <tr><td>Odrosty (do 2 cm)</td><td class="pr">200 zł</td><td class="pr">250 zł</td><td class="pr">300 zł</td></tr>
-            <tr><td>Pełna koloryzacja</td><td class="pr">250 zł</td><td class="pr">300 zł</td><td class="pr">350 zł</td></tr>
-            <tr><td>Tonowanie koloru</td><td class="pr">200 zł</td><td class="pr">250 zł</td><td class="pr">300 zł</td></tr>
-            <tr><td>Dekoloryzacja + kolor</td><td class="pr">500 zł</td><td class="pr">600 zł</td><td class="pr">700 zł</td></tr>
-            <tr><td>Baleyage (różne techniki)</td><td class="pr">400 zł</td><td class="pr">500 zł</td><td class="pr">600 zł</td></tr>
-            <tr><td>Air touch</td><td class="pr">500 zł</td><td class="pr">600 zł</td><td class="pr">700 zł</td></tr>
-            <tr class="cat"><td colspan="4">Fryzury / upięcia</td></tr>
-            <tr><td>Fryzury okolicznościowe</td><td class="pr">150 zł</td><td class="pr">200 zł</td><td class="pr">250 zł</td></tr>
-            <tr><td>Fale / loki / prostowanie</td><td class="pr">100 zł</td><td class="pr">120 zł</td><td class="pr">150 zł</td></tr>
-            <tr class="cat"><td colspan="4">Zabiegi na włosy</td></tr>
-            <tr><td>Keratyna</td><td class="pr">400 zł</td><td class="pr">500 zł</td><td class="pr">600 zł</td></tr>
-            <tr><td>Krioterapia</td><td class="pr">200 zł</td><td class="pr">250 zł</td><td class="pr">300 zł</td></tr>
-            <tr><td>Regeneracja botox</td><td class="pr">200 zł</td><td class="pr">300 zł</td><td class="pr">400 zł</td></tr>
-            <tr><td>Mezoterapia skóry głowy</td><td class="pr">350 zł</td><td class="na">—</td><td class="na">—</td></tr>
-            <tr><td>Prądy na skórę głowy</td><td class="pr">30 zł</td><td class="na">—</td><td class="na">—</td></tr>
-            <tr><td>Infuzja tlenowa głowy</td><td class="pr">80 zł</td><td class="na">—</td><td class="na">—</td></tr>
-            <tr><td>Peeling skóry głowy</td><td class="pr">70 zł</td><td class="na">—</td><td class="na">—</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <p class="price-note">Nie wiesz, który zabieg wybrać? Zadzwoń — wspólnie dobierzemy coś dla Twojej skóry i włosów.</p>
-  </div>
-</section>
-
-<!-- O MNIE -->
-<section class="about" id="o-mnie">
-  <div class="wrap about-grid">
-    <div class="about-panel reveal">
-      <svg class="mgm" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="290 215 360 425" fill="currentColor"><path transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0"/></svg>
-      <div class="who">
-        <div class="sc script">Sara Dąbrowska</div>
-        <small>Założycielka Sara's Beauty</small>
-      </div>
-    </div>
-    <div class="about-copy reveal">
-      <span class="eyebrow">O mnie</span>
-      <h2>Kosmetologia i fryzjerstwo — dwie pasje w jednym gabinecie</h2>
-      <p>Nazywam się Sara Dąbrowska i jestem magistrem kosmetologii ze specjalizacją w trychologii. Od kilku lat zdobywam doświadczenie w gabinetach kosmetologicznych i fryzjerskich, stale poszerzając wiedzę i umiejętności.</p>
-      <p>W pracy skupiam się na zdrowiu, kondycji i wyglądzie skóry oraz włosów. Zabiegi dobieram indywidualnie — również przy skórze trądzikowej, atopowej, wrażliwej czy dojrzałej, a także przy przebarwieniach i oznakach starzenia.</p>
-      <p>Wierzę, że piękno zaczyna się od zdrowej skóry i zadbanych włosów. Każdą osobę traktuję indywidualnie, szukając rozwiązań dopasowanych do jej potrzeb i oczekiwań.</p>
-      <div class="creds">
-        <span>mgr kosmetologii</span>
-        <span>Specjalizacja: trychologia</span>
-        <span>Indywidualna analiza potrzeb</span>
+      <div class="offer-photo reveal">
+        <div class="oimg on"><img src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></div>
+        <div class="oimg"><img src="img/zabieg-trychologia.jpg" alt="Efekt terapii skóry — przed i po" width="1100" height="1375" loading="lazy"></div>
+        <div class="oimg"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VOUCHER -->
+<section class="steps">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Twoja skóra nie potrzebuje wszystkiego.<br>Potrzebuje tego, co jest odpowiednie dla niej.</h2>
+      <p class="intro">Wierzę, że piękno zaczyna się od zdrowej skóry i zadbanych włosów. Dlatego zależy mi na indywidualnym podejściu, dokładnej analizie potrzeb i świadomym doborze zabiegów.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <h3>Poznaję potrzeby</h3>
+        <p>Rozmowa i analiza kondycji skóry lub włosów.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">02</span>
+        <h3>Dobieram pielęgnację</h3>
+        <p>Zabieg dostosowany do rzeczywistych potrzeb.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">03</span>
+        <h3>Dbamy o efekty</h3>
+        <p>Świadoma pielęgnacja również po wyjściu z gabinetu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="cennik" style="background:#fafbfd;border-top:1px solid var(--line-soft)">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-ix"><span class="n">03</span><span class="rule"></span><span class="label">Cennik</span></div>
+      <h2 style="font-size:clamp(2.4rem,4.4vw,4rem)">Pełny cennik usług</h2>
+      <div class="cen-tabs" role="tablist">
+        <button class="cen-tab on" data-cen="0" role="tab" aria-selected="true" aria-controls="cen-kosmetologia">Kosmetologia</button>
+        <button class="cen-tab" data-cen="1" role="tab" aria-selected="false" aria-controls="cen-fryzjerstwo">Fryzjerstwo i trychologia</button>
+      </div>
+    </div>
+    <div class="cen-panel" id="cen-kosmetologia" role="tabpanel">
+      <div class="cen-cols">
+        <div>
+          <div class="cgroup">
+            <h3>Oczy i brwi</h3>
+            <ul class="clist">
+              <li><span class="name">Regulacja brwi</span><span class="dots"></span><span class="price">40 zł</span></li>
+              <li><span class="name">Koloryzacja z regulacją brwi</span><span class="dots"></span><span class="price">60 zł</span></li>
+              <li><span class="name">Koloryzacja rzęs</span><span class="dots"></span><span class="price">40 zł</span></li>
+              <li><span class="name">Koloryzacja rzęs i brwi</span><span class="dots"></span><span class="price">80 zł</span></li>
+              <li><span class="name">Laminacja brwi</span><span class="dots"></span><span class="price">140 zł</span></li>
+              <li><span class="name">Laminacja rzęs</span><span class="dots"></span><span class="price">140 zł</span></li>
+              <li><span class="name">Laminacja brwi i rzęs</span><span class="dots"></span><span class="price">250 zł</span></li>
+            </ul>
+          </div>
+          <div class="cgroup">
+            <h3>Zamykanie naczynek</h3>
+            <ul class="clist">
+              <li><span class="name">Zamknięcie naczynka</span><span class="dots"></span><span class="price">100 zł</span></li>
+              <li><span class="name">Mały obszar (nos / broda)</span><span class="dots"></span><span class="price">250 zł</span></li>
+              <li><span class="name">Średni obszar (policzki / dekolt)</span><span class="dots"></span><span class="price">450 zł</span></li>
+              <li><span class="name">Rubiniaki (5–10)</span><span class="dots"></span><span class="price">300 zł</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cgroup">
+          <h3>Zabiegi na twarz</h3>
+          <ul class="clist">
+            <li><span class="name">Oczyszczanie wodorowe</span><span class="dots"></span><span class="price">220 zł</span></li>
+            <li><span class="name">Oczyszczanie manualne</span><span class="dots"></span><span class="price"><span class="from">od</span>200 zł</span></li>
+            <li><span class="name">Kwasy</span><span class="dots"></span><span class="price">200–350 zł</span></li>
+            <li><span class="name">Retinol</span><span class="dots"></span><span class="price">300 zł</span></li>
+            <li><span class="name">Mezoterapia twarzy</span><span class="dots"></span><span class="price">300 zł</span></li>
+            <li><span class="name">Mezoterapia twarzy + szyja</span><span class="dots"></span><span class="price">350 zł</span></li>
+            <li><span class="name">Mezoterapia twarzy + szyja + dekolt</span><span class="dots"></span><span class="price">400 zł</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cen-panel" id="cen-fryzjerstwo" role="tabpanel" hidden>
+      <table class="htable">
+        <thead>
+          <tr><th scope="col">Usługa</th><th scope="col">Krótkie</th><th scope="col">Średnie</th><th scope="col">Długie</th></tr>
+        </thead>
+        <tbody>
+          <tr class="cat"><td colspan="4">Strzyżenie</td></tr>
+          <tr><td>Damskie</td><td class="pr">80 zł</td><td class="na">—</td><td class="na">—</td></tr>
+          <tr><td>Męskie</td><td class="pr">50 zł</td><td class="na">—</td><td class="na">—</td></tr>
+          <tr><td>Zarost / broda</td><td class="pr">40 zł</td><td class="na">—</td><td class="na">—</td></tr>
+          <tr><td>Strzyżenie dzieci (do 6 lat)</td><td class="pr">40 zł</td><td class="na">—</td><td class="na">—</td></tr>
+          <tr class="cat"><td colspan="4">Koloryzacja</td></tr>
+          <tr><td>Odrosty (do 2 cm)</td><td class="pr">200 zł</td><td class="pr">250 zł</td><td class="pr">300 zł</td></tr>
+          <tr><td>Pełna koloryzacja</td><td class="pr">250 zł</td><td class="pr">300 zł</td><td class="pr">350 zł</td></tr>
+          <tr><td>Tonowanie koloru</td><td class="pr">200 zł</td><td class="pr">250 zł</td><td class="pr">300 zł</td></tr>
+          <tr><td>Dekoloryzacja + kolor</td><td class="pr">500 zł</td><td class="pr">600 zł</td><td class="pr">700 zł</td></tr>
+          <tr><td>Baleyage (różne techniki)</td><td class="pr">400 zł</td><td class="pr">500 zł</td><td class="pr">600 zł</td></tr>
+          <tr><td>Air touch</td><td class="pr">500 zł</td><td class="pr">600 zł</td><td class="pr">700 zł</td></tr>
+          <tr class="cat"><td colspan="4">Fryzury / upięcia</td></tr>
+          <tr><td>Fryzury okolicznościowe</td><td class="pr">150 zł</td><td class="pr">200 zł</td><td class="pr">250 zł</td></tr>
+          <tr><td>Fale / loki / prostowanie</td><td class="pr">100 zł</td><td class="pr">120 zł</td><td class="pr">150 zł</td></tr>
+          <tr class="cat"><td colspan="4">Zabiegi na włosy</td></tr>
+          <tr><td>Keratyna</td><td class="pr">400 zł</td><td class="pr">500 zł</td><td class="pr">600 zł</td></tr>
+          <tr><td>Krioterapia</td><td class="pr">200 zł</td><td class="pr">250 zł</td><td class="pr">300 zł</td></tr>
+          <tr><td>Regeneracja botox</td><td class="pr">200 zł</td><td class="pr">300 zł</td><td class="pr">400 zł</td></tr>
+          <tr><td>Mezoterapia skóry głowy</td><td class="pr">350 zł</td><td class="na">—</td><td class="na">—</td></tr>
+          <tr><td>Prądy na skórę głowy</td><td class="pr">30 zł</td><td class="na">—</td><td class="na">—</td></tr>
+          <tr><td>Infuzja tlenowa głowy</td><td class="pr">80 zł</td><td class="na">—</td><td class="na">—</td></tr>
+          <tr><td>Peeling skóry głowy</td><td class="pr">70 zł</td><td class="na">—</td><td class="na">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="metamorfozy">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-ix"><span class="n">04</span><span class="rule"></span><span class="label">Metamorfozy</span></div>
+      <h2 style="font-size:clamp(2.4rem,4.4vw,4rem);max-width:16ch">Efekty, które możesz zobaczyć</h2>
+    </div>
+    <div class="case reveal">
+      <div class="case-meta">
+        <div class="sec-ix" style="margin:0 0 10px"><span class="rule"></span></div>
+        <span class="big">01</span>
+        <span class="lab">Metamorfoza</span>
+        <p class="desc">Seria zabiegów kosmetologicznych — skóra wygładzona i wyciszona.</p>
+      </div>
+      <div class="ba">
+          <img class="im-before" src="img/metamorfoza-1.jpg" width="1122" height="1402" loading="lazy" alt="Skóra przed serią zabiegów — widoczne zmiany trądzikowe">
+          <div class="after-wrap" style="clip-path:inset(0 0 0 50%)">
+            <img class="im-after" src="img/metamorfoza-1.jpg" width="1122" height="1402" loading="lazy" alt="Skóra po serii zabiegów — wygładzona i wyciszona">
+          </div>
+          <div class="ba-line" style="left:50%"></div>
+          <div class="ba-dot" style="left:50%"><span>◂</span><span>▸</span></div>
+          <span class="tag tag-b">Przed</span>
+          <span class="tag tag-a">Po</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Porównanie przed i po — przesuń">
+      </div>
+    </div>
+    <div class="case case--flip reveal">
+      <div class="case-meta">
+        <div class="sec-ix" style="margin:0 0 10px"><span class="rule"></span></div>
+        <span class="big">02</span>
+        <span class="lab">Metamorfoza</span>
+        <p class="desc">Terapia skóry czoła — zredukowane zmiany zapalne.</p>
+      </div>
+      <div class="ba">
+          <img class="im-before" src="img/metamorfoza-2.jpg" width="1254" height="1254" loading="lazy" alt="Skóra czoła przed zabiegami — aktywne zmiany zapalne">
+          <div class="after-wrap" style="clip-path:inset(0 0 0 50%)">
+            <img class="im-after" src="img/metamorfoza-2.jpg" width="1254" height="1254" loading="lazy" alt="Skóra czoła po zabiegach — zredukowane zmiany">
+          </div>
+          <div class="ba-line" style="left:50%"></div>
+          <div class="ba-dot" style="left:50%"><span>◂</span><span>▸</span></div>
+          <span class="tag tag-b">Przed</span>
+          <span class="tag tag-a">Po</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Porównanie przed i po — przesuń">
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="voucher" id="voucher">
   <div class="wrap vo-grid">
     <div class="vo-copy reveal">
-      <span class="eyebrow">Piękno · Relaks · Pewność siebie</span>
-      <h2>Podaruj</h2>
-      <span class="sc script">Voucher podarunkowy</span>
-      <p>Wyjątkowy prezent dla wyjątkowej osoby. Voucher kwotowy do wykorzystania na dowolne zabiegi w Sara's Beauty.</p>
-      <ul class="vo-list">
-        <li>Na dowolne usługi kosmetologiczne i fryzjerskie</li>
-        <li>Możliwość personalizacji</li>
-        <li>Eleganckie opakowanie</li>
-      </ul>
-      <a href="tel:+48514330140" class="btn btn-ice">Zamów voucher</a>
+      <span class="label">Voucher podarunkowy</span>
+      <h2>Podaruj komuś<br>chwilę dla siebie.</h2>
+      <p>Voucher Sara's Beauty to prezent, który można zamienić w profesjonalną pielęgnację skóry lub włosów.</p>
+      <a href="tel:+48514330140" class="btn btn-light">Dowiedz się więcej <span class="ar" aria-hidden="true">→</span></a>
     </div>
     <div class="reveal">
       <div class="vo-card">
-        <svg class="mgm" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="290 215 360 425" fill="currentColor"><path transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0"/></svg>
+        <svg class="mgm" aria-hidden="true" viewBox="290 215 360 425" fill="currentColor"><use href="#mgm-v2"></use></svg>
         <div class="t">Voucher</div>
         <div class="s">podarunkowy</div>
-        <div class="m">Sara's Beauty</div>
+        <div class="m">Sara's Beauty · Skierniewice</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- KONTAKT -->
-<section id="kontakt">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Zapraszam</span>
-      <h2>Umów wizytę</h2>
-      <p>Wizyty odbywają się po wcześniejszym umówieniu — zadzwoń lub napisz na Instagramie.</p>
+<section class="final" id="kontakt">
+  <div class="wrap reveal">
+    <div class="sdiv" aria-hidden="true" style="padding:0 0 38px"><svg viewBox="0 0 88 44" fill="none"><path d="M10 34 C 30 44, 46 30, 44 20 C 42 10, 58 0, 78 10" stroke="currentColor" stroke-width="1"></path></svg></div>
+    <h2>Zadbajmy o Ciebie.</h2>
+    <p>Umów wizytę i wspólnie dobierzemy pielęgnację odpowiednią dla Twojej skóry i włosów.</p>
+    <a href="tel:+48514330140" class="btn btn-ink">Umów wizytę <span class="ar" aria-hidden="true">→</span></a>
+    <div class="tels">
+      <a href="tel:+48514330140">514 330 140</a>
+      <a href="tel:+48517062870">517 062 870</a>
     </div>
-    <div class="contact-grid reveal">
-      <div class="contact-info">
-        <div class="info-row"><div class="lbl">Adres</div><div class="val"><strong>Ludwików 1P</strong><br>96-100 Skierniewice</div></div>
-        <div class="info-row"><div class="lbl">Telefon</div><div class="val"><strong><a href="tel:+48514330140">514 330 140</a></strong><br><a href="tel:+48517062870">517 062 870</a></div></div>
-        <div class="info-row"><div class="lbl">E-mail</div><div class="val"><a href="mailto:sara.beauty.kosmetolog@gmail.com">sara.beauty.kosmetolog@gmail.com</a></div></div>
-        <div class="info-row"><div class="lbl">Social media</div><div class="val"><a href="https://www.instagram.com/sara_beauty_kosmetolog" target="_blank" rel="noopener">Instagram: @sara_beauty_kosmetolog</a><br><a href="https://www.facebook.com/share/1PAon6BCLR/" target="_blank" rel="noopener">Facebook: Sara's Beauty</a></div></div>
-        <div class="info-row"><div class="lbl">Wizyty</div><div class="val">Po wcześniejszym umówieniu telefonicznym</div></div>
-        <div style="margin-top:28px"><a href="tel:+48514330140" class="btn btn-solid">Zadzwoń i zarezerwuj</a></div>
-      </div>
-      <div class="contact-map">
-        <div class="card">
-          <svg class="mgm" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="290 215 360 425" fill="currentColor"><path transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0"/></svg>
-          <h3>Sara's Beauty</h3>
-          <p>Ludwików 1P<br>96-100 Skierniewice</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Ludwik%C3%B3w%201P%2C%2096-100%20Skierniewice" target="_blank" rel="noopener" class="btn btn-line">Zobacz na mapie</a>
-        </div>
-      </div>
+    <p class="addr">Ludwików 1P · 96-100 Skierniewice</p>
+    <div class="socials" style="display:flex;justify-content:center;gap:28px;margin-top:22px">
+      <a href="https://www.instagram.com/sara_beauty_kosmetolog" target="_blank" rel="noopener" style="font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:3px">Instagram</a>
+      <a href="https://www.facebook.com/share/1PAon6BCLR/" target="_blank" rel="noopener" style="font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:3px">Facebook</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="foot-top">
-      <div>
-        <div class="foot-brand">
-          <svg class="mgm" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="290 215 360 425" fill="currentColor"><path transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0"/></svg>
-          <div><div class="bt">Sara's Beauty</div><small>Cosmetologist</small></div>
-        </div>
-        <p style="opacity:.65;font-size:.9rem;margin-top:12px;max-width:34ch">Kosmetologia, trychologia i fryzjerstwo w Skierniewicach.</p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <svg class="mgm" aria-hidden="true" viewBox="290 215 360 425" fill="currentColor"><use href="#mgm-v2"></use></svg>
+        <div class="bt">Sara's Beauty</div>
+        <p><b>Sara Dąbrowska</b><br>mgr kosmetologii · trycholog</p>
       </div>
-      <div class="foot-cols">
-        <div class="foot-col">
-          <h4>Menu</h4>
-          <a href="#oferta">Oferta</a>
-          <a href="#cennik">Cennik</a>
-          <a href="#o-mnie">O mnie</a>
-          <a href="#voucher">Voucher</a>
-          <a href="#kontakt">Kontakt</a>
-        </div>
-        <div class="foot-col">
-          <h4>Kontakt</h4>
-          <p>Ludwików 1P, 96-100 Skierniewice</p>
-          <a href="tel:+48514330140">514 330 140</a>
-          <a href="tel:+48517062870">517 062 870</a>
-          <a href="mailto:sara.beauty.kosmetolog@gmail.com">sara.beauty.kosmetolog@gmail.com</a>
-        </div>
-        <div class="foot-col">
-          <h4>Znajdź nas</h4>
-          <a href="https://www.instagram.com/sara_beauty_kosmetolog" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.facebook.com/share/1PAon6BCLR/" target="_blank" rel="noopener">Facebook</a>
-        </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <p>Ludwików 1P<br>96-100 Skierniewice</p>
+        <a href="tel:+48514330140">514 330 140</a>
+        <a href="tel:+48517062870">517 062 870</a>
+        <a href="mailto:sara.beauty.kosmetolog@gmail.com">sara.beauty.kosmetolog@gmail.com</a>
+      </div>
+      <div class="foot-col">
+        <h4>Menu</h4>
+        <a href="#oferta">Oferta</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#o-mnie">O mnie</a>
+        <a href="#voucher">Voucher</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <div class="foot-col">
+        <h4>Social media</h4>
+        <a href="https://www.instagram.com/sara_beauty_kosmetolog" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/share/1PAon6BCLR/" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Sara's Beauty. Wszelkie prawa zastrzeżone.</span>
-      <span>Projekt strony — <a href="index.html" style="text-decoration:underline">Studio Widoczni</a></span>
+      <span>© 2026 Sara's Beauty</span>
+      <span>Polityka prywatności — wkrótce</span>
     </div>
   </div>
 </footer>
 
 <script>
-  const burger=document.getElementById('burger'), menu=document.getElementById('menu');
-  burger.addEventListener('click',()=>menu.classList.toggle('open'));
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function(){
+  var burger=document.getElementById('burger'), menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){menu.classList.toggle('open')});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+
+  var fab=document.getElementById('fab');
+  function onScroll(){fab.classList.toggle('show', window.scrollY>window.innerHeight*.75)}
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  var rows=document.querySelectorAll('.orow'), oimgs=document.querySelectorAll('.oimg');
+  function setOff(i){
+    rows.forEach(function(r,j){r.classList.toggle('act',i===j)});
+    oimgs.forEach(function(m,j){m.classList.toggle('on',i===j)});
+  }
+  rows.forEach(function(r){
+    var i=+r.dataset.off;
+    r.addEventListener('mouseenter',function(){setOff(i)});
+    r.addEventListener('click',function(){setOff(i)});
+  });
+
+  var tabs=document.querySelectorAll('.cen-tab'), panels=[document.getElementById('cen-kosmetologia'),document.getElementById('cen-fryzjerstwo')];
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      var i=+t.dataset.cen;
+      tabs.forEach(function(b,j){b.classList.toggle('on',i===j);b.setAttribute('aria-selected',i===j?'true':'false')});
+      panels.forEach(function(p,j){p.hidden=(i!==j)});
+    });
+  });
+
+  document.querySelectorAll('.ba').forEach(function(ba){
+    var input=ba.querySelector('input[type=range]'), wrap=ba.querySelector('.after-wrap'),
+        line=ba.querySelector('.ba-line'), dot=ba.querySelector('.ba-dot');
+    function upd(){
+      var v=input.value;
+      wrap.style.clipPath='inset(0 0 0 '+v+'%)';
+      line.style.left=v+'%'; dot.style.left=v+'%';
+    }
+    input.addEventListener('input',upd); upd();
+  });
+})();
 </script>
 </body>
 </html>
