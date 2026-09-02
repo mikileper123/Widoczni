@@ -133,9 +133,9 @@
   .intro .label{display:block;margin-bottom:28px}
   .intro-side p{color:var(--ink-soft);max-width:44ch;margin-bottom:26px}
 
-  .marq{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);overflow:hidden;padding:22px 0;white-space:nowrap}
+  .marq{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);overflow:hidden;padding:13px 0;white-space:nowrap}
   .marq-in{display:inline-block;animation:marq 46s linear infinite}
-  .marq span{font-family:'Bodoni Moda',serif;font-size:1.15rem;letter-spacing:.3em;text-transform:uppercase;padding:0 30px;color:var(--ink-soft)}
+  .marq span{font-family:'Bodoni Moda',serif;font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;padding:0 22px;color:var(--ink-soft)}
   .marq .dot{color:var(--peri-soft);padding:0}
   @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -342,6 +342,8 @@
     .final .tels{flex-direction:column;gap:12px}
   }
   @media(max-width:640px){
+    .marq{padding:10px 0}
+    .marq span{font-size:.7rem;padding:0 16px}
     .nav{gap:12px}
     .brand{gap:9px}
     .brand .bt{font-size:.86rem;letter-spacing:.15em}
