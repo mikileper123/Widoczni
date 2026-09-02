@@ -100,10 +100,12 @@
   .hero-copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;width:min(100%,760px);margin-left:max(0px,calc(50vw - 720px));padding:52px clamp(24px,5vw,80px) 56px clamp(24px,4vw,64px)}
   .hero-art{position:absolute;inset:0 0 0 auto;width:48%;z-index:0;pointer-events:none}
   .hero-field{position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,27,54,0) 0%,rgba(37,49,92,.55) 52%,#25315c 100%)}
-  .kv-halo{position:absolute;width:clamp(460px,42vw,680px);aspect-ratio:1;right:-6%;top:52%;transform:translateY(-48%);border-radius:50%;background:radial-gradient(circle at 46% 44%,rgba(147,172,240,.34) 0%,rgba(147,172,240,.16) 46%,rgba(147,172,240,0) 70%)}
+  .kv-halo{position:absolute;width:clamp(500px,46vw,760px);aspect-ratio:1;right:-8%;top:52%;transform:translateY(-48%);border-radius:50%;background:radial-gradient(circle at 46% 44%,rgba(147,172,240,.42) 0%,rgba(147,172,240,.18) 46%,rgba(147,172,240,0) 70%)}
+  .kv-halo::after{content:"";position:absolute;inset:7%;border:1px solid rgba(172,193,255,.22);border-radius:50%}
+  .hero-art::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(172,193,255,.3) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:radial-gradient(62% 72% at 68% 50%,#000 18%,transparent 74%);mask-image:radial-gradient(62% 72% at 68% 50%,#000 18%,transparent 74%)}
   .hero-art::after{content:"";position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' sc-camel-base-frequency='0.9' sc-camel-num-octaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
   .hero-hair{position:absolute;left:0;right:0;top:63%;height:1px;z-index:1;background:linear-gradient(90deg,rgba(172,193,255,0) 0%,rgba(172,193,255,.22) 18%,rgba(172,193,255,.3) 62%,rgba(172,193,255,0) 100%)}
-  .hero-mark{position:absolute;display:block;right:clamp(-40px,2vw,90px);top:52%;width:clamp(340px,30vw,480px);height:auto;transform:translateY(-48%);filter:drop-shadow(0 30px 60px rgba(125,151,232,.22));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .4s,markFloat 12s ease-in-out 1.7s infinite;opacity:.9}
+  .hero-mark{position:absolute;display:block;right:clamp(-60px,1vw,60px);top:52%;width:clamp(380px,34vw,580px);height:auto;transform:translateY(-48%);filter:drop-shadow(0 0 90px rgba(147,172,240,.5));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .4s,markFloat 12s ease-in-out 1.7s infinite;opacity:.95}
   @keyframes markIn{from{opacity:0;transform:translateY(-46%) scale(.97)}to{opacity:1;transform:translateY(-46%) scale(1)}}
   @keyframes markFloat{0%,100%{transform:translateY(-46%)}50%{transform:translateY(calc(-46% - 5px))}}
   @keyframes markInM{from{opacity:0;transform:scale(.97)}to{opacity:.8;transform:scale(1)}}
@@ -113,8 +115,9 @@
   .hero-cta .btn:hover .ar{transform:translateX(4px)}
   .hero .lead{animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .48s}
   @media (prefers-reduced-motion:reduce){.hero-mark,.hero .lead,.hero-cta,.hero-meta,.hl-line{animation:none;opacity:1;transform:none}.hero-mark{transform:translateY(-46%);opacity:.9}}
-  .hero-copy .label{margin-bottom:38px;color:var(--peri);font-size:.72rem}
-  .hero h1{font-size:clamp(2.7rem,5vw,5rem);color:#fff;line-height:1.08;letter-spacing:-.014em}
+  .hero-chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:42px;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .1s}
+  .hero-chips span{border:1px solid rgba(172,193,255,.38);color:var(--peri);padding:9px 18px;border-radius:999px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase}
+  .hero h1{font-size:clamp(3rem,5.8vw,6rem);color:#fff;line-height:1.04;letter-spacing:-.018em}
   .hero h1 em{font-style:italic;font-weight:400;color:var(--peri)}
   .hero h1 .it{font-size:.55em;line-height:1.4;letter-spacing:0}
   .hero h1 .it:nth-child(3){margin-top:26px}
@@ -123,8 +126,9 @@
   .hl-line:nth-child(3){animation-delay:.24s}
   .hl-line:nth-child(4){animation-delay:.36s}
   @keyframes hlUp{to{opacity:1;transform:none}}
-  .hero .lead{font-size:1.06rem;color:#c3cdec;max-width:460px;margin:32px 0 46px}
-  .hero-cta{display:flex;gap:34px;flex-wrap:wrap;align-items:center}
+  .hero .lead{font-size:1.12rem;color:#cdd6f0;max-width:480px;margin:34px 0 48px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .hero-cta .btn{padding:15px 30px}
   .hero .btn-ink{background:#fff;color:var(--navy)}
   .hero .btn-ink:hover{background:var(--peri-pale,#e9eeff);color:var(--navy)}
   .hero .arrow-link{color:#e6ebfb}
@@ -335,7 +339,7 @@
     .fab{display:inline-flex}
     .hero{min-height:auto}
     .hero-copy{padding:52px clamp(24px,5vw,48px) 48px;margin-left:0;width:100%;max-width:680px}
-    .hero-copy .label{margin-bottom:22px}
+    .hero-chips{margin-bottom:26px}
     .hero h1{font-size:clamp(2.2rem,6.6vw,3.4rem)}
     .hero h1 .it:nth-child(3){margin-top:16px}
     .hero .lead{font-size:1rem;margin:20px 0 34px;max-width:40ch}
@@ -365,7 +369,7 @@
     .hero .lead{max-width:32ch;margin:18px 0 28px}
     .hero-cta{flex-direction:column;align-items:stretch;gap:18px}
     .hero-cta .btn{justify-content:center;text-align:center;width:100%;min-height:50px;padding:14px 26px}
-    .hero-cta .arrow-link{align-self:center}
+
     .kv-halo{width:min(72vw,320px);right:-16%;top:6%;transform:none}
     .hero-mark{width:min(48vw,210px);right:clamp(-26px,-3vw,-8px);top:88px;transform:none;opacity:.8;filter:none;animation:markInM 1.2s cubic-bezier(.22,1,.36,1) both .4s}
     section{padding:60px 0}
@@ -442,12 +446,12 @@
   </div>
   <div class="hero-hair" aria-hidden="true"></div>
   <div class="hero-copy">
-    <span class="label">Kosmetologia · Trychologia · Fryzjerstwo</span>
+    <div class="hero-chips"><span>Kosmetologia</span><span>Trychologia</span><span>Fryzjerstwo</span></div>
     <h1><span class="hl-line">Zdrowa skóra.</span><span class="hl-line">Zadbane włosy.</span><span class="hl-line it"><em>Piękno, które</em></span><span class="hl-line it"><em>zaczyna się od Ciebie.</em></span></h1>
     <p class="lead">Indywidualna pielęgnacja skóry, skóry głowy i włosów, oparta na wiedzy, doświadczeniu i potrzebach Twojej skóry.</p>
     <div class="hero-cta">
       <a href="tel:+48514330140" class="btn btn-ink">Umów wizytę <span class="ar" aria-hidden="true">→</span></a>
-      <a href="#oferta" class="arrow-link" style="border-bottom:0;text-transform:none;letter-spacing:.06em;font-size:.9rem">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
+      <a href="#oferta" class="btn btn-light">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
     </div>
     <div class="hero-meta"><span>Sara Dąbrowska · mgr kosmetologii · trycholog</span><span>Ludwików 1P · Skierniewice</span></div>
   </div>
