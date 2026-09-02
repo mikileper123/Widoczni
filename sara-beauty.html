@@ -96,14 +96,14 @@
   .fab:hover{color:#fff}
   .fab.show{transform:none}
 
-  .hero{position:relative;min-height:calc(84vh - 80px);display:flex;align-items:center;overflow:hidden}
+  .hero{position:relative;min-height:calc(84vh - 80px);display:flex;align-items:center;overflow:hidden;background:linear-gradient(165deg,#1b2547 0%,#131b36 58%,#0f1730 100%)}
   .hero-copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;width:min(100%,760px);margin-left:max(0px,calc(50vw - 720px));padding:52px clamp(24px,5vw,80px) 56px clamp(24px,4vw,64px)}
   .hero-art{position:absolute;inset:0 0 0 auto;width:48%;z-index:0;pointer-events:none}
-  .hero-field{position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,254,255,0) 0%,rgba(242,247,255,.55) 52%,#eef4fe 100%)}
-  .kv-halo{position:absolute;width:clamp(460px,42vw,680px);aspect-ratio:1;right:-6%;top:52%;transform:translateY(-48%);border-radius:50%;background:radial-gradient(circle at 46% 44%,#dfeafd 0%,rgba(223,234,253,.5) 46%,rgba(223,234,253,0) 70%)}
+  .hero-field{position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,27,54,0) 0%,rgba(37,49,92,.55) 52%,#25315c 100%)}
+  .kv-halo{position:absolute;width:clamp(460px,42vw,680px);aspect-ratio:1;right:-6%;top:52%;transform:translateY(-48%);border-radius:50%;background:radial-gradient(circle at 46% 44%,rgba(147,172,240,.34) 0%,rgba(147,172,240,.16) 46%,rgba(147,172,240,0) 70%)}
   .hero-art::after{content:"";position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' sc-camel-base-frequency='0.9' sc-camel-num-octaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
-  .hero-hair{position:absolute;left:0;right:0;top:63%;height:1px;z-index:1;background:linear-gradient(90deg,rgba(223,230,243,0) 0%,#dfe6f3 18%,#d7e0f2 62%,rgba(223,230,243,0) 100%)}
-  .hero-mark{position:absolute;display:block;right:clamp(-40px,2vw,90px);top:52%;width:clamp(340px,30vw,480px);height:auto;transform:translateY(-48%);filter:drop-shadow(0 30px 60px rgba(125,151,232,.22));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .4s,markFloat 12s ease-in-out 1.7s infinite}
+  .hero-hair{position:absolute;left:0;right:0;top:63%;height:1px;z-index:1;background:linear-gradient(90deg,rgba(172,193,255,0) 0%,rgba(172,193,255,.22) 18%,rgba(172,193,255,.3) 62%,rgba(172,193,255,0) 100%)}
+  .hero-mark{position:absolute;display:block;right:clamp(-40px,2vw,90px);top:52%;width:clamp(340px,30vw,480px);height:auto;transform:translateY(-48%);filter:drop-shadow(0 30px 60px rgba(125,151,232,.22));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .4s,markFloat 12s ease-in-out 1.7s infinite;opacity:.9}
   @keyframes markIn{from{opacity:0;transform:translateY(-46%) scale(.97)}to{opacity:1;transform:translateY(-46%) scale(1)}}
   @keyframes markFloat{0%,100%{transform:translateY(-46%)}50%{transform:translateY(calc(-46% - 5px))}}
   @keyframes markInM{from{opacity:0;transform:scale(.97)}to{opacity:.8;transform:scale(1)}}
@@ -112,10 +112,10 @@
   .hero-cta .btn .ar{transition:transform .3s cubic-bezier(.22,1,.36,1)}
   .hero-cta .btn:hover .ar{transform:translateX(4px)}
   .hero .lead{animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .48s}
-  @media (prefers-reduced-motion:reduce){.hero-mark,.hero .lead,.hero-cta,.hl-line{animation:none;opacity:1;transform:none}.hero-mark{transform:translateY(-46%)}}
-  .hero-copy .label{margin-bottom:38px;color:var(--peri-deep,#7d97e8);font-size:.72rem}
-  .hero h1{font-size:clamp(2.7rem,5vw,5rem);color:var(--ink);line-height:1.08;letter-spacing:-.014em}
-  .hero h1 em{font-style:italic;font-weight:400;color:var(--ink-soft)}
+  @media (prefers-reduced-motion:reduce){.hero-mark,.hero .lead,.hero-cta,.hero-meta,.hl-line{animation:none;opacity:1;transform:none}.hero-mark{transform:translateY(-46%);opacity:.9}}
+  .hero-copy .label{margin-bottom:38px;color:var(--peri);font-size:.72rem}
+  .hero h1{font-size:clamp(2.7rem,5vw,5rem);color:#fff;line-height:1.08;letter-spacing:-.014em}
+  .hero h1 em{font-style:italic;font-weight:400;color:var(--peri)}
   .hero h1 .it{font-size:.55em;line-height:1.4;letter-spacing:0}
   .hero h1 .it:nth-child(3){margin-top:26px}
   .hl-line{display:block;opacity:0;transform:translateY(26px);animation:hlUp .8s cubic-bezier(.22,1,.36,1) forwards}
@@ -123,8 +123,13 @@
   .hl-line:nth-child(3){animation-delay:.24s}
   .hl-line:nth-child(4){animation-delay:.36s}
   @keyframes hlUp{to{opacity:1;transform:none}}
-  .hero .lead{font-size:1.06rem;color:var(--ink-soft);max-width:460px;margin:32px 0 46px}
+  .hero .lead{font-size:1.06rem;color:#c3cdec;max-width:460px;margin:32px 0 46px}
   .hero-cta{display:flex;gap:34px;flex-wrap:wrap;align-items:center}
+  .hero .btn-ink{background:#fff;color:var(--navy)}
+  .hero .btn-ink:hover{background:var(--peri-pale,#e9eeff);color:var(--navy)}
+  .hero .arrow-link{color:#e6ebfb}
+  .hero .arrow-link:hover{color:var(--peri)}
+  .hero-meta{display:flex;justify-content:space-between;gap:18px 36px;flex-wrap:wrap;margin-top:58px;padding-top:22px;border-top:1px solid rgba(172,193,255,.24);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:#9fb0dd;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .72s}
   .hero-sig{display:flex;align-items:center;gap:18px;margin-top:auto;padding-top:64px;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
   .hero-sig::before{content:"";width:44px;height:1px;background:var(--line)}
   .intro{border-top:1px solid var(--line-soft)}
@@ -336,7 +341,7 @@
     .hero .lead{font-size:1rem;margin:20px 0 34px;max-width:40ch}
     .hero-cta{gap:24px}
     .hero-art{width:100%}
-    .hero-field{background:linear-gradient(215deg,#eef4fe 0%,rgba(242,247,255,.4) 36%,rgba(253,254,255,0) 62%)}
+    .hero-field{background:linear-gradient(215deg,rgba(37,49,92,.6) 0%,rgba(37,49,92,.25) 36%,rgba(19,27,54,0) 62%)}
     .kv-halo{width:min(52vw,440px);right:-12%;top:52%;transform:translateY(-50%)}
     .hero-hair{display:none}
     .hero-mark{width:min(32vw,300px);right:clamp(-30px,1vw,40px);top:52%}
@@ -444,6 +449,7 @@
       <a href="tel:+48514330140" class="btn btn-ink">Umów wizytę <span class="ar" aria-hidden="true">→</span></a>
       <a href="#oferta" class="arrow-link" style="border-bottom:0;text-transform:none;letter-spacing:.06em;font-size:.9rem">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
     </div>
+    <div class="hero-meta"><span>Sara Dąbrowska · mgr kosmetologii · trycholog</span><span>Ludwików 1P · Skierniewice</span></div>
   </div>
 </section>
 
