@@ -302,10 +302,10 @@
   @media(max-width:1000px){
     .vo-grid{grid-template-columns:1fr;gap:44px}
     .meet-eyebrow{text-align:left;margin-bottom:28px}
-    .meet-grid{grid-template-columns:1fr;column-gap:0;grid-template-areas:"head" "spec" "photo" "desc" "cta"}
+    .meet-grid{grid-template-columns:minmax(0,320px) 1fr;column-gap:clamp(32px,5vw,56px);grid-template-areas:"head head" "photo spec" "photo desc" "photo cta" "photo ."}
     .meet-h{font-size:clamp(2rem,7.6vw,2.6rem)}
     .meet-spec{margin-top:24px;padding-top:22px}
-    .meet-photo{width:min(78vw,380px);margin:38px 0 0;justify-self:start}
+    .meet-photo{width:100%;max-width:320px;margin:34px 0 0;justify-self:start}
     .meet-p{margin-top:34px}
     .meet-cta{margin-top:30px}
     .meet-sig{width:180px;left:-50px;bottom:-36px;opacity:.07}
@@ -368,6 +368,7 @@
     .sec-ix{gap:14px;margin-bottom:26px}
     .sec-ix .rule{width:36px}
     .meet .sec-ix{margin-bottom:30px}
+    .meet-grid{grid-template-columns:1fr;column-gap:0;grid-template-areas:"head" "spec" "photo" "desc" "cta"}
     .meet-h{font-size:clamp(1.9rem,8.4vw,2.4rem)}
     .meet-photo{width:100%;max-width:none;aspect-ratio:4/5;margin-top:32px}
     .intro h2{font-size:clamp(1.6rem,6.8vw,2rem)}
