@@ -86,12 +86,12 @@
   .navlinks a:hover{color:var(--ink)}
   .navlinks a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.22,1,.36,1)}
   .navlinks a:not(.cta):hover::after{transform:scaleX(1)}
-  .navlinks .cta{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:4px}
-  .navlinks .cta:hover{color:var(--peri);border-color:var(--peri)}
+  .navlinks .cta{color:var(--peri);border-bottom:1px solid var(--peri);padding-bottom:4px}
+  .navlinks .cta:hover{color:var(--peri-deep,#7d97e8);border-color:var(--peri-deep,#7d97e8)}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:14px 10px;min-width:48px;min-height:48px;justify-content:center;align-items:center}
   .burger span{width:24px;height:1.5px;background:var(--ink);transition:.3s}
-  .nav-book{display:none;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--ink);padding:12px 16px;color:var(--ink)}
-  .nav-book:hover{color:var(--ink)}
+  .nav-book{display:none;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--peri);padding:12px 16px;color:var(--peri)}
+  .nav-book:hover{color:var(--peri-deep,#7d97e8);border-color:var(--peri-deep,#7d97e8)}
   .fab{display:none;position:fixed;left:20px;right:20px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:70;background:var(--ink);color:#fff;text-align:center;justify-content:center;align-items:center;gap:12px;padding:18px 24px;font-size:.76rem;letter-spacing:.24em;text-transform:uppercase;box-shadow:0 16px 40px -12px rgba(20,28,56,.4);transform:translateY(140%);transition:transform .45s cubic-bezier(.22,1,.36,1)}
   .fab:hover{color:#fff}
   .fab.show{transform:none}
