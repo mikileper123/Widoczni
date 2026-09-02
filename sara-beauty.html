@@ -108,7 +108,7 @@
   .hero-mark{position:absolute;display:block;right:clamp(-60px,1vw,60px);top:52%;width:clamp(380px,34vw,580px);height:auto;transform:translateY(-48%);filter:drop-shadow(0 0 90px rgba(147,172,240,.5));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .4s,markFloat 12s ease-in-out 1.7s infinite;opacity:.95}
   @keyframes markIn{from{opacity:0;transform:translateY(-46%) scale(.97)}to{opacity:1;transform:translateY(-46%) scale(1)}}
   @keyframes markFloat{0%,100%{transform:translateY(-46%)}50%{transform:translateY(calc(-46% - 5px))}}
-  @keyframes markInM{from{opacity:0;transform:scale(.97)}to{opacity:.8;transform:scale(1)}}
+  @keyframes markInM{from{opacity:0;transform:scale(.97)}to{opacity:.3;transform:scale(1)}}
   .hero-cta{gap:26px;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .6s}
   .hero-cta .btn{padding:13px 26px;min-height:0;transition:background .3s ease,color .3s ease}
   .hero-cta .btn .ar{transition:transform .3s cubic-bezier(.22,1,.36,1)}
@@ -370,8 +370,9 @@
     .hero-cta{flex-direction:column;align-items:stretch;gap:18px}
     .hero-cta .btn{justify-content:center;text-align:center;width:100%;min-height:50px;padding:14px 26px}
 
-    .kv-halo{width:min(72vw,320px);right:-16%;top:6%;transform:none}
-    .hero-mark{width:min(48vw,210px);right:clamp(-26px,-3vw,-8px);top:88px;transform:none;opacity:.8;filter:none;animation:markInM 1.2s cubic-bezier(.22,1,.36,1) both .4s}
+    .kv-halo{display:none}
+    .hero-art::before{display:none}
+    .hero-mark{width:min(44vw,185px);right:-34px;top:54px;transform:none;opacity:.3;filter:none;animation:markInM 1.2s cubic-bezier(.22,1,.36,1) both .4s}
     section{padding:60px 0}
     body{font-size:15px}
     .sec-ix{gap:14px;margin-bottom:26px}
