@@ -293,6 +293,7 @@
   .vo-copy .label{display:block;color:var(--peri-soft);margin-bottom:28px}
   .vo-copy h2{font-size:clamp(2.6rem,4.8vw,4.4rem)}
   .vo-copy p{color:#b9c3e6;max-width:44ch;margin:26px 0 40px}
+  .vo-img{display:block;width:min(100%,320px);height:auto;margin:0 auto;border-radius:10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
   .vo-card{aspect-ratio:8/5;max-width:520px;margin:0 auto;position:relative;background:linear-gradient(135deg,#1b2547 0%,#161f3e 55%,#1e2a52 100%);border:1px solid rgba(174,190,242,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;animation:voFloat 9s ease-in-out infinite}
   @keyframes voFloat{0%,100%{transform:translateY(0) rotate(-.4deg)}50%{transform:translateY(-9px) rotate(.4deg)}}
   @media(prefers-reduced-motion:reduce){.vo-card{animation:none}}
@@ -415,7 +416,8 @@
     .clist .name{font-size:.92rem}
     .clist .price{font-size:1.1rem}
     .vo-copy h2{font-size:clamp(2rem,8.6vw,2.6rem)}
-    .vo-card{max-width:none}
+    .vo-img{display:block;width:min(100%,320px);height:auto;margin:0 auto;border-radius:10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
+  .vo-card{max-width:none}
     .final h2{font-size:clamp(2.3rem,10vw,3rem)}
     .final .tels a{font-size:1.5rem}
     .foot-grid{grid-template-columns:1fr;gap:30px}
@@ -442,6 +444,7 @@
     </a>
     <nav class="navlinks" id="menu">
       <a href="#oferta">Oferta</a>
+      <a href="zabiegi.html">Zabiegi</a>
       <a href="#cennik">Cennik</a>
       <a href="#metamorfozy">Metamorfozy</a>
       <a href="#opinie">Opinie</a>
@@ -473,9 +476,9 @@
         <a href="#oferta" class="btn btn-light">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
       </div>
       <div class="hero-bubbles">
-        <a class="bub" href="#cennik"><span class="bimg"><img src="img/zabieg-kosmetologia.jpg" alt="Kosmetologia — stylizacja brwi i rzęs" width="1400" height="1867"></span><span class="bl">Kosmetologia</span></a>
-        <a class="bub" href="#cennik" data-tab="1"><span class="bimg"><img src="img/fryzjerstwo.jpg" alt="Fryzjerstwo — upięcie okolicznościowe" width="1200" height="1600"></span><span class="bl">Fryzjerstwo</span></a>
-        <a class="bub" href="#cennik" data-tab="1"><span class="bimg"><img src="img/zabieg-trychologia.jpg" alt="Trychologia — terapia skóry" width="1100" height="1375"></span><span class="bl">Trychologia</span></a>
+        <a class="bub" href="zabiegi.html#kosmetologia"><span class="bimg"><img src="img/zabieg-kosmetologia.jpg" alt="Kosmetologia — stylizacja brwi i rzęs" width="1400" height="1867"></span><span class="bl">Kosmetologia</span></a>
+        <a class="bub" href="zabiegi.html#fryzjerstwo"><span class="bimg"><img src="img/fryzjerstwo.jpg" alt="Fryzjerstwo — upięcie okolicznościowe" width="1200" height="1600"></span><span class="bl">Fryzjerstwo</span></a>
+        <a class="bub" href="zabiegi.html#trychologia"><span class="bimg"><img src="img/zabieg-trychologia.jpg" alt="Trychologia — terapia skóry" width="1100" height="1375"></span><span class="bl">Trychologia</span></a>
       </div>
       <div class="hero-meta"><span>Sara Dąbrowska · mgr kosmetologii · trycholog</span><span>Ludwików 1P · Skierniewice</span></div>
     </div>
@@ -546,7 +549,7 @@
           <div class="odesc">
             <div class="ophoto"><img src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></div>
             <p>Profesjonalna pielęgnacja skóry twarzy i ciała, dopasowana do jej aktualnych potrzeb i kondycji — również skóry trądzikowej, atopowej, wrażliwej, dojrzałej, z przebarwieniami i oznakami starzenia.</p>
-            <a href="#cennik" class="arrow-link">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></a>
+            <a href="zabiegi.html#kosmetologia" class="arrow-link">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="orow" data-off="1">
@@ -555,7 +558,7 @@
           <div class="odesc">
             <div class="ophoto"><img src="img/zabieg-trychologia.jpg" alt="Efekt terapii skóry — przed i po" width="1100" height="1375" loading="lazy"></div>
             <p>Profesjonalna pielęgnacja skóry głowy i włosów oraz zabiegi trychologiczne wspierające ich zdrowie i kondycję.</p>
-            <a href="#cennik" class="arrow-link" data-tab="1">Poznaj trychologię <span class="ar" aria-hidden="true">→</span></a>
+            <a href="zabiegi.html#trychologia" class="arrow-link">Poznaj trychologię <span class="ar" aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="orow" data-off="2">
@@ -564,7 +567,7 @@
           <div class="odesc">
             <div class="ophoto"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></div>
             <p>Strzyżenie, koloryzacja, dekoloryzacja oraz profesjonalna pielęgnacja włosów.</p>
-            <a href="#cennik" class="arrow-link" data-tab="1">Zobacz usługi <span class="ar" aria-hidden="true">→</span></a>
+            <a href="zabiegi.html#fryzjerstwo" class="arrow-link">Zobacz usługi <span class="ar" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -772,12 +775,7 @@
       <a href="tel:+48514330140" class="btn btn-light">Dowiedz się więcej <span class="ar" aria-hidden="true">→</span></a>
     </div>
     <div class="reveal">
-      <div class="vo-card">
-        <svg class="mgm" aria-hidden="true" viewBox="290 215 360 425" fill="currentColor"><use href="#mgm-v2"></use></svg>
-        <div class="t">Voucher</div>
-        <div class="s">podarunkowy</div>
-        <div class="m">Sara's Beauty · Skierniewice</div>
-      </div>
+      <img class="vo-img" src="img/voucher.jpg" alt="Voucher podarunkowy Sara's Beauty" width="640" height="1316" loading="lazy">
     </div>
   </div>
 </section>
@@ -818,6 +816,7 @@
       <div class="foot-col">
         <h4>Menu</h4>
         <a href="#oferta">Oferta</a>
+        <a href="zabiegi.html">Zabiegi</a>
         <a href="#cennik">Cennik</a>
         <a href="#o-mnie">O mnie</a>
         <a href="#opinie">Opinie</a>

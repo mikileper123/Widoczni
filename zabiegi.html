@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zabiegi — Sara's Beauty Skierniewice</title>
+<meta name="description" content="Opisy zabiegów Sara's Beauty Skierniewice — kosmetologia, fryzjerstwo i trychologia. Oczyszczanie, kwasy, retinol, mezoterapia mikroigłowa, laminacja, koloryzacja, terapie skóry głowy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfcfe;
+    --ink:#141c38;
+    --ink-soft:#5b6483;
+    --peri:#93acf0;
+    --peri-soft:#aec3f7;
+    --peri-pale:#e9eeff;
+    --navy:#131b36;
+    --navy-2:#1b2547;
+    --line:rgba(20,28,56,.12);
+    --line-soft:rgba(20,28,56,.07);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-weight:300;font-size:15.5px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 clamp(24px,4vw,48px)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(251,252,254,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1320px;margin:0 auto;padding:0 clamp(24px,4vw,56px)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mgm{width:26px;height:32px;color:var(--peri-soft)}
+  .brand .bt{font-family:Georgia,'Times New Roman',serif;font-size:1.02rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;white-space:nowrap}
+  .nav-right{display:flex;align-items:center;gap:26px}
+  .nav-right a{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+  .nav-right a:hover{color:var(--peri)}
+  .nav-right .tel{color:var(--peri);border:1px solid var(--peri);padding:11px 16px}
+  .nav-right .tel:hover{color:#7d97e8;border-color:#7d97e8}
+
+  .hero-lite{background:linear-gradient(165deg,#c6d4fb 0%,#acc1ff 60%,#9db2f2 100%);padding:clamp(56px,8vw,96px) 0}
+  .hero-lite h1{font-size:clamp(2.6rem,5.4vw,4.4rem);color:var(--navy)}
+  .hero-lite p{color:#28345f;max-width:56ch;margin-top:18px}
+  .chapters{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+  .chapters a{background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.8);color:var(--navy);padding:11px 20px;border-radius:999px;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;transition:background .25s}
+  .chapters a:hover{background:#fff}
+
+  section{padding:clamp(64px,8vw,110px) 0;scroll-margin-top:72px}
+  section + section{border-top:1px solid var(--line-soft)}
+  .sec-ix{display:flex;align-items:center;gap:18px;margin-bottom:14px}
+  .sec-ix .n{font-family:Georgia,'Times New Roman',serif;font-size:1.5rem;color:var(--peri)}
+  .sec-ix .rule{width:56px;height:1px;background:var(--line)}
+  .sec-ix .label{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
+  section > .wrap > h2{font-size:clamp(2.2rem,4.4vw,3.4rem);color:var(--navy);margin-bottom:clamp(36px,5vw,56px)}
+
+  .tx{padding:clamp(34px,4vw,46px) 0;border-top:1px solid var(--line-soft)}
+  .tx:first-of-type{border-top:0}
+  .tx h3{font-size:clamp(1.5rem,2.6vw,1.9rem);color:var(--navy);margin-bottom:8px}
+  .tx .tag{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.08rem;color:#5b6ba8;margin-bottom:18px}
+  .tx p{color:var(--ink-soft);max-width:68ch;margin-bottom:14px}
+  .tx ul{list-style:none;margin:6px 0 16px;max-width:68ch}
+  .tx li{padding:7px 0 7px 26px;position:relative;color:var(--ink)}
+  .tx li::before{content:"✦";position:absolute;left:2px;color:var(--peri);font-size:.8rem}
+  .tx .note{font-size:.9rem;color:var(--ink-soft);opacity:.85}
+  .tx .close{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--ink)}
+
+  .cta-band{background:var(--navy);color:#fff;text-align:center;padding:clamp(56px,7vw,88px) 0}
+  .cta-band h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:14px}
+  .cta-band p{color:#c9d4f5;max-width:46ch;margin:0 auto 30px}
+  .btn{display:inline-block;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 32px;background:#fff;color:var(--navy);transition:.25s}
+  .btn:hover{background:var(--peri-pale)}
+
+  footer{border-top:1px solid var(--line-soft);padding:34px 0;text-align:center;font-size:.82rem;color:var(--ink-soft)}
+  footer a{border-bottom:1px solid currentColor}
+  @media(max-width:640px){
+    .nav-right a:not(.tel){display:none}
+    .nav-right .tel{padding:9px 12px;font-size:.7rem;white-space:nowrap}
+    .brand .bt{font-size:.88rem;letter-spacing:.16em}
+    body{font-size:15px}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden"><defs><path id="mgm-v2" transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0" fill="currentColor"></path></defs></svg>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="Sara's Beauty — strona główna">
+      <svg class="mgm" viewBox="290 215 360 425" fill="currentColor" aria-hidden="true"><use href="#mgm-v2"></use></svg>
+      <span class="bt">Sara's Beauty</span>
+    </a>
+    <nav class="nav-right">
+      <a href="index.html#cennik">Cennik</a>
+      <a href="index.html#kontakt">Kontakt</a>
+      <a class="tel" href="tel:+48514330140">Umów wizytę</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-lite">
+  <div class="wrap">
+    <h1>Zabiegi</h1>
+    <p>Każdy zabieg w Sara's Beauty poprzedza rozmowa i analiza potrzeb — poniżej znajdziesz opisy, które pomogą Ci wybrać coś dla siebie.</p>
+    <nav class="chapters">
+      <a href="#kosmetologia">Kosmetologia</a>
+      <a href="#fryzjerstwo">Fryzjerstwo</a>
+      <a href="#trychologia">Trychologia</a>
+    </nav>
+  </div>
+</div>
+
+<section id="kosmetologia">
+  <div class="wrap">
+    <div class="sec-ix"><span class="n">01</span><span class="rule"></span><span class="label">Kosmetologia</span></div>
+    <h2>Pielęgnacja twarzy</h2>
+
+    <article class="tx">
+      <h3>Oczyszczanie wodorowe — pełny zabieg wieloetapowy</h3>
+      <p class="tag">Głębokie oczyszczenie, odświeżenie i kompleksowa pielęgnacja skóry w jednym zabiegu.</p>
+      <p>Pełne oczyszczanie wodorowe to rozbudowany, wieloetapowy zabieg, który łączy dokładne oczyszczanie skóry z jej pielęgnacją, nawilżeniem i odświeżeniem. Poszczególne etapy dobierane są do aktualnego stanu i potrzeb skóry.</p>
+      <p>Zabieg pomaga usunąć zanieczyszczenia i nadmiar sebum, odświeża cerę oraz poprawia jej gładkość i wygląd. Kolejne etapy pielęgnacyjne wspierają nawilżenie i pozostawiają skórę miękką, promienną i zadbaną.</p>
+      <p>Zabieg może obejmować:</p>
+      <ul>
+        <li>przygotowanie i dokładne oczyszczenie skóry</li>
+        <li>oczyszczanie wodorowe</li>
+        <li>peeling i usunięcie zrogowaciałego naskórka</li>
+        <li>dodatkowe etapy oczyszczające i pielęgnacyjne</li>
+        <li>aplikację odpowiednio dobranych składników aktywnych</li>
+        <li>intensywne nawilżenie i ukojenie skóry</li>
+        <li>maskę dobraną do potrzeb cery</li>
+        <li>pielęgnację końcową</li>
+      </ul>
+      <p>Efekt? Czysta, świeża, wygładzona i wyraźnie bardziej promienna skóra.</p>
+      <p class="close">To doskonały zabieg dla osób, które oczekują czegoś więcej niż podstawowego oczyszczania — kompleksowej pielęgnacji podczas jednej wizyty.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Oczyszczanie manualne twarzy</h3>
+      <p class="tag">Dokładne oczyszczenie skóry z zaskórników i nagromadzonych zanieczyszczeń.</p>
+      <p>Oczyszczanie manualne to zabieg przeznaczony szczególnie dla skóry zanieczyszczonej, z zaskórnikami, rozszerzonymi porami oraz tendencją do powstawania niedoskonałości.</p>
+      <p>Zabieg rozpoczynamy od odpowiedniego przygotowania i zmiękczenia skóry, a następnie dokładnie i manualnie oczyszczamy ją z zaskórników oraz zalegających zanieczyszczeń. Całość uzupełnia pielęgnacja łagodząca, wyciszająca i nawilżająca, dobrana do potrzeb cery.</p>
+      <p>Efekty zabiegu:</p>
+      <ul>
+        <li>oczyszczenie zaskórników i porów</li>
+        <li>usunięcie nagromadzonych zanieczyszczeń</li>
+        <li>wygładzenie powierzchni skóry</li>
+        <li>poprawa jej świeżości i wyglądu</li>
+        <li>przygotowanie skóry do dalszej pielęgnacji</li>
+      </ul>
+      <p class="note">Zabieg oraz jego poszczególne etapy zawsze dobieramy indywidualnie do aktualnego stanu skóry.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Kwasy — indywidualnie dobrana terapia skóry</h3>
+      <p class="tag">Zabieg dopasowany do potrzeb i aktualnej kondycji Twojej skóry.</p>
+      <p>Zabiegi z wykorzystaniem kwasów dobierane są indywidualnie po wcześniejszej ocenie i diagnozie skóry twarzy. Rodzaj preparatu, jego stężenie oraz sposób zastosowania zależą od problemu, nad którym chcemy pracować.</p>
+      <p>Kwasy mogą być stosowane m.in. przy przebarwieniach, niedoskonałościach, nadmiernym wydzielaniu sebum, zaskórnikach, rozszerzonych porach, nierównej strukturze skóry, oznakach starzenia oraz utracie świeżości i blasku.</p>
+      <p>Zabieg może pomóc w:</p>
+      <ul>
+        <li>oczyszczeniu i odświeżeniu skóry</li>
+        <li>redukcji niedoskonałości i zaskórników</li>
+        <li>wyrównaniu kolorytu</li>
+        <li>zmniejszeniu widoczności przebarwień</li>
+        <li>wygładzeniu struktury skóry</li>
+        <li>poprawie wyglądu porów</li>
+        <li>regeneracji i poprawie ogólnej kondycji cery</li>
+      </ul>
+      <p class="close">Nie każda skóra potrzebuje tego samego kwasu. Dlatego terapię dobieramy do jej charakteru, potrzeb oraz oczekiwanego efektu, a w przypadku terapii wymagających serii ustalamy indywidualny plan zabiegowy.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Retinol — intensywna odnowa skóry</h3>
+      <p class="tag">Regeneracja, wygładzenie i poprawa jakości skóry.</p>
+      <p>Zabieg z retinolem to intensywna terapia wspierająca naturalne procesy odnowy skóry. Polecany jest szczególnie przy oznakach starzenia, przebarwieniach, nierównym kolorycie i strukturze skóry, niedoskonałościach oraz utracie jędrności i blasku.</p>
+      <p>Retinol wspomaga proces odnowy naskórka oraz produkcję kolagenu, dzięki czemu przy regularnym stosowaniu skóra może stać się gładsza, bardziej jednolita, jędrna i promienna.</p>
+      <p>Zabieg polecany przy:</p>
+      <ul>
+        <li>drobnych zmarszczkach i oznakach starzenia</li>
+        <li>przebarwieniach i nierównym kolorycie</li>
+        <li>rozszerzonych porach</li>
+        <li>niedoskonałościach</li>
+        <li>nierównej strukturze skóry</li>
+        <li>utracie jędrności i elastyczności</li>
+      </ul>
+      <p>Rodzaj i intensywność terapii dobieramy indywidualnie do kondycji i potrzeb skóry. Dla uzyskania najlepszych rezultatów zabiegi z retinolem mogą być wykonywane w odpowiednio zaplanowanej serii.</p>
+      <p class="note">Po zabiegu może wystąpić przejściowe przesuszenie, zaczerwienienie lub złuszczanie naskórka — jest to zależne od zastosowanego preparatu i reakcji skóry.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Mezoterapia mikroigłowa</h3>
+      <p class="tag">Intensywna regeneracja i pobudzenie naturalnych procesów odnowy skóry.</p>
+      <p>Mezoterapia mikroigłowa polega na kontrolowanym mikronakłuwaniu skóry, które stymuluje jej naturalne procesy regeneracyjne oraz wspiera produkcję kolagenu i elastyny. Podczas zabiegu stosowane są odpowiednio dobrane preparaty dostosowane do potrzeb skóry.</p>
+      <p>Zabieg polecany jest przy:</p>
+      <ul>
+        <li>utracie jędrności i elastyczności</li>
+        <li>drobnych zmarszczkach</li>
+        <li>nierównej strukturze skóry</li>
+        <li>rozszerzonych porach</li>
+        <li>przebarwieniach i nierównym kolorycie</li>
+        <li>bliznach potrądzikowych</li>
+        <li>skórze wymagającej regeneracji i odświeżenia</li>
+      </ul>
+      <p>Dla uzyskania szybszych i bardziej widocznych rezultatów mezoterapię mikroigłową szczególnie polecamy w pakiecie zabiegowym. Regularnie wykonywana seria pozwala stopniowo pracować nad kondycją, strukturą i wyglądem skóry.</p>
+      <p class="note">Liczba oraz częstotliwość zabiegów dobierana jest indywidualnie do potrzeb i kondycji skóry.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Laserowe usuwanie zmian — naczynka, pajączki, rubinki i włókniaki</h3>
+      <p class="tag">Gładka, jednolita i estetycznie wyglądająca skóra bez niechcianych zmian.</p>
+      <p>Precyzyjne zabiegi laserowe pozwalają zmniejszyć widoczność drobnych zmian, które zaburzają estetyczny wygląd skóry. Zabieg dobierany jest indywidualnie w zależności od rodzaju, wielkości i lokalizacji zmiany.</p>
+      <p>Zabieg obejmuje:</p>
+      <ul>
+        <li>zamykanie rozszerzonych naczynek i „pajączków"</li>
+        <li>usuwanie rubinków — drobnych zmian naczyniowych</li>
+        <li>usuwanie wybranych włókniaków</li>
+        <li>poprawę estetyki i jednolitości skóry</li>
+      </ul>
+      <p>Laser działa precyzyjnie i miejscowo, dzięki czemu możemy pracować bezpośrednio na wybranej zmianie. Efektem jest czystszy, bardziej jednolity i estetyczny wygląd skóry, bez drobnych mankamentów, które wcześniej przyciągały uwagę.</p>
+      <p class="note">Każda zmiana przed zabiegiem podlega ocenie. W przypadku zmian budzących wątpliwości konieczna jest wcześniejsza konsultacja dermatologiczna.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Koloryzacja brwi i rzęs</h3>
+      <p class="tag">Idealny kształt, odpowiedni kolor i naturalnie podkreślone spojrzenie.</p>
+      <p>Koloryzacja brwi to coś więcej niż przyciemnienie włosków. Odpowiednio dobrany odcień pozwala podkreślić kształt brwi, optycznie je zagęścić i nadać twarzy piękną oprawę.</p>
+      <p>Kolor dobieramy indywidualnie do typu urody, koloru włosów, karnacji oraz naturalnego odcienia brwi, tak aby efekt był harmonijny i dopasowany właśnie do Ciebie. W zależności od oczekiwań możemy uzyskać efekt delikatny i naturalny lub bardziej wyrazisty i zdefiniowany.</p>
+      <p class="close">Dobrze dobrane brwi nie dominują twarzy — podkreślają jej naturalne piękno.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Laminacja brwi i rzęs</h3>
+      <p class="tag">Naturalne podkreślenie spojrzenia i perfekcyjnie zadbane brwi.</p>
+      <p>Laminacja to zabieg, który pozwala uporządkować, podkreślić i nadać odpowiedni kierunek włoskom brwi oraz pięknie unieść i podkręcić naturalne rzęsy.</p>
+      <p>Laminacja brwi pomaga ujarzmić niesforne włoski, optycznie zagęścić brwi i nadać im estetyczny, dopracowany kształt. Laminacja rzęs podkreśla natomiast ich naturalną długość, unosi je od nasady i sprawia, że spojrzenie staje się bardziej wyraziste.</p>
+      <p>Efekty:</p>
+      <ul>
+        <li>uporządkowane i optycznie pełniejsze brwi</li>
+        <li>podkreślony kształt brwi</li>
+        <li>uniesione i podkręcone naturalne rzęsy</li>
+        <li>bardziej otwarte i wyraziste spojrzenie</li>
+        <li>naturalny, elegancki efekt</li>
+        <li>łatwiejsza codzienna stylizacja</li>
+      </ul>
+      <p class="close">Idealny wybór dla osób, które cenią naturalny efekt i zadbany wygląd bez konieczności codziennej stylizacji.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Nitkowanie — precyzyjne usuwanie owłosienia twarzy</h3>
+      <p class="tag">Idealnie gładka skóra i precyzyjnie wymodelowane brwi.</p>
+      <p>Nitkowanie to niezwykle dokładna metoda usuwania owłosienia za pomocą specjalnej nici. Pozwala usunąć nie tylko widoczne włoski, ale również bardzo delikatny, niemal niewidoczny meszek, pozostawiając skórę wyjątkowo gładką.</p>
+      <p>Metoda doskonale sprawdza się przy regulacji brwi, usuwaniu wąsika oraz nitkowaniu całej twarzy — policzków, brody, linii żuchwy czy okolic ust.</p>
+      <p>Dlaczego warto wybrać nitkowanie?</p>
+      <ul>
+        <li>usuwa nawet bardzo drobny meszek</li>
+        <li>zapewnia wyjątkową precyzję regulacji brwi</li>
+        <li>pozostawia skórę gładką i estetyczną</li>
+        <li>nie wymaga stosowania wosku ani preparatów chemicznych</li>
+        <li>sprawdza się również przy jasnych i cienkich włoskach, których laser może nie wychwytywać</li>
+        <li>zazwyczaj powoduje mniejsze obciążenie powierzchni skóry niż metody wykorzystujące wosk</li>
+      </ul>
+      <p class="close">Nitkowanie całej twarzy to jedna z najbardziej precyzyjnych metod usuwania delikatnego owłosienia — szczególnie tam, gdzie zależy nam na usunięciu nawet najmniejszego meszku i uzyskaniu perfekcyjnie gładkiej skóry.</p>
+    </article>
+  </div>
+</section>
+
+<section id="fryzjerstwo">
+  <div class="wrap">
+    <div class="sec-ix"><span class="n">02</span><span class="rule"></span><span class="label">Fryzjerstwo</span></div>
+    <h2>Włosy i stylizacja</h2>
+
+    <article class="tx">
+      <h3>Strzyżenie precyzyjne</h3>
+      <p class="tag">Dobre strzyżenie poznaje się nie tylko po wyjściu z salonu, ale każdego ranka przed lustrem.</p>
+      <p>Precyzyjne strzyżenie to coś więcej niż skrócenie włosów. To odpowiednio dobrana forma, linia i technika cięcia, dopasowane do rodzaju włosów, ich naturalnego kierunku układania, gęstości, struktury oraz kształtu twarzy.</p>
+      <p>Pracujemy z wykorzystaniem nowoczesnych technik strzyżenia, tworząc fryzurę, która zachowuje swój kształt również po umyciu włosów w domu. Bo włosy dobrze ostrzyżone po prostu lepiej się układają.</p>
+      <p>Odpowiednio wykonane cięcie pozwala wydobyć naturalny ruch włosów, nadać im lekkość lub objętość, podkreślić skręt, a tam, gdzie jest to potrzebne — ujarzmić nadmierną gęstość i ciężkość.</p>
+      <p>Dobre cięcie to:</p>
+      <ul>
+        <li>forma dopasowana indywidualnie do Ciebie</li>
+        <li>precyzja i nowoczesne techniki strzyżenia</li>
+        <li>łatwiejsza codzienna stylizacja</li>
+        <li>naturalny ruch i lepsze układanie włosów</li>
+        <li>fryzura, która dobrze wygląda nie tylko w dniu wizyty</li>
+      </ul>
+      <p class="close">Nie tworzymy fryzury tylko na chwilę. Tworzymy cięcie, z którym dobrze wygląda się każdego dnia.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Zarost — konturowanie i stopniowanie</h3>
+      <p class="tag">Perfekcyjna linia. Precyzyjne przejścia. Zadbany wygląd.</p>
+      <p>Profesjonalne opracowanie zarostu to nie tylko jego skrócenie. To precyzyjne konturowanie, stopniowanie długości oraz dopasowanie kształtu brody do rysów i proporcji twarzy.</p>
+      <p>Dbamy o czyste linie na policzkach i szyi, płynne przejścia oraz odpowiednią długość zarostu, dzięki czemu broda wygląda schludnie, nowocześnie i zachowuje właściwy kształt.</p>
+      <p>Zabieg obejmuje:</p>
+      <ul>
+        <li>precyzyjne konturowanie zarostu</li>
+        <li>stopniowanie i płynne przejścia długości</li>
+        <li>nadanie odpowiedniego kształtu brodzie</li>
+        <li>dopracowanie linii policzków i szyi</li>
+        <li>wyrównanie i uporządkowanie zarostu</li>
+        <li>dopasowanie stylu do kształtu twarzy</li>
+      </ul>
+      <p class="close">Dobrze wystylizowany zarost podkreśla rysy twarzy i charakter — różnicę robią detale.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Koloryzacja — kolor stworzony dla Ciebie</h3>
+      <p class="tag">Kolor włosów może zmienić więcej niż fryzurę. Może rozświetlić twarz, podkreślić oczy, zmiękczyć rysy i sprawić, że po prostu wyglądasz… lepiej.</p>
+      <p>Dobra koloryzacja nie zaczyna się od wyboru numeru farby. Zaczyna się od Ciebie. Analizujemy naturalny kolor i kondycję włosów, wcześniejsze koloryzacje, odcień skóry oraz efekt, który chcesz osiągnąć. Następnie tworzymy kolor dopasowany tak, aby wyglądał pięknie nie tylko w salonie, ale również po kilku tygodniach.</p>
+      <p>Pracujemy z kolorem świadomie — wykorzystując nowoczesne techniki koloryzacji, rozjaśniania, tonowania, refleksów i wielowymiarowego łączenia odcieni.</p>
+      <p>Tworzymy:</p>
+      <ul>
+        <li>naturalne blondy i świetliste refleksy</li>
+        <li>chłodne i eleganckie brązy</li>
+        <li>głębokie, nasycone kolory</li>
+        <li>miękkie przejścia i wielowymiarowe odcienie</li>
+        <li>subtelne rozświetlenia wokół twarzy</li>
+        <li>metamorfozy i korekty wcześniejszych koloryzacji</li>
+        <li>koloryzacje dopasowane do siwych włosów</li>
+      </ul>
+      <p>Nie zawsze najbardziej spektakularny kolor jest tym najlepszym. Najpiękniejszy jest ten, który wygląda tak, jakby został stworzony właśnie dla Ciebie. Dbamy również o kondycję włosów, ponieważ nawet najpiękniejszy odcień potrzebuje zdrowo wyglądających, lśniących włosów, żeby naprawdę zachwycać.</p>
+      <p class="close">Koloryzacja to sztuka światła, odcieni i proporcji. Ty przynosisz inspirację — my tworzymy z niej Twój kolor.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Fryzury okolicznościowe</h3>
+      <p class="tag">Są dni, w których zwykła fryzura to za mało.</p>
+      <p>Ślub, wesele, przyjęcie, studniówka, sesja zdjęciowa czy wyjątkowe wyjście — tworzymy fryzury, które podkreślają urodę, styl i charakter, a jednocześnie pozwalają czuć się swobodnie przez wiele godzin.</p>
+      <p>Od romantycznych fal i miękkich upięć, przez eleganckie koki, aż po nowoczesne, minimalistyczne stylizacje — każdą fryzurę dopasowujemy do rysów twarzy, długości i struktury włosów, stylizacji oraz charakteru wydarzenia. Dbamy o każdy detal: odpowiednią objętość, proporcje, lekkość i trwałość fryzury.</p>
+      <p>Piękna fryzura nie powinna przebierać Cię w kogoś innego. Powinna sprawić, że w swojej wyjątkowej wersji nadal będziesz sobą.</p>
+      <p class="close">Bo kiedy nadchodzi ważny moment, Ty masz go przeżywać — a Twoja fryzura ma po prostu wyglądać pięknie.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Keratynowe prostowanie włosów</h3>
+      <p class="tag">Gładkie, lśniące i łatwiejsze do ułożenia włosy każdego dnia.</p>
+      <p>Keratynowe prostowanie to zabieg wygładzający, który pomaga ujarzmić puszące się, niesforne i trudne do stylizacji włosy. Keratyna w połączeniu z odpowiednią techniką zabiegową wygładza powierzchnię włosa, nadając mu miękkość, połysk i bardziej zadbany wygląd.</p>
+      <p>Efekty zabiegu:</p>
+      <ul>
+        <li>wygładzenie i ograniczenie puszenia się włosów</li>
+        <li>łatwiejsze rozczesywanie i codzienna stylizacja</li>
+        <li>większa miękkość i elastyczność</li>
+        <li>piękny połysk</li>
+        <li>ograniczenie skrętu i niesforności włosów</li>
+        <li>efekt bardziej gładkich i uporządkowanych pasm</li>
+      </ul>
+      <p>Efekt może utrzymywać się do 6 miesięcy, w zależności od rodzaju i kondycji włosów, zastosowanego preparatu oraz późniejszej pielęgnacji domowej.</p>
+      <p class="note">Przed zabiegiem oceniamy kondycję włosów i dobieramy sposób wykonania tak, aby uzyskać najlepszy możliwy efekt przy zachowaniu ich dobrej kondycji.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Krioterapia włosów — regeneracja na zimno</h3>
+      <p class="tag">Intensywna regeneracja włosów bez użycia wysokiej temperatury.</p>
+      <p>Krioterapia włosów to nowoczesny zabieg pielęgnacyjny wykorzystujący działanie niskiej temperatury. Polecany jest szczególnie włosom suchym, osłabionym, zniszczonym zabiegami chemicznymi, rozjaśnianiem i częstą stylizacją.</p>
+      <p>Zabieg pomaga wygładzić powierzchnię włosa i ograniczyć utratę składników zastosowanej pielęgnacji. Włosy po zabiegu są miękkie, bardziej elastyczne, gładkie i pełne blasku, bez efektu obciążenia.</p>
+      <p>Efekty zabiegu:</p>
+      <ul>
+        <li>regeneracja włosów na zimno</li>
+        <li>wygładzenie i większa miękkość</li>
+        <li>poprawa elastyczności włosów</li>
+        <li>ograniczenie puszenia</li>
+        <li>piękny połysk i zdrowszy wygląd</li>
+        <li>łatwiejsze rozczesywanie i stylizacja</li>
+      </ul>
+      <p class="close">Idealny wybór dla włosów uwrażliwionych i zniszczonych, które potrzebują intensywnej pielęgnacji bez dodatkowego działania wysokiej temperatury. Efekt utrzymuje się do 3 miesięcy.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Botox na włosy — intensywna regeneracja</h3>
+      <p class="tag">Miękkie, elastyczne i mniej puszące się włosy.</p>
+      <p>Botox na włosy to intensywnie regenerujący i wygładzający zabieg przeznaczony szczególnie dla włosów suchych, matowych, osłabionych oraz podatnych na puszenie.</p>
+      <p>Zabieg poprawia wygląd i kondycję włosów, nadając im miękkość, elastyczność i piękny połysk. Włosy stają się gładsze, bardziej zdyscyplinowane i zdecydowanie łatwiejsze w codziennej pielęgnacji.</p>
+      <p>Efekty zabiegu:</p>
+      <ul>
+        <li>intensywna regeneracja i odżywienie</li>
+        <li>większa miękkość i elastyczność włosów</li>
+        <li>ograniczenie puszenia</li>
+        <li>wygładzenie i połysk</li>
+        <li>łatwiejsze rozczesywanie i stylizacja</li>
+        <li>poprawa wyglądu suchych i zniszczonych włosów</li>
+      </ul>
+      <p class="note">Botox nie jest zabiegiem typowo prostującym. W przypadku naturalnie kręconych włosów skręt pozostaje widoczny, jednak po zabiegu może zostać delikatnie rozluźniony, a same loki stają się bardziej miękkie, gładkie i mniej puszące.</p>
+    </article>
+  </div>
+</section>
+
+<section id="trychologia">
+  <div class="wrap">
+    <div class="sec-ix"><span class="n">03</span><span class="rule"></span><span class="label">Trychologia</span></div>
+    <h2>Skóra głowy i włosy</h2>
+
+    <article class="tx">
+      <h3>Mezoterapia mikroigłowa skóry głowy — terapia trychologiczna</h3>
+      <p class="tag">Zdrowe włosy zaczynają się od zdrowej skóry głowy.</p>
+      <p>Mezoterapia skóry głowy to jeden z zabiegów wykorzystywanych w terapiach trychologicznych ukierunkowanych na poprawę kondycji skóry głowy oraz wsparcie osłabionych i nadmiernie wypadających włosów.</p>
+      <p>Podczas zabiegu odpowiednio dobrane preparaty zawierające składniki aktywne podawane są bezpośrednio w obszar skóry wymagający terapii. Rodzaj preparatu dobieramy indywidualnie — w zależności od problemu, kondycji skóry głowy i włosów oraz wskazań do zabiegu.</p>
+      <p>Mezoterapię stosujemy jako wsparcie przy:</p>
+      <ul>
+        <li>nadmiernym wypadaniu włosów</li>
+        <li>osłabieniu i przerzedzeniu włosów</li>
+        <li>pogorszeniu kondycji skóry głowy</li>
+        <li>włosach cienkich i osłabionych</li>
+        <li>potrzebie intensywnego odżywienia i regeneracji skóry głowy</li>
+      </ul>
+      <p>W trychologii nie pracujemy według jednego schematu. Najpierw szukamy problemu, później dobieramy terapię. Dlatego mezoterapia może stanowić jeden z elementów szerszego planu pielęgnacyjnego i zabiegowego. Najlepsze rezultaty uzyskuje się zazwyczaj podczas odpowiednio zaplanowanej serii zabiegów, której częstotliwość i zakres ustalane są indywidualnie.</p>
+      <p class="close">Nie pielęgnujemy wyłącznie włosów. Zaczynamy tam, gdzie rozpoczyna się ich kondycja — od skóry głowy.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Elektroterapia skóry głowy — terapia prądami</h3>
+      <p class="tag">Nowoczesne wsparcie w terapii problemów skóry głowy i osłabionych włosów.</p>
+      <p>Elektroterapia wykorzystuje odpowiednio dobrane prądy jako element terapii trychologicznej. Zabieg dobieramy indywidualnie do kondycji skóry głowy, rodzaju problemu oraz potrzeb włosów.</p>
+      <p>Stosowana jest jako uzupełnienie terapii przy nadmiernym przetłuszczaniu, problematycznej skórze głowy, osłabieniu włosów oraz tendencji do ich nadmiernego wypadania.</p>
+      <p>Działanie zabiegu:</p>
+      <ul>
+        <li>wspiera mikrokrążenie skóry głowy</li>
+        <li>wspomaga dotlenienie i odżywienie tkanek</li>
+        <li>wspiera prawidłową kondycję skóry głowy</li>
+        <li>może być elementem terapii przy nadmiernym przetłuszczaniu</li>
+        <li>wspomaga pielęgnację włosów osłabionych i wypadających</li>
+        <li>przygotowuje skórę do kolejnych etapów terapii trychologicznej</li>
+      </ul>
+      <p class="note">Nie każdy problem skóry głowy wymaga takiego samego postępowania. Dlatego przed rozpoczęciem terapii oceniamy jej stan i dobieramy odpowiednią metodę oraz częstotliwość zabiegów. Elektroterapia może być łączona z innymi procedurami trychologicznymi, tworząc kompleksową terapię dopasowaną do potrzeb skóry głowy i włosów.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Infuzja tlenowa skóry głowy</h3>
+      <p class="tag">Dotlenienie, odświeżenie i intensywna pielęgnacja skóry głowy.</p>
+      <p>Infuzja tlenowa to bezinwazyjny zabieg trychologiczny wykorzystujący tlen oraz odpowiednio dobrane preparaty ze składnikami aktywnymi, dostosowanymi do aktualnych potrzeb skóry głowy i włosów.</p>
+      <p>Zabieg pozwala połączyć pielęgnację z przyjemnym uczuciem świeżości i dotlenienia skóry. Szczególnie dobrze sprawdza się jako element kompleksowych terapii trychologicznych oraz pielęgnacji skóry wymagającej regeneracji, nawilżenia i odżywienia.</p>
+      <p>Infuzję tlenową stosujemy jako wsparcie przy:</p>
+      <ul>
+        <li>osłabionych i nadmiernie wypadających włosach</li>
+        <li>suchej i wymagającej nawilżenia skórze głowy</li>
+        <li>skórze z tendencją do nadmiernego przetłuszczania</li>
+        <li>potrzebie regeneracji i odżywienia skóry</li>
+        <li>włosach cienkich i osłabionych</li>
+        <li>terapiach wymagających zastosowania odpowiednio dobranych składników aktywnych</li>
+      </ul>
+      <p>Rodzaj preparatu dobieramy indywidualnie po ocenie skóry głowy, dzięki czemu zabieg może być częścią terapii ukierunkowanej na konkretny problem. Infuzję tlenową możemy również łączyć z innymi zabiegami trychologicznymi, tworząc indywidualny plan pielęgnacji skóry głowy i włosów.</p>
+      <p class="close">Piękne włosy zaczynają się od skóry głowy — dajmy jej to, czego naprawdę potrzebuje.</p>
+    </article>
+
+    <article class="tx">
+      <h3>Peeling skóry głowy — głębokie oczyszczenie</h3>
+      <p class="tag">Zdrowa pielęgnacja włosów zaczyna się od czystej, zadbanej skóry głowy.</p>
+      <p>Peeling skóry głowy to jeden z podstawowych zabiegów trychologicznych. Pomaga dokładnie usunąć nadmiar sebum, zrogowaciały naskórek, pozostałości kosmetyków i nagromadzone zanieczyszczenia, których nie zawsze można pozbyć się podczas zwykłego mycia włosów.</p>
+      <p>Rodzaj peelingu dobieramy indywidualnie do kondycji i potrzeb skóry — szczególnie przy nadmiernym przetłuszczaniu, łuszczeniu, uczuciu obciążenia oraz skórze wymagającej intensywniejszego oczyszczenia.</p>
+      <p>Efekty zabiegu:</p>
+      <ul>
+        <li>dokładnie oczyszczona i odświeżona skóra głowy</li>
+        <li>usunięcie nagromadzonego zrogowaciałego naskórka</li>
+        <li>ograniczenie zalegania sebum i pozostałości kosmetyków</li>
+        <li>uczucie lekkości i świeżości u nasady włosów</li>
+        <li>przygotowanie skóry do kolejnych etapów terapii trychologicznej</li>
+        <li>lepsze warunki do świadomej pielęgnacji skóry głowy</li>
+      </ul>
+      <p>Peeling może być wykonywany jako samodzielny zabieg oczyszczający lub jako pierwszy etap indywidualnie dobranej terapii trychologicznej.</p>
+      <p class="close">Czasami włosy nie potrzebują kolejnego kosmetyku. Potrzebują dobrze oczyszczonej skóry, z której wyrastają.</p>
+    </article>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Nie wiesz, który zabieg wybrać?</h2>
+    <p>Zadzwoń — porozmawiamy o potrzebach Twojej skóry i włosów i wspólnie dobierzemy terapię.</p>
+    <a href="tel:+48514330140" class="btn">Zadzwoń: 514 330 140</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sara's Beauty · Ludwików 1P, 96-100 Skierniewice · <a href="index.html">Strona główna</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
