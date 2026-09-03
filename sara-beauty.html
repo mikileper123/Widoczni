@@ -7,7 +7,7 @@
 <meta name="description" content="Sara's Beauty Skierniewice — Sara Dąbrowska, mgr kosmetologii i trycholog. Kosmetologia, trychologia i fryzjerstwo. Indywidualnie dobrana pielęgnacja. Tel. 514 330 140.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,14 +48,14 @@
   html{scroll-behavior:smooth}
   html,body{overflow-x:clip}
   body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-weight:300;font-size:15.5px;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.serif{font-family:'Bodoni Moda',serif;font-weight:400;line-height:1.06;letter-spacing:.002em}
+  h1,h2,h3,.serif{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.06;letter-spacing:.002em}
   a{color:inherit;text-decoration:none}
   a:hover{color:var(--peri)}
   a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
   .wrap{max-width:1320px;margin:0 auto;padding:0 clamp(24px,4vw,56px)}
   .label{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;font-weight:500;color:var(--peri)}
   .sec-ix{display:flex;align-items:center;gap:18px;margin-bottom:clamp(30px,4vw,44px)}
-  .sec-ix .n{font-family:'Bodoni Moda',serif;font-size:.92rem;color:var(--ink);letter-spacing:.08em}
+  .sec-ix .n{font-family:Georgia,'Times New Roman',serif;font-size:.92rem;color:var(--ink);letter-spacing:.08em}
   .sec-ix .rule{width:52px;height:1px;background:var(--line)}
   .sdiv{display:flex;justify-content:center;padding:clamp(20px,3vw,36px) 0 0}
   .sdiv svg{width:88px;height:44px;color:var(--peri-soft)}
@@ -79,7 +79,7 @@
   .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
   .brand:hover{color:inherit}
   .brand .mgm{width:26px;height:32px;color:var(--peri-soft)}
-  .brand .bt{font-family:'Bodoni Moda',serif;font-size:1.02rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding-left:.22em;white-space:nowrap}
+  .brand .bt{font-family:Georgia,'Times New Roman',serif;font-size:1.02rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding-left:.22em;white-space:nowrap}
   .navlinks{display:flex;gap:clamp(22px,2.6vw,38px);align-items:center}
   .navlinks .cta{margin-left:clamp(10px,2vw,26px)}
   .navlinks a{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);transition:color .25s;white-space:nowrap;position:relative}
@@ -96,15 +96,16 @@
   .fab:hover{color:#fff}
   .fab.show{transform:none}
 
-  .hero{position:relative;min-height:calc(84vh - 80px);display:flex;align-items:center;overflow:hidden;background:linear-gradient(165deg,#1b2547 0%,#131b36 58%,#0f1730 100%)}
-  .hero-copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;width:min(100%,760px);margin-left:max(0px,calc(50vw - 720px));padding:52px clamp(24px,5vw,80px) 56px clamp(24px,4vw,64px)}
+  .hero{position:relative;min-height:calc(84vh - 80px);overflow:hidden;background:linear-gradient(165deg,#c6d4fb 0%,#acc1ff 52%,#96adee 100%)}
+  .hero-in{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:clamp(28px,5vw,72px);max-width:1320px;margin:0 auto;padding:clamp(40px,6vh,72px) clamp(24px,4vw,56px)}
+  .hero-copy{position:relative;display:flex;flex-direction:column;justify-content:center;flex:1 1 auto;max-width:660px}
   .hero-art{position:absolute;inset:0 0 0 auto;width:48%;z-index:0;pointer-events:none}
-  .hero-field{position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,27,54,0) 0%,rgba(37,49,92,.55) 52%,#25315c 100%)}
-  .kv-halo{position:absolute;width:clamp(500px,46vw,760px);aspect-ratio:1;right:-8%;top:52%;transform:translateY(-48%);border-radius:50%;background:radial-gradient(circle at 46% 44%,rgba(147,172,240,.42) 0%,rgba(147,172,240,.18) 46%,rgba(147,172,240,0) 70%)}
-  .kv-halo::after{content:"";position:absolute;inset:7%;border:1px solid rgba(172,193,255,.22);border-radius:50%}
-  .hero-art::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(172,193,255,.3) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:radial-gradient(62% 72% at 68% 50%,#000 18%,transparent 74%);mask-image:radial-gradient(62% 72% at 68% 50%,#000 18%,transparent 74%)}
+  .hero-field{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.14) 55%,rgba(255,255,255,.28) 100%)}
+  .kv-halo{position:absolute;width:clamp(500px,46vw,760px);aspect-ratio:1;right:-8%;top:52%;transform:translateY(-48%);border-radius:50%;background:radial-gradient(circle at 46% 44%,rgba(255,255,255,.5) 0%,rgba(255,255,255,.2) 46%,rgba(255,255,255,0) 70%)}
+  .kv-halo::after{content:"";position:absolute;inset:7%;border:1px solid rgba(255,255,255,.38);border-radius:50%}
+  .hero-art::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.55) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:radial-gradient(62% 72% at 68% 50%,#000 18%,transparent 74%);mask-image:radial-gradient(62% 72% at 68% 50%,#000 18%,transparent 74%)}
   .hero-art::after{content:"";position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' sc-camel-base-frequency='0.9' sc-camel-num-octaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
-  .hero-hair{position:absolute;left:0;right:0;top:63%;height:1px;z-index:1;background:linear-gradient(90deg,rgba(172,193,255,0) 0%,rgba(172,193,255,.22) 18%,rgba(172,193,255,.3) 62%,rgba(172,193,255,0) 100%)}
+  .hero-hair{display:none}
   .hero-mark{position:absolute;display:block;right:clamp(-60px,1vw,60px);top:52%;width:clamp(380px,34vw,580px);height:auto;transform:translateY(-48%);filter:drop-shadow(0 0 90px rgba(147,172,240,.5));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .4s,markFloat 12s ease-in-out 1.7s infinite;opacity:.95}
   @keyframes markIn{from{opacity:0;transform:translateY(-46%) scale(.97)}to{opacity:1;transform:translateY(-46%) scale(1)}}
   @keyframes markFloat{0%,100%{transform:translateY(-46%)}50%{transform:translateY(calc(-46% - 5px))}}
@@ -114,11 +115,17 @@
   .hero-cta .btn .ar{transition:transform .3s cubic-bezier(.22,1,.36,1)}
   .hero-cta .btn:hover .ar{transform:translateX(4px)}
   .hero .lead{animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .48s}
-  @media (prefers-reduced-motion:reduce){.hero-mark,.hero .lead,.hero-cta,.hero-meta,.hl-line{animation:none;opacity:1;transform:none}.hero-mark{transform:translateY(-46%);opacity:.9}}
-  .hero-chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:42px;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .1s}
-  .hero-chips span{border:1px solid rgba(172,193,255,.38);color:var(--peri);padding:9px 18px;border-radius:999px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase}
-  .hero h1{font-size:clamp(3rem,5.8vw,6rem);color:#fff;line-height:1.04;letter-spacing:-.018em}
-  .hero h1 em{font-style:italic;font-weight:400;color:var(--peri)}
+  @media (prefers-reduced-motion:reduce){.hero-mark,.hero .lead,.hero-cta,.hero-meta,.hero-bubbles,.hero-photo,.hl-line{animation:none;opacity:1;transform:none}}
+  .hero-bubbles{display:flex;gap:clamp(18px,2.5vw,36px);margin-top:46px;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .66s}
+  .bub{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .bub .bimg{display:block;width:clamp(80px,7.6vw,108px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,.9);box-shadow:0 14px 30px rgba(19,27,54,.24);transition:transform .3s cubic-bezier(.22,1,.36,1)}
+  .bub:hover .bimg{transform:translateY(-4px)}
+  .bub .bimg img{width:100%;height:100%;object-fit:cover;display:block}
+  .bub .bl{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);font-weight:500}
+  .hero-photo{position:relative;z-index:2;flex:0 0 clamp(280px,29vw,420px);animation:hlUp .9s cubic-bezier(.22,1,.36,1) both .3s}
+  .hero-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 20px 20px;border:4px solid rgba(255,255,255,.92);box-shadow:0 34px 70px -20px rgba(19,27,54,.4)}
+  .hero h1{font-size:clamp(2.8rem,5.2vw,5.4rem);color:var(--navy);line-height:1.04;letter-spacing:-.014em}
+  .hero h1 em{font-style:italic;font-weight:400;color:#2e3d7c}
   .hero h1 .it{font-size:.55em;line-height:1.4;letter-spacing:0}
   .hero h1 .it:nth-child(3){margin-top:26px}
   .hl-line{display:block;opacity:0;transform:translateY(26px);animation:hlUp .8s cubic-bezier(.22,1,.36,1) forwards}
@@ -126,14 +133,14 @@
   .hl-line:nth-child(3){animation-delay:.24s}
   .hl-line:nth-child(4){animation-delay:.36s}
   @keyframes hlUp{to{opacity:1;transform:none}}
-  .hero .lead{font-size:1.12rem;color:#cdd6f0;max-width:480px;margin:34px 0 48px}
+  .hero .lead{font-size:1.12rem;color:#28345f;max-width:480px;margin:32px 0 42px}
   .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
   .hero-cta .btn{padding:15px 30px}
-  .hero .btn-ink{background:#fff;color:var(--navy)}
-  .hero .btn-ink:hover{background:var(--peri-pale,#e9eeff);color:var(--navy)}
-  .hero .arrow-link{color:#e6ebfb}
-  .hero .arrow-link:hover{color:var(--peri)}
-  .hero-meta{display:flex;justify-content:space-between;gap:18px 36px;flex-wrap:wrap;margin-top:58px;padding-top:22px;border-top:1px solid rgba(172,193,255,.24);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:#9fb0dd;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .72s}
+  .hero .btn-ink{background:var(--navy);color:#fff}
+  .hero .btn-ink:hover{background:var(--navy-2);color:#fff}
+  .hero .btn-light{border:1px solid rgba(19,27,54,.5);color:var(--navy)}
+  .hero .btn-light:hover{border-color:var(--navy);color:var(--navy)}
+  .hero-meta{display:flex;justify-content:space-between;gap:14px 36px;flex-wrap:wrap;margin-top:44px;padding-top:20px;border-top:1px solid rgba(19,27,54,.24);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:#33417c;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .72s}
   .hero-sig{display:flex;align-items:center;gap:18px;margin-top:auto;padding-top:64px;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
   .hero-sig::before{content:"";width:44px;height:1px;background:var(--line)}
   .intro{border-top:1px solid var(--line-soft)}
@@ -144,7 +151,7 @@
 
   .marq{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);overflow:hidden;padding:13px 0;white-space:nowrap}
   .marq-in{display:inline-block;animation:marq 46s linear infinite}
-  .marq span{font-family:'Bodoni Moda',serif;font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;padding:0 22px;color:var(--ink-soft)}
+  .marq span{font-family:Georgia,'Times New Roman',serif;font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;padding:0 22px;color:var(--ink-soft)}
   .marq .dot{color:var(--peri-soft);padding:0}
   @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -158,8 +165,10 @@
   .meet-h em{font-style:italic;font-weight:400}
   .meet-spec{grid-area:spec;margin:32px 0 0;padding-top:24px;border-top:1px solid var(--line);max-width:300px;display:flex;flex-direction:column;gap:8px}
   .meet-spec .l1{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);font-weight:500}
-  .meet-spec .l2{font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft)}
-  .meet-p{grid-area:desc;color:var(--ink-soft);max-width:44ch;margin:26px 0 0}
+  .meet-spec .l2{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft)}
+  .meet-p{grid-area:desc;margin:26px 0 0}
+  .meet-p p{color:var(--ink-soft);max-width:52ch;margin-bottom:14px}
+  .meet-p .meet-close{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;color:var(--ink);margin-top:20px}
   .meet-cta{grid-area:cta;margin-top:36px;justify-self:start}
   .meet-cta:hover .ar{transform:translateX(4px)}
   .meet-sig{position:absolute;left:max(-80px,-5vw);bottom:-56px;width:clamp(220px,24vw,340px);height:auto;color:var(--peri);opacity:.09;pointer-events:none;z-index:0}
@@ -195,7 +204,7 @@
   .steps .intro{color:var(--ink-soft);max-width:54ch;margin:26px 0 0}
   .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(32px,4vw,64px);margin-top:clamp(56px,7vw,96px)}
   .step{border-top:1px solid var(--ink);padding-top:28px}
-  .step .n{font-family:'Bodoni Moda',serif;font-size:2.6rem;line-height:1;color:var(--peri);display:block;margin-bottom:18px}
+  .step .n{font-family:Georgia,'Times New Roman',serif;font-size:2.6rem;line-height:1;color:var(--peri);display:block;margin-bottom:18px}
   .step h3{font-size:1.35rem;margin-bottom:10px}
   .step p{color:var(--ink-soft);font-size:.96rem}
 
@@ -204,15 +213,15 @@
   .mrow{display:flex;flex-direction:column;gap:6px;padding:30px 0;border-top:1px solid var(--line)}
   .mrow:last-of-type{border-bottom:1px solid var(--line)}
   .mrow .top{display:flex;align-items:baseline;gap:18px}
-  .mrow .name{font-family:'Bodoni Moda',serif;font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:500}
+  .mrow .name{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:500}
   .mrow .dots{flex:1;border-bottom:1px dotted var(--line)}
-  .mrow .price{font-family:'Bodoni Moda',serif;font-size:clamp(1.3rem,2vw,1.7rem);font-weight:600;white-space:nowrap}
+  .mrow .price{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.3rem,2vw,1.7rem);font-weight:600;white-space:nowrap}
   .mrow .price .from{font-family:'Manrope',sans-serif;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-right:6px;font-weight:400}
   .mrow .sub{font-size:.92rem;color:var(--ink-soft);max-width:64ch}
   .menu-foot{margin-top:clamp(40px,5vw,60px);text-align:center}
 
   .cen-tabs{display:flex;gap:clamp(20px,4vw,44px);margin:clamp(36px,4vw,52px) 0 clamp(28px,3vw,40px);border-bottom:1px solid var(--line)}
-  .cen-tab{background:none;border:0;cursor:pointer;font-family:'Bodoni Moda',serif;font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;color:var(--ink-soft);padding:0 2px 16px;border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .3s,border-color .3s}
+  .cen-tab{background:none;border:0;cursor:pointer;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;color:var(--ink-soft);padding:0 2px 16px;border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .3s,border-color .3s}
   .cen-tab.on{color:var(--ink);border-color:var(--ink)}
   .cgroup{margin-bottom:clamp(36px,4vw,56px)}
   .cgroup:last-child{margin-bottom:0}
@@ -221,7 +230,7 @@
   .clist li{display:flex;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px solid var(--line-soft)}
   .clist .name{font-size:1rem}
   .clist .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:20px}
-  .clist .price{font-family:'Bodoni Moda',serif;font-size:1.25rem;font-weight:600;white-space:nowrap}
+  .clist .price{font-family:Georgia,'Times New Roman',serif;font-size:1.25rem;font-weight:600;white-space:nowrap}
   .clist .from{font-family:'Manrope',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-right:4px;font-weight:400}
   .cen-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
   .htable{width:100%;border-collapse:collapse}
@@ -229,7 +238,7 @@
   .htable th:first-child{text-align:left}
   .htable td{padding:12px 6px;border-bottom:1px solid var(--line-soft);font-size:.98rem;text-align:right}
   .htable td:first-child{text-align:left}
-  .htable td.pr{font-family:'Bodoni Moda',serif;font-size:1.2rem;font-weight:600;white-space:nowrap}
+  .htable td.pr{font-family:Georgia,'Times New Roman',serif;font-size:1.2rem;font-weight:600;white-space:nowrap}
   .htable td.na{color:var(--ink-soft);opacity:.4}
   .htable .cat td{padding-top:30px;border-bottom:1px solid var(--line);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--peri);text-align:left}
   .htable tr:last-child td{border-bottom:0}
@@ -244,7 +253,7 @@
   .case--flip .case-meta{order:2;text-align:right}
   .case--flip .case-meta .sec-ix{justify-content:flex-end}
   .case-meta{position:sticky;top:130px}
-  .case-meta .big{font-family:'Bodoni Moda',serif;font-size:clamp(3.6rem,7vw,6.4rem);line-height:1;color:var(--ink)}
+  .case-meta .big{font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.6rem,7vw,6.4rem);line-height:1;color:var(--ink)}
   .case-meta .lab{display:block;font-size:.64rem;letter-spacing:.4em;text-transform:uppercase;color:var(--peri);margin-top:14px}
   .case-meta .desc{font-size:.9rem;color:var(--ink-soft);max-width:26ch;margin-top:22px}
   .case--flip .case-meta .desc{margin-left:auto}
@@ -273,6 +282,12 @@
     .case .ba,.case--flip .ba{margin:0;max-width:none;justify-self:stretch}
   }
 
+  .op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:10px}
+  .op-card{background:#fff;border:1px solid var(--line);padding:38px 34px;margin:0;display:flex;flex-direction:column;gap:18px}
+  .op-card blockquote{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;line-height:1.55;color:var(--ink)}
+  .op-card.ph blockquote{color:var(--ink-soft);opacity:.7}
+  .op-card figcaption{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--peri-deep,#7d97e8)}
+  @media(max-width:900px){.op-grid{grid-template-columns:1fr}}
   .voucher{background:var(--navy);color:#fff}
   .vo-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,7vw,110px);align-items:center}
   .vo-copy .label{display:block;color:var(--peri-soft);margin-bottom:28px}
@@ -283,21 +298,21 @@
   @media(prefers-reduced-motion:reduce){.vo-card{animation:none}}
   .vo-card::before{content:"";position:absolute;inset:14px;border:1px solid rgba(174,190,242,.22)}
   .vo-card .mgm{width:54px;color:var(--peri-soft)}
-  .vo-card .t{font-family:'Bodoni Moda',serif;font-size:1.4rem;letter-spacing:.42em;text-transform:uppercase;margin-top:16px;padding-left:.42em}
-  .vo-card .s{font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.1rem;color:var(--peri-soft)}
+  .vo-card .t{font-family:Georgia,'Times New Roman',serif;font-size:1.4rem;letter-spacing:.42em;text-transform:uppercase;margin-top:16px;padding-left:.42em}
+  .vo-card .s{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;color:var(--peri-soft)}
   .vo-card .m{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:#8e9cd0;margin-top:18px}
 
   .final{text-align:center;background:radial-gradient(60% 70% at 50% 100%,#eef4fe 0%,rgba(238,244,254,0) 70%)}
   .final h2{font-size:clamp(3rem,7vw,6rem)}
   .final p{color:var(--ink-soft);max-width:46ch;margin:28px auto 48px}
   .final .tels{display:flex;justify-content:center;gap:clamp(28px,5vw,64px);flex-wrap:wrap;margin-top:60px}
-  .final .tels a{font-family:'Bodoni Moda',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500}
+  .final .tels a{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500}
   .final .addr{margin-top:26px;font-size:.86rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
 
   footer{border-top:1px solid var(--line-soft);padding:clamp(56px,7vw,88px) 0 36px}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(32px,4vw,64px)}
   .foot-brand .mgm{width:30px;color:var(--peri-soft);margin-bottom:18px}
-  .foot-brand .bt{font-family:'Bodoni Moda',serif;font-size:1.2rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
+  .foot-brand .bt{font-family:Georgia,'Times New Roman',serif;font-size:1.2rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
   .foot-brand p{font-size:.9rem;color:var(--ink-soft);margin-top:16px}
   .foot-brand b{font-weight:400;color:var(--ink)}
   .foot-col h4{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--peri);margin-bottom:18px;font-weight:400}
@@ -332,20 +347,21 @@
   @media(max-width:1140px){
     .navlinks{position:fixed;inset:76px 0 0 0;height:calc(100dvh - 76px);background:var(--bg);flex-direction:column;gap:0;padding:28px 0 40px;transform:translateY(-105%);transition:transform .45s cubic-bezier(.22,1,.36,1);align-items:flex-start;overflow-y:auto;visibility:hidden}
     .navlinks.open{transform:none;visibility:visible}
-    .navlinks a{padding:16px 24px;width:100%;font-family:'Bodoni Moda',serif;font-size:1.7rem;letter-spacing:.04em;text-transform:none;color:var(--ink);border-bottom:1px solid var(--line-soft)}
+    .navlinks a{padding:16px 24px;width:100%;font-family:Georgia,'Times New Roman',serif;font-size:1.7rem;letter-spacing:.04em;text-transform:none;color:var(--ink);border-bottom:1px solid var(--line-soft)}
     .navlinks .cta{border-bottom:0;color:var(--peri);margin-top:16px;font-size:1.4rem;font-style:italic}
     .burger{display:flex}
     .nav-book{display:inline-block}
     .fab{display:inline-flex}
     .hero{min-height:auto}
-    .hero-copy{padding:52px clamp(24px,5vw,48px) 48px;margin-left:0;width:100%;max-width:680px}
-    .hero-chips{margin-bottom:26px}
+    .hero-in{flex-direction:column;align-items:stretch;gap:10px;padding:40px 24px 48px}
+    .hero-copy{width:100%;max-width:680px}
+    .hero-photo{flex:0 0 auto;width:min(70vw,330px);margin:30px auto 0}
     .hero h1{font-size:clamp(2.2rem,6.6vw,3.4rem)}
     .hero h1 .it:nth-child(3){margin-top:16px}
     .hero .lead{font-size:1rem;margin:20px 0 34px;max-width:40ch}
     .hero-cta{gap:24px}
     .hero-art{width:100%}
-    .hero-field{background:linear-gradient(215deg,rgba(37,49,92,.6) 0%,rgba(37,49,92,.25) 36%,rgba(19,27,54,0) 62%)}
+    .hero-field{background:none}
     .kv-halo{width:min(52vw,440px);right:-12%;top:52%;transform:translateY(-50%)}
     .hero-hair{display:none}
     .hero-mark{width:min(32vw,300px);right:clamp(-30px,1vw,40px);top:52%}
@@ -364,7 +380,10 @@
     .brand{gap:9px}
     .brand .bt{font-size:.86rem;letter-spacing:.15em}
     .nav-book{padding:10px 12px}
-    .hero-copy{padding:44px 24px 40px;max-width:none}
+    .hero-copy{max-width:none}
+    .hero-in{padding:36px 24px 44px}
+    .hero-photo{width:min(82vw,320px)}
+    .hero-bubbles{gap:16px;justify-content:flex-start}
     .hero h1{font-size:clamp(2.15rem,9vw,2.6rem)}
     .hero .lead{max-width:32ch;margin:18px 0 28px}
     .hero-cta{flex-direction:column;align-items:stretch;gap:18px}
@@ -425,6 +444,7 @@
       <a href="#oferta">Oferta</a>
       <a href="#cennik">Cennik</a>
       <a href="#metamorfozy">Metamorfozy</a>
+      <a href="#opinie">Opinie</a>
       <a href="#o-mnie">O mnie</a>
       <a href="#voucher">Voucher</a>
       <a href="#kontakt">Kontakt</a>
@@ -443,18 +463,23 @@
   <div class="hero-art" aria-hidden="true">
     <div class="hero-field"></div>
     <div class="kv-halo"></div>
-    <svg class="hero-mark" viewBox="290 215 360 425" style="color:#a2bcf6" aria-hidden="true"><use href="#mgm-v2"></use></svg>
   </div>
-  <div class="hero-hair" aria-hidden="true"></div>
-  <div class="hero-copy">
-    <div class="hero-chips"><span>Kosmetologia</span><span>Trychologia</span><span>Fryzjerstwo</span></div>
-    <h1><span class="hl-line">Zdrowa skóra.</span><span class="hl-line">Zadbane włosy.</span><span class="hl-line it"><em>Piękno, które</em></span><span class="hl-line it"><em>zaczyna się od Ciebie.</em></span></h1>
-    <p class="lead">Indywidualna pielęgnacja skóry, skóry głowy i włosów, oparta na wiedzy, doświadczeniu i potrzebach Twojej skóry.</p>
-    <div class="hero-cta">
-      <a href="tel:+48514330140" class="btn btn-ink">Umów wizytę <span class="ar" aria-hidden="true">→</span></a>
-      <a href="#oferta" class="btn btn-light">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
+  <div class="hero-in">
+    <div class="hero-copy">
+      <h1><span class="hl-line">Zdrowa skóra.</span><span class="hl-line">Zadbane włosy.</span><span class="hl-line it"><em>Piękno, które</em></span><span class="hl-line it"><em>zaczyna się od Ciebie.</em></span></h1>
+      <p class="lead">Indywidualna pielęgnacja skóry, skóry głowy i włosów, oparta na wiedzy, doświadczeniu i potrzebach Twojej skóry.</p>
+      <div class="hero-cta">
+        <a href="tel:+48514330140" class="btn btn-ink">Umów wizytę <span class="ar" aria-hidden="true">→</span></a>
+        <a href="#oferta" class="btn btn-light">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-bubbles">
+        <a class="bub" href="#cennik"><span class="bimg"><img src="img/zabieg-kosmetologia.jpg" alt="Kosmetologia — stylizacja brwi i rzęs" width="1400" height="1867"></span><span class="bl">Kosmetologia</span></a>
+        <a class="bub" href="#cennik" data-tab="1"><span class="bimg"><img src="img/fryzjerstwo.jpg" alt="Fryzjerstwo — upięcie okolicznościowe" width="1200" height="1600"></span><span class="bl">Fryzjerstwo</span></a>
+        <a class="bub" href="#cennik" data-tab="1"><span class="bimg"><img src="img/zabieg-trychologia.jpg" alt="Trychologia — terapia skóry" width="1100" height="1375"></span><span class="bl">Trychologia</span></a>
+      </div>
+      <div class="hero-meta"><span>Sara Dąbrowska · mgr kosmetologii · trycholog</span><span>Ludwików 1P · Skierniewice</span></div>
     </div>
-    <div class="hero-meta"><span>Sara Dąbrowska · mgr kosmetologii · trycholog</span><span>Ludwików 1P · Skierniewice</span></div>
+    <div class="hero-photo"><img src="img/sara-portret.jpg" alt="Sara Dąbrowska w gabinecie" width="1200" height="1800"></div>
   </div>
 </section>
 
@@ -486,7 +511,13 @@
       </div>
       <h2 class="meet-h reveal">Nazywam się<br><em>Sara Dąbrowska.</em></h2>
       <div class="meet-spec reveal" style="transition-delay:.12s"><span class="l1">Magister kosmetologii</span><span class="l2">specjalizacja · trychologia</span></div>
-      <p class="meet-p reveal" style="transition-delay:.2s">Łączę kosmetologię i trychologię, patrząc na skórę i włosy kompleksowo. Każdą pielęgnację dobieram indywidualnie, opierając ją na wiedzy, doświadczeniu i realnych potrzebach.</p>
+      <div class="meet-p reveal" style="transition-delay:.2s">
+        <p>Jestem magistrem kosmetologii, a swoją pracę traktuję nie tylko jako zawód, ale przede wszystkim jako pasję. Od lat rozwijam się w dziedzinie kosmetologii, fryzjerstwa i trychologii, łącząc zdobytą wiedzę z praktycznym doświadczeniem.</p>
+        <p>Największą satysfakcję daje mi możliwość wykonywania pracy, którą naprawdę lubię, oraz obserwowanie efektów, jakie wspólnie z moimi klientami możemy osiągnąć.</p>
+        <p>Branża beauty nieustannie się zmienia — pojawiają się nowe technologie, urządzenia, preparaty i metody pracy. Dlatego nie stoję w miejscu: regularnie się szkolę i rozwijam umiejętności, aby świadomie korzystać z możliwości, jakie daje nowoczesna kosmetologia, trychologia i fryzjerstwo.</p>
+        <p>Wierzę, że wykształcenie daje solidne podstawy, ale prawdziwe doświadczenie buduje się każdego dnia — praktyką, ciągłą nauką i tysiącami godzin pracy. W tym zawodzie nie ma momentu, w którym wie się już wszystko. Technologia idzie naprzód, a ja razem z nią.</p>
+        <p class="meet-close">Sara's Beauty to miejsce stworzone z wiedzy, doświadczenia i pasji do piękna.</p>
+      </div>
       <a href="#kontakt" class="arrow-link meet-cta reveal" style="transition-delay:.3s">Poznaj mnie lepiej <span class="ar" aria-hidden="true">→</span></a>
     </div>
   </div>
@@ -524,7 +555,7 @@
           <div class="odesc">
             <div class="ophoto"><img src="img/zabieg-trychologia.jpg" alt="Efekt terapii skóry — przed i po" width="1100" height="1375" loading="lazy"></div>
             <p>Profesjonalna pielęgnacja skóry głowy i włosów oraz zabiegi trychologiczne wspierające ich zdrowie i kondycję.</p>
-            <a href="#cennik" class="arrow-link">Poznaj trychologię <span class="ar" aria-hidden="true">→</span></a>
+            <a href="#cennik" class="arrow-link" data-tab="1">Poznaj trychologię <span class="ar" aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="orow" data-off="2">
@@ -533,7 +564,7 @@
           <div class="odesc">
             <div class="ophoto"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></div>
             <p>Strzyżenie, koloryzacja, dekoloryzacja oraz profesjonalna pielęgnacja włosów.</p>
-            <a href="#cennik" class="arrow-link">Zobacz usługi <span class="ar" aria-hidden="true">→</span></a>
+            <a href="#cennik" class="arrow-link" data-tab="1">Zobacz usługi <span class="ar" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -609,17 +640,30 @@
             </ul>
           </div>
         </div>
-        <div class="cgroup">
+        <div>
+          <div class="cgroup">
           <h3>Zabiegi na twarz</h3>
           <ul class="clist">
             <li><span class="name">Oczyszczanie wodorowe</span><span class="dots"></span><span class="price">220 zł</span></li>
             <li><span class="name">Oczyszczanie manualne</span><span class="dots"></span><span class="price"><span class="from">od</span>200 zł</span></li>
             <li><span class="name">Kwasy</span><span class="dots"></span><span class="price">200–350 zł</span></li>
             <li><span class="name">Retinol</span><span class="dots"></span><span class="price">300 zł</span></li>
-            <li><span class="name">Mezoterapia twarzy</span><span class="dots"></span><span class="price">300 zł</span></li>
-            <li><span class="name">Mezoterapia twarzy + szyja</span><span class="dots"></span><span class="price">350 zł</span></li>
-            <li><span class="name">Mezoterapia twarzy + szyja + dekolt</span><span class="dots"></span><span class="price">400 zł</span></li>
+            <li><span class="name">Mezoterapia mikroigłowa twarzy</span><span class="dots"></span><span class="price">300 zł</span></li>
+            <li><span class="name">Mezoterapia mikroigłowa twarzy + szyja</span><span class="dots"></span><span class="price">350 zł</span></li>
+            <li><span class="name">Mezoterapia mikroigłowa twarzy + szyja + dekolt</span><span class="dots"></span><span class="price">400 zł</span></li>
           </ul>
+          </div>
+          <div class="cgroup">
+            <h3>Nitkowanie</h3>
+            <ul class="clist">
+              <li><span class="name">Nitkowanie górnej wargi</span><span class="dots"></span><span class="price">30 zł</span></li>
+              <li><span class="name">Nitkowanie brody</span><span class="dots"></span><span class="price">40 zł</span></li>
+              <li><span class="name">Nitkowanie policzków</span><span class="dots"></span><span class="price">40 zł</span></li>
+              <li><span class="name">Nitkowanie szyi</span><span class="dots"></span><span class="price">50 zł</span></li>
+              <li><span class="name">Cała twarz z brwiami</span><span class="dots"></span><span class="price">150 zł</span></li>
+              <li><span class="name">Cała twarz bez brwi</span><span class="dots"></span><span class="price">100 zł</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -648,7 +692,7 @@
           <tr><td>Keratyna</td><td class="pr">400 zł</td><td class="pr">500 zł</td><td class="pr">600 zł</td></tr>
           <tr><td>Krioterapia</td><td class="pr">200 zł</td><td class="pr">250 zł</td><td class="pr">300 zł</td></tr>
           <tr><td>Regeneracja botox</td><td class="pr">200 zł</td><td class="pr">300 zł</td><td class="pr">400 zł</td></tr>
-          <tr><td>Mezoterapia skóry głowy</td><td class="pr">350 zł</td><td class="na">—</td><td class="na">—</td></tr>
+          <tr><td>Mezoterapia mikroigłowa skóry głowy</td><td class="pr">350 zł</td><td class="na">—</td><td class="na">—</td></tr>
           <tr><td>Prądy na skórę głowy</td><td class="pr">30 zł</td><td class="na">—</td><td class="na">—</td></tr>
           <tr><td>Infuzja tlenowa głowy</td><td class="pr">80 zł</td><td class="na">—</td><td class="na">—</td></tr>
           <tr><td>Peeling skóry głowy</td><td class="pr">70 zł</td><td class="na">—</td><td class="na">—</td></tr>
@@ -701,6 +745,20 @@
           <span class="tag tag-a">Po</span>
           <input type="range" min="0" max="100" value="50" aria-label="Porównanie przed i po — przesuń">
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="opinie" style="background:#fafbfd;border-top:1px solid var(--line-soft)">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-ix"><span class="n">05</span><span class="rule"></span><span class="label">Opinie</span></div>
+      <h2 style="font-size:clamp(2.4rem,4.4vw,4rem)">Co mówią klientki</h2>
+    </div>
+    <div class="op-grid">
+      <figure class="op-card ph reveal"><blockquote>„Tu pojawi się pierwsza opinia — czekamy na ulubione słowa klientek z Instagrama lub wizytówki Google."</blockquote><figcaption>Miejsce na opinię</figcaption></figure>
+      <figure class="op-card ph reveal"><blockquote>„Tu pojawi się druga opinia klientki Sara's Beauty."</blockquote><figcaption>Miejsce na opinię</figcaption></figure>
+      <figure class="op-card ph reveal"><blockquote>„Tu pojawi się trzecia opinia klientki Sara's Beauty."</blockquote><figcaption>Miejsce na opinię</figcaption></figure>
     </div>
   </div>
 </section>
@@ -762,6 +820,7 @@
         <a href="#oferta">Oferta</a>
         <a href="#cennik">Cennik</a>
         <a href="#o-mnie">O mnie</a>
+        <a href="#opinie">Opinie</a>
         <a href="#voucher">Voucher</a>
         <a href="#kontakt">Kontakt</a>
       </div>
@@ -809,6 +868,10 @@
       tabs.forEach(function(b,j){b.classList.toggle('on',i===j);b.setAttribute('aria-selected',i===j?'true':'false')});
       panels.forEach(function(p,j){p.hidden=(i!==j)});
     });
+  });
+
+  document.querySelectorAll('a[data-tab]').forEach(function(a){
+    a.addEventListener('click',function(){var i=+a.dataset.tab; if(tabs[i]) tabs[i].click();});
   });
 
   document.querySelectorAll('.ba').forEach(function(ba){
