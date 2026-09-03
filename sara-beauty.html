@@ -159,7 +159,7 @@
   .meet{background:#fafbfd;position:relative;overflow:hidden}
   .meet .sec-ix{margin-bottom:clamp(40px,5vw,64px)}
   .meet-grid{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);column-gap:clamp(48px,7vw,110px);grid-template-areas:"photo head" "photo spec" "photo desc" "photo cta" "photo .";align-items:start;position:relative;z-index:1}
-  .meet-photo{grid-area:photo;aspect-ratio:4/5;position:relative;width:min(100%,380px);justify-self:start;margin:clamp(16px,3vw,44px) 0 0 clamp(0px,3vw,48px)}
+  .meet-photo{grid-area:photo;aspect-ratio:4/5;position:relative;width:100%;max-width:480px;justify-self:start;margin:clamp(12px,2vw,28px) 0 0 0}
   .meet-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .meet-h{grid-area:head;font-size:clamp(2.2rem,3.6vw,3.4rem);line-height:1.12}
   .meet-h em{font-style:italic;font-weight:400}
@@ -168,7 +168,10 @@
   .meet-spec .l2{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft)}
   .meet-p{grid-area:desc;margin:26px 0 0}
   .meet-p p{color:var(--ink-soft);max-width:52ch;margin-bottom:14px}
-  .meet-p .meet-close{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;color:var(--ink);margin-top:20px}
+  .meet-more{margin-top:clamp(40px,5vw,64px);padding-top:clamp(28px,4vw,40px);border-top:1px solid var(--line-soft);position:relative;z-index:1;columns:2;column-gap:clamp(40px,5vw,72px)}
+  .meet-more p{color:var(--ink-soft);margin-bottom:14px;break-inside:avoid;max-width:60ch}
+  .meet-more .meet-close{column-span:all;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--ink);margin-top:26px;max-width:none;text-align:center}
+  @media(max-width:900px){.meet-more{columns:1}.meet-more .meet-close{text-align:left}}
   .meet-cta{grid-area:cta;margin-top:36px;justify-self:start}
   .meet-cta:hover .ar{transform:translateX(4px)}
   .meet-sig{position:absolute;left:max(-80px,-5vw);bottom:-56px;width:clamp(220px,24vw,340px);height:auto;color:var(--peri);opacity:.09;pointer-events:none;z-index:0}
@@ -327,10 +330,10 @@
   @media(max-width:1000px){
     .vo-grid{grid-template-columns:1fr;gap:44px}
     .meet-eyebrow{text-align:left;margin-bottom:28px}
-    .meet-grid{grid-template-columns:minmax(0,320px) 1fr;column-gap:clamp(32px,5vw,56px);grid-template-areas:"head head" "photo spec" "photo desc" "photo cta" "photo ."}
+    .meet-grid{grid-template-columns:minmax(0,44%) 1fr;column-gap:clamp(32px,5vw,56px);grid-template-areas:"head head" "photo spec" "photo desc" "photo cta" "photo ."}
     .meet-h{font-size:clamp(2rem,7.6vw,2.6rem)}
     .meet-spec{margin-top:24px;padding-top:22px}
-    .meet-photo{width:100%;max-width:320px;margin:34px 0 0;justify-self:start}
+    .meet-photo{width:100%;max-width:none;margin:30px 0 0;justify-self:start}
     .meet-p{margin-top:34px}
     .meet-cta{margin-top:30px}
     .meet-sig{width:180px;left:-50px;bottom:-36px;opacity:.07}
@@ -517,11 +520,13 @@
       <div class="meet-p reveal" style="transition-delay:.2s">
         <p>Jestem magistrem kosmetologii, a swoją pracę traktuję nie tylko jako zawód, ale przede wszystkim jako pasję. Od lat rozwijam się w dziedzinie kosmetologii, fryzjerstwa i trychologii, łącząc zdobytą wiedzę z praktycznym doświadczeniem.</p>
         <p>Największą satysfakcję daje mi możliwość wykonywania pracy, którą naprawdę lubię, oraz obserwowanie efektów, jakie wspólnie z moimi klientami możemy osiągnąć.</p>
-        <p>Branża beauty nieustannie się zmienia — pojawiają się nowe technologie, urządzenia, preparaty i metody pracy. Dlatego nie stoję w miejscu: regularnie się szkolę i rozwijam umiejętności, aby świadomie korzystać z możliwości, jakie daje nowoczesna kosmetologia, trychologia i fryzjerstwo.</p>
-        <p>Wierzę, że wykształcenie daje solidne podstawy, ale prawdziwe doświadczenie buduje się każdego dnia — praktyką, ciągłą nauką i tysiącami godzin pracy. W tym zawodzie nie ma momentu, w którym wie się już wszystko. Technologia idzie naprzód, a ja razem z nią.</p>
-        <p class="meet-close">Sara's Beauty to miejsce stworzone z wiedzy, doświadczenia i pasji do piękna.</p>
       </div>
       <a href="#kontakt" class="arrow-link meet-cta reveal" style="transition-delay:.3s">Poznaj mnie lepiej <span class="ar" aria-hidden="true">→</span></a>
+    </div>
+    <div class="meet-more reveal">
+      <p>Branża beauty nieustannie się zmienia — pojawiają się nowe technologie, urządzenia, preparaty i metody pracy. Dlatego nie stoję w miejscu: regularnie się szkolę i rozwijam umiejętności, aby świadomie korzystać z możliwości, jakie daje nowoczesna kosmetologia, trychologia i fryzjerstwo.</p>
+      <p>Wierzę, że wykształcenie daje solidne podstawy, ale prawdziwe doświadczenie buduje się każdego dnia — praktyką, ciągłą nauką i tysiącami godzin pracy. W tym zawodzie nie ma momentu, w którym wie się już wszystko. Technologia idzie naprzód, a ja razem z nią.</p>
+      <p class="meet-close">Sara's Beauty to miejsce stworzone z wiedzy, doświadczenia i pasji do piękna.</p>
     </div>
   </div>
   <svg class="meet-sig" viewBox="290 215 360 425" aria-hidden="true"><use href="#mgm-v2"></use></svg>
