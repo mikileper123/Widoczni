@@ -106,7 +106,7 @@
   .hero-art::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.55) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:radial-gradient(62% 72% at 68% 50%,#000 18%,transparent 74%);mask-image:radial-gradient(62% 72% at 68% 50%,#000 18%,transparent 74%)}
   .hero-art::after{content:"";position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' sc-camel-base-frequency='0.9' sc-camel-num-octaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
   .hero-hair{display:none}
-  .hero-mark{position:absolute;display:block;right:clamp(-60px,1vw,60px);top:52%;width:clamp(380px,34vw,580px);height:auto;transform:translateY(-48%);filter:drop-shadow(0 0 90px rgba(147,172,240,.5));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .4s,markFloat 12s ease-in-out 1.7s infinite;opacity:.95}
+  .hero-mark{position:absolute;display:block;right:clamp(-60px,1vw,60px);top:52%;width:clamp(380px,34vw,580px);height:auto;transform:translateY(-48%);filter:drop-shadow(0 24px 60px rgba(19,27,54,.18));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .4s,markFloat 12s ease-in-out 1.7s infinite;opacity:.85}
   @keyframes markIn{from{opacity:0;transform:translateY(-46%) scale(.97)}to{opacity:1;transform:translateY(-46%) scale(1)}}
   @keyframes markFloat{0%,100%{transform:translateY(-46%)}50%{transform:translateY(calc(-46% - 5px))}}
   @keyframes markInM{from{opacity:0;transform:scale(.97)}to{opacity:.3;transform:scale(1)}}
@@ -359,7 +359,6 @@
     .hero{min-height:auto}
     .hero-in{flex-direction:column;align-items:stretch;gap:10px;padding:40px 24px 48px}
     .hero-copy{width:100%;max-width:680px}
-    .hero-photo{flex:0 0 auto;width:min(70vw,330px);margin:30px auto 0}
     .hero h1{font-size:clamp(2.2rem,6.6vw,3.4rem)}
     .hero h1 .it:nth-child(3){margin-top:16px}
     .hero .lead{font-size:1rem;margin:20px 0 34px;max-width:40ch}
@@ -386,7 +385,6 @@
     .nav-book{padding:10px 12px}
     .hero-copy{max-width:none}
     .hero-in{padding:36px 24px 44px}
-    .hero-photo{width:min(82vw,320px)}
     .hero-bubbles{gap:16px;justify-content:flex-start}
     .hero h1{font-size:clamp(2.15rem,9vw,2.6rem)}
     .hero .lead{max-width:32ch;margin:18px 0 28px}
@@ -469,6 +467,7 @@
   <div class="hero-art" aria-hidden="true">
     <div class="hero-field"></div>
     <div class="kv-halo"></div>
+    <svg class="hero-mark" viewBox="290 215 360 425" style="color:#fff" aria-hidden="true"><use href="#mgm-v2"></use></svg>
   </div>
   <div class="hero-in">
     <div class="hero-copy">
@@ -485,7 +484,6 @@
       </div>
       <div class="hero-meta"><span>Sara Dąbrowska · mgr kosmetologii · trycholog</span><span>Ludwików 1P · Skierniewice</span></div>
     </div>
-    <div class="hero-photo"><img src="img/sara-portret.jpg" alt="Sara Dąbrowska — portret" width="819" height="1024"></div>
   </div>
 </section>
 
