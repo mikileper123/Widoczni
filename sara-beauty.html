@@ -298,7 +298,15 @@
   .vo-copy .label{display:block;color:var(--peri-soft);margin-bottom:28px}
   .vo-copy h2{font-size:clamp(2.6rem,4.8vw,4.4rem)}
   .vo-copy p{color:#b9c3e6;max-width:44ch;margin:26px 0 40px}
-  .vo-img{display:block;width:min(100%,320px);height:auto;margin:0 auto;border-radius:10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
+  .vo-pair{display:flex;justify-content:center;align-items:flex-start;gap:clamp(16px,2.4vw,32px)}
+  .vo-side{margin:0;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .vo-side img{display:block;width:100%;max-width:255px;height:auto;border-radius:10px;box-shadow:0 34px 70px -28px rgba(0,0,0,.6);transition:transform .45s cubic-bezier(.22,1,.36,1)}
+  .vo-side figcaption{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:#9fb0dd}
+  .vo-front img{transform:rotate(-3deg)}
+  .vo-back img{transform:rotate(3deg)}
+  .vo-pair:hover .vo-front img{transform:rotate(-1.5deg) translateY(-6px)}
+  .vo-pair:hover .vo-back img{transform:rotate(1.5deg) translateY(-6px)}
+  @media(prefers-reduced-motion:reduce){.vo-side img{transition:none}}
   .vo-card{aspect-ratio:8/5;max-width:520px;margin:0 auto;position:relative;background:linear-gradient(135deg,#1b2547 0%,#161f3e 55%,#1e2a52 100%);border:1px solid rgba(174,190,242,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;animation:voFloat 9s ease-in-out infinite}
   @keyframes voFloat{0%,100%{transform:translateY(0) rotate(-.4deg)}50%{transform:translateY(-9px) rotate(.4deg)}}
   @media(prefers-reduced-motion:reduce){.vo-card{animation:none}}
@@ -418,8 +426,8 @@
     .clist .name{font-size:.92rem}
     .clist .price{font-size:1.1rem}
     .vo-copy h2{font-size:clamp(2rem,8.6vw,2.6rem)}
-    .vo-img{display:block;width:min(100%,320px);height:auto;margin:0 auto;border-radius:10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
-  .vo-card{max-width:none}
+    .vo-pair{gap:12px}
+    .vo-side img{max-width:none}
     .final h2{font-size:clamp(2.3rem,10vw,3rem)}
     .final .tels a{font-size:1.5rem}
     .foot-grid{grid-template-columns:1fr;gap:30px}
@@ -817,7 +825,16 @@
       <a href="tel:+48514330140" class="btn btn-light">Dowiedz się więcej <span class="ar" aria-hidden="true">→</span></a>
     </div>
     <div class="reveal">
-      <img class="vo-img" src="img/voucher.jpg" alt="Voucher podarunkowy Sara's Beauty" width="640" height="1316" loading="lazy">
+      <div class="vo-pair">
+        <figure class="vo-side vo-front">
+          <img src="img/voucher-front.jpg" alt="Voucher podarunkowy Sara's Beauty — awers z monogramem" width="640" height="1316" loading="lazy">
+          <figcaption>Awers</figcaption>
+        </figure>
+        <figure class="vo-side vo-back">
+          <img src="img/voucher-back.jpg" alt="Voucher podarunkowy Sara's Beauty — rewers z miejscem na dane" width="640" height="1316" loading="lazy">
+          <figcaption>Rewers</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
