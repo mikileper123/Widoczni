@@ -55,7 +55,7 @@
   .sec-ix .label{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
   section > .wrap > h2{font-size:clamp(2.2rem,4.4vw,3.4rem);color:var(--navy);margin-bottom:clamp(36px,5vw,56px)}
 
-  .tx{padding:clamp(34px,4vw,46px) 0;border-top:1px solid var(--line-soft)}
+  .tx{scroll-margin-top:96px;padding:clamp(34px,4vw,46px) 0;border-top:1px solid var(--line-soft)}
   .tx:first-of-type{border-top:0}
   .tx h3{font-size:clamp(1.5rem,2.6vw,1.9rem);color:var(--navy);margin-bottom:8px}
   .tx .tag{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.08rem;color:#5b6ba8;margin-bottom:18px}
@@ -118,7 +118,7 @@
     <div class="sec-ix"><span class="n">01</span><span class="rule"></span><span class="label">Kosmetologia</span></div>
     <h2>Pielęgnacja twarzy</h2>
 
-    <article class="tx">
+    <article class="tx" id="oczyszczanie-wodorowe">
       <h3>Oczyszczanie wodorowe — pełny zabieg wieloetapowy</h3>
       <p class="tag">Głębokie oczyszczenie, odświeżenie i kompleksowa pielęgnacja skóry w jednym zabiegu.</p>
       <p>Pełne oczyszczanie wodorowe to rozbudowany, wieloetapowy zabieg, który łączy dokładne oczyszczanie skóry z jej pielęgnacją, nawilżeniem i odświeżeniem. Poszczególne etapy dobierane są do aktualnego stanu i potrzeb skóry.</p>
@@ -138,7 +138,7 @@
       <p class="close">To doskonały zabieg dla osób, które oczekują czegoś więcej niż podstawowego oczyszczania — kompleksowej pielęgnacji podczas jednej wizyty.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="oczyszczanie-manualne">
       <h3>Oczyszczanie manualne twarzy</h3>
       <p class="tag">Dokładne oczyszczenie skóry z zaskórników i nagromadzonych zanieczyszczeń.</p>
       <p>Oczyszczanie manualne to zabieg przeznaczony szczególnie dla skóry zanieczyszczonej, z zaskórnikami, rozszerzonymi porami oraz tendencją do powstawania niedoskonałości.</p>
@@ -154,7 +154,7 @@
       <p class="note">Zabieg oraz jego poszczególne etapy zawsze dobieramy indywidualnie do aktualnego stanu skóry.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="kwasy">
       <h3>Kwasy — indywidualnie dobrana terapia skóry</h3>
       <p class="tag">Zabieg dopasowany do potrzeb i aktualnej kondycji Twojej skóry.</p>
       <p>Zabiegi z wykorzystaniem kwasów dobierane są indywidualnie po wcześniejszej ocenie i diagnozie skóry twarzy. Rodzaj preparatu, jego stężenie oraz sposób zastosowania zależą od problemu, nad którym chcemy pracować.</p>
@@ -172,7 +172,7 @@
       <p class="close">Nie każda skóra potrzebuje tego samego kwasu. Dlatego terapię dobieramy do jej charakteru, potrzeb oraz oczekiwanego efektu, a w przypadku terapii wymagających serii ustalamy indywidualny plan zabiegowy.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="retinol">
       <h3>Retinol — intensywna odnowa skóry</h3>
       <p class="tag">Regeneracja, wygładzenie i poprawa jakości skóry.</p>
       <p>Zabieg z retinolem to intensywna terapia wspierająca naturalne procesy odnowy skóry. Polecany jest szczególnie przy oznakach starzenia, przebarwieniach, nierównym kolorycie i strukturze skóry, niedoskonałościach oraz utracie jędrności i blasku.</p>
@@ -190,7 +190,7 @@
       <p class="note">Po zabiegu może wystąpić przejściowe przesuszenie, zaczerwienienie lub złuszczanie naskórka — jest to zależne od zastosowanego preparatu i reakcji skóry.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="mezoterapia">
       <h3>Mezoterapia mikroigłowa</h3>
       <p class="tag">Intensywna regeneracja i pobudzenie naturalnych procesów odnowy skóry.</p>
       <p>Mezoterapia mikroigłowa polega na kontrolowanym mikronakłuwaniu skóry, które stymuluje jej naturalne procesy regeneracyjne oraz wspiera produkcję kolagenu i elastyny. Podczas zabiegu stosowane są odpowiednio dobrane preparaty dostosowane do potrzeb skóry.</p>
@@ -208,7 +208,7 @@
       <p class="note">Liczba oraz częstotliwość zabiegów dobierana jest indywidualnie do potrzeb i kondycji skóry.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="laser">
       <h3>Laserowe usuwanie zmian — naczynka, pajączki, rubinki i włókniaki</h3>
       <p class="tag">Gładka, jednolita i estetycznie wyglądająca skóra bez niechcianych zmian.</p>
       <p>Precyzyjne zabiegi laserowe pozwalają zmniejszyć widoczność drobnych zmian, które zaburzają estetyczny wygląd skóry. Zabieg dobierany jest indywidualnie w zależności od rodzaju, wielkości i lokalizacji zmiany.</p>
@@ -223,7 +223,7 @@
       <p class="note">Każda zmiana przed zabiegiem podlega ocenie. W przypadku zmian budzących wątpliwości konieczna jest wcześniejsza konsultacja dermatologiczna.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="koloryzacja-brwi">
       <h3>Koloryzacja brwi i rzęs</h3>
       <p class="tag">Idealny kształt, odpowiedni kolor i naturalnie podkreślone spojrzenie.</p>
       <p>Koloryzacja brwi to coś więcej niż przyciemnienie włosków. Odpowiednio dobrany odcień pozwala podkreślić kształt brwi, optycznie je zagęścić i nadać twarzy piękną oprawę.</p>
@@ -231,7 +231,7 @@
       <p class="close">Dobrze dobrane brwi nie dominują twarzy — podkreślają jej naturalne piękno.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="laminacja">
       <h3>Laminacja brwi i rzęs</h3>
       <p class="tag">Naturalne podkreślenie spojrzenia i perfekcyjnie zadbane brwi.</p>
       <p>Laminacja to zabieg, który pozwala uporządkować, podkreślić i nadać odpowiedni kierunek włoskom brwi oraz pięknie unieść i podkręcić naturalne rzęsy.</p>
@@ -248,7 +248,7 @@
       <p class="close">Idealny wybór dla osób, które cenią naturalny efekt i zadbany wygląd bez konieczności codziennej stylizacji.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="nitkowanie">
       <h3>Nitkowanie — precyzyjne usuwanie owłosienia twarzy</h3>
       <p class="tag">Idealnie gładka skóra i precyzyjnie wymodelowane brwi.</p>
       <p>Nitkowanie to niezwykle dokładna metoda usuwania owłosienia za pomocą specjalnej nici. Pozwala usunąć nie tylko widoczne włoski, ale również bardzo delikatny, niemal niewidoczny meszek, pozostawiając skórę wyjątkowo gładką.</p>
@@ -272,7 +272,7 @@
     <div class="sec-ix"><span class="n">02</span><span class="rule"></span><span class="label">Fryzjerstwo</span></div>
     <h2>Włosy i stylizacja</h2>
 
-    <article class="tx">
+    <article class="tx" id="strzyzenie">
       <h3>Strzyżenie precyzyjne</h3>
       <p class="tag">Dobre strzyżenie poznaje się nie tylko po wyjściu z salonu, ale każdego ranka przed lustrem.</p>
       <p>Precyzyjne strzyżenie to coś więcej niż skrócenie włosów. To odpowiednio dobrana forma, linia i technika cięcia, dopasowane do rodzaju włosów, ich naturalnego kierunku układania, gęstości, struktury oraz kształtu twarzy.</p>
@@ -289,7 +289,7 @@
       <p class="close">Nie tworzymy fryzury tylko na chwilę. Tworzymy cięcie, z którym dobrze wygląda się każdego dnia.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="zarost">
       <h3>Zarost — konturowanie i stopniowanie</h3>
       <p class="tag">Perfekcyjna linia. Precyzyjne przejścia. Zadbany wygląd.</p>
       <p>Profesjonalne opracowanie zarostu to nie tylko jego skrócenie. To precyzyjne konturowanie, stopniowanie długości oraz dopasowanie kształtu brody do rysów i proporcji twarzy.</p>
@@ -306,7 +306,7 @@
       <p class="close">Dobrze wystylizowany zarost podkreśla rysy twarzy i charakter — różnicę robią detale.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="koloryzacja">
       <h3>Koloryzacja — kolor stworzony dla Ciebie</h3>
       <p class="tag">Kolor włosów może zmienić więcej niż fryzurę. Może rozświetlić twarz, podkreślić oczy, zmiękczyć rysy i sprawić, że po prostu wyglądasz… lepiej.</p>
       <p>Dobra koloryzacja nie zaczyna się od wyboru numeru farby. Zaczyna się od Ciebie. Analizujemy naturalny kolor i kondycję włosów, wcześniejsze koloryzacje, odcień skóry oraz efekt, który chcesz osiągnąć. Następnie tworzymy kolor dopasowany tak, aby wyglądał pięknie nie tylko w salonie, ale również po kilku tygodniach.</p>
@@ -325,7 +325,7 @@
       <p class="close">Koloryzacja to sztuka światła, odcieni i proporcji. Ty przynosisz inspirację — my tworzymy z niej Twój kolor.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="fryzury">
       <h3>Fryzury okolicznościowe</h3>
       <p class="tag">Są dni, w których zwykła fryzura to za mało.</p>
       <p>Ślub, wesele, przyjęcie, studniówka, sesja zdjęciowa czy wyjątkowe wyjście — tworzymy fryzury, które podkreślają urodę, styl i charakter, a jednocześnie pozwalają czuć się swobodnie przez wiele godzin.</p>
@@ -334,7 +334,7 @@
       <p class="close">Bo kiedy nadchodzi ważny moment, Ty masz go przeżywać — a Twoja fryzura ma po prostu wyglądać pięknie.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="keratyna">
       <h3>Keratynowe prostowanie włosów</h3>
       <p class="tag">Gładkie, lśniące i łatwiejsze do ułożenia włosy każdego dnia.</p>
       <p>Keratynowe prostowanie to zabieg wygładzający, który pomaga ujarzmić puszące się, niesforne i trudne do stylizacji włosy. Keratyna w połączeniu z odpowiednią techniką zabiegową wygładza powierzchnię włosa, nadając mu miękkość, połysk i bardziej zadbany wygląd.</p>
@@ -351,7 +351,7 @@
       <p class="note">Przed zabiegiem oceniamy kondycję włosów i dobieramy sposób wykonania tak, aby uzyskać najlepszy możliwy efekt przy zachowaniu ich dobrej kondycji.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="krioterapia">
       <h3>Krioterapia włosów — regeneracja na zimno</h3>
       <p class="tag">Intensywna regeneracja włosów bez użycia wysokiej temperatury.</p>
       <p>Krioterapia włosów to nowoczesny zabieg pielęgnacyjny wykorzystujący działanie niskiej temperatury. Polecany jest szczególnie włosom suchym, osłabionym, zniszczonym zabiegami chemicznymi, rozjaśnianiem i częstą stylizacją.</p>
@@ -368,7 +368,7 @@
       <p class="close">Idealny wybór dla włosów uwrażliwionych i zniszczonych, które potrzebują intensywnej pielęgnacji bez dodatkowego działania wysokiej temperatury. Efekt utrzymuje się do 3 miesięcy.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="botox">
       <h3>Botox na włosy — intensywna regeneracja</h3>
       <p class="tag">Miękkie, elastyczne i mniej puszące się włosy.</p>
       <p>Botox na włosy to intensywnie regenerujący i wygładzający zabieg przeznaczony szczególnie dla włosów suchych, matowych, osłabionych oraz podatnych na puszenie.</p>
@@ -392,7 +392,7 @@
     <div class="sec-ix"><span class="n">03</span><span class="rule"></span><span class="label">Trychologia</span></div>
     <h2>Skóra głowy i włosy</h2>
 
-    <article class="tx">
+    <article class="tx" id="mezo-glowy">
       <h3>Mezoterapia mikroigłowa skóry głowy — terapia trychologiczna</h3>
       <p class="tag">Zdrowe włosy zaczynają się od zdrowej skóry głowy.</p>
       <p>Mezoterapia skóry głowy to jeden z zabiegów wykorzystywanych w terapiach trychologicznych ukierunkowanych na poprawę kondycji skóry głowy oraz wsparcie osłabionych i nadmiernie wypadających włosów.</p>
@@ -409,7 +409,7 @@
       <p class="close">Nie pielęgnujemy wyłącznie włosów. Zaczynamy tam, gdzie rozpoczyna się ich kondycja — od skóry głowy.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="elektroterapia">
       <h3>Elektroterapia skóry głowy — terapia prądami</h3>
       <p class="tag">Nowoczesne wsparcie w terapii problemów skóry głowy i osłabionych włosów.</p>
       <p>Elektroterapia wykorzystuje odpowiednio dobrane prądy jako element terapii trychologicznej. Zabieg dobieramy indywidualnie do kondycji skóry głowy, rodzaju problemu oraz potrzeb włosów.</p>
@@ -426,7 +426,7 @@
       <p class="note">Nie każdy problem skóry głowy wymaga takiego samego postępowania. Dlatego przed rozpoczęciem terapii oceniamy jej stan i dobieramy odpowiednią metodę oraz częstotliwość zabiegów. Elektroterapia może być łączona z innymi procedurami trychologicznymi, tworząc kompleksową terapię dopasowaną do potrzeb skóry głowy i włosów.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="infuzja">
       <h3>Infuzja tlenowa skóry głowy</h3>
       <p class="tag">Dotlenienie, odświeżenie i intensywna pielęgnacja skóry głowy.</p>
       <p>Infuzja tlenowa to bezinwazyjny zabieg trychologiczny wykorzystujący tlen oraz odpowiednio dobrane preparaty ze składnikami aktywnymi, dostosowanymi do aktualnych potrzeb skóry głowy i włosów.</p>
@@ -444,7 +444,7 @@
       <p class="close">Piękne włosy zaczynają się od skóry głowy — dajmy jej to, czego naprawdę potrzebuje.</p>
     </article>
 
-    <article class="tx">
+    <article class="tx" id="peeling-glowy">
       <h3>Peeling skóry głowy — głębokie oczyszczenie</h3>
       <p class="tag">Zdrowa pielęgnacja włosów zaczyna się od czystej, zadbanej skóry głowy.</p>
       <p>Peeling skóry głowy to jeden z podstawowych zabiegów trychologicznych. Pomaga dokładnie usunąć nadmiar sebum, zrogowaciały naskórek, pozostałości kosmetyków i nagromadzone zanieczyszczenia, których nie zawsze można pozbyć się podczas zwykłego mycia włosów.</p>
