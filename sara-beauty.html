@@ -450,63 +450,6 @@
   #tip .more:hover{color:#fff}
   @media(max-width:640px){#tip{max-width:min(88vw,330px);font-size:.86rem}}
   @media(prefers-reduced-motion:reduce){#tip{transition:none}}
-
-  /* ===== HERO w układzie z makiety ===== */
-  .hero-in{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:clamp(28px,4vw,64px);max-width:1320px;margin:0 auto;padding:clamp(44px,6vh,80px) clamp(24px,4vw,56px)}
-  .hero-copy{max-width:620px}
-  .hero-eyebrow{display:flex;align-items:center;gap:18px;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:#4a5a95;margin-bottom:26px}
-  .hero-eyebrow i{flex:1;max-width:70px;height:1px;background:rgba(19,27,54,.3)}
-  .hero-sub{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(1.3rem,2.4vw,1.85rem);color:#2e3d7c;margin-top:16px}
-  .hero-sub em{font-style:italic}
-  .botan{position:absolute;inset:0;width:100%;height:100%;filter:blur(22px);opacity:.5;pointer-events:none}
-  .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;gap:clamp(18px,2.4vw,36px)}
-  .hero-frame{position:relative;flex:1 1 auto;max-width:440px;aspect-ratio:4/5;border-radius:220px 220px 18px 18px;overflow:hidden;background:radial-gradient(120% 90% at 50% 22%,rgba(255,255,255,.75) 0%,rgba(255,255,255,.28) 46%,rgba(255,255,255,.1) 72%);border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center}
-  .hero-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .hero-frame .hero-mark{position:relative;width:58%;height:auto;color:#fff;opacity:.9;filter:drop-shadow(0 18px 40px rgba(19,27,54,.18));animation:markIn 1.2s cubic-bezier(.22,1,.36,1) both .3s}
-  .hero-values{list-style:none;display:flex;flex-direction:column;gap:12px;text-align:right;flex-shrink:0}
-  .hero-values li{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:#5a6aa6}
-  /* pasek z danymi pod hero */
-  .cred-strip{background:var(--bg);border-bottom:1px solid var(--line-soft);padding:20px 0}
-  .cred-in{display:flex;align-items:center;gap:clamp(16px,3vw,36px)}
-  .cred-name,.cred-city{font-size:.63rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
-  .cred-name i{font-style:normal;color:var(--peri);padding:0 8px}
-  .cred-rule{flex:1;height:1px;background:var(--line)}
-  /* ===== karty specjalizacji ===== */
-  .scards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.2vw,30px)}
-  .scard{position:relative;display:block;background:#fff;border:1px solid var(--line);overflow:hidden;padding:34px 30px 30px;min-height:250px;transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .3s}
-  .scard:hover{transform:translateY(-5px);border-color:var(--peri-soft);color:inherit}
-  .scard-img{position:absolute;inset:0 0 0 42%;display:block;overflow:hidden}
-  .scard-img img{width:100%;height:100%;object-fit:cover;display:block}
-  .scard-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.86) 34%,rgba(255,255,255,.28) 100%)}
-  .scard-ic{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;border:1px solid var(--line);background:#fff}
-  .scard-ic svg{width:60%;height:60%}
-  .scard-body{position:relative;z-index:2;display:block;margin-top:26px}
-  .scard-t{display:block;font-family:Georgia,'Times New Roman',serif;font-size:1.6rem;color:var(--navy);margin-bottom:10px}
-  .scard-d{display:block;font-size:.94rem;color:var(--ink-soft);max-width:26ch;margin-bottom:20px}
-  .scard-go{display:inline-flex;align-items:center;gap:10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--navy)}
-  .scard:hover .scard-go .ar{transform:translateX(4px)}
-  .scard-go .ar{transition:transform .3s cubic-bezier(.22,1,.36,1)}
-  @media(max-width:1000px){
-    .hero-in{grid-template-columns:1fr;gap:34px;padding:40px 24px 48px}
-    .hero-copy{max-width:none}
-    .hero-visual{justify-content:flex-start}
-    .hero-frame{max-width:min(62vw,360px)}
-    .scards{grid-template-columns:1fr}
-    .scard{min-height:0}
-    .scard-img{inset:0 0 0 48%}
-  }
-  @media(max-width:640px){
-    .hero-frame{max-width:none;width:100%;aspect-ratio:5/4;border-radius:180px 180px 14px 14px}
-    .hero-frame .hero-mark{width:40%}
-    .hero-values{gap:8px}
-    .hero-values li{font-size:.55rem;letter-spacing:.2em}
-    .cred-in{flex-direction:column;align-items:flex-start;gap:8px}
-    .cred-rule{display:none}
-    .scard{padding:28px 22px 26px}
-    .scard-img{inset:0 0 0 44%}
-    .scard-t{font-size:1.4rem}
-  }
-  @media(prefers-reduced-motion:reduce){.hero-frame .hero-mark{animation:none}}
 </style>
 </head>
 <body>
@@ -540,47 +483,21 @@
 <section class="hero" style="padding:0">
   <div class="hero-art" aria-hidden="true">
     <div class="hero-field"></div>
-    <svg class="botan" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g fill="#ffffff" opacity=".5">
-        <ellipse cx="90" cy="150" rx="26" ry="86" transform="rotate(-24 90 150)"/>
-        <ellipse cx="140" cy="250" rx="22" ry="74" transform="rotate(-12 140 250)"/>
-        <ellipse cx="52" cy="300" rx="20" ry="70" transform="rotate(-38 52 300)"/>
-        <ellipse cx="120" cy="420" rx="24" ry="80" transform="rotate(-6 120 420)"/>
-        <ellipse cx="500" cy="700" rx="26" ry="88" transform="rotate(22 500 700)"/>
-        <ellipse cx="556" cy="600" rx="20" ry="72" transform="rotate(14 556 600)"/>
-        <ellipse cx="440" cy="790" rx="22" ry="76" transform="rotate(34 440 790)"/>
-      </g>
-    </svg>
+    <div class="kv-halo"></div>
+    <svg class="hero-mark" viewBox="290 215 360 425" style="color:#fff" aria-hidden="true"><use href="#mgm-v2"></use></svg>
   </div>
   <div class="hero-in">
     <div class="hero-copy">
-      <span class="hero-eyebrow">Piękno, które zaczyna się od Ciebie<i></i></span>
-      <h1><span class="hl-line">Zdrowa skóra.</span><span class="hl-line">Zadbane włosy.</span></h1>
-      <p class="hero-sub"><em>Świadoma pielęgnacja skóry i włosów.</em></p>
-      <p class="lead">Indywidualnie dobrane terapie skóry, skóry głowy i włosów, oparte na wiedzy, doświadczeniu i realnych potrzebach.</p>
+      <h1><span class="hl-line">Zdrowa skóra.</span><span class="hl-line">Zadbane włosy.</span><span class="hl-line it"><em>Piękno, które</em></span><span class="hl-line it"><em>zaczyna się od Ciebie.</em></span></h1>
+      <p class="lead">Indywidualna pielęgnacja skóry, skóry głowy i włosów, oparta na wiedzy, doświadczeniu i potrzebach Twojej skóry.</p>
       <div class="hero-cta">
         <a href="tel:+48514330140" class="btn btn-ink">Umów wizytę <span class="ar" aria-hidden="true">→</span></a>
         <a href="#oferta" class="btn btn-light">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
       </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-frame">
-        <svg class="hero-mark" viewBox="290 215 360 425" aria-hidden="true"><use href="#mgm-v2"></use></svg>
-      </div>
-      <ul class="hero-values">
-        <li>Wiedza</li><li>Pielęgnacja</li><li>Zaufanie</li><li>Rezultaty</li>
-      </ul>
+      <div class="hero-meta"><span>Sara Dąbrowska · mgr kosmetologii · trycholog</span><span>Ludwików 1P · Skierniewice</span></div>
     </div>
   </div>
 </section>
-
-<div class="cred-strip">
-  <div class="wrap cred-in">
-    <span class="cred-name">Sara Dąbrowska <i>•</i> mgr kosmetologii <i>•</i> trycholog</span>
-    <span class="cred-rule"></span>
-    <span class="cred-city">Skierniewice</span>
-  </div>
-</div>
 
 <div class="marq" aria-hidden="true">
   <div class="marq-in">
@@ -663,53 +580,41 @@
       <div class="sec-ix" style="margin-bottom:0"><span class="n">02</span><span class="rule"></span><span class="label">Oferta</span></div>
       <h2 style="margin-top:26px">Trzy specjalizacje, jedno podejście</h2>
     </div>
-    <div class="scards">
-      <a class="scard reveal" href="zabiegi.html#kosmetologia">
-        <span class="scard-img"><img src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></span>
-        <span class="scard-ic"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <path d="M12 22 Q32 11 52 22" stroke="#131b36" stroke-width="2" stroke-linecap="round"/>
-  <path d="M13 33 Q32 45 51 33" stroke="#131b36" stroke-width="2" stroke-linecap="round"/>
-  <path d="M19 37.5 L16.5 43 M26 40.5 L24.5 46.5 M33 41.5 L32.5 48 M40 40 L41 46 M46.5 36.5 L49 42" stroke="#131b36" stroke-width="1.7" stroke-linecap="round"/>
-  <path d="M54 12 v7 M50.5 15.5 h7" stroke="#93acf0" stroke-width="1.7" stroke-linecap="round"/>
-  <path d="M10 46 v5 M7.5 48.5 h5" stroke="#93acf0" stroke-width="1.5" stroke-linecap="round"/>
-</svg></span>
-        <span class="scard-body">
-          <span class="scard-t">Kosmetologia</span>
-          <span class="scard-d">Profesjonalne terapie skóry twarzy, szyi i dekoltu, również trądzikowej, wrażliwej i dojrzałej.</span>
-          <span class="scard-go">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="scard reveal" href="zabiegi.html#trychologia">
-        <span class="scard-img"><img src="img/zabieg-trychologia.jpg" alt="Skóra głowy przed i po terapii trychologicznej" width="1100" height="1368" loading="lazy"></span>
-        <span class="scard-ic"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <path d="M13 49 Q32 38 51 49" stroke="#131b36" stroke-width="2" stroke-linecap="round"/>
-  <path d="M22 45 Q17 37 23 31 Q29 25 25 17" stroke="#131b36" stroke-width="1.9" stroke-linecap="round"/>
-  <path d="M32 42.5 Q27 34 33 28 Q39 22 35 14" stroke="#131b36" stroke-width="1.9" stroke-linecap="round"/>
-  <path d="M42 45 Q37 37 43 31 Q49 25 45 17" stroke="#131b36" stroke-width="1.9" stroke-linecap="round"/>
-  <path d="M54 22 v6 M51 25 h6" stroke="#93acf0" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M10 26 v5 M7.5 28.5 h5" stroke="#93acf0" stroke-width="1.5" stroke-linecap="round"/>
-</svg></span>
-        <span class="scard-body">
-          <span class="scard-t">Trychologia</span>
-          <span class="scard-d">Diagnostyka i skuteczne terapie skóry głowy oraz osłabionych włosów.</span>
-          <span class="scard-go">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="scard reveal" href="zabiegi.html#fryzjerstwo">
-        <span class="scard-img"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa z warkoczem" width="1200" height="1600" loading="lazy"></span>
-        <span class="scard-ic"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <path d="M23 16 L41 46 M41 16 L23 46" stroke="#131b36" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="19.5" cy="51" r="4.6" stroke="#131b36" stroke-width="2"/>
-  <circle cx="44.5" cy="51" r="4.6" stroke="#131b36" stroke-width="2"/>
-  <path d="M52 13 Q58 19 52 25 Q46 31 52 37" stroke="#93acf0" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M11 13 Q6 18 11 23" stroke="#93acf0" stroke-width="1.6" stroke-linecap="round"/>
-</svg></span>
-        <span class="scard-body">
-          <span class="scard-t">Pielęgnacja włosów</span>
-          <span class="scard-d">Strzyżenie, koloryzacja i zabiegi, dzięki którym włosy są zdrowe i mocne.</span>
-          <span class="scard-go">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></span>
-        </span>
-      </a>
+    <div class="offer-grid">
+      <div class="offer-list has-act reveal">
+        <div class="orow act" data-off="0">
+          <span class="num">01</span>
+          <h3>Kosmetologia</h3>
+          <div class="odesc">
+            <div class="ophoto"><img src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></div>
+            <p>Profesjonalna pielęgnacja skóry twarzy i ciała, dopasowana do jej aktualnych potrzeb i kondycji — również skóry trądzikowej, atopowej, wrażliwej, dojrzałej, z przebarwieniami i oznakami starzenia.</p>
+            <a href="zabiegi.html#kosmetologia" class="arrow-link">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="orow" data-off="1">
+          <span class="num">02</span>
+          <h3>Trychologia</h3>
+          <div class="odesc">
+            <div class="ophoto"><img src="img/zabieg-trychologia.jpg" alt="Skóra głowy przed i po terapii trychologicznej" width="1100" height="1368" loading="lazy"></div>
+            <p>Profesjonalna pielęgnacja skóry głowy i włosów oraz zabiegi trychologiczne wspierające ich zdrowie i kondycję.</p>
+            <a href="zabiegi.html#trychologia" class="arrow-link">Poznaj trychologię <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="orow" data-off="2">
+          <span class="num">03</span>
+          <h3>Fryzjerstwo</h3>
+          <div class="odesc">
+            <div class="ophoto"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></div>
+            <p>Strzyżenie, koloryzacja, dekoloryzacja oraz profesjonalna pielęgnacja włosów.</p>
+            <a href="zabiegi.html#fryzjerstwo" class="arrow-link">Zobacz usługi <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="offer-photo reveal">
+        <div class="oimg on"><img src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></div>
+        <div class="oimg"><img src="img/zabieg-trychologia.jpg" alt="Skóra głowy przed i po terapii trychologicznej" width="1100" height="1368" loading="lazy"></div>
+        <div class="oimg"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></div>
+      </div>
     </div>
   </div>
 </section>
