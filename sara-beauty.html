@@ -7,7 +7,7 @@
 <meta name="description" content="Sara's Beauty Skierniewice — Sara Dąbrowska, mgr kosmetologii i trycholog. Kosmetologia, trychologia i fryzjerstwo. Indywidualnie dobrana pielęgnacja. Tel. 514 330 140.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,17 +48,15 @@
   html{scroll-behavior:smooth}
   html,body{overflow-x:clip}
   body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-weight:300;font-size:15.5px;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-weight:400;line-height:1.06;letter-spacing:.002em}
+  h1,h2,h3,.serif{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.06;letter-spacing:.002em}
   a{color:inherit;text-decoration:none}
   a:hover{color:var(--peri)}
   a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
   .wrap{max-width:1320px;margin:0 auto;padding:0 clamp(24px,4vw,56px)}
   .label{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;font-weight:500;color:var(--peri)}
-  section[id],div[id]{scroll-margin-top:96px}
   .sec-ix{display:flex;align-items:center;gap:18px;margin-bottom:clamp(30px,4vw,44px)}
-  .sec-ix .n{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:.92rem;color:var(--ink);letter-spacing:.08em}
+  .sec-ix .n{font-family:Georgia,'Times New Roman',serif;font-size:.92rem;color:var(--ink);letter-spacing:.08em}
   .sec-ix .rule{width:52px;height:1px;background:var(--line)}
-  .sec-ix span.label{display:inline;margin:0}
   .sdiv{display:flex;justify-content:center;padding:clamp(20px,3vw,36px) 0 0}
   .sdiv svg{width:88px;height:44px;color:var(--peri-soft)}
   .mgm{display:block}
@@ -77,19 +75,19 @@
   .btn-light:hover{border-color:#fff;color:#fff}
 
   header{position:sticky;top:0;z-index:60;background:rgba(251,252,254,.94);border-bottom:1px solid var(--line-soft)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:96px;gap:32px}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:32px}
   .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
   .brand:hover{color:inherit}
   .brand .mgm{width:26px;height:32px;color:var(--peri-soft)}
-  .brand .bt{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:1.16rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding-left:.22em;white-space:nowrap}
-  .navlinks{display:flex;gap:clamp(20px,2.3vw,34px);align-items:center}
+  .brand .bt{font-family:Georgia,'Times New Roman',serif;font-size:1.02rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding-left:.22em;white-space:nowrap}
+  .navlinks{display:flex;gap:clamp(22px,2.6vw,38px);align-items:center}
   .navlinks .cta{margin-left:clamp(10px,2vw,26px)}
-  .navlinks a{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:1.06rem;letter-spacing:.02em;text-transform:none;color:var(--ink);transition:color .25s;white-space:nowrap;position:relative}
+  .navlinks a{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);transition:color .25s;white-space:nowrap;position:relative}
   .navlinks a:hover{color:var(--ink)}
   .navlinks a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.22,1,.36,1)}
   .navlinks a:not(.cta):hover::after{transform:scaleX(1)}
-  .navlinks .cta{background:var(--navy);color:#fff;border-bottom:0;padding:15px 26px;font-family:'Manrope',system-ui,sans-serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;transition:background .25s}
-  .navlinks .cta:hover{background:var(--navy-2);color:#fff}
+  .navlinks .cta{color:var(--peri);border-bottom:1px solid var(--peri);padding-bottom:4px}
+  .navlinks .cta:hover{color:var(--peri-deep,#7d97e8);border-color:var(--peri-deep,#7d97e8)}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:14px 10px;min-width:48px;min-height:48px;justify-content:center;align-items:center}
   .burger span{width:24px;height:1.5px;background:var(--ink);transition:.3s}
   .nav-book{display:none;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--peri);padding:12px 16px;color:var(--peri)}
@@ -155,7 +153,7 @@
 
   .marq{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);overflow:hidden;padding:13px 0;white-space:nowrap}
   .marq-in{display:inline-block;animation:marq 46s linear infinite}
-  .marq span{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;padding:0 22px;color:var(--ink-soft)}
+  .marq span{font-family:Georgia,'Times New Roman',serif;font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;padding:0 22px;color:var(--ink-soft)}
   .marq .dot{color:var(--peri-soft);padding:0}
   @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -169,12 +167,12 @@
   .meet-h em{font-style:italic;font-weight:400}
   .meet-spec{grid-area:spec;margin:32px 0 0;padding-top:24px;border-top:1px solid var(--line);max-width:300px;display:flex;flex-direction:column;gap:8px}
   .meet-spec .l1{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);font-weight:500}
-  .meet-spec .l2{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft)}
+  .meet-spec .l2{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft)}
   .meet-p{grid-area:desc;margin:26px 0 0}
   .meet-p p{color:var(--ink-soft);max-width:52ch;margin-bottom:14px}
   .meet-more{margin-top:clamp(40px,5vw,64px);padding-top:clamp(28px,4vw,40px);border-top:1px solid var(--line-soft);position:relative;z-index:1;columns:2;column-gap:clamp(40px,5vw,72px)}
   .meet-more p{color:var(--ink-soft);margin-bottom:14px;break-inside:avoid;max-width:60ch}
-  .meet-more .meet-close{column-span:all;font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--ink);margin-top:26px;max-width:none;text-align:center}
+  .meet-more .meet-close{column-span:all;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--ink);margin-top:26px;max-width:none;text-align:center}
   @media(max-width:900px){.meet-more{columns:1}.meet-more .meet-close{text-align:left}}
   .meet-cta{grid-area:cta;margin-top:36px;justify-self:start}
   .meet-cta:hover .ar{transform:translateX(4px)}
@@ -211,7 +209,7 @@
   .steps .intro{color:var(--ink-soft);max-width:54ch;margin:26px 0 0}
   .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(32px,4vw,64px);margin-top:clamp(56px,7vw,96px)}
   .step{border-top:1px solid var(--ink);padding-top:28px}
-  .step .n{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:2.6rem;line-height:1;color:var(--peri);display:block;margin-bottom:18px}
+  .step .n{font-family:Georgia,'Times New Roman',serif;font-size:2.6rem;line-height:1;color:var(--peri);display:block;margin-bottom:18px}
   .step h3{font-size:1.35rem;margin-bottom:10px}
   .step p{color:var(--ink-soft);font-size:.96rem}
 
@@ -220,15 +218,15 @@
   .mrow{display:flex;flex-direction:column;gap:6px;padding:30px 0;border-top:1px solid var(--line)}
   .mrow:last-of-type{border-bottom:1px solid var(--line)}
   .mrow .top{display:flex;align-items:baseline;gap:18px}
-  .mrow .name{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:500}
+  .mrow .name{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:500}
   .mrow .dots{flex:1;border-bottom:1px dotted var(--line)}
-  .mrow .price{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:clamp(1.3rem,2vw,1.7rem);font-weight:600;white-space:nowrap}
+  .mrow .price{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.3rem,2vw,1.7rem);font-weight:600;white-space:nowrap}
   .mrow .price .from{font-family:'Manrope',sans-serif;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-right:6px;font-weight:400}
   .mrow .sub{font-size:.92rem;color:var(--ink-soft);max-width:64ch}
   .menu-foot{margin-top:clamp(40px,5vw,60px);text-align:center}
 
   .cen-tabs{display:flex;gap:clamp(20px,4vw,44px);margin:clamp(36px,4vw,52px) 0 clamp(28px,3vw,40px);border-bottom:1px solid var(--line)}
-  .cen-tab{background:none;border:0;cursor:pointer;font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;color:var(--ink-soft);padding:0 2px 16px;border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .3s,border-color .3s}
+  .cen-tab{background:none;border:0;cursor:pointer;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;color:var(--ink-soft);padding:0 2px 16px;border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .3s,border-color .3s}
   .cen-tab.on{color:var(--ink);border-color:var(--ink)}
   .cgroup{margin-bottom:clamp(36px,4vw,56px)}
   .cgroup:last-child{margin-bottom:0}
@@ -237,7 +235,7 @@
   .clist li{display:flex;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px solid var(--line-soft)}
   .clist .name{font-size:1rem}
   .clist .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:20px}
-  .clist .price{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:1.25rem;font-weight:600;white-space:nowrap}
+  .clist .price{font-family:Georgia,'Times New Roman',serif;font-size:1.25rem;font-weight:600;white-space:nowrap}
   .clist .from{font-family:'Manrope',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-right:4px;font-weight:400}
   .cen-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
   .htable{width:100%;border-collapse:collapse}
@@ -245,7 +243,7 @@
   .htable th:first-child{text-align:left}
   .htable td{padding:12px 6px;border-bottom:1px solid var(--line-soft);font-size:.98rem;text-align:right}
   .htable td:first-child{text-align:left}
-  .htable td.pr{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:1.2rem;font-weight:600;white-space:nowrap}
+  .htable td.pr{font-family:Georgia,'Times New Roman',serif;font-size:1.2rem;font-weight:600;white-space:nowrap}
   .htable td.na{color:var(--ink-soft);opacity:.4}
   .htable .cat td{padding-top:30px;border-bottom:1px solid var(--line);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--peri);text-align:left}
   .htable tr:last-child td{border-bottom:0}
@@ -260,7 +258,7 @@
   .case--flip .case-meta{order:2;text-align:right}
   .case--flip .case-meta .sec-ix{justify-content:flex-end}
   .case-meta{position:sticky;top:130px}
-  .case-meta .big{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:clamp(3.6rem,7vw,6.4rem);line-height:1;color:var(--ink)}
+  .case-meta .big{font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.6rem,7vw,6.4rem);line-height:1;color:var(--ink)}
   .case-meta .lab{display:block;font-size:.64rem;letter-spacing:.4em;text-transform:uppercase;color:var(--peri);margin-top:14px}
   .case-meta .desc{font-size:.9rem;color:var(--ink-soft);max-width:26ch;margin-top:22px}
   .case--flip .case-meta .desc{margin-left:auto}
@@ -291,7 +289,7 @@
 
   .op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:10px}
   .op-card{background:#fff;border:1px solid var(--line);padding:38px 34px;margin:0;display:flex;flex-direction:column;gap:18px}
-  .op-card blockquote{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;line-height:1.55;color:var(--ink)}
+  .op-card blockquote{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;line-height:1.55;color:var(--ink)}
   .op-card.ph blockquote{color:var(--ink-soft);opacity:.7}
   .op-card figcaption{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--peri-deep,#7d97e8)}
   @media(max-width:900px){.op-grid{grid-template-columns:1fr}}
@@ -314,21 +312,21 @@
   @media(prefers-reduced-motion:reduce){.vo-card{animation:none}}
   .vo-card::before{content:"";position:absolute;inset:14px;border:1px solid rgba(174,190,242,.22)}
   .vo-card .mgm{width:54px;color:var(--peri-soft)}
-  .vo-card .t{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:1.4rem;letter-spacing:.42em;text-transform:uppercase;margin-top:16px;padding-left:.42em}
-  .vo-card .s{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;color:var(--peri-soft)}
+  .vo-card .t{font-family:Georgia,'Times New Roman',serif;font-size:1.4rem;letter-spacing:.42em;text-transform:uppercase;margin-top:16px;padding-left:.42em}
+  .vo-card .s{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.1rem;color:var(--peri-soft)}
   .vo-card .m{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:#8e9cd0;margin-top:18px}
 
   .final{text-align:center;background:radial-gradient(60% 70% at 50% 100%,#eef4fe 0%,rgba(238,244,254,0) 70%)}
   .final h2{font-size:clamp(3rem,7vw,6rem)}
   .final p{color:var(--ink-soft);max-width:46ch;margin:28px auto 48px}
   .final .tels{display:flex;justify-content:center;gap:clamp(28px,5vw,64px);flex-wrap:wrap;margin-top:60px}
-  .final .tels a{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500}
+  .final .tels a{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500}
   .final .addr{margin-top:26px;font-size:.86rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
 
   footer{border-top:1px solid var(--line-soft);padding:clamp(56px,7vw,88px) 0 36px}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(32px,4vw,64px)}
   .foot-brand .mgm{width:30px;color:var(--peri-soft);margin-bottom:18px}
-  .foot-brand .bt{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:1.2rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
+  .foot-brand .bt{font-family:Georgia,'Times New Roman',serif;font-size:1.2rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
   .foot-brand p{font-size:.9rem;color:var(--ink-soft);margin-top:16px}
   .foot-brand b{font-weight:400;color:var(--ink)}
   .foot-col h4{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--peri);margin-bottom:18px;font-weight:400}
@@ -363,12 +361,11 @@
   @media(max-width:1140px){
     .navlinks{position:fixed;inset:76px 0 0 0;height:calc(100dvh - 76px);background:var(--bg);flex-direction:column;gap:0;padding:28px 0 40px;transform:translateY(-105%);transition:transform .45s cubic-bezier(.22,1,.36,1);align-items:flex-start;overflow-y:auto;visibility:hidden}
     .navlinks.open{transform:none;visibility:visible}
-    .navlinks a{padding:16px 24px;width:100%;font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:1.7rem;letter-spacing:.04em;text-transform:none;color:var(--ink);border-bottom:1px solid var(--line-soft)}
+    .navlinks a{padding:16px 24px;width:100%;font-family:Georgia,'Times New Roman',serif;font-size:1.7rem;letter-spacing:.04em;text-transform:none;color:var(--ink);border-bottom:1px solid var(--line-soft)}
     .navlinks .cta{border-bottom:0;color:var(--peri);margin-top:16px;font-size:1.4rem;font-style:italic}
     .burger{display:flex}
     .nav-book{display:inline-block}
-    .fab{display:inline-flex;padding:16px 22px;font-size:.72rem}
-    footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+    .fab{display:inline-flex}
     .hero{min-height:auto}
     .hero-in{flex-direction:column;align-items:stretch;gap:10px;padding:40px 24px 48px}
     .hero-copy{width:100%;max-width:680px}
@@ -453,166 +450,10 @@
   #tip .more:hover{color:#fff}
   @media(max-width:640px){#tip{max-width:min(88vw,330px);font-size:.86rem}}
   @media(prefers-reduced-motion:reduce){#tip{transition:none}}
-
-  /* ===== HERO editorial ===== */
-  .hero{position:relative;padding:0;min-height:min(70vh,660px);display:flex;align-items:center;overflow:hidden;background:linear-gradient(140deg,#eaf0ff 0%,#dde6fc 42%,#cfdcfb 100%)}
-  .hero-bot{position:absolute;color:#8298cf;opacity:.34;filter:blur(5px);pointer-events:none;z-index:0;height:auto}
-  .hero-bot-l{left:-3%;bottom:-10%;width:min(20%,240px)}
-  .hero-bot-r{right:-2%;top:-14%;width:min(17%,210px);transform:scaleX(-1) rotate(8deg);opacity:.24}
-  .hero .hero-photo{position:absolute;right:clamp(0px,7.5%,130px);top:0;bottom:0;left:auto;z-index:1;flex:none;aspect-ratio:812/968;max-width:44vw;animation:none}
-  .hero .hero-photo img.hero-model{display:block;width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0;box-shadow:none;object-fit:cover;object-position:center;
-    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 15%,#000 87%,transparent 100%);
-    mask-image:linear-gradient(to right,transparent 0,#000 15%,#000 87%,transparent 100%)}
-  .hero .hero-ring{position:absolute;left:-7%;right:auto;top:56%;width:58%;max-width:290px;height:auto;transform:translate(-50%,-50%);z-index:3;pointer-events:none;animation:none}
-  .hero .hero-mark{position:absolute;left:-6%;right:auto;top:50%;width:28%;max-width:146px;height:auto;transform:translate(-50%,-50%);color:#fff;opacity:.95;z-index:4;pointer-events:none;filter:drop-shadow(0 8px 26px rgba(66,92,158,.3));animation:none}
-  .hero-in{position:relative;z-index:5;display:block;width:100%;max-width:1360px;margin:0 auto;padding:clamp(44px,6vh,78px) clamp(20px,2.4vw,44px) clamp(44px,6vh,78px) clamp(24px,4vw,64px)}
-  .hero-copy{display:block;max-width:min(54%,640px);padding-right:0}
-  .hero-eyebrow{display:flex;align-items:center;gap:20px;font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:#4d5c96;margin-bottom:30px}
-  .hero-eyebrow i{flex:1;max-width:88px;height:1px;background:rgba(19,27,54,.28)}
-  .hero h1{font-size:clamp(2.6rem,4.6vw,4.4rem);color:var(--navy);line-height:1.06;letter-spacing:-.005em}
-  .hero-sub{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.35rem,2.5vw,2rem);color:#31407f;margin-top:14px}
-  .hero .lead{font-size:1.02rem;color:#3a4671;max-width:46ch;margin:26px 0 38px;line-height:1.75}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-  .hero .btn-ink{background:var(--navy);color:#fff;border:1px solid var(--navy)}
-  .hero .btn-ink:hover{background:var(--navy-2);color:#fff}
-  .hero .btn-line{background:transparent;color:var(--navy);border:1px solid rgba(19,27,54,.45)}
-  .hero .btn-line:hover{border-color:var(--navy);background:rgba(255,255,255,.4);color:var(--navy)}
-  .hero-values{list-style:none;position:absolute;right:clamp(16px,2.6vw,40px);top:50%;transform:translateY(-50%);z-index:5;display:flex;flex-direction:column;gap:13px;text-align:right}
-  .hero-values::before{content:"";display:block;width:44px;height:1px;background:rgba(19,27,54,.3);margin:0 0 16px auto}
-  .hero-values li{font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:#5b6aa4}
-  /* ===== trust bar ===== */
-  .trustbar{background:#fff;border-bottom:1px solid var(--line-soft);padding:22px 0}
-  .trust-in{display:flex;align-items:center;gap:clamp(16px,3vw,40px)}
-  .trust-l,.trust-r{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
-  .trust-l i{font-style:normal;color:var(--peri);padding:0 6px}
-  .trust-rule{flex:1;height:1px;background:var(--line)}
-  /* ===== karty usług ===== */
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2vw,28px)}
-  .svc{position:relative;display:block;background:#fff;border:1px solid #e5eaf6;border-radius:4px;overflow:hidden;min-height:clamp(230px,17vw,260px);transition:transform .5s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .5s}
-  .svc:hover{transform:translateY(-6px);border-color:var(--peri-soft);color:inherit;box-shadow:0 18px 40px -26px rgba(30,46,96,.4)}
-  .svc-ph{position:absolute;right:0;top:0;width:62%;height:100%;object-fit:cover;object-position:center;display:block;z-index:1;transition:transform .8s cubic-bezier(.22,1,.36,1);
-    -webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 34%,#000 68%);mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 34%,#000 68%)}
-  .svc:hover .svc-ph{transform:scale(1.05)}
-  .svc-body{position:relative;z-index:2;display:block;padding:clamp(22px,2vw,30px);max-width:82%}
-  .svc-ic{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border:1px solid var(--line);border-radius:50%;background:rgba(255,255,255,.72);margin-bottom:clamp(16px,1.6vw,24px)}
-  .svc-ic svg{width:30px;height:30px;display:block}
-  .svc-t{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.5rem,1.7vw,1.85rem);color:var(--navy);margin-bottom:8px;line-height:1.15}
-  .svc-d{display:block;font-size:.88rem;color:var(--ink-soft);max-width:27ch;margin-bottom:20px;line-height:1.6}
-  .svc-go{display:inline-flex;align-items:center;gap:10px;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--navy)}
-  .svc-go .ar{transition:transform .35s cubic-bezier(.22,1,.36,1)}
-  .svc:hover .svc-go .ar{transform:translateX(4px)}
-  @media(max-width:1180px){
-    .hero .hero-photo{right:0}
-    .hero-values{display:none}
-    .hero-copy{max-width:56%}
-    .hero h1{font-size:clamp(2.1rem,4.3vw,3.4rem)}
-    .hero-sub{font-size:clamp(1.2rem,2.3vw,1.6rem)}
-    .hero .lead{font-size:.96rem;margin:20px 0 30px;max-width:40ch}
-    .hero-eyebrow{margin-bottom:24px}
-  }
-  @media(max-width:900px){
-    .hero{min-height:min(64vh,560px)}
-    .hero-copy{max-width:58%}
-    .hero .hero-photo{max-width:42vw}
-    .hero .hero-ring{left:-16%;width:66%}
-    .hero .hero-mark{left:-13%;width:32%;max-width:128px}
-    .hero .btn{padding:13px 20px;font-size:.66rem}
-    .hero-cta{gap:10px}
-  }
-  @media(max-width:1000px){
-    .trust-in{flex-wrap:wrap;gap:10px 22px}
-    .trust-l,.trust-r{white-space:normal}
-    .trust-rule{display:none}
-    .svc-grid{grid-template-columns:1fr}
-    .svc{min-height:190px}
-    .svc-ph{width:52%;-webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.5) 30%,#000 70%);mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.5) 30%,#000 70%)}
-    .svc-body{max-width:70%;padding:22px}
-    .svc-ic{width:48px;height:48px;margin-bottom:14px}
-    .svc-ic svg{width:26px;height:26px}
-    .svc-d{max-width:22ch;margin-bottom:16px}
-  }
-  @media(prefers-reduced-motion:reduce){.svc,.svc-ph,.svc-go .ar{transition:none}}
-  @media(max-width:640px){
-    .hero h1{font-size:clamp(2.5rem,10.2vw,3.2rem)}
-    .hero .hero-photo{width:min(88%,340px)}
-    .svc-t{font-size:1.55rem}
-  }
-  @media(max-width:760px){
-    .hero{min-height:0;display:flex;flex-direction:column;align-items:stretch}
-    .hero-in{order:1;padding:40px 24px 0}
-    .hero .hero-photo{order:2;position:relative;right:auto;top:auto;bottom:auto;width:min(84%,400px);max-width:none;aspect-ratio:812/968;height:auto;margin:26px auto 0}
-    .hero-copy{max-width:none}
-    .hero h1{font-size:clamp(2.3rem,7.4vw,3.1rem)}
-    .hero .lead{max-width:46ch}
-    .hero .hero-photo img.hero-model{object-position:54% 20%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 10%,#000 90%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 10%,#000 90%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect}
-    .hero .hero-ring{left:4%;top:54%;width:58%;max-width:240px}
-    .hero .hero-mark{left:11%;top:49%;width:27%;max-width:116px}
-    .hero-bot-l{width:min(30%,190px);opacity:.22}
-    .hero-bot-r{display:none}
-  }
-  @media(max-width:640px){
-    .marq{padding:10px 0}
-    .marq span{font-size:.7rem;padding:0 16px}
-    .nav{gap:12px}
-    .brand{gap:9px}
-    .brand .bt{font-size:.86rem;letter-spacing:.15em}
-    .nav-book{padding:10px 12px}
-    .hero-copy{max-width:none}
-    .hero-in{padding:36px 24px 44px}
-    .hero-bubbles{gap:16px;justify-content:flex-start}
-    .hero h1{font-size:clamp(2.15rem,9vw,2.6rem)}
-    .hero .lead{max-width:32ch;margin:18px 0 28px}
-    .hero-cta{flex-direction:row;flex-wrap:nowrap;align-items:stretch;gap:10px}
-    .hero-cta .btn{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;min-height:46px;padding:12px 8px;font-size:.63rem;letter-spacing:.1em}
-
-    .kv-halo{display:none}
-    .hero-mark{width:min(44vw,185px);right:-34px;top:54px;transform:none;opacity:.3;filter:none;animation:markInM 1.2s cubic-bezier(.22,1,.36,1) both .4s}
-    section{padding:60px 0}
-    body{font-size:15px}
-    .sec-ix{gap:14px;margin-bottom:26px}
-    .sec-ix .rule{width:36px}
-    .meet .sec-ix{margin-bottom:30px}
-    .meet-grid{grid-template-columns:1fr;column-gap:0;grid-template-areas:"head" "spec" "photo" "desc" "cta" "bub"}
-    .meet-h{font-size:clamp(1.9rem,8.4vw,2.4rem)}
-    .meet-photo{width:100%;max-width:none;aspect-ratio:4/5;margin-top:32px}
-    .intro h2{font-size:clamp(1.6rem,6.8vw,2rem)}
-    .motto{min-height:auto}
-    .motto h2{font-size:clamp(1.9rem,8vw,2.4rem)}
-    .motto p{margin-top:30px}
-    .offer-head h2,.menu-head h2{font-size:clamp(1.9rem,8vw,2.4rem)}
-    .orow{padding:28px 0}
-    .orow h3{font-size:clamp(1.6rem,7.4vw,2rem)}
-    .orow .odesc{display:block}
-    .ophoto{aspect-ratio:4/3;max-width:330px;margin:18px 0 24px}
-    .steps h2{font-size:clamp(1.6rem,6.8vw,2rem)}
-    .cen-tab{font-size:1.1rem;padding-bottom:12px}
-    .cgroup h3{font-size:1.35rem}
-    .clist .name{font-size:.92rem}
-    .clist .price{font-size:1.1rem}
-    .vo-copy h2{font-size:clamp(2rem,8.6vw,2.6rem)}
-    .vo-pair{gap:12px}
-    .vo-side img{max-width:none}
-    .final h2{font-size:clamp(2.3rem,10vw,3rem)}
-    .final .tels a{font-size:1.5rem}
-    .foot-grid{grid-template-columns:1fr;gap:30px}
-    .sdiv svg{width:66px;height:33px}
-  }
-  @media(prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
-    .reveal{transition:none;opacity:1;transform:none}
-    .marq-in{animation:none}
-  }
-
-  .meta-ed{background:linear-gradient(180deg,#f4f7ff 0%,#eef3fe 100%);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
-  .meta-head{margin-bottom:clamp(44px,5vw,72px)}
-  .meta-ed .meta-head h2{font-size:clamp(2.5rem,5vw,4.4rem);color:var(--navy);line-height:1.06;margin-top:26px}
-  .meta-intro{margin-top:22px;max-width:52ch;color:var(--ink-soft);font-size:1rem}
-  .meta-ed .case-meta .big{color:var(--navy)}
-  @media(max-width:640px){.meta-ed .meta-head h2{font-size:clamp(1.9rem,8.2vw,2.4rem)}}
 </style>
 </head>
 <body>
-<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden"><defs><path id="mgm-v2" transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0" fill="currentColor"></path><symbol id="botan" viewBox="0 0 200 480"><path d="M104 478 C86 370 104 250 150 6" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><path d="M118 478 C150 392 154 300 132 180" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><g fill="currentColor"><ellipse cx="119.0" cy="429.0" rx="40.0" ry="13.0" transform="rotate(-58.7 119.0 429.0)"/><ellipse cx="120.5" cy="458.2" rx="37.9" ry="12.3" transform="rotate(-131.9 120.5 458.2)"/><ellipse cx="115.8" cy="383.8" rx="35.9" ry="11.7" transform="rotate(-53.3 115.8 383.8)"/><ellipse cx="114.7" cy="405.2" rx="33.8" ry="11.0" transform="rotate(-127.0 114.7 405.2)"/><ellipse cx="116.0" cy="333.5" rx="31.7" ry="10.3" transform="rotate(-48.9 116.0 333.5)"/><ellipse cx="113.9" cy="345.9" rx="29.7" ry="9.6" transform="rotate(-123.1 113.9 345.9)"/><ellipse cx="119.6" cy="276.0" rx="27.6" ry="9.0" transform="rotate(-45.6 119.6 276.0)"/><ellipse cx="118.2" cy="278.2" rx="25.5" ry="8.3" transform="rotate(-120.4 118.2 278.2)"/><ellipse cx="126.7" cy="209.3" rx="23.5" ry="7.6" transform="rotate(-43.5 126.7 209.3)"/><ellipse cx="127.0" cy="200.4" rx="21.4" ry="7.0" transform="rotate(-118.7 127.0 200.4)"/><ellipse cx="137.5" cy="131.2" rx="19.3" ry="6.3" transform="rotate(-42.1 137.5 131.2)"/><ellipse cx="140.0" cy="110.4" rx="17.3" ry="5.6" transform="rotate(-117.7 140.0 110.4)"/><ellipse cx="151.8" cy="40.0" rx="15.2" ry="4.9" transform="rotate(-41.5 151.8 40.0)"/><ellipse cx="115.2" cy="439.8" rx="28.0" ry="9.0" transform="rotate(-110.1 115.2 439.8)"/><ellipse cx="114.4" cy="447.2" rx="25.8" ry="8.3" transform="rotate(-38.1 114.4 447.2)"/><ellipse cx="128.8" cy="385.9" rx="23.7" ry="7.6" transform="rotate(-118.1 128.8 385.9)"/><ellipse cx="129.9" cy="386.6" rx="21.5" ry="6.9" transform="rotate(-46.0 129.9 386.6)"/><ellipse cx="135.6" cy="328.3" rx="19.3" ry="6.2" transform="rotate(-125.7 135.6 328.3)"/><ellipse cx="136.9" cy="320.7" rx="17.2" ry="5.5" transform="rotate(-53.1 136.9 320.7)"/><ellipse cx="135.7" cy="265.2" rx="15.0" ry="4.8" transform="rotate(-132.2 135.7 265.2)"/><ellipse cx="135.3" cy="248.3" rx="12.8" ry="4.1" transform="rotate(-59.0 135.3 248.3)"/><ellipse cx="128.9" cy="195.1" rx="10.6" ry="3.4" transform="rotate(-137.4 128.9 195.1)"/></g></symbol></defs></svg>
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden"><defs><path id="mgm-v2" transform="matrix(1,0,0,-1,647.68,347.14)" d="M0 0C0-80.22-64.72-126.99-144.54-126.99-156.90-126.99-168.92-125.68-180.39-123.15-180.75-123.07-181.00-122.75-181.00-122.38-181.00-121.96-180.65-121.61-180.23-121.61-92.84-121.30-44.33-69.08-44.33-4.41-44.33 58.42-89.15 110.17-146.33 110.17-162.31 110.17-170.21 104.35-170.21 96.45V-3.57C-170.21-15.09-179.14-24.53-190.47-25.29H-193.47C-199.38-24.89-205.65-21.11-208.33-17.94-212.86-12.58-216.72-2.31-225.14 4.53-236.15 13.48-255.10 21.97-284.17 14.25-303.65 9.08-312.69-7.95-312.69-24.56-312.69-58.67-264.91-83.01-244.36-98.98-223.19-115.43-213.73-123.2-200.02-137.64-181.90-156.74-172.68-180.09-172.68-207.78-172.68-253.65-201.45-281.08-239.10-290.84-223.28-281.38-212.05-261.22-212.05-238.36-212.05-190.78-260.13-161.47-279.79-147.2-292.81-137.74-313.15-124.49-326.38-109.03-342.90-89.73-355.52-66.57-355.52-43.60-355.52 2.16-325.01 28.51-283.33 36.27-274.56 37.92-265.31 38.73-255.74 38.73-239.21 38.73-225.34 37.30-213.73 34.62V101.62C-213.73 107.57-213.73 121.17-234.78 121.17H-243.10C-245.50 121.17-247.43 123.11-247.43 125.50-247.43 127.89-245.50 129.83-243.10 129.83H-144.54C-119.91 129.83-100.67 127.09-81.66 121.17-33.33 106.13 0 69.68 0 0" fill="currentColor"></path></defs></svg>
 
 <header>
   <div class="wrap nav">
@@ -639,36 +480,24 @@
 
 <a class="fab" id="fab" href="tel:+48514330140" aria-label="Umów wizytę — zadzwoń">Umów wizytę <span aria-hidden="true">→</span></a>
 
-<section class="hero">
-  <svg class="hero-bot hero-bot-l" viewBox="0 0 200 480" aria-hidden="true"><use href="#botan"></use></svg>
-  <svg class="hero-bot hero-bot-r" viewBox="0 0 200 480" aria-hidden="true"><use href="#botan"></use></svg>
-  <div class="hero-photo">
-    <img class="hero-model" src="img/hero-model.jpg" alt="Kobieta o zadbanej, rozświetlonej skórze" width="812" height="968" fetchpriority="high">
-    <svg class="hero-ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="99.4" fill="none" stroke="#fff" stroke-width=".7" opacity=".7"/></svg>
-    <svg class="hero-mark" viewBox="290 215 360 425" aria-hidden="true"><use href="#mgm-v2"></use></svg>
+<section class="hero" style="padding:0">
+  <div class="hero-art" aria-hidden="true">
+    <div class="hero-field"></div>
+    <div class="kv-halo"></div>
+    <svg class="hero-mark" viewBox="290 215 360 425" style="color:#fff" aria-hidden="true"><use href="#mgm-v2"></use></svg>
   </div>
-  <ul class="hero-values" aria-hidden="true"><li>Wiedza</li><li>Pielęgnacja</li><li>Zaufanie</li><li>Rezultaty</li></ul>
   <div class="hero-in">
     <div class="hero-copy">
-      <span class="hero-eyebrow">Piękno, które zaczyna się od Ciebie<i></i></span>
-      <h1><span class="hl-line">Zdrowa skóra.</span><span class="hl-line">Zadbane włosy.</span></h1>
-      <p class="hero-sub">Świadoma pielęgnacja skóry i włosów.</p>
-      <p class="lead">Indywidualnie dobrane terapie skóry, skóry głowy i włosów, oparte na wiedzy, doświadczeniu i realnych potrzebach.</p>
+      <h1><span class="hl-line">Zdrowa skóra.</span><span class="hl-line">Zadbane włosy.</span><span class="hl-line it"><em>Piękno, które</em></span><span class="hl-line it"><em>zaczyna się od Ciebie.</em></span></h1>
+      <p class="lead">Indywidualna pielęgnacja skóry, skóry głowy i włosów, oparta na wiedzy, doświadczeniu i potrzebach Twojej skóry.</p>
       <div class="hero-cta">
         <a href="tel:+48514330140" class="btn btn-ink">Umów wizytę <span class="ar" aria-hidden="true">→</span></a>
-        <a href="#oferta" class="btn btn-line">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
+        <a href="#oferta" class="btn btn-light">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
       </div>
+      <div class="hero-meta"><span>Sara Dąbrowska · mgr kosmetologii · trycholog</span><span>Ludwików 1P · Skierniewice</span></div>
     </div>
   </div>
 </section>
-
-<div class="trustbar">
-  <div class="wrap trust-in">
-    <span class="trust-l">Sara Dąbrowska <i>•</i> mgr kosmetologii <i>•</i> trycholog</span>
-    <span class="trust-rule"></span>
-    <span class="trust-r">Skierniewice</span>
-  </div>
-</div>
 
 <div class="marq" aria-hidden="true">
   <div class="marq-in">
@@ -751,53 +580,41 @@
       <div class="sec-ix" style="margin-bottom:0"><span class="n">02</span><span class="rule"></span><span class="label">Oferta</span></div>
       <h2 style="margin-top:26px">Trzy specjalizacje, jedno podejście</h2>
     </div>
-    <div class="svc-grid">
-      <a class="svc reveal" href="zabiegi.html#kosmetologia">
-        <img class="svc-ph" src="img/kosmetologia-texture.jpg" alt="Faktura kremu kosmetologicznego" width="441" height="675" loading="lazy">
-        <span class="svc-body">
-          <span class="svc-ic"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <path d="M12 22 Q32 11 52 22" stroke="#131b36" stroke-width="2" stroke-linecap="round"/>
-  <path d="M13 33 Q32 45 51 33" stroke="#131b36" stroke-width="2" stroke-linecap="round"/>
-  <path d="M19 37.5 L16.5 43 M26 40.5 L24.5 46.5 M33 41.5 L32.5 48 M40 40 L41 46 M46.5 36.5 L49 42" stroke="#131b36" stroke-width="1.7" stroke-linecap="round"/>
-  <path d="M54 12 v7 M50.5 15.5 h7" stroke="#93acf0" stroke-width="1.7" stroke-linecap="round"/>
-  <path d="M10 46 v5 M7.5 48.5 h5" stroke="#93acf0" stroke-width="1.5" stroke-linecap="round"/>
-</svg></span>
-          <span class="svc-t">Kosmetologia</span>
-          <span class="svc-d">Profesjonalne terapie skóry twarzy, szyi i dekoltu.</span>
-          <span class="svc-go">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="svc reveal" href="zabiegi.html#trychologia" style="transition-delay:.12s">
-        <img class="svc-ph" src="img/trychologia-serum.jpg" alt="Kropla serum trychologicznego" width="489" height="675" loading="lazy">
-        <span class="svc-body">
-          <span class="svc-ic"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <path d="M13 49 Q32 38 51 49" stroke="#131b36" stroke-width="2" stroke-linecap="round"/>
-  <path d="M22 45 Q17 37 23 31 Q29 25 25 17" stroke="#131b36" stroke-width="1.9" stroke-linecap="round"/>
-  <path d="M32 42.5 Q27 34 33 28 Q39 22 35 14" stroke="#131b36" stroke-width="1.9" stroke-linecap="round"/>
-  <path d="M42 45 Q37 37 43 31 Q49 25 45 17" stroke="#131b36" stroke-width="1.9" stroke-linecap="round"/>
-  <path d="M54 22 v6 M51 25 h6" stroke="#93acf0" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M10 26 v5 M7.5 28.5 h5" stroke="#93acf0" stroke-width="1.5" stroke-linecap="round"/>
-</svg></span>
-          <span class="svc-t">Trychologia</span>
-          <span class="svc-d">Diagnostyka i skuteczne terapie skóry głowy oraz włosów.</span>
-          <span class="svc-go">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="svc reveal" href="zabiegi.html#fryzjerstwo" style="transition-delay:.24s">
-        <img class="svc-ph" src="img/pielegnacja-wlosow.jpg" alt="Jasne, lśniące pasma włosów" width="387" height="675" loading="lazy">
-        <span class="svc-body">
-          <span class="svc-ic"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <path d="M23 16 L41 46 M41 16 L23 46" stroke="#131b36" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="19.5" cy="51" r="4.6" stroke="#131b36" stroke-width="2"/>
-  <circle cx="44.5" cy="51" r="4.6" stroke="#131b36" stroke-width="2"/>
-  <path d="M52 13 Q58 19 52 25 Q46 31 52 37" stroke="#93acf0" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M11 13 Q6 18 11 23" stroke="#93acf0" stroke-width="1.6" stroke-linecap="round"/>
-</svg></span>
-          <span class="svc-t">Pielęgnacja włosów</span>
-          <span class="svc-d">Zdrowe, mocne i piękne włosy dzięki indywidualnej pielęgnacji.</span>
-          <span class="svc-go">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></span>
-        </span>
-      </a>
+    <div class="offer-grid">
+      <div class="offer-list has-act reveal">
+        <div class="orow act" data-off="0">
+          <span class="num">01</span>
+          <h3>Kosmetologia</h3>
+          <div class="odesc">
+            <div class="ophoto"><img src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></div>
+            <p>Profesjonalna pielęgnacja skóry twarzy i ciała, dopasowana do jej aktualnych potrzeb i kondycji — również skóry trądzikowej, atopowej, wrażliwej, dojrzałej, z przebarwieniami i oznakami starzenia.</p>
+            <a href="zabiegi.html#kosmetologia" class="arrow-link">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="orow" data-off="1">
+          <span class="num">02</span>
+          <h3>Trychologia</h3>
+          <div class="odesc">
+            <div class="ophoto"><img src="img/zabieg-trychologia.jpg" alt="Skóra głowy przed i po terapii trychologicznej" width="1100" height="1368" loading="lazy"></div>
+            <p>Profesjonalna pielęgnacja skóry głowy i włosów oraz zabiegi trychologiczne wspierające ich zdrowie i kondycję.</p>
+            <a href="zabiegi.html#trychologia" class="arrow-link">Poznaj trychologię <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="orow" data-off="2">
+          <span class="num">03</span>
+          <h3>Fryzjerstwo</h3>
+          <div class="odesc">
+            <div class="ophoto"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></div>
+            <p>Strzyżenie, koloryzacja, dekoloryzacja oraz profesjonalna pielęgnacja włosów.</p>
+            <a href="zabiegi.html#fryzjerstwo" class="arrow-link">Zobacz usługi <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="offer-photo reveal">
+        <div class="oimg on"><img src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></div>
+        <div class="oimg"><img src="img/zabieg-trychologia.jpg" alt="Skóra głowy przed i po terapii trychologicznej" width="1100" height="1368" loading="lazy"></div>
+        <div class="oimg"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -927,12 +744,11 @@
   </div>
 </section>
 
-<section id="metamorfozy" class="meta-ed">
+<section id="metamorfozy">
   <div class="wrap">
-    <div class="reveal meta-head">
-      <div class="sec-ix"><span class="n">04</span><span class="rule"></span><span class="label">Prawdziwe historie</span></div>
-      <h2>Metamorfozy,<br>które dają pewność siebie.</h2>
-      <p class="meta-intro">Prawdziwe efekty terapii prowadzonych w gabinecie. Przesuń suwak, aby zobaczyć różnicę.</p>
+    <div class="reveal">
+      <div class="sec-ix"><span class="n">04</span><span class="rule"></span><span class="label">Metamorfozy</span></div>
+      <h2 style="font-size:clamp(2.4rem,4.4vw,4rem);max-width:16ch">Efekty, które możesz zobaczyć</h2>
     </div>
     <div class="case reveal">
       <div class="case-meta">
