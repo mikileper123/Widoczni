@@ -157,6 +157,10 @@
   .meet-bubbles{grid-area:bub;margin-top:40px;animation:none}
   .meet-bubbles .bimg{border:1px solid var(--line);box-shadow:0 10px 24px rgba(19,27,54,.1)}
   .meet-bubbles .bl{color:var(--ink)}
+  .hero-book{margin-top:20px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#3f4c7d;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .68s}
+  .hero-book a{border-bottom:1px solid rgba(19,27,54,.4);padding-bottom:2px;font-weight:500;transition:border-color .3s,color .3s}
+  .hero-book a:hover{color:var(--navy);border-bottom-color:var(--navy)}
+  @media(max-width:640px){.hero-book{font-size:.62rem;letter-spacing:.14em;margin-top:16px}}
   .hero-meta{display:flex;justify-content:space-between;gap:14px 36px;flex-wrap:wrap;margin-top:44px;padding-top:20px;border-top:1px solid rgba(19,27,54,.24);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:#33417c;animation:hlUp .8s cubic-bezier(.22,1,.36,1) both .72s}
   .hero-sig{display:flex;align-items:center;gap:18px;margin-top:auto;padding-top:64px;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
   .hero-sig::before{content:"";width:44px;height:1px;background:var(--line)}
@@ -487,7 +491,7 @@
       <a href="#o-mnie">O mnie</a>
       <a href="#voucher">Voucher</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="https://booksy.com/pl-pl/360709_saras-beauty-kosmetologia-i-fryzjerstwo_salon-kosmetyczny_25096_skierniewice" target="_blank" rel="noopener" class="cta">Umów wizytę <span aria-hidden="true">→</span></a>
+      <a href="https://booksy.com/pl-pl/360709_saras-beauty-kosmetologia-i-fryzjerstwo_salon-kosmetyczny_25096_skierniewice" target="_blank" rel="noopener" class="cta">Umów w Booksy <span aria-hidden="true">→</span></a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
       <a class="nav-book" href="https://booksy.com/pl-pl/360709_saras-beauty-kosmetologia-i-fryzjerstwo_salon-kosmetyczny_25096_skierniewice" target="_blank" rel="noopener">Umów</a>
@@ -512,6 +516,7 @@
         <a href="https://booksy.com/pl-pl/360709_saras-beauty-kosmetologia-i-fryzjerstwo_salon-kosmetyczny_25096_skierniewice" target="_blank" rel="noopener" class="btn btn-ink">Umów wizytę <span class="ar" aria-hidden="true">→</span></a>
         <a href="#oferta" class="btn btn-light">Poznaj ofertę <span class="ar" aria-hidden="true">→</span></a>
       </div>
+      <p class="hero-book">Rezerwacja przez <a href="https://booksy.com/pl-pl/360709_saras-beauty-kosmetologia-i-fryzjerstwo_salon-kosmetyczny_25096_skierniewice" target="_blank" rel="noopener">Booksy</a> · czynne całą dobę</p>
       <div class="hero-meta"><span>Sara Dąbrowska · mgr kosmetologii · trycholog</span><span>Ludwików 1P · Skierniewice</span></div>
     </div>
   </div>
