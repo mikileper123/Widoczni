@@ -188,7 +188,8 @@
   .intro-side p{color:var(--ink-soft);max-width:44ch;margin-bottom:26px}
 
   .marq{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);overflow:hidden;padding:13px 0;white-space:nowrap}
-  .marq-in{display:inline-block;animation:marq 46s linear infinite}
+  .marq-in{display:inline-block;animation:marq 46s linear infinite;will-change:transform}
+  .marq:not(.on) .marq-in{animation-play-state:paused}
   .marq span{font-family:Georgia,'Times New Roman',serif;font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;padding:0 22px;color:var(--ink-soft)}
   .marq .dot{color:var(--peri-soft);padding:0}
   @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -565,7 +566,7 @@
     <div class="sec-ix reveal"><span class="n">01</span><span class="rule"></span><span class="label">Poznajmy się</span></div>
     <div class="meet-grid">
       <div class="meet-photo reveal" style="transition-delay:.1s">
-        <img src="img/sara-portret.jpg" alt="Sara Dąbrowska — portret" width="819" height="1024" loading="lazy">
+        <picture><source srcset="img/sara-portret.webp" type="image/webp"><img decoding="async" src="img/sara-portret.jpg" alt="Sara Dąbrowska — portret" width="819" height="1024" loading="lazy"></picture>
       </div>
       <h2 class="meet-h reveal">Nazywam się<br><em>Sara Dąbrowska.</em></h2>
       <div class="meet-spec reveal" style="transition-delay:.12s"><span class="l1">Magister kosmetologii</span><span class="l2">specjalizacja · trychologia</span></div>
@@ -628,7 +629,7 @@
           <span class="num">01</span>
           <h3>Kosmetologia</h3>
           <div class="odesc">
-            <div class="ophoto"><img src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></div>
+            <div class="ophoto"><picture><source srcset="img/zabieg-kosmetologia.webp" type="image/webp"><img decoding="async" src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></picture></div>
             <p>Profesjonalna pielęgnacja skóry twarzy i ciała, dopasowana do jej aktualnych potrzeb i kondycji — również skóry trądzikowej, atopowej, wrażliwej, dojrzałej, z przebarwieniami i oznakami starzenia.</p>
             <a href="zabiegi.html#kosmetologia" class="arrow-link">Zobacz zabiegi <span class="ar" aria-hidden="true">→</span></a>
           </div>
@@ -637,7 +638,7 @@
           <span class="num">02</span>
           <h3>Trychologia</h3>
           <div class="odesc">
-            <div class="ophoto"><img src="img/zabieg-trychologia.jpg" alt="Skóra głowy przed i po terapii trychologicznej" width="1100" height="1368" loading="lazy"></div>
+            <div class="ophoto"><picture><source srcset="img/zabieg-trychologia.webp" type="image/webp"><img decoding="async" src="img/zabieg-trychologia.jpg" alt="Skóra głowy przed i po terapii trychologicznej" width="1100" height="1368" loading="lazy"></picture></div>
             <p>Profesjonalna pielęgnacja skóry głowy i włosów oraz zabiegi trychologiczne wspierające ich zdrowie i kondycję.</p>
             <a href="zabiegi.html#trychologia" class="arrow-link">Poznaj trychologię <span class="ar" aria-hidden="true">→</span></a>
           </div>
@@ -646,16 +647,16 @@
           <span class="num">03</span>
           <h3>Fryzjerstwo</h3>
           <div class="odesc">
-            <div class="ophoto"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></div>
+            <div class="ophoto"><picture><source srcset="img/fryzjerstwo.webp" type="image/webp"><img decoding="async" src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></picture></div>
             <p>Strzyżenie, koloryzacja, dekoloryzacja oraz profesjonalna pielęgnacja włosów.</p>
             <a href="zabiegi.html#fryzjerstwo" class="arrow-link">Zobacz usługi <span class="ar" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
       <div class="offer-photo reveal">
-        <div class="oimg on"><img src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></div>
-        <div class="oimg"><img src="img/zabieg-trychologia.jpg" alt="Skóra głowy przed i po terapii trychologicznej" width="1100" height="1368" loading="lazy"></div>
-        <div class="oimg"><img src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></div>
+        <div class="oimg on"><picture><source srcset="img/zabieg-kosmetologia.webp" type="image/webp"><img decoding="async" src="img/zabieg-kosmetologia.jpg" alt="Zbliżenie oka po stylizacji brwi i rzęs" width="1400" height="1867" loading="lazy"></picture></div>
+        <div class="oimg"><picture><source srcset="img/zabieg-trychologia.webp" type="image/webp"><img decoding="async" src="img/zabieg-trychologia.jpg" alt="Skóra głowy przed i po terapii trychologicznej" width="1100" height="1368" loading="lazy"></picture></div>
+        <div class="oimg"><picture><source srcset="img/fryzjerstwo.webp" type="image/webp"><img decoding="async" src="img/fryzjerstwo.jpg" alt="Fryzura okolicznościowa — upięcie z warkoczem" width="1200" height="1600" loading="lazy"></picture></div>
       </div>
     </div>
   </div>
@@ -800,9 +801,9 @@
         <p class="desc">Seria zabiegów kosmetologicznych — skóra wygładzona i wyciszona.</p>
       </div>
       <div class="ba">
-          <img class="im-before" src="img/metamorfoza-1.jpg" width="1122" height="1402" loading="lazy" alt="Skóra przed serią zabiegów — widoczne zmiany trądzikowe">
+          <picture><source srcset="img/metamorfoza-1.webp" type="image/webp"><img decoding="async" class="im-before" src="img/metamorfoza-1.jpg" width="1122" height="1402" loading="lazy" alt="Skóra przed serią zabiegów — widoczne zmiany trądzikowe"></picture>
           <div class="after-wrap" style="clip-path:inset(0 0 0 50%)">
-            <img class="im-after" src="img/metamorfoza-1.jpg" width="1122" height="1402" loading="lazy" alt="Skóra po serii zabiegów — wygładzona i wyciszona">
+            <picture><source srcset="img/metamorfoza-1.webp" type="image/webp"><img decoding="async" class="im-after" src="img/metamorfoza-1.jpg" width="1122" height="1402" loading="lazy" alt="Skóra po serii zabiegów — wygładzona i wyciszona"></picture>
           </div>
           <div class="ba-line" style="left:50%"></div>
           <div class="ba-dot" style="left:50%"><span>◂</span><span>▸</span></div>
@@ -819,9 +820,9 @@
         <p class="desc">Terapia skóry czoła — zredukowane zmiany zapalne.</p>
       </div>
       <div class="ba">
-          <img class="im-before" src="img/metamorfoza-2.jpg" width="1254" height="1254" loading="lazy" alt="Skóra czoła przed zabiegami — aktywne zmiany zapalne">
+          <picture><source srcset="img/metamorfoza-2.webp" type="image/webp"><img decoding="async" class="im-before" src="img/metamorfoza-2.jpg" width="1254" height="1254" loading="lazy" alt="Skóra czoła przed zabiegami — aktywne zmiany zapalne"></picture>
           <div class="after-wrap" style="clip-path:inset(0 0 0 50%)">
-            <img class="im-after" src="img/metamorfoza-2.jpg" width="1254" height="1254" loading="lazy" alt="Skóra czoła po zabiegach — zredukowane zmiany">
+            <picture><source srcset="img/metamorfoza-2.webp" type="image/webp"><img decoding="async" class="im-after" src="img/metamorfoza-2.jpg" width="1254" height="1254" loading="lazy" alt="Skóra czoła po zabiegach — zredukowane zmiany"></picture>
           </div>
           <div class="ba-line" style="left:50%"></div>
           <div class="ba-dot" style="left:50%"><span>◂</span><span>▸</span></div>
@@ -838,9 +839,9 @@
         <p class="desc">Terapia trychologiczna — skóra głowy po serii zabiegów, zmiany wyraźnie zredukowane.</p>
       </div>
       <div class="ba">
-          <img class="im-before" src="img/zabieg-trychologia.jpg" width="1100" height="1368" loading="lazy" alt="Skóra głowy przed terapią trychologiczną — widoczne zmiany">
+          <picture><source srcset="img/zabieg-trychologia.webp" type="image/webp"><img decoding="async" class="im-before" src="img/zabieg-trychologia.jpg" width="1100" height="1368" loading="lazy" alt="Skóra głowy przed terapią trychologiczną — widoczne zmiany"></picture>
           <div class="after-wrap" style="clip-path:inset(0 0 0 50%)">
-            <img class="im-after" src="img/zabieg-trychologia.jpg" width="1100" height="1368" loading="lazy" alt="Skóra głowy po terapii trychologicznej — wyciszona i czysta">
+            <picture><source srcset="img/zabieg-trychologia.webp" type="image/webp"><img decoding="async" class="im-after" src="img/zabieg-trychologia.jpg" width="1100" height="1368" loading="lazy" alt="Skóra głowy po terapii trychologicznej — wyciszona i czysta"></picture>
           </div>
           <div class="ba-line" style="left:50%"></div>
           <div class="ba-dot" style="left:50%"><span>◂</span><span>▸</span></div>
@@ -880,11 +881,11 @@
     <div class="reveal">
       <div class="vo-pair">
         <figure class="vo-side vo-front">
-          <img src="img/voucher-front.jpg" alt="Voucher podarunkowy Sara's Beauty — awers z monogramem" width="640" height="1316" loading="lazy">
+          <picture><source srcset="img/voucher-front.webp" type="image/webp"><img decoding="async" src="img/voucher-front.jpg" alt="Voucher podarunkowy Sara's Beauty — awers z monogramem" width="640" height="1316" loading="lazy"></picture>
           <figcaption>Awers</figcaption>
         </figure>
         <figure class="vo-side vo-back">
-          <img src="img/voucher-back.jpg" alt="Voucher podarunkowy Sara's Beauty — rewers z miejscem na dane" width="640" height="1316" loading="lazy">
+          <picture><source srcset="img/voucher-back.webp" type="image/webp"><img decoding="async" src="img/voucher-back.jpg" alt="Voucher podarunkowy Sara's Beauty — rewers z miejscem na dane" width="640" height="1316" loading="lazy"></picture>
           <figcaption>Rewers</figcaption>
         </figure>
       </div>
@@ -962,6 +963,8 @@
   function onScroll(){fab.classList.toggle('show', window.scrollY>window.innerHeight*.75)}
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
+  var mq=document.querySelector('.marq');
+  if(mq){new IntersectionObserver(function(es){es.forEach(function(e){mq.classList.toggle('on',e.isIntersecting)})}).observe(mq);}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 
